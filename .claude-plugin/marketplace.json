@@ -1,0 +1,166 @@
+{
+  "name": "iran-mcp",
+  "description": "Unofficial MCP servers and skills for Iranian websites: shopping, food, travel, doctors, books.",
+  "owner": {
+    "name": "sepehr071",
+    "url": "https://github.com/sepehr071"
+  },
+  "plugins": [
+    {
+      "name": "snapp",
+      "source": "./plugins/snapp",
+      "description": "Unofficial read-only Snappfood & SnappMarket: search food and groceries, compare prices, deals.",
+      "category": "food"
+    },
+    {
+      "name": "okala",
+      "source": "./plugins/okala",
+      "description": "Unofficial read-only Okala: grocery stores that deliver to you, compare prices across stores.",
+      "category": "food"
+    },
+    {
+      "name": "digikala",
+      "source": "./plugins/digikala",
+      "description": "Unofficial read-only Digikala: search products, compare sellers, price history, reviews, deals.",
+      "category": "shopping"
+    },
+    {
+      "name": "technolife",
+      "source": "./plugins/technolife",
+      "description": "Unofficial read-only Technolife: search electronics, compare sellers and installment prices, deals.",
+      "category": "shopping"
+    },
+    {
+      "name": "masterkala",
+      "source": "./plugins/masterkala",
+      "description": "Unofficial read-only MasterKala: search gadgets, compare prices and specs, stock, delivery, deals.",
+      "category": "shopping"
+    },
+    {
+      "name": "khanoumi",
+      "source": "./plugins/khanoumi",
+      "description": "Unofficial read-only Khanoumi: search cosmetics and skin care, compare prices, shades, reviews.",
+      "category": "beauty"
+    },
+    {
+      "name": "asalbanoo",
+      "source": "./plugins/asalbanoo",
+      "description": "Unofficial read-only Asal Banoo: search cosmetics and skin care, compare prices, sizes, deals.",
+      "category": "beauty"
+    },
+    {
+      "name": "shopino",
+      "source": "./plugins/shopino",
+      "description": "Unofficial read-only Shopino: search fashion across Iranian shops, compare prices, sizes, stock.",
+      "category": "fashion"
+    },
+    {
+      "name": "otaghak",
+      "source": "./plugins/otaghak",
+      "description": "Unofficial read-only Otaghak: search Iranian villas, availability, exact stay prices, reviews.",
+      "category": "travel"
+    },
+    {
+      "name": "jabama",
+      "source": "./plugins/jabama",
+      "description": "Unofficial read-only Jabama: villas and stays with exact prices, group tours, events and theater.",
+      "category": "travel"
+    },
+    {
+      "name": "mrbilit",
+      "source": "./plugins/mrbilit",
+      "description": "Unofficial read-only MrBilit: Iranian flights, trains, buses, taxis and hotels, seats and prices.",
+      "category": "travel"
+    },
+    {
+      "name": "flytoday",
+      "source": "./plugins/flytoday",
+      "description": "Unofficial read-only Flytoday: Iranian and international flights, hotels, villas, trains, buses.",
+      "category": "travel"
+    },
+    {
+      "name": "paziresh24",
+      "source": "./plugins/paziresh24",
+      "description": "Unofficial read-only Paziresh24: find Iranian doctors, profiles, prices, reviews and free slots.",
+      "category": "health"
+    },
+    {
+      "name": "doctoreto",
+      "source": "./plugins/doctoreto",
+      "description": "Unofficial read-only Doctoreto: Iranian doctors, visit fees, free appointment times, clinics, labs.",
+      "category": "health"
+    },
+    {
+      "name": "taaghche",
+      "source": "./plugins/taaghche",
+      "description": "Unofficial read-only Taaghche: search Persian ebooks and audiobooks, compare prices, read reviews.",
+      "category": "books"
+    },
+    {
+      "name": "fidibo",
+      "source": "./plugins/fidibo",
+      "description": "Unofficial read-only Fidibo: search Persian ebooks and audiobooks, compare prices, free books.",
+      "category": "books"
+    },
+    {
+      "name": "30book",
+      "source": "./plugins/30book",
+      "description": "Unofficial read-only 30book: search Iranian printed books, compare editions and prices.",
+      "category": "books"
+    },
+    {
+      "name": "payping",
+      "source": "./plugins/payping",
+      "description": "PayPing merchant account for agents: balance, sales, invoices; create invoices and payment links.",
+      "category": "business"
+    },
+    {
+      "name": "bale",
+      "source": "./plugins/bale",
+      "description": "Private, local Bale bot for agents: read, search and answer messages, ask and wait, files.",
+      "category": "messaging"
+    },
+    {
+      "name": "iran-all",
+      "source": "./plugins/iran-all",
+      "description": "All 17 read-only Iranian site servers in one install.",
+      "category": "bundle"
+    },
+    {
+      "name": "iran-food",
+      "source": "./plugins/iran-food",
+      "description": "Everything for food or groceries delivered in Iran: Snappfood & SnappMarket, Okala.",
+      "category": "bundle"
+    },
+    {
+      "name": "iran-shopping",
+      "source": "./plugins/iran-shopping",
+      "description": "Everything for to buy electronics, appliances or other goods in Iran: Digikala, Technolife, MasterKala.",
+      "category": "bundle"
+    },
+    {
+      "name": "iran-beauty",
+      "source": "./plugins/iran-beauty",
+      "description": "Everything for cosmetics, skin and hair care or perfume in Iran: Khanoumi, Asal Banoo.",
+      "category": "bundle"
+    },
+    {
+      "name": "iran-travel",
+      "source": "./plugins/iran-travel",
+      "description": "Everything for flights, trains, buses, hotels, villas or tours in Iran: Otaghak, Jabama, MrBilit, Flytoday.",
+      "category": "bundle"
+    },
+    {
+      "name": "iran-health",
+      "source": "./plugins/iran-health",
+      "description": "Everything for a doctor, clinic or lab appointment in Iran: Paziresh24, Doctoreto.",
+      "category": "bundle"
+    },
+    {
+      "name": "iran-books",
+      "source": "./plugins/iran-books",
+      "description": "Everything for ebooks, audiobooks or printed books in Iran: Taaghche, Fidibo, 30book.",
+      "category": "bundle"
+    }
+  ]
+}

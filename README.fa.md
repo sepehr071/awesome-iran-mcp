@@ -13,7 +13,8 @@
 <p align="center">
 <b>وب ایران را به ایجنت هوش مصنوعی‌تان بدهید.</b><br>
 ۱۹ سرور MCP متن‌باز برای دیجی‌کالا، اسنپ‌فود، جاباما، مستربلیط، پذیرش۲۴، طاقچه و بقیه.<br>
-جست‌وجو، مقایسهٔ قیمت به تومان، پیدا کردن نوبت خالی و تخفیف‌های امروز، از داخل Claude، Cursor، VS Code یا هر کلاینت MCP.
+جست‌وجو، مقایسهٔ قیمت به تومان، پیدا کردن نوبت خالی و تخفیف‌های امروز، از داخل Claude، Cursor، VS Code یا هر کلاینت MCP.<br>
+به‌صورت پلاگین Claude Code همراه با اسکیل نصب کنید، یا به‌صورت Agent Skills برای Codex، Cursor، Antigravity و Grok Build.
 </p>
 
 <p align="center">
@@ -42,7 +43,34 @@
 
 هر سرور یک پکیج کوچک پایتون روی PyPI است که با [`uvx`](https://docs.astral.sh/uv/) اجرا می‌شود. نه کلید API لازم است و نه نصب جداگانه؛ فقط `payping-mcp` و `bale-mcp` روی حساب خودتان کار می‌کنند و توکن می‌خواهند.
 
-**یک سرور** (Claude Code):
+**پلاگین‌های Claude Code** (سرور + اسکیل، هر کدام را که خواستید): یک بار مارکت‌پلیس را اضافه کنید، بعد سرورها را در تب Discover دستور `/plugin` انتخاب کنید یا با نام نصب کنید.
+
+</div>
+
+```bash
+claude plugin marketplace add sepehr071/awesome-iran-mcp
+claude plugin install digikala@iran-mcp            # one server
+claude plugin install iran-travel@iran-mcp         # a bundle: food, shopping, beauty, travel, health, books
+claude plugin install iran-all@iran-mcp            # every read-only site server
+```
+
+<div dir="rtl">
+
+دستور `claude plugin install <name> --marketplace sepehr071/awesome-iran-mcp` هر دو مرحله را با یک دستور انجام می‌دهد. `payping` و `bale` روی حساب خودتان کار می‌کنند، برای همین در هیچ بسته‌ای نیستند؛ آن‌ها را با نام نصب کنید.
+
+**اسکیل برای ایجنت‌های دیگر** (Codex، Cursor، Gemini CLI و ...): اسکیل‌های لازم را انتخاب کنید و بعد هر سرور را با کانفیگ پایین اضافه کنید.
+
+</div>
+
+```bash
+npx skills add sepehr071/awesome-iran-mcp
+```
+
+<div dir="rtl">
+
+**Grok Build** همین مارکت‌پلیس را می‌خواند: `grok plugin marketplace add sepehr071/awesome-iran-mcp`، بعد سرورها را یکی‌یکی نصب کنید (Grok اعضای بسته‌ها را نصب نمی‌کند). اینکه هر ایجنت چه چیزی را پشتیبانی می‌کند: [PLUGINS.md](PLUGINS.md#compatibility).
+
+**یک سرور** (Claude Code، بدون پلاگین):
 
 </div>
 
@@ -150,6 +178,9 @@ cd awesome-iran-mcp && claude
 | [`TOOLS.md`](TOOLS.md) | هر ۳۰۸ ابزار به تفکیک سرور |
 | [`llms.txt`](llms.txt) | فهرست کوتاه برای LLMها |
 | [`.mcp.json`](.mcp.json) | تنظیمات آماده برای همهٔ سرورها |
+| [`.claude-plugin/marketplace.json`](.claude-plugin/marketplace.json) | مارکت‌پلیس پلاگین `iran-mcp`: یک پلاگین برای هر سرور به‌اضافهٔ بسته‌ها |
+| [`plugins/`](plugins) | هر پلاگین: سرور MCP آن، پین‌شده روی یک نسخهٔ منتشرشده، و یک `SKILL.md` که می‌گوید کی و با چه قوانینی استفاده شود |
+| [`PLUGINS.md`](PLUGINS.md) | سازگاری با ایجنت‌ها، و اینکه نسخهٔ جدید یک سرور چطور به کاربران پلاگین می‌رسد |
 
 این را به ایجنت‌تان بدهید تا خودش راه‌اندازی کند:
 
@@ -182,11 +213,14 @@ uv run pytest -m live -q             # against the real site
 
 # update every server to latest main and rebuild the catalog
 git submodule update --init --remote
-python scripts/catalog.py
+python scripts/catalog.py            # also rewrites plugins/ and .claude-plugin/
 python scripts/banner.py
+claude plugin validate .
 ```
 
 <div dir="rtl">
+
+یک GitHub Action هر شب همهٔ این کارها را انجام می‌دهد و نتیجه را commit می‌کند. روند کامل انتشار در [PLUGINS.md](PLUGINS.md) آمده است.
 
 باگ‌ها و درخواست‌های هر سرور را در مخزن همان سرور ثبت کنید.
 
@@ -214,6 +248,12 @@ python scripts/banner.py
 <summary><b>پایتون لازم دارم؟</b></summary>
 
 فقط <a href="https://docs.astral.sh/uv/getting-started/installation/">uv</a> لازم است. <code>uvx</code> در اولین اجرا پایتون مناسب و پکیج را دانلود می‌کند.
+</details>
+
+<details>
+<summary><b>به‌روزرسانی‌ها را چطور بگیرم؟</b></summary>
+
+پلاگین‌ها هر سرور را روی یک نسخهٔ منتشرشده پین می‌کنند، پس به‌روزرسانی پلاگین یعنی به‌روزرسانی سرور. یک بار در <code>/plugin</code> ← <b>Marketplaces</b> ← <code>iran-mcp</code> به‌روزرسانی خودکار را روشن کنید، یا <code>claude plugin update &lt;name&gt;@iran-mcp</code> را اجرا کنید. تنظیم سادهٔ <code>uvx digikala-mcp</code> همان نسخهٔ کش‌شده را اجرا می‌کند؛ برای ارتقا یک بار <code>uvx digikala-mcp@latest --help</code> را اجرا کنید و کلاینت را دوباره باز کنید.
 </details>
 
 ## مجوز

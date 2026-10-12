@@ -1,0 +1,26 @@
+{
+  "name": "taaghche",
+  "displayName": "Taaghche",
+  "version": "0.1.0",
+  "description": "Unofficial read-only Taaghche: search Persian ebooks and audiobooks, compare prices, read reviews.",
+  "author": {
+    "name": "sepehr071",
+    "url": "https://github.com/sepehr071"
+  },
+  "homepage": "https://github.com/sepehr071/awesome-iran-mcp",
+  "repository": "https://github.com/sepehr071/taaghche-mcp",
+  "license": "MIT",
+  "keywords": [
+    "iran",
+    "books",
+    "taaghche.com"
+  ],
+  "mcpServers": {
+    "taaghche": {
+      "command": "uvx",
+      "args": [
+        "taaghche-mcp@0.1.0"
+      ]
+    }
+  }
+}

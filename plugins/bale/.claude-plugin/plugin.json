@@ -1,0 +1,29 @@
+{
+  "name": "bale",
+  "displayName": "Bale Bot",
+  "version": "0.1.0",
+  "description": "Private, local Bale bot for agents: read, search and answer messages, ask and wait, files.",
+  "author": {
+    "name": "sepehr071",
+    "url": "https://github.com/sepehr071"
+  },
+  "homepage": "https://github.com/sepehr071/awesome-iran-mcp",
+  "repository": "https://github.com/sepehr071/bale-mcp",
+  "license": "MIT",
+  "keywords": [
+    "iran",
+    "messaging",
+    "bale.ai"
+  ],
+  "mcpServers": {
+    "bale": {
+      "command": "uvx",
+      "args": [
+        "bale-mcp@0.1.0"
+      ],
+      "env": {
+        "BALE_BOT_TOKEN": "${BALE_BOT_TOKEN:-}"
+      }
+    }
+  }
+}

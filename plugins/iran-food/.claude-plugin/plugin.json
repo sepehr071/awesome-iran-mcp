@@ -1,0 +1,13 @@
+{
+  "name": "iran-food",
+  "description": "Everything for food or groceries delivered in Iran: Snappfood & SnappMarket, Okala.",
+  "author": {
+    "name": "sepehr071",
+    "url": "https://github.com/sepehr071"
+  },
+  "homepage": "https://github.com/sepehr071/awesome-iran-mcp",
+  "dependencies": [
+    "snapp",
+    "okala"
+  ]
+}

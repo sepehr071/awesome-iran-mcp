@@ -1,0 +1,26 @@
+{
+  "name": "jabama",
+  "displayName": "Jabama",
+  "version": "0.2.0",
+  "description": "Unofficial read-only Jabama: villas and stays with exact prices, group tours, events and theater.",
+  "author": {
+    "name": "sepehr071",
+    "url": "https://github.com/sepehr071"
+  },
+  "homepage": "https://github.com/sepehr071/awesome-iran-mcp",
+  "repository": "https://github.com/sepehr071/jabama-mcp",
+  "license": "MIT",
+  "keywords": [
+    "iran",
+    "travel",
+    "jabama.com"
+  ],
+  "mcpServers": {
+    "jabama": {
+      "command": "uvx",
+      "args": [
+        "jabama-mcp@0.2.0"
+      ]
+    }
+  }
+}

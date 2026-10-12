@@ -1,0 +1,26 @@
+{
+  "name": "khanoumi",
+  "displayName": "Khanoumi",
+  "version": "0.1.2",
+  "description": "Unofficial read-only Khanoumi: search cosmetics and skin care, compare prices, shades, reviews.",
+  "author": {
+    "name": "sepehr071",
+    "url": "https://github.com/sepehr071"
+  },
+  "homepage": "https://github.com/sepehr071/awesome-iran-mcp",
+  "repository": "https://github.com/sepehr071/khanoumi-mcp",
+  "license": "MIT",
+  "keywords": [
+    "iran",
+    "beauty",
+    "khanoumi.com"
+  ],
+  "mcpServers": {
+    "khanoumi": {
+      "command": "uvx",
+      "args": [
+        "khanoumi-mcp@0.1.2"
+      ]
+    }
+  }
+}

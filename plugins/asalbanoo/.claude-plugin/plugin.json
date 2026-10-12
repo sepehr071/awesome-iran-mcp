@@ -1,0 +1,26 @@
+{
+  "name": "asalbanoo",
+  "displayName": "Asal Banoo",
+  "version": "0.2.0",
+  "description": "Unofficial read-only Asal Banoo: search cosmetics and skin care, compare prices, sizes, deals.",
+  "author": {
+    "name": "sepehr071",
+    "url": "https://github.com/sepehr071"
+  },
+  "homepage": "https://github.com/sepehr071/awesome-iran-mcp",
+  "repository": "https://github.com/sepehr071/asalbanoo-mcp",
+  "license": "MIT",
+  "keywords": [
+    "iran",
+    "beauty",
+    "asalbanooshop.com"
+  ],
+  "mcpServers": {
+    "asalbanoo": {
+      "command": "uvx",
+      "args": [
+        "asalbanoo-mcp@0.2.0"
+      ]
+    }
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "name": "iran-books",
+  "description": "Everything for ebooks, audiobooks or printed books in Iran: Taaghche, Fidibo, 30book.",
+  "author": {
+    "name": "sepehr071",
+    "url": "https://github.com/sepehr071"
+  },
+  "homepage": "https://github.com/sepehr071/awesome-iran-mcp",
+  "dependencies": [
+    "taaghche",
+    "fidibo",
+    "30book"
+  ]
+}

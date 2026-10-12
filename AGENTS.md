@@ -39,6 +39,16 @@ claude mcp add digikala -- uvx digikala-mcp          # Claude Code
 { "mcpServers": { "digikala": { "command": "uvx", "args": ["digikala-mcp"] } } }
 ```
 
+As Claude Code plugins (MCP server plus a skill with usage rules), from the `iran-mcp` marketplace:
+
+```bash
+claude plugin install digikala --marketplace sepehr071/awesome-iran-mcp     # one server
+claude plugin install iran-all --marketplace sepehr071/awesome-iran-mcp     # all read-only site servers
+```
+
+Bundles: `iran-all`, `iran-food`, `iran-shopping`, `iran-beauty`, `iran-travel`, `iran-health`, `iran-books`.
+Skills only, for any agent: `npx skills add sepehr071/awesome-iran-mcp`.
+
 The server key in config is the package name without `-mcp`. [`.mcp.json`](.mcp.json) holds all 19.
 Requires [uv](https://docs.astral.sh/uv/). Add only the servers the task needs: each one adds 11 to 23 tools.
 
@@ -58,7 +68,10 @@ Requires [uv](https://docs.astral.sh/uv/). Add only the servers the task needs: 
 
 ```
 servers/<name>-mcp/   git submodule, one per server (own repo, own issues, own releases)
-scripts/catalog.py    rebuilds servers.json, TOOLS.md and .mcp.json from the submodules
+scripts/catalog.py    rebuilds servers.json, TOOLS.md, .mcp.json, plugins/ and .claude-plugin/ from the submodules
+plugins/              one Claude Code plugin per server (MCP server + skill) and bundle plugins (generated)
+.claude-plugin/       marketplace.json for the `iran-mcp` plugin marketplace (generated)
+PLUGINS.md            plugin layout, agent compatibility, and how a server release reaches users
 scripts/banner.py     redraws assets/banner.svg and assets/banner.fa.svg from servers.json
 assets/               banners (generated)
 README.md / README.fa.md   English (default) and Persian docs; keep both in sync
@@ -66,7 +79,8 @@ README.md / README.fa.md   English (default) and Persian docs; keep both in sync
 
 - Update servers: `git submodule update --init --remote && python scripts/catalog.py && python scripts/banner.py`,
   then commit the new pins and generated files.
-- Never edit `servers.json`, `TOOLS.md`, `.mcp.json` or the banners by hand.
+- Never edit `servers.json`, `TOOLS.md`, `.mcp.json`, `plugins/`, `.claude-plugin/` or the banners by hand.
+  Skill text comes from `skill()`, `USE` and `NOTES` in `scripts/catalog.py`; check with `claude plugin validate .`.
 - Add a server: `git submodule add https://github.com/sepehr071/<name>-mcp servers/<name>-mcp`, add it to
   `SERVERS` in `scripts/catalog.py` and `APPS` in `scripts/banner.py` (with its logo in `assets/logos/`), run both scripts, add a row to both
   READMEs and the table above. Update the 19 / 308 counts written in both READMEs.

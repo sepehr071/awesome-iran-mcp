@@ -1,0 +1,29 @@
+{
+  "name": "payping",
+  "displayName": "PayPing",
+  "version": "0.1.0",
+  "description": "PayPing merchant account for agents: balance, sales, invoices; create invoices and payment links.",
+  "author": {
+    "name": "sepehr071",
+    "url": "https://github.com/sepehr071"
+  },
+  "homepage": "https://github.com/sepehr071/awesome-iran-mcp",
+  "repository": "https://github.com/sepehr071/payping-mcp",
+  "license": "MIT",
+  "keywords": [
+    "iran",
+    "business",
+    "payping.ir"
+  ],
+  "mcpServers": {
+    "payping": {
+      "command": "uvx",
+      "args": [
+        "payping-mcp@0.1.0"
+      ],
+      "env": {
+        "PAYPING_TOKEN": "${PAYPING_TOKEN:-}"
+      }
+    }
+  }
+}

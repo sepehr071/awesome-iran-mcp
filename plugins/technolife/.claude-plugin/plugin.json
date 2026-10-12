@@ -1,0 +1,26 @@
+{
+  "name": "technolife",
+  "displayName": "Technolife",
+  "version": "0.2.0",
+  "description": "Unofficial read-only Technolife: search electronics, compare sellers and installment prices, deals.",
+  "author": {
+    "name": "sepehr071",
+    "url": "https://github.com/sepehr071"
+  },
+  "homepage": "https://github.com/sepehr071/awesome-iran-mcp",
+  "repository": "https://github.com/sepehr071/technolife-mcp",
+  "license": "MIT",
+  "keywords": [
+    "iran",
+    "shopping",
+    "technolife.com"
+  ],
+  "mcpServers": {
+    "technolife": {
+      "command": "uvx",
+      "args": [
+        "technolife-mcp@0.2.0"
+      ]
+    }
+  }
+}

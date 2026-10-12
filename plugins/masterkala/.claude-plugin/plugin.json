@@ -1,0 +1,26 @@
+{
+  "name": "masterkala",
+  "displayName": "MasterKala",
+  "version": "0.2.0",
+  "description": "Unofficial read-only MasterKala: search gadgets, compare prices and specs, stock, delivery, deals.",
+  "author": {
+    "name": "sepehr071",
+    "url": "https://github.com/sepehr071"
+  },
+  "homepage": "https://github.com/sepehr071/awesome-iran-mcp",
+  "repository": "https://github.com/sepehr071/masterkala-mcp",
+  "license": "MIT",
+  "keywords": [
+    "iran",
+    "shopping",
+    "masterkala.com"
+  ],
+  "mcpServers": {
+    "masterkala": {
+      "command": "uvx",
+      "args": [
+        "masterkala-mcp@0.2.0"
+      ]
+    }
+  }
+}

@@ -1,6 +1,6 @@
 # awesome-iran-mcp
 
-> 19 unofficial, open-source MCP servers (308 tools) that let AI agents search and compare Iranian websites: Digikala, Technolife, MasterKala, Shopino, Khanoumi, Asal Banoo, Snappfood, Okala, MrBilit, Flytoday, Jabama, Otaghak, Paziresh24, Doctoreto, Taaghche, Fidibo, 30book, plus PayPing and Bale for the user's own accounts. Prices in Toman. Site servers are read-only. Run any server with `uvx <name>-mcp`.
+> 19 unofficial, open-source MCP servers (308 tools) that let AI agents search and compare Iranian websites: Digikala, Technolife, MasterKala, Shopino, Khanoumi, Asal Banoo, Snappfood, Okala, MrBilit, Flytoday, Jabama, Otaghak, Paziresh24, Doctoreto, Taaghche, Fidibo, 30book, plus PayPing and Bale for the user's own accounts. Prices in Toman. Site servers are read-only. Run any server with `uvx <name>-mcp`. Also a Claude Code plugin marketplace (`iran-mcp`): `claude plugin install <name> --marketplace sepehr071/awesome-iran-mcp`, one plugin per server (MCP server + skill) plus bundles such as `iran-all`. Skills for other agents: `npx skills add sepehr071/awesome-iran-mcp`.
 
 ## Docs
 
@@ -8,6 +8,8 @@
 - [TOOLS.md](https://raw.githubusercontent.com/sepehr071/awesome-iran-mcp/main/TOOLS.md): every tool with a one-line summary
 - [servers.json](https://raw.githubusercontent.com/sepehr071/awesome-iran-mcp/main/servers.json): machine-readable catalog (package, version, env vars, tools)
 - [.mcp.json](https://raw.githubusercontent.com/sepehr071/awesome-iran-mcp/main/.mcp.json): config for all servers
+- [marketplace.json](https://raw.githubusercontent.com/sepehr071/awesome-iran-mcp/main/.claude-plugin/marketplace.json): Claude Code plugin marketplace, one plugin per server plus bundles
+- [PLUGINS.md](https://raw.githubusercontent.com/sepehr071/awesome-iran-mcp/main/PLUGINS.md): plugins and skills, agent compatibility, update flow
 - [README.md](https://raw.githubusercontent.com/sepehr071/awesome-iran-mcp/main/README.md): overview (English)
 - [README.fa.md](https://raw.githubusercontent.com/sepehr071/awesome-iran-mcp/main/README.fa.md): overview (Persian)
 

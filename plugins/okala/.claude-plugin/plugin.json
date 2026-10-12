@@ -1,0 +1,26 @@
+{
+  "name": "okala",
+  "displayName": "Okala",
+  "version": "0.1.0",
+  "description": "Unofficial read-only Okala: grocery stores that deliver to you, compare prices across stores.",
+  "author": {
+    "name": "sepehr071",
+    "url": "https://github.com/sepehr071"
+  },
+  "homepage": "https://github.com/sepehr071/awesome-iran-mcp",
+  "repository": "https://github.com/sepehr071/okala-mcp",
+  "license": "MIT",
+  "keywords": [
+    "iran",
+    "food",
+    "okala.com"
+  ],
+  "mcpServers": {
+    "okala": {
+      "command": "uvx",
+      "args": [
+        "okala-mcp@0.1.0"
+      ]
+    }
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "name": "shopino",
+  "displayName": "Shopino",
+  "version": "0.2.0",
+  "description": "Unofficial read-only Shopino: search fashion across Iranian shops, compare prices, sizes, stock.",
+  "author": {
+    "name": "sepehr071",
+    "url": "https://github.com/sepehr071"
+  },
+  "homepage": "https://github.com/sepehr071/awesome-iran-mcp",
+  "repository": "https://github.com/sepehr071/shopino-mcp",
+  "license": "MIT",
+  "keywords": [
+    "iran",
+    "fashion",
+    "shopino.app"
+  ],
+  "mcpServers": {
+    "shopino": {
+      "command": "uvx",
+      "args": [
+        "shopino-mcp@0.2.0"
+      ]
+    }
+  }
+}

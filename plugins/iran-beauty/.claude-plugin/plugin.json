@@ -1,0 +1,13 @@
+{
+  "name": "iran-beauty",
+  "description": "Everything for cosmetics, skin and hair care or perfume in Iran: Khanoumi, Asal Banoo.",
+  "author": {
+    "name": "sepehr071",
+    "url": "https://github.com/sepehr071"
+  },
+  "homepage": "https://github.com/sepehr071/awesome-iran-mcp",
+  "dependencies": [
+    "khanoumi",
+    "asalbanoo"
+  ]
+}

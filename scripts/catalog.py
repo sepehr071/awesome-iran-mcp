@@ -1,4 +1,4 @@
-"""Rebuild servers.json, TOOLS.md and .mcp.json from the submodules in servers/.
+"""Rebuild servers.json, TOOLS.md, .mcp.json and the Claude Code plugin marketplace from the submodules in servers/.
 
 Run from the repo root after `git submodule update --init --remote`:  python scripts/catalog.py
 """
@@ -7,8 +7,36 @@ import ast
 import json
 import pathlib
 import re
+import shutil
+import urllib.error
+import urllib.request
+from urllib.parse import urlparse
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
+MARKETPLACE = "iran-mcp"
+OWNER = {"name": "sepehr071", "url": "https://github.com/sepehr071"}
+HOME = "https://github.com/sepehr071/awesome-iran-mcp"
+
+# category -> what a user wants when they need it; used in skill and bundle descriptions
+USE = {
+    "food": "food or groceries delivered",
+    "shopping": "to buy electronics, appliances or other goods",
+    "beauty": "cosmetics, skin and hair care or perfume",
+    "fashion": "clothes, shoes or bags",
+    "travel": "flights, trains, buses, hotels, villas or tours",
+    "health": "a doctor, clinic or lab appointment",
+    "books": "ebooks, audiobooks or printed books",
+    "business": "to manage their own PayPing merchant account",
+    "messaging": "to run their own Bale messenger bot",
+}
+
+# extra lines for a server's skill, beyond the shared rules
+NOTES = {
+    "okala-mcp": "One exception to no login: real text search needs the optional SMS login (`ok_login`), which stays "
+    "read-only. Ask the user before starting it.",
+    "flytoday-mcp": "Searches are rate-limited per IP. Do not repeat a search the user did not ask for.",
+    "30book-mcp": "Lists are slow (2 to 5 s each). Prefer one good query over many.",
+}
 
 # name -> (category, site url); order here is the order everywhere else
 SERVERS = {
@@ -92,8 +120,127 @@ def main() -> None:
     (ROOT / "servers.json").write_text(json.dumps(catalog, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     (ROOT / ".mcp.json").write_text(json.dumps({"mcpServers": mcp}, indent=2) + "\n", encoding="utf-8")
     (ROOT / "TOOLS.md").write_text("\n".join(md), encoding="utf-8")
+    plugins(catalog, mcp)
     sync_docs(catalog, old_total, total)
     print(f"{len(catalog)} servers, {total} tools")
+
+
+def skill(s: dict, key: str, entry: dict) -> str:
+    """SKILL.md for one server: when to use it, how to get its tools, and the rules it follows."""
+    host = urlparse(s["site"]).netloc.removeprefix("www.")
+    lines = [
+        "---",
+        f"name: {key}",
+        # JSON string = valid YAML double-quoted scalar; descriptions contain ": "
+        "description: " + json.dumps(
+            f"{s['description']} Use when the user asks about {s['title']} ({host}) or wants {USE[s['category']]} in Iran.",
+            ensure_ascii=False,
+        ),
+        "---",
+        "",
+        f"# {s['title']}",
+        "",
+        s["description"],
+        "",
+        f"The tools below come from the `{s['name']}` MCP server. If they are not available, install it with "
+        f"`claude mcp add {key} -- {s['run']}`, or add `\"{key}\": {json.dumps(entry)}` to the client's "
+        "MCP servers config. It needs [uv](https://docs.astral.sh/uv/). Restart the session after installing.",
+        "",
+        "## Tools",
+        "",
+        *[f"- `{t['name']}`: {t['summary'] or t['title']}" for t in s["tools"]],
+        "",
+        "## Rules",
+        "",
+    ]
+    if s["read_only"]:
+        lines += [
+            "- Prices are Toman. Convert before comparing with a Rial figure from anywhere else.",
+            "- Read-only: no login, basket, booking, order or payment. Give the user the link to finish on the site.",
+            "- Keep request rates low. These are undocumented site APIs that can change or rate-limit.",
+        ]
+    else:
+        secrets = ", ".join(f"`{e['name']}`" for e in s["env"] if e["isRequired"])
+        lines.append(
+            f"- This server acts on the user's own account ({secrets}). Confirm with the user before any call "
+            "that creates, sends, edits or deletes something."
+        )
+    for e in s["env"]:
+        if e["name"].endswith("_MCP_PROXY"):
+            lines.append(f"- On timeouts or HTTP 403 outside Iran, set `{e['name']}` to an HTTP proxy with an Iranian IP.")
+    if s["name"] in NOTES:
+        lines.append(f"- {NOTES[s['name']]}")
+    return "\n".join(lines) + "\n"
+
+
+def released(package: str, version: str) -> str:
+    """`version` if PyPI has it, else PyPI's newest release (main can be bumped before the release is published)."""
+    try:
+        urllib.request.urlopen(f"https://pypi.org/pypi/{package}/{version}/json", timeout=30).close()
+        return version
+    except urllib.error.HTTPError as e:
+        if e.code != 404:
+            raise
+    with urllib.request.urlopen(f"https://pypi.org/pypi/{package}/json", timeout=30) as r:
+        return json.load(r)["info"]["version"]
+
+
+def plugins(catalog: list[dict], mcp: dict) -> None:
+    """One plugin per server (MCP server + skill), plus bundle plugins that only pull in others."""
+    out = ROOT / "plugins"
+    shutil.rmtree(out, ignore_errors=True)
+    entries = []
+
+    def write(name: str, manifest: dict, category: str) -> None:
+        (out / name / ".claude-plugin").mkdir(parents=True)
+        (out / name / ".claude-plugin" / "plugin.json").write_text(json.dumps(manifest, indent=2) + "\n", encoding="utf-8")
+        entries.append({"name": name, "source": f"./plugins/{name}", "description": manifest["description"], "category": category})
+
+    for s in catalog:
+        key = s["name"].removesuffix("-mcp")
+        # pin the exact release: bare `uvx pkg` keeps running its cached copy forever
+        version = released(s["pypi"], s["version"])
+        server = {**mcp[key], "args": [f"{s['pypi']}@{version}"]}
+        write(
+            key,
+            {
+                "name": key,
+                "displayName": s["title"],
+                "version": version,
+                "description": s["description"],
+                "author": OWNER,
+                "homepage": HOME,
+                "repository": s["repository"],
+                "license": "MIT",
+                "keywords": ["iran", s["category"], urlparse(s["site"]).netloc.removeprefix("www.")],
+                "mcpServers": {key: server},
+            },
+            s["category"],
+        )
+        (out / key / "skills" / key).mkdir(parents=True)
+        (out / key / "skills" / key / "SKILL.md").write_text(skill(s, key, mcp[key]), encoding="utf-8")
+
+    # bundles carry no version: Claude Code then versions them by commit, so a changed list reaches users
+    sites = [s for s in catalog if s["read_only"]]
+    bundles = {"iran-all": (f"All {len(sites)} read-only Iranian site servers in one install.", sites)}
+    for cat in dict.fromkeys(s["category"] for s in sites):
+        members = [s for s in sites if s["category"] == cat]
+        if len(members) > 1:
+            names = ", ".join(s["title"] for s in members)
+            bundles[f"iran-{cat}"] = (f"Everything for {USE[cat]} in Iran: {names}.", members)
+    for name, (description, members) in bundles.items():
+        deps = [s["name"].removesuffix("-mcp") for s in members]
+        write(name, {"name": name, "description": description, "author": OWNER, "homepage": HOME, "dependencies": deps}, "bundle")
+
+    marketplace = {
+        "name": MARKETPLACE,
+        "description": "Unofficial MCP servers and skills for Iranian websites: shopping, food, travel, doctors, books.",
+        "owner": OWNER,
+        "plugins": entries,
+    }
+    path = ROOT / ".claude-plugin" / "marketplace.json"
+    path.parent.mkdir(exist_ok=True)
+    path.write_text(json.dumps(marketplace, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
 
 
 def sync_docs(catalog: list[dict], old_total: int, total: int) -> None:

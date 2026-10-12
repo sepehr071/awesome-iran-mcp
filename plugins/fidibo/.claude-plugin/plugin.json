@@ -1,0 +1,26 @@
+{
+  "name": "fidibo",
+  "displayName": "Fidibo",
+  "version": "0.1.1",
+  "description": "Unofficial read-only Fidibo: search Persian ebooks and audiobooks, compare prices, free books.",
+  "author": {
+    "name": "sepehr071",
+    "url": "https://github.com/sepehr071"
+  },
+  "homepage": "https://github.com/sepehr071/awesome-iran-mcp",
+  "repository": "https://github.com/sepehr071/fidibo-mcp",
+  "license": "MIT",
+  "keywords": [
+    "iran",
+    "books",
+    "fidibo.com"
+  ],
+  "mcpServers": {
+    "fidibo": {
+      "command": "uvx",
+      "args": [
+        "fidibo-mcp@0.1.1"
+      ]
+    }
+  }
+}

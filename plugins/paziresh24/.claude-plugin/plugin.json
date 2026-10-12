@@ -1,0 +1,26 @@
+{
+  "name": "paziresh24",
+  "displayName": "Paziresh24",
+  "version": "0.2.0",
+  "description": "Unofficial read-only Paziresh24: find Iranian doctors, profiles, prices, reviews and free slots.",
+  "author": {
+    "name": "sepehr071",
+    "url": "https://github.com/sepehr071"
+  },
+  "homepage": "https://github.com/sepehr071/awesome-iran-mcp",
+  "repository": "https://github.com/sepehr071/paziresh24-mcp",
+  "license": "MIT",
+  "keywords": [
+    "iran",
+    "health",
+    "paziresh24.com"
+  ],
+  "mcpServers": {
+    "paziresh24": {
+      "command": "uvx",
+      "args": [
+        "paziresh24-mcp@0.2.0"
+      ]
+    }
+  }
+}

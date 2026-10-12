@@ -1,0 +1,26 @@
+{
+  "name": "flytoday",
+  "displayName": "Flytoday",
+  "version": "0.1.0",
+  "description": "Unofficial read-only Flytoday: Iranian and international flights, hotels, villas, trains, buses.",
+  "author": {
+    "name": "sepehr071",
+    "url": "https://github.com/sepehr071"
+  },
+  "homepage": "https://github.com/sepehr071/awesome-iran-mcp",
+  "repository": "https://github.com/sepehr071/flytoday-mcp",
+  "license": "MIT",
+  "keywords": [
+    "iran",
+    "travel",
+    "flytoday.ir"
+  ],
+  "mcpServers": {
+    "flytoday": {
+      "command": "uvx",
+      "args": [
+        "flytoday-mcp@0.1.0"
+      ]
+    }
+  }
+}

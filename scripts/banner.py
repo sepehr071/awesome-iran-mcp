@@ -169,12 +169,12 @@ def banner(fa: bool, servers: int, tools: int) -> str:
   {glass("card", card_x, 30, card_w, 400, 40)}
   {glass("panel", panel_x, 30, panel_w, 400, 40)}
 
-  <rect x="{tx - (300 if fa else 0)}" y="70" width="300" height="38" rx="19" fill="#000" fill-opacity="0.28" stroke="#fff" stroke-opacity="0.25"/>
-  <text x="{tx + (-150 if fa else 150)}" y="95" text-anchor="middle" font-family="{MONO}" font-size="16" fill="#d9fff9">$ uvx digikala-mcp</text>
+  <rect x="{tx - (430 if fa else 0)}" y="70" width="430" height="38" rx="19" fill="#000" fill-opacity="0.28" stroke="#fff" stroke-opacity="0.25"/>
+  <text x="{tx + (-215 if fa else 215)}" y="95" text-anchor="middle" font-family="{MONO}" font-size="16" fill="#d9fff9">$ claude plugin install iran-all@iran-mcp</text>
   <text x="{tx}" y="196" text-anchor="{anchor}" font-family="{LATIN}" font-size="58" font-weight="800" fill="url(#ink)" letter-spacing="-1.5">awesome-iran-mcp</text>
   <text x="{tx}" y="250" text-anchor="{anchor}" font-family="{font}" font-size="25" fill="#fff" fill-opacity="0.92">{subtitle}</text>
   {chr(10).join(pills)}
-  <text x="{tx}" y="396" text-anchor="{anchor}" font-family="{LATIN}" font-size="15" fill="#fff" fill-opacity="0.7">Claude · Cursor · VS Code · Windsurf · any MCP client</text>
+  <text x="{tx}" y="396" text-anchor="{anchor}" font-family="{LATIN}" font-size="15" fill="#fff" fill-opacity="0.7">Claude Code plugins · Agent Skills · any MCP client</text>
 
   {icons(panel_x + 38, 46, fa)}
 </svg>

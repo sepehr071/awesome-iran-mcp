@@ -8,10 +8,12 @@
 
 **Give your AI agent the Iranian web.**<br>
 19 open-source MCP servers for Digikala, Snappfood, Jabama, MrBilit, Paziresh24, Taaghche and more.<br>
-Search, compare prices in Toman, find free slots and today's deals from Claude, Cursor, VS Code or any MCP client.
+Search, compare prices in Toman, find free slots and today's deals from Claude, Cursor, VS Code or any MCP client.<br>
+Install them as Claude Code plugins with skills, or as Agent Skills for Codex, Cursor, Antigravity and Grok Build.
 
 [![Servers](https://img.shields.io/badge/servers-19-3fd6c9)](#the-servers)
 [![Tools](https://img.shields.io/badge/tools-308-f4b54a)](TOOLS.md)
+[![Claude Code plugins](https://img.shields.io/badge/Claude_Code-plugin_marketplace-d97757)](#quick-start)
 [![MCP Registry](https://img.shields.io/badge/MCP_Registry-io.github.sepehr071-7c3aed)](https://registry.modelcontextprotocol.io/?q=sepehr071)
 [![License: MIT](https://img.shields.io/badge/license-MIT-16a34a)](LICENSE)
 [![Stars](https://img.shields.io/github/stars/sepehr071/awesome-iran-mcp?style=social)](https://github.com/sepehr071/awesome-iran-mcp)
@@ -46,7 +48,31 @@ Put a few of them together and one sentence does a day of tab-hopping (illustrat
 Every server is a small Python package on PyPI, run with [`uvx`](https://docs.astral.sh/uv/). No API key and
 no install step, except `payping-mcp` and `bale-mcp`, which act on your own account.
 
-**One server** (Claude Code):
+**Claude Code plugins** (server + skill, pick what you want): add the marketplace once, then choose
+servers in the `/plugin` Discover tab, or install by name.
+
+```bash
+claude plugin marketplace add sepehr071/awesome-iran-mcp
+claude plugin install digikala@iran-mcp            # one server
+claude plugin install iran-travel@iran-mcp         # a bundle: food, shopping, beauty, travel, health, books
+claude plugin install iran-all@iran-mcp            # every read-only site server
+```
+
+`claude plugin install <name> --marketplace sepehr071/awesome-iran-mcp` does both steps in one command.
+`payping` and `bale` act on your own account, so no bundle includes them; install them by name.
+
+**Skills for other agents** (Codex, Cursor, Gemini CLI, ...): pick the skills you want, then add each server
+with the config below.
+
+```bash
+npx skills add sepehr071/awesome-iran-mcp
+```
+
+**Grok Build** reads the same marketplace: `grok plugin marketplace add sepehr071/awesome-iran-mcp`, then install
+servers one by one (Grok doesn't install a bundle's members). Which agent supports what:
+[PLUGINS.md](PLUGINS.md#compatibility).
+
+**One server** (Claude Code, without the plugin):
 
 ```bash
 claude mcp add digikala -- uvx digikala-mcp
@@ -143,6 +169,9 @@ This repo is built to be read by agents as much as by people:
 | [`TOOLS.md`](TOOLS.md) | All 308 tools grouped by server, one line each |
 | [`llms.txt`](llms.txt) | Short index for LLMs ([llmstxt.org](https://llmstxt.org)) |
 | [`.mcp.json`](.mcp.json) | Ready-to-use config for every server |
+| [`.claude-plugin/marketplace.json`](.claude-plugin/marketplace.json) | The `iran-mcp` plugin marketplace: one plugin per server plus bundles |
+| [`plugins/`](plugins) | Each plugin: its MCP server, pinned to a release, and a `SKILL.md` with when to use it and its rules |
+| [`PLUGINS.md`](PLUGINS.md) | Agent compatibility, and how a server release reaches plugin users |
 
 Paste this into your agent to set it up:
 
@@ -176,9 +205,12 @@ Pull every server to its latest `main` and rebuild the catalog:
 
 ```bash
 git submodule update --init --remote
-python scripts/catalog.py            # rewrites servers.json, TOOLS.md, .mcp.json
+python scripts/catalog.py            # rewrites servers.json, TOOLS.md, .mcp.json, plugins/, .claude-plugin/
 python scripts/banner.py             # redraws both banners with the new counts
+claude plugin validate .             # checks the marketplace and every plugin
 ```
+
+A nightly GitHub Action does all of this and commits the result. The full release flow is in [PLUGINS.md](PLUGINS.md).
 
 Bugs and feature requests for a server go to that server's own repo.
 
@@ -209,6 +241,15 @@ No. The site servers are read-only on purpose. Your agent finds and compares; yo
 
 You need [uv](https://docs.astral.sh/uv/getting-started/installation/). `uvx` downloads the right Python and the
 package on first run.
+</details>
+
+<details>
+<summary><b>How do I get updates?</b></summary>
+
+Plugins pin each server to a release, so a plugin update is a server update. Turn on auto-update once in
+`/plugin` → **Marketplaces** → `iran-mcp`, or run `claude plugin update <name>@iran-mcp`. A plain
+`uvx digikala-mcp` config keeps running its cached copy; run `uvx digikala-mcp@latest --help` once and restart
+your client to upgrade it.
 </details>
 
 ## License

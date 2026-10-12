@@ -1,0 +1,15 @@
+{
+  "name": "iran-travel",
+  "description": "Everything for flights, trains, buses, hotels, villas or tours in Iran: Otaghak, Jabama, MrBilit, Flytoday.",
+  "author": {
+    "name": "sepehr071",
+    "url": "https://github.com/sepehr071"
+  },
+  "homepage": "https://github.com/sepehr071/awesome-iran-mcp",
+  "dependencies": [
+    "otaghak",
+    "jabama",
+    "mrbilit",
+    "flytoday"
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "name": "iran-all",
+  "description": "All 17 read-only Iranian site servers in one install.",
+  "author": {
+    "name": "sepehr071",
+    "url": "https://github.com/sepehr071"
+  },
+  "homepage": "https://github.com/sepehr071/awesome-iran-mcp",
+  "dependencies": [
+    "snapp",
+    "okala",
+    "digikala",
+    "technolife",
+    "masterkala",
+    "khanoumi",
+    "asalbanoo",
+    "shopino",
+    "otaghak",
+    "jabama",
+    "mrbilit",
+    "flytoday",
+    "paziresh24",
+    "doctoreto",
+    "taaghche",
+    "fidibo",
+    "30book"
+  ]
+}

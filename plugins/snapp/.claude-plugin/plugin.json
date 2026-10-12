@@ -1,0 +1,26 @@
+{
+  "name": "snapp",
+  "displayName": "Snappfood & SnappMarket",
+  "version": "0.1.1",
+  "description": "Unofficial read-only Snappfood & SnappMarket: search food and groceries, compare prices, deals.",
+  "author": {
+    "name": "sepehr071",
+    "url": "https://github.com/sepehr071"
+  },
+  "homepage": "https://github.com/sepehr071/awesome-iran-mcp",
+  "repository": "https://github.com/sepehr071/snapp-mcp",
+  "license": "MIT",
+  "keywords": [
+    "iran",
+    "food",
+    "snappfood.ir"
+  ],
+  "mcpServers": {
+    "snapp": {
+      "command": "uvx",
+      "args": [
+        "snapp-mcp@0.1.1"
+      ]
+    }
+  }
+}

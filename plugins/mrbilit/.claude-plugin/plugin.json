@@ -1,0 +1,26 @@
+{
+  "name": "mrbilit",
+  "displayName": "MrBilit",
+  "version": "0.2.0",
+  "description": "Unofficial read-only MrBilit: Iranian flights, trains, buses, taxis and hotels, seats and prices.",
+  "author": {
+    "name": "sepehr071",
+    "url": "https://github.com/sepehr071"
+  },
+  "homepage": "https://github.com/sepehr071/awesome-iran-mcp",
+  "repository": "https://github.com/sepehr071/mrbilit-mcp",
+  "license": "MIT",
+  "keywords": [
+    "iran",
+    "travel",
+    "mrbilit.com"
+  ],
+  "mcpServers": {
+    "mrbilit": {
+      "command": "uvx",
+      "args": [
+        "mrbilit-mcp@0.2.0"
+      ]
+    }
+  }
+}

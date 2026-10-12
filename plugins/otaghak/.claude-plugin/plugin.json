@@ -1,0 +1,26 @@
+{
+  "name": "otaghak",
+  "displayName": "Otaghak",
+  "version": "0.1.2",
+  "description": "Unofficial read-only Otaghak: search Iranian villas, availability, exact stay prices, reviews.",
+  "author": {
+    "name": "sepehr071",
+    "url": "https://github.com/sepehr071"
+  },
+  "homepage": "https://github.com/sepehr071/awesome-iran-mcp",
+  "repository": "https://github.com/sepehr071/otaghak-mcp",
+  "license": "MIT",
+  "keywords": [
+    "iran",
+    "travel",
+    "otaghak.com"
+  ],
+  "mcpServers": {
+    "otaghak": {
+      "command": "uvx",
+      "args": [
+        "otaghak-mcp@0.1.2"
+      ]
+    }
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "name": "30book",
+  "displayName": "30book",
+  "version": "0.1.0",
+  "description": "Unofficial read-only 30book: search Iranian printed books, compare editions and prices.",
+  "author": {
+    "name": "sepehr071",
+    "url": "https://github.com/sepehr071"
+  },
+  "homepage": "https://github.com/sepehr071/awesome-iran-mcp",
+  "repository": "https://github.com/sepehr071/30book-mcp",
+  "license": "MIT",
+  "keywords": [
+    "iran",
+    "books",
+    "30book.com"
+  ],
+  "mcpServers": {
+    "30book": {
+      "command": "uvx",
+      "args": [
+        "30book-mcp@0.1.0"
+      ]
+    }
+  }
+}
