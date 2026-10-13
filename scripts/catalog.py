@@ -15,7 +15,7 @@ from urllib.parse import urlparse
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 MARKETPLACE = "iran-mcp"
-OWNER = {"name": "sepehr071", "url": "https://github.com/sepehr071"}
+OWNER = {"name": "Sepehr Radmard", "email": "sepehrr80@gmail.com", "url": "https://github.com/sepehr071"}
 HOME = "https://github.com/sepehr071/awesome-iran-mcp"
 
 # category -> what a user wants when they need it; used in skill and bundle descriptions

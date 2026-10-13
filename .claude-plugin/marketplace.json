@@ -2,7 +2,8 @@
   "name": "iran-mcp",
   "description": "MCP servers and skills for Iranian websites: shopping, food, travel, doctors, books, crypto.",
   "owner": {
-    "name": "sepehr071",
+    "name": "Sepehr Radmard",
+    "email": "sepehrr80@gmail.com",
     "url": "https://github.com/sepehr071"
   },
   "plugins": [
