@@ -1,7 +1,7 @@
 {
   "name": "masterkala",
   "displayName": "MasterKala",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "description": "Unofficial read-only MasterKala: search gadgets, compare prices and specs, stock, delivery, deals.",
   "author": {
     "name": "Sepehr Radmard",
@@ -20,7 +20,7 @@
     "masterkala": {
       "command": "uvx",
       "args": [
-        "masterkala-mcp@0.2.1"
+        "masterkala-mcp@0.2.2"
       ]
     }
   }

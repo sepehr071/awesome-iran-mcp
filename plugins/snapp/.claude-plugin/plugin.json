@@ -1,7 +1,7 @@
 {
   "name": "snapp",
   "displayName": "Snappfood & SnappMarket",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "Unofficial read-only Snappfood & SnappMarket: search food and groceries, compare prices, deals.",
   "author": {
     "name": "Sepehr Radmard",
@@ -20,7 +20,7 @@
     "snapp": {
       "command": "uvx",
       "args": [
-        "snapp-mcp@0.1.2"
+        "snapp-mcp@0.1.3"
       ]
     }
   }

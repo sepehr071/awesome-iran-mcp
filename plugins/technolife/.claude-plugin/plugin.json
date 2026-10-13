@@ -1,7 +1,7 @@
 {
   "name": "technolife",
   "displayName": "Technolife",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "description": "Unofficial read-only Technolife: search electronics, compare sellers and installment prices, deals.",
   "author": {
     "name": "Sepehr Radmard",
@@ -20,7 +20,7 @@
     "technolife": {
       "command": "uvx",
       "args": [
-        "technolife-mcp@0.2.1"
+        "technolife-mcp@0.2.2"
       ]
     }
   }

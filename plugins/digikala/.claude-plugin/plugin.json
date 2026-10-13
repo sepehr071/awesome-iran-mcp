@@ -1,7 +1,7 @@
 {
   "name": "digikala",
   "displayName": "Digikala",
-  "version": "0.3.1",
+  "version": "0.3.2",
   "description": "Unofficial read-only Digikala: search products, compare sellers, price history, reviews, deals.",
   "author": {
     "name": "Sepehr Radmard",
@@ -20,7 +20,7 @@
     "digikala": {
       "command": "uvx",
       "args": [
-        "digikala-mcp@0.3.1"
+        "digikala-mcp@0.3.2"
       ]
     }
   }
