@@ -1,6 +1,9 @@
 """Draw assets/banner.svg (English) and assets/banner.fa.svg (Persian) in a frosted-glass style.
 
 Counts come from servers.json, so run scripts/catalog.py first:  python scripts/banner.py
+
+Also writes assets/social.svg (1280x640) for GitHub's social preview, which needs a PNG:
+  chrome --headless=new --hide-scrollbars --window-size=1280,640 --screenshot=assets/social.png assets/social.svg
 """
 
 import base64
@@ -134,7 +137,9 @@ def icons(px: float, py: float, fa: bool) -> str:
     return "\n  ".join(out)
 
 
-def banner(fa: bool, servers: int, tools: int) -> str:
+def banner(fa: bool, servers: int, tools: int, h: int = H) -> str:
+    """h > H centres the banner on a taller full-bleed canvas (GitHub social preview is 1280x640)."""
+    oy, rx = (h - H) // 2, 28 if h == H else 0
     card_x, panel_x = (650, 40) if fa else (40, 670)
     card_w, panel_w = 590, 570
     if fa:
@@ -158,14 +163,15 @@ def banner(fa: bool, servers: int, tools: int) -> str:
         pills.append(pill(x, 300, w, text, font, color, fa))
         x = x + w + 14 if not fa else x - 14
 
-    return f"""<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="{W}" height="{H}" viewBox="0 0 {W} {H}" role="img" aria-labelledby="t d">
+    return f"""<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="{W}" height="{h}" viewBox="0 0 {W} {h}" role="img" aria-labelledby="t d">
   <title id="t">awesome-iran-mcp</title>
   <desc id="d">{desc}</desc>
   {DEFS}
 
-  <rect width="{W}" height="{H}" rx="28" fill="url(#bg)"/>
+  <rect width="{W}" height="{h}" rx="{rx}" fill="url(#bg)"/>
+  <g transform="translate(0 {oy})">
   <g clip-path="url(#frame)"><use href="#blobs" filter="url(#soft)" opacity="0.85"/></g>
-  <clipPath id="frame"><rect width="{W}" height="{H}" rx="28"/></clipPath>
+  <clipPath id="frame"><rect y="{-oy}" width="{W}" height="{h}" rx="{rx}"/></clipPath>
 
   {glass("card", card_x, 30, card_w, 400, 40)}
   {glass("panel", panel_x, 30, panel_w, 400, 40)}
@@ -178,6 +184,7 @@ def banner(fa: bool, servers: int, tools: int) -> str:
   <text x="{tx}" y="396" text-anchor="{anchor}" font-family="{LATIN}" font-size="15" fill="#fff" fill-opacity="0.7">Claude Code plugins · Agent Skills · any MCP client</text>
 
   {icons(panel_x + 38, 46, fa)}
+  </g>
 </svg>
 """
 
@@ -205,8 +212,8 @@ def embed_fonts(svg: str) -> str:
 def main() -> None:
     catalog = json.loads((ROOT / "servers.json").read_text(encoding="utf-8"))
     servers, tools = len(catalog), sum(s["tool_count"] for s in catalog)
-    for name, fa in (("banner.svg", False), ("banner.fa.svg", True)):
-        svg = embed_fonts(banner(fa, servers, tools))
+    for name, fa, h in (("banner.svg", False, H), ("banner.fa.svg", True, H), ("social.svg", False, 640)):
+        svg = embed_fonts(banner(fa, servers, tools, h))
         (ROOT / "assets" / name).write_text(svg, encoding="utf-8", newline="\n")
     print(f"banners written: {servers} servers, {tools} tools")
 
