@@ -55,3 +55,6 @@
 [submodule "servers/bale-mcp"]
 	path = servers/bale-mcp
 	url = https://github.com/sepehr071/bale-mcp.git
+[submodule "servers/swapwallet-mcp"]
+	path = servers/swapwallet-mcp
+	url = https://github.com/SwapWallet/swapwallet-mcp.git

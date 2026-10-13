@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="assets/banner.fa.svg" alt="awesome-iran-mcp: ۱۹ سرور MCP غیررسمی و ۳۰۸ ابزار برای فروشگاه‌ها، غذا، سفر، سلامت و کتاب ایرانی، برای Claude، Cursor و Copilot" width="100%">
+<img src="assets/banner.fa.svg" alt="awesome-iran-mcp: ۲۰ سرور MCP و ۳۲۱ ابزار برای فروشگاه‌ها، غذا، سفر، سلامت، کتاب و صرافی رمزارز ایرانی، برای Claude، Cursor و Copilot" width="100%">
 
 [English](README.md) · **فارسی**
 
@@ -12,7 +12,7 @@
 
 <p align="center">
 <b>وب ایران را به ایجنت هوش مصنوعی‌تان بدهید.</b><br>
-۱۹ سرور MCP متن‌باز و غیررسمی برای ایران و سایت‌های فارسی: دیجی‌کالا، اسنپ‌فود، جاباما، مستربلیط، پذیرش۲۴، طاقچه و بقیه.<br>
+۱۹ سرور MCP متن‌باز و غیررسمی برای ایران و سایت‌های فارسی: دیجی‌کالا، اسنپ‌فود، جاباما، مستربلیط، پذیرش۲۴، طاقچه و بقیه، به‌اضافهٔ سرور رسمی سواپ‌ولت.<br>
 جست‌وجو، مقایسهٔ قیمت به تومان، پیدا کردن نوبت خالی و تخفیف‌های امروز، از داخل Claude، Cursor، GitHub Copilot در VS Code یا هر کلاینت MCP.<br>
 به‌صورت پلاگین Claude Code همراه با اسکیل نصب کنید، یا به‌صورت Agent Skills برای Codex، Cursor، Antigravity و Grok Build.
 </p>
@@ -25,7 +25,7 @@
 
 ## چرا؟
 
-سایت‌های ایرانی برای ایجنت‌ها ساخته نشده‌اند. بیشترشان API عمومی ندارند، یک صفحه قیمت را ریال نشان می‌دهد و صفحهٔ بعد تومان، و هر سایت بهترین تخفیف‌هایش را پشت یک منوی متفاوت پنهان کرده است. هر سرور این مجموعه API واقعی (و مستندنشدهٔ) یک سایت را نقشه‌برداری و تست کرده و آن را به شکل ابزارهای تمیز MCP با قیمت **تومان** در اختیار ایجنت می‌گذارد.
+سایت‌های ایرانی برای ایجنت‌ها ساخته نشده‌اند. بیشترشان API عمومی ندارند، یک صفحه قیمت را ریال نشان می‌دهد و صفحهٔ بعد تومان، و هر سایت بهترین تخفیف‌هایش را پشت یک منوی متفاوت پنهان کرده است. هر سرور پایتونی این مجموعه API واقعی (و مستندنشدهٔ) یک سایت را نقشه‌برداری و تست کرده و آن را به شکل ابزارهای تمیز MCP با قیمت **تومان** در اختیار ایجنت می‌گذارد. `swapwallet-mcp` سرور خود سواپ‌ولت است و روی API مستند خودش ساخته شده.
 
 چند سرور را کنار هم بگذارید تا یک جمله کار یک روز گشتن بین تب‌ها را انجام دهد (مثال نمایشی):
 
@@ -41,7 +41,7 @@
 
 ## شروع سریع
 
-هر سرور یک پکیج کوچک پایتون روی PyPI است که با [`uvx`](https://docs.astral.sh/uv/) اجرا می‌شود. نه کلید API لازم است و نه نصب جداگانه؛ فقط `payping-mcp` و `bale-mcp` روی حساب خودتان کار می‌کنند و توکن می‌خواهند.
+هر سرور یک پکیج کوچک پایتون روی PyPI است که با [`uvx`](https://docs.astral.sh/uv/) اجرا می‌شود، جز `swapwallet-mcp` که خود سواپ‌ولت میزبانی‌اش می‌کند: با آدرسش اضافه‌اش می‌کنید و یک بار با OAuth وارد حساب می‌شوید. سرورهای سایت‌ها نه حساب می‌خواهند و نه کلید API. `payping-mcp` و `bale-mcp` با توکن شما روی حساب خودتان کار می‌کنند و `swapwallet-mcp` با ورود شما به سواپ‌ولت.
 
 **پلاگین‌های Claude Code** (سرور + اسکیل، هر کدام را که خواستید): یک بار مارکت‌پلیس را اضافه کنید، بعد سرورها را در تب Discover دستور `/plugin` انتخاب کنید یا با نام نصب کنید.
 
@@ -56,7 +56,7 @@ claude plugin install iran-all@iran-mcp            # every read-only site server
 
 <div dir="rtl">
 
-دستور `claude plugin install <name> --marketplace sepehr071/awesome-iran-mcp` هر دو مرحله را با یک دستور انجام می‌دهد. `payping` و `bale` روی حساب خودتان کار می‌کنند، برای همین در هیچ بسته‌ای نیستند؛ آن‌ها را با نام نصب کنید.
+دستور `claude plugin install <name> --marketplace sepehr071/awesome-iran-mcp` هر دو مرحله را با یک دستور انجام می‌دهد. `payping`، `bale` و `swapwallet` روی حساب خودتان کار می‌کنند، برای همین در هیچ بسته‌ای نیستند؛ آن‌ها را با نام نصب کنید. سواپ‌ولت همین سرور را با همین قوانین به‌صورت پلاگین خودش هم منتشر کرده است (`swapwallet@swapwallet` از [SwapWallet/swapwallet-mcp](https://github.com/SwapWallet/swapwallet-mcp)). فقط یکی از این دو را نصب کنید، وگرنه سرور دو بار اضافه می‌شود.
 
 **اسکیل برای ایجنت‌های دیگر** (Codex، Cursor، Gemini CLI و ...): اسکیل‌های لازم را انتخاب کنید و بعد هر سرور را با کانفیگ پایین اضافه کنید.
 
@@ -76,6 +76,7 @@ npx skills add sepehr071/awesome-iran-mcp
 
 ```bash
 claude mcp add digikala -- uvx digikala-mcp
+claude mcp add --transport http swapwallet https://swapwallet.app/mcp   # hosted; then sign in from /mcp
 ```
 
 <div dir="rtl">
@@ -95,7 +96,9 @@ claude mcp add digikala -- uvx digikala-mcp
 
 <div dir="rtl">
 
-**هر ۱۹ سرور با هم:** این مخزن را کلون کنید و در Claude Code باز کنید. فایل [`.mcp.json`](.mcp.json) همهٔ سرورها را ثبت می‌کند؛ هر کدام را که لازم دارید تأیید کنید.
+`swapwallet-mcp` با آدرسش اضافه می‌شود و هر کلاینت آدرس را به شکل خودش می‌گیرد (Windsurf با `serverUrl`، و Claude Desktop از Settings ← Connectors): [راه‌اندازی آن در هر کلاینت](https://github.com/SwapWallet/swapwallet-mcp#connect).
+
+**هر ۲۰ سرور با هم:** این مخزن را کلون کنید و در Claude Code باز کنید. فایل [`.mcp.json`](.mcp.json) همهٔ سرورها را ثبت می‌کند؛ هر کدام را که لازم دارید تأیید کنید.
 
 </div>
 
@@ -107,7 +110,7 @@ cd awesome-iran-mcp && claude
 <div dir="rtl">
 
 > [!TIP]
-> ۳۰۸ ابزار کانتکست زیادی می‌گیرد. به‌جای همه، فقط سرورهای لازم برای همان کار را فعال کنید.
+> ۳۲۱ ابزار کانتکست زیادی می‌گیرد. به‌جای همه، فقط سرورهای لازم برای همان کار را فعال کنید.
 
 ## سرورها
 
@@ -158,12 +161,13 @@ cd awesome-iran-mcp && claude
 | [fidibo-mcp](https://github.com/sepehr071/fidibo-mcp) | [فیدیبو](https://fidibo.com) | ۱۱ | [![PyPI](https://img.shields.io/pypi/v/fidibo-mcp?label=&color=2fe0cf)](https://pypi.org/project/fidibo-mcp/) | [![Last commit](https://img.shields.io/github/last-commit/sepehr071/fidibo-mcp?label=&color=ffc23d)](https://github.com/sepehr071/fidibo-mcp/commits/main) | کتاب الکترونیکی و صوتی: قیمت، فیدیبو پلاس، نظرها، پرفروش‌ها، کتاب رایگان |
 | [30book-mcp](https://github.com/sepehr071/30book-mcp) | [سی‌بوک](https://www.30book.com) | ۱۴ | [![PyPI](https://img.shields.io/pypi/v/30book-mcp?label=&color=2fe0cf)](https://pypi.org/project/30book-mcp/) | [![Last commit](https://img.shields.io/github/last-commit/sepehr071/30book-mcp?label=&color=ffc23d)](https://github.com/sepehr071/30book-mcp/commits/main) | کتاب چاپی: قیمت پشت جلد و با تخفیف، موجودی، چاپ‌ها، شابک، تخفیف‌ها |
 
-### 💳 حساب‌های خودتان (توکن لازم است)
+### 💳 حساب‌های خودتان (توکن یا ورود لازم است)
 
 | سرور | سایت | ابزار | نسخه | آخرین تغییر | ایجنت چه می‌تواند بکند |
 |---|---|---:|:---:|:---:|---|
 | [payping-mcp](https://github.com/sepehr071/payping-mcp) | [پی‌پینگ](https://www.payping.ir) | ۲۱ | [![PyPI](https://img.shields.io/pypi/v/payping-mcp?label=&color=2fe0cf)](https://pypi.org/project/payping-mcp/) | [![Last commit](https://img.shields.io/github/last-commit/sepehr071/payping-mcp?label=&color=ffc23d)](https://github.com/sepehr071/payping-mcp/commits/main) | خواندن موجودی، فروش و مشتری‌ها؛ ساخت محصول، لینک پرداخت، کوپن و فاکتور |
 | [bale-mcp](https://github.com/sepehr071/bale-mcp) | پیام‌رسان [بله](https://bale.ai) | ۱۳ | [![PyPI](https://img.shields.io/pypi/v/bale-mcp?label=&color=2fe0cf)](https://pypi.org/project/bale-mcp/) | [![Last commit](https://img.shields.io/github/last-commit/sepehr071/bale-mcp?label=&color=ffc23d)](https://github.com/sepehr071/bale-mcp/commits/main) | خواندن و پاسخ دادن به پیام‌های ربات شما، پرسیدن و منتظر جواب ماندن، ارسال فایل |
+| [swapwallet-mcp](https://github.com/SwapWallet/swapwallet-mcp) | [سواپ‌ولت](https://swapwallet.app) (رسمی، میزبانی‌شده) | ۱۳ | [![MCP Registry](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fregistry.modelcontextprotocol.io%2Fv0.1%2Fservers%2Fapp.swapwallet%252Fmcp%2Fversions%2Flatest&query=%24.server.version&label=&color=2fe0cf)](https://registry.modelcontextprotocol.io/v0.1/servers/app.swapwallet%2Fmcp/versions/latest) | [![Last commit](https://img.shields.io/github/last-commit/SwapWallet/swapwallet-mcp?label=&color=ffc23d)](https://github.com/SwapWallet/swapwallet-mcp/commits/main) | خواندن موجودی، سود و زیان و تاریخچه؛ درخواست سواپ، انتقال و برداشت که فقط بعد از تأیید شما در تلگرام انجام می‌شود |
 
 فهرست همهٔ ابزارها با یک خط توضیح: [TOOLS.md](TOOLS.md)
 
@@ -174,12 +178,12 @@ cd awesome-iran-mcp && claude
 | فایل | چیست |
 |---|---|
 | [`AGENTS.md`](AGENTS.md) | کدام سرور برای کدام کار، قراردادها، قوانین ایمنی، نحوهٔ کار در این مخزن |
-| [`servers.json`](servers.json) | کاتالوگ ماشین‌خوان: پکیج، نسخه، دسته، متغیرهای محیطی و همهٔ ابزارهای هر سرور |
-| [`TOOLS.md`](TOOLS.md) | هر ۳۰۸ ابزار به تفکیک سرور |
+| [`servers.json`](servers.json) | کاتالوگ ماشین‌خوان: پکیج یا آدرس، نسخه، دسته، متغیرهای محیطی و همهٔ ابزارهای هر سرور |
+| [`TOOLS.md`](TOOLS.md) | هر ۳۲۱ ابزار به تفکیک سرور |
 | [`llms.txt`](llms.txt) | فهرست کوتاه برای LLMها |
 | [`.mcp.json`](.mcp.json) | تنظیمات آماده برای همهٔ سرورها |
 | [`.claude-plugin/marketplace.json`](.claude-plugin/marketplace.json) | مارکت‌پلیس پلاگین `iran-mcp`: یک پلاگین برای هر سرور به‌اضافهٔ بسته‌ها |
-| [`plugins/`](plugins) | هر پلاگین: سرور MCP آن، پین‌شده روی یک نسخهٔ منتشرشده، و یک `SKILL.md` که می‌گوید کی و با چه قوانینی استفاده شود |
+| [`plugins/`](plugins) | هر پلاگین: سرور MCP آن (پکیجی پین‌شده روی یک نسخهٔ منتشرشده، یا آدرس یک سرور میزبانی‌شده) و یک `SKILL.md` که می‌گوید کی و با چه قوانینی استفاده شود |
 | [`PLUGINS.md`](PLUGINS.md) | سازگاری با ایجنت‌ها، و اینکه نسخهٔ جدید یک سرور چطور به کاربران پلاگین می‌رسد |
 
 این را به ایجنت‌تان بدهید تا خودش راه‌اندازی کند:
@@ -195,13 +199,13 @@ Read https://raw.githubusercontent.com/sepehr071/awesome-iran-mcp/main/AGENTS.md
 ## قراردادهای مشترک
 
 - **قیمت‌ها همیشه تومان است**، حتی وقتی API سایت ریال برمی‌گرداند.
-- **فقط خواندنی.** سرورهای خرید، سفر، سلامت و کتاب هرگز وارد حساب نمی‌شوند، سبد خرید پر نمی‌کنند، رزرو یا پرداخت نمی‌کنند. `payping-mcp` و `bale-mcp` می‌توانند بنویسند، ولی فقط روی حساب خودتان، با توکن خودتان، روی سیستم خودتان.
+- **سرورهای سایت‌ها فقط خواندنی‌اند.** سرورهای خرید، سفر، سلامت و کتاب هرگز وارد حساب نمی‌شوند، سبد خرید پر نمی‌کنند، رزرو یا پرداخت نمی‌کنند. `payping-mcp` و `bale-mcp` می‌توانند بنویسند، ولی فقط روی حساب خودتان، با توکن خودتان، روی سیستم خودتان. `swapwallet-mcp` بعد از ورود شما روی حساب سواپ‌ولت خودتان کار می‌کند و سواپ، انتقال یا برداشتی که درخواست کند فقط بعد از تأیید شما در تلگرام انجام می‌شود.
 - **تصویر:** نتایج محصول، اقامتگاه، هتل و پزشک در صورت وجود یک لینک `image` دارند.
-- **پروکسی:** هر سرور یک متغیر اختیاری `<NAME>_MCP_PROXY` می‌خواند (مثلاً `DIGIKALA_MCP_PROXY`) برای سایت‌هایی که IP شما را مسدود می‌کنند. تنظیمات پروکسی سیستم نادیده گرفته می‌شود. نام دقیق‌ها در [`servers.json`](servers.json) است.
+- **پروکسی:** هر سرور پایتونی یک متغیر اختیاری `<NAME>_MCP_PROXY` می‌خواند (مثلاً `DIGIKALA_MCP_PROXY`) برای سایت‌هایی که IP شما را مسدود می‌کنند. تنظیمات پروکسی سیستم نادیده گرفته می‌شود. نام دقیق‌ها در [`servers.json`](servers.json) است.
 
 ## کار با سورس
 
-هر سرور مخزن خودش را دارد و اینجا به‌صورت git submodule در پوشهٔ `servers/` قرار گرفته است.
+هر سرور مخزن خودش را دارد و اینجا به‌صورت git submodule در پوشهٔ `servers/` قرار گرفته است. مخزن یک سرور میزبانی‌شده `server.json` و تنظیمات کلاینت‌ها را دارد، نه کدش را؛ `catalog.py` ابزارهایش را از server card که خود سرور منتشر می‌کند می‌خواند.
 
 </div>
 
@@ -229,7 +233,7 @@ claude plugin validate .
 <details>
 <summary><b>این سرورها رسمی هستند؟</b></summary>
 
-نه. غیررسمی‌اند و به هیچ‌کدام از سایت‌ها وابسته نیستند. همان endpointهایی را صدا می‌زنند که اپ وب خود سایت استفاده می‌کند. این APIها مستند نیستند و ممکن است تغییر کنند؛ اگر چیزی خراب شد در مخزن همان سرور issue باز کنید.
+همه جز یکی غیررسمی‌اند و به سایت‌ها وابسته نیستند. همان endpointهایی را صدا می‌زنند که اپ وب خود سایت استفاده می‌کند. این APIها مستند نیستند و ممکن است تغییر کنند؛ اگر چیزی خراب شد در مخزن همان سرور issue باز کنید. <code>swapwallet-mcp</code> سرور خود سواپ‌ولت است و مستنداتش در <a href="https://swapwallet.app/docs/mcp">swapwallet.app/docs/mcp</a> است.
 </details>
 
 <details>
@@ -241,25 +245,25 @@ claude plugin validate .
 <details>
 <summary><b>ایجنت می‌تواند برایم سفارش بدهد یا پرداخت کند؟</b></summary>
 
-نه. سرورهای سایت‌ها عمداً فقط خواندنی‌اند. ایجنت پیدا و مقایسه می‌کند؛ خرید با شماست.
+روی سایت‌ها نه: سرورهای سایت‌ها عمداً فقط خواندنی‌اند. ایجنت پیدا و مقایسه می‌کند؛ خرید با شماست. استثنا حساب سواپ‌ولت خودتان است: با <code>swapwallet-mcp</code> ایجنت می‌تواند درخواست سواپ، انتقال یا برداشت بدهد و تا شما در تلگرام تأیید نکنید چیزی جابه‌جا نمی‌شود.
 </details>
 
 <details>
 <summary><b>پایتون لازم دارم؟</b></summary>
 
-فقط <a href="https://docs.astral.sh/uv/getting-started/installation/">uv</a> لازم است. <code>uvx</code> در اولین اجرا پایتون مناسب و پکیج را دانلود می‌کند.
+فقط <a href="https://docs.astral.sh/uv/getting-started/installation/">uv</a> لازم است. <code>uvx</code> در اولین اجرا پایتون مناسب و پکیج را دانلود می‌کند. <code>swapwallet-mcp</code> روی سرورهای سواپ‌ولت اجرا می‌شود و نصب لازم ندارد.
 </details>
 
 <details>
 <summary><b>به‌روزرسانی‌ها را چطور بگیرم؟</b></summary>
 
-پلاگین‌ها هر سرور را روی یک نسخهٔ منتشرشده پین می‌کنند، پس به‌روزرسانی پلاگین یعنی به‌روزرسانی سرور. یک بار در <code>/plugin</code> ← <b>Marketplaces</b> ← <code>iran-mcp</code> به‌روزرسانی خودکار را روشن کنید، یا <code>claude plugin update &lt;name&gt;@iran-mcp</code> را اجرا کنید. تنظیم سادهٔ <code>uvx digikala-mcp</code> همان نسخهٔ کش‌شده را اجرا می‌کند؛ برای ارتقا یک بار <code>uvx digikala-mcp@latest --help</code> را اجرا کنید و کلاینت را دوباره باز کنید.
+پلاگین‌ها هر سرور پایتونی را روی یک نسخهٔ منتشرشده پین می‌کنند، پس به‌روزرسانی پلاگین یعنی به‌روزرسانی سرور. <code>swapwallet-mcp</code> میزبانی‌شده است: سواپ‌ولت هر بار که نسخهٔ تازه‌ای منتشر کند سرور به‌روز می‌شود و به‌روزرسانی پلاگین فقط اسکیل تازه را می‌آورد. یک بار در <code>/plugin</code> ← <b>Marketplaces</b> ← <code>iran-mcp</code> به‌روزرسانی خودکار را روشن کنید، یا <code>claude plugin update &lt;name&gt;@iran-mcp</code> را اجرا کنید. تنظیم سادهٔ <code>uvx digikala-mcp</code> همان نسخهٔ کش‌شده را اجرا می‌کند؛ برای ارتقا یک بار <code>uvx digikala-mcp@latest --help</code> را اجرا کنید و کلاینت را دوباره باز کنید.
 </details>
 
 اگر این مجموعه چند بار گشتن بین تب‌ها را برایتان کم کرد، ستاره‌دار کردن مخزن به پیدا شدن آن توسط دیگران کمک می‌کند.
 
 ## مجوز
 
-[MIT](LICENSE). هر سرور در مخزن خودش با مجوز MIT منتشر شده است. نام‌ها، لوگوها و نشان‌های تجاری سایت‌ها متعلق به صاحبانشان است و فقط برای معرفی هر سایت آمده‌اند.
+[MIT](LICENSE). هر سرور پایتونی در مخزن خودش با مجوز MIT منتشر شده است. نام‌ها، لوگوها و نشان‌های تجاری سایت‌ها متعلق به صاحبانشان است و فقط برای معرفی هر سایت آمده‌اند.
 
 </div>

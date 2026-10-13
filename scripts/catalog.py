@@ -1,4 +1,5 @@
-"""Rebuild servers.json, TOOLS.md, .mcp.json and the Claude Code plugin marketplace from the submodules in servers/.
+"""Rebuild servers.json, TOOLS.md, .mcp.json and the Claude Code plugin marketplace from the submodules in servers/
+(plus, for hosted servers, the server card each one publishes).
 
 Run from the repo root after `git submodule update --init --remote`:  python scripts/catalog.py
 """
@@ -28,6 +29,7 @@ USE = {
     "books": "ebooks, audiobooks or printed books",
     "business": "to manage their own PayPing merchant account",
     "messaging": "to run their own Bale messenger bot",
+    "crypto": "to check or use their own SwapWallet crypto wallet",
 }
 
 # extra lines for a server's skill, beyond the shared rules
@@ -61,6 +63,13 @@ SERVERS = {
     "bale-mcp": ("messaging", "https://bale.ai"),
 }
 
+# name -> (category, site url) for servers their owner hosts, listed after SERVERS. The submodule holds the server's
+# MCP Registry server.json (with `remotes`); tools/list needs the user's sign-in, so the tools, sign-in and read-only
+# status come from the server card the server publishes (card()).
+REMOTE = {
+    "swapwallet-mcp": ("crypto", "https://swapwallet.app"),
+}
+
 
 def tools(src: pathlib.Path) -> list[dict]:
     """Every function decorated with @tool("Title") under src, in file order."""
@@ -74,6 +83,13 @@ def tools(src: pathlib.Path) -> list[dict]:
                     doc = (ast.get_docstring(node) or "").strip().split("\n")[0]
                     out.append({"name": node.name, "title": ast.literal_eval(dec.args[0]), "summary": doc})
     return out
+
+
+def card(url: str) -> dict:
+    """The MCP server card (SEP-1649, SEP-2127) published next to a hosted server's endpoint."""
+    u = urlparse(url)
+    with urllib.request.urlopen(f"{u.scheme}://{u.netloc}/.well-known/mcp/server-card.json", timeout=30) as r:
+        return json.load(r)
 
 
 def main() -> None:
@@ -111,8 +127,43 @@ def main() -> None:
             entry["env"] = {e: "${" + e + ":-}" for e in required}
         mcp[name.removesuffix("-mcp")] = entry
 
-        md += [f"## {meta['title']} (`{name}`, {len(found)} tools)", "", meta["description"], ""]
-        md += [f"- `{t['name']}`: {t['summary'] or t['title']}" for t in found]
+    for name, (category, site) in REMOTE.items():
+        meta = json.loads((ROOT / "servers" / name / "server.json").read_text(encoding="utf-8"))
+        url = meta["remotes"][0]["url"]
+        info = card(url)
+        login = info.get("authentication", {})
+        if login.get("required") and "oauth2" not in login.get("schemes", []):
+            raise SystemExit(f"{name}: hosted servers must use OAuth or no sign-in, the card says {login}")
+        found = []
+        for t in info["tools"]:
+            # the description's first sentence, like a package tool's first docstring line
+            summary = re.split(r"(?<=\.)\s+", t["description"].strip(), maxsplit=1)[0]
+            found.append({"name": t["name"], "title": t.get("title") or t["name"], "summary": summary})
+        catalog.append(
+            {
+                "name": name,
+                "title": meta["title"],
+                "category": category,
+                "site": site,
+                "description": meta["description"],
+                "version": meta["version"],
+                "url": url,
+                "repository": meta["repository"]["url"],
+                "registry_name": meta["name"],
+                "auth": "oauth" if login.get("required") else "none",
+                # like a package server with no required token: no sign-in, and no tool that changes anything
+                "read_only": not login.get("required")
+                and all(t.get("annotations", {}).get("readOnlyHint") for t in info["tools"]),
+                "env": [],
+                "tool_count": len(found),
+                "tools": found,
+            }
+        )
+        mcp[name.removesuffix("-mcp")] = {"type": "http", "url": url}
+
+    for s in catalog:
+        md += [f"## {s['title']} (`{s['name']}`, {s['tool_count']} tools)", "", s["description"], ""]
+        md += [f"- `{t['name']}`: {t['summary'] or t['title']}" for t in s["tools"]]
         md.append("")
 
     old_total = sum(s["tool_count"] for s in json.loads((ROOT / "servers.json").read_text(encoding="utf-8")))
@@ -128,6 +179,12 @@ def main() -> None:
 def skill(s: dict, key: str, entry: dict) -> str:
     """SKILL.md for one server: when to use it, how to get its tools, and the rules it follows."""
     host = urlparse(s["site"]).netloc.removeprefix("www.")
+    # a server whose repo ships its own skill keeps its own rules, so the two skills can't disagree
+    own = ROOT / "servers" / s["name"] / "skills" / key / "SKILL.md"
+    intro, rules = "", ""
+    if own.exists():
+        body = own.read_text(encoding="utf-8").split("\n# ", 1)[1].split("\n", 1)[1]  # drop front matter and title
+        intro, _, rules = body.strip().partition("\n## ")
     lines = [
         "---",
         f"name: {key}",
@@ -142,17 +199,17 @@ def skill(s: dict, key: str, entry: dict) -> str:
         "",
         s["description"],
         "",
-        f"The tools below come from the `{s['name']}` MCP server. If they are not available, install it with "
-        f"`claude mcp add {key} -- {s['run']}`, or add `\"{key}\": {json.dumps(entry)}` to the client's "
-        "MCP servers config. It needs [uv](https://docs.astral.sh/uv/). Restart the session after installing.",
+        *([intro.strip(), ""] if intro else []),
+        install(s, key, entry),
         "",
         "## Tools",
         "",
         *[f"- `{t['name']}`: {t['summary'] or t['title']}" for t in s["tools"]],
         "",
-        "## Rules",
-        "",
     ]
+    if rules:
+        return "\n".join(lines) + "\n## " + rules + "\n"
+    lines += ["## Rules", ""]
     if s["read_only"]:
         lines += [
             "- Prices are Toman. Convert before comparing with a Rial figure from anywhere else.",
@@ -160,9 +217,9 @@ def skill(s: dict, key: str, entry: dict) -> str:
             "- Keep request rates low. These are undocumented site APIs that can change or rate-limit.",
         ]
     else:
-        secrets = ", ".join(f"`{e['name']}`" for e in s["env"] if e["isRequired"])
+        access = ", ".join(f"`{e['name']}`" for e in s["env"] if e["isRequired"]) or "OAuth sign-in"
         lines.append(
-            f"- This server acts on the user's own account ({secrets}). Confirm with the user before any call "
+            f"- This server acts on the user's own account ({access}). Confirm with the user before any call "
             "that creates, sends, edits or deletes something."
         )
     for e in s["env"]:
@@ -171,6 +228,41 @@ def skill(s: dict, key: str, entry: dict) -> str:
     if s["name"] in NOTES:
         lines.append(f"- {NOTES[s['name']]}")
     return "\n".join(lines) + "\n"
+
+
+def install(s: dict, key: str, entry: dict) -> str:
+    """The skill's lines on where its tools come from and how to add the server."""
+    if "url" not in s:
+        return (
+            f"The tools below come from the `{s['name']}` MCP server. If they are not available, install it with "
+            f"`claude mcp add {key} -- {s['run']}`, or add `\"{key}\": {json.dumps(entry)}` to the client's "
+            "MCP servers config. It needs [uv](https://docs.astral.sh/uv/). Restart the session after installing."
+        )
+    url = s["url"]
+    # each client takes a remote server in its own shape
+    lines = [
+        f"The tools below come from {s['title']}'s hosted MCP server at {url} (Streamable HTTP). If they are not "
+        "available, add it to the client:",
+        "",
+        f"- Claude Code: `claude mcp add --transport http {key} {url}`",
+        f"- Codex CLI: `codex mcp add {key} --url {url}`",
+        f"- Gemini CLI: `gemini mcp add --transport http {key} {url}`",
+        f'- Cursor: `"{key}": {{"url": "{url}"}}` under `mcpServers` in `~/.cursor/mcp.json`',
+        f'- VS Code: `"{key}": {json.dumps(entry)}` under `servers` in `.vscode/mcp.json`',
+        f'- Windsurf: `"{key}": {{"serverUrl": "{url}"}}` under `mcpServers` in `~/.codeium/windsurf/mcp_config.json`',
+        "- Claude Desktop and claude.ai: Settings → Connectors → Add custom connector, with the URL",
+        "",
+        "Restart the session after installing.",
+    ]
+    if s["auth"] == "oauth":
+        lines[-1] += (
+            " The user then signs in once with OAuth. The client runs the sign-in, not the agent, and Claude Code "
+            "doesn't open the browser by itself: run `/mcp`, pick the server and choose Authenticate, or run "
+            f"`claude mcp login <name>` with the name `claude mcp list` shows (`plugin:{key}:{key}` when installed as "
+            f"a plugin). Codex: `codex mcp login {key}`. Gemini CLI: `/mcp auth {key}`. Other clients show a sign-in "
+            "button or prompt."
+        )
+    return "\n".join(lines)
 
 
 def released(package: str, version: str) -> str:
@@ -198,9 +290,12 @@ def plugins(catalog: list[dict], mcp: dict) -> None:
 
     for s in catalog:
         key = s["name"].removesuffix("-mcp")
-        # pin the exact release: bare `uvx pkg` keeps running its cached copy forever
-        version = released(s["pypi"], s["version"])
-        server = {**mcp[key], "args": [f"{s['pypi']}@{version}"]}
+        if "url" in s:  # hosted: its owner deploys it, so there is no release to pin
+            version, server = s["version"], mcp[key]
+        else:
+            # pin the exact release: bare `uvx pkg` keeps running its cached copy forever
+            version = released(s["pypi"], s["version"])
+            server = {**mcp[key], "args": [f"{s['pypi']}@{version}"]}
         write(
             key,
             {
@@ -234,7 +329,7 @@ def plugins(catalog: list[dict], mcp: dict) -> None:
 
     marketplace = {
         "name": MARKETPLACE,
-        "description": "Unofficial MCP servers and skills for Iranian websites: shopping, food, travel, doctors, books.",
+        "description": "MCP servers and skills for Iranian websites: shopping, food, travel, doctors, books, crypto.",
         "owner": OWNER,
         "plugins": entries,
     }

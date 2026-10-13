@@ -1,18 +1,18 @@
 <div align="center">
 
-<img src="assets/banner.svg" alt="awesome-iran-mcp: 19 unofficial MCP servers and 308 tools for Iranian shopping, food, travel, health and book sites, for Claude, Cursor and Copilot" width="100%">
+<img src="assets/banner.svg" alt="awesome-iran-mcp: 20 MCP servers and 321 tools for Iranian shopping, food, travel, health, book and crypto sites, for Claude, Cursor and Copilot" width="100%">
 
 **English** · [فارسی](README.fa.md)
 
 # Iran MCP servers: awesome-iran-mcp
 
 **Give your AI agent the Iranian web.**<br>
-19 unofficial, open-source Persian-web MCP servers for Digikala, Snappfood, Jabama, MrBilit, Paziresh24, Taaghche and more.<br>
+19 unofficial, open-source Persian-web MCP servers for Digikala, Snappfood, Jabama, MrBilit, Paziresh24, Taaghche and more, plus SwapWallet's official one.<br>
 Search, compare prices in Toman, find free slots and today's deals from Claude, Cursor, GitHub Copilot in VS Code or any MCP client.<br>
 Install them as Claude Code plugins with skills, or as Agent Skills for Codex, Cursor, Antigravity and Grok Build.
 
-[![Servers](https://img.shields.io/badge/servers-19-3fd6c9)](#the-servers)
-[![Tools](https://img.shields.io/badge/tools-308-f4b54a)](TOOLS.md)
+[![Servers](https://img.shields.io/badge/servers-20-3fd6c9)](#the-servers)
+[![Tools](https://img.shields.io/badge/tools-321-f4b54a)](TOOLS.md)
 [![Claude Code plugins](https://img.shields.io/badge/Claude_Code-plugin_marketplace-d97757)](#quick-start)
 [![MCP Registry](https://img.shields.io/badge/MCP_Registry-io.github.sepehr071-7c3aed)](https://registry.modelcontextprotocol.io/?q=sepehr071)
 [![License: MIT](https://img.shields.io/badge/license-MIT-16a34a)](LICENSE)
@@ -27,8 +27,9 @@ Install them as Claude Code plugins with skills, or as Agent Skills for Codex, C
 ## Why
 
 Iranian websites are not built for AI agents. Most have no public API, prices come in Rial on one page and Toman
-on the next, and every site hides its best deals behind a different menu. Each server here maps one site's real
-(undocumented) API, tests it, and exposes it as clean MCP tools with prices in **Toman**.
+on the next, and every site hides its best deals behind a different menu. Each package server here maps one site's
+real (undocumented) API, tests it, and exposes it as clean MCP tools with prices in **Toman**. `swapwallet-mcp` is
+SwapWallet's own server, built on its documented API.
 
 Put a few of them together and one sentence does a day of tab-hopping (illustrative example):
 
@@ -45,8 +46,10 @@ Put a few of them together and one sentence does a day of tab-hopping (illustrat
 
 ## Quick start
 
-Every server is a small Python package on PyPI, run with [`uvx`](https://docs.astral.sh/uv/). No API key and
-no install step, except `payping-mcp` and `bale-mcp`, which act on your own account.
+Every server is a small Python package on PyPI, run with [`uvx`](https://docs.astral.sh/uv/), except
+`swapwallet-mcp`, which SwapWallet hosts: you add it by URL and sign in once with OAuth. The site servers need no
+account and no API key. `payping-mcp` and `bale-mcp` work on your own account with your token, and `swapwallet-mcp`
+with your SwapWallet sign-in.
 
 **Claude Code plugins** (server + skill, pick what you want): add the marketplace once, then choose
 servers in the `/plugin` Discover tab, or install by name.
@@ -59,7 +62,10 @@ claude plugin install iran-all@iran-mcp            # every read-only site server
 ```
 
 `claude plugin install <name> --marketplace sepehr071/awesome-iran-mcp` does both steps in one command.
-`payping` and `bale` act on your own account, so no bundle includes them; install them by name.
+`payping`, `bale` and `swapwallet` act on your own account, so no bundle includes them; install them by name.
+SwapWallet also publishes this server as its own plugin (`swapwallet@swapwallet`, from
+[SwapWallet/swapwallet-mcp](https://github.com/SwapWallet/swapwallet-mcp)), with the same rules. Install one of the
+two: with both you get the server twice.
 
 **Skills for other agents** (Codex, Cursor, Gemini CLI, ...): pick the skills you want, then add each server
 with the config below.
@@ -76,6 +82,7 @@ servers one by one (Grok doesn't install a bundle's members). Which agent suppor
 
 ```bash
 claude mcp add digikala -- uvx digikala-mcp
+claude mcp add --transport http swapwallet https://swapwallet.app/mcp   # hosted; then sign in from /mcp
 ```
 
 **Any MCP client** (Claude Desktop, Cursor, Windsurf, VS Code, ...):
@@ -89,7 +96,10 @@ claude mcp add digikala -- uvx digikala-mcp
 }
 ```
 
-**All 19 at once:** clone this repo and open it in Claude Code. The [`.mcp.json`](.mcp.json) at the root
+`swapwallet-mcp` is added by URL, and each client takes a URL in its own shape (Windsurf uses `serverUrl`, Claude
+Desktop takes it under Settings → Connectors): see [its setup for each client](https://github.com/SwapWallet/swapwallet-mcp#connect).
+
+**All 20 at once:** clone this repo and open it in Claude Code. The [`.mcp.json`](.mcp.json) at the root
 registers every server; approve the ones you want.
 
 ```bash
@@ -98,7 +108,7 @@ cd awesome-iran-mcp && claude
 ```
 
 > [!TIP]
-> 308 tools is a lot of context. Enable the servers for the task at hand rather than all of them.
+> 321 tools is a lot of context. Enable the servers for the task at hand rather than all of them.
 
 ## The servers
 
@@ -149,12 +159,13 @@ cd awesome-iran-mcp && claude
 | [fidibo-mcp](https://github.com/sepehr071/fidibo-mcp) | [Fidibo](https://fidibo.com) | 11 | [![PyPI](https://img.shields.io/pypi/v/fidibo-mcp?label=&color=2fe0cf)](https://pypi.org/project/fidibo-mcp/) | [![Last commit](https://img.shields.io/github/last-commit/sepehr071/fidibo-mcp?label=&color=ffc23d)](https://github.com/sepehr071/fidibo-mcp/commits/main) | Ebooks and audiobooks: prices, Fidibo Plus, reviews, bestsellers, free books |
 | [30book-mcp](https://github.com/sepehr071/30book-mcp) | [30book](https://www.30book.com) | 14 | [![PyPI](https://img.shields.io/pypi/v/30book-mcp?label=&color=2fe0cf)](https://pypi.org/project/30book-mcp/) | [![Last commit](https://img.shields.io/github/last-commit/sepehr071/30book-mcp?label=&color=ffc23d)](https://github.com/sepehr071/30book-mcp/commits/main) | Printed books: list and discounted price, stock, editions, ISBN, deals |
 
-### 💳 Your own accounts (need a token)
+### 💳 Your own accounts (need a token or sign-in)
 
 | Server | Site | Tools | Version | Updated | What your agent can do |
 |---|---|---:|:---:|:---:|---|
 | [payping-mcp](https://github.com/sepehr071/payping-mcp) | [PayPing](https://www.payping.ir) | 21 | [![PyPI](https://img.shields.io/pypi/v/payping-mcp?label=&color=2fe0cf)](https://pypi.org/project/payping-mcp/) | [![Last commit](https://img.shields.io/github/last-commit/sepehr071/payping-mcp?label=&color=ffc23d)](https://github.com/sepehr071/payping-mcp/commits/main) | Read balance, sales, customers; create products, payment links, coupons, invoices |
 | [bale-mcp](https://github.com/sepehr071/bale-mcp) | [Bale](https://bale.ai) messenger | 13 | [![PyPI](https://img.shields.io/pypi/v/bale-mcp?label=&color=2fe0cf)](https://pypi.org/project/bale-mcp/) | [![Last commit](https://img.shields.io/github/last-commit/sepehr071/bale-mcp?label=&color=ffc23d)](https://github.com/sepehr071/bale-mcp/commits/main) | Read and answer your bot's messages, ask and wait for replies, send files |
+| [swapwallet-mcp](https://github.com/SwapWallet/swapwallet-mcp) | [SwapWallet](https://swapwallet.app) (official, hosted) | 13 | [![MCP Registry](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fregistry.modelcontextprotocol.io%2Fv0.1%2Fservers%2Fapp.swapwallet%252Fmcp%2Fversions%2Flatest&query=%24.server.version&label=&color=2fe0cf)](https://registry.modelcontextprotocol.io/v0.1/servers/app.swapwallet%2Fmcp/versions/latest) | [![Last commit](https://img.shields.io/github/last-commit/SwapWallet/swapwallet-mcp?label=&color=ffc23d)](https://github.com/SwapWallet/swapwallet-mcp/commits/main) | Read balances, P&L and history; request swaps, transfers and withdrawals that run only after you approve them in Telegram |
 
 Every tool, with a one-line summary: [TOOLS.md](TOOLS.md).
 
@@ -165,12 +176,12 @@ This repo is built to be read by agents as much as by people:
 | File | What it is |
 |---|---|
 | [`AGENTS.md`](AGENTS.md) | Which server to pick for which task, conventions, safety rules, how to work in this repo |
-| [`servers.json`](servers.json) | Machine-readable catalog: package, version, category, env vars and every tool of each server |
-| [`TOOLS.md`](TOOLS.md) | All 308 tools grouped by server, one line each |
+| [`servers.json`](servers.json) | Machine-readable catalog: package or URL, version, category, env vars and every tool of each server |
+| [`TOOLS.md`](TOOLS.md) | All 321 tools grouped by server, one line each |
 | [`llms.txt`](llms.txt) | Short index for LLMs ([llmstxt.org](https://llmstxt.org)) |
 | [`.mcp.json`](.mcp.json) | Ready-to-use config for every server |
 | [`.claude-plugin/marketplace.json`](.claude-plugin/marketplace.json) | The `iran-mcp` plugin marketplace: one plugin per server plus bundles |
-| [`plugins/`](plugins) | Each plugin: its MCP server, pinned to a release, and a `SKILL.md` with when to use it and its rules |
+| [`plugins/`](plugins) | Each plugin: its MCP server (a package pinned to a release, or a hosted server's URL) and a `SKILL.md` with when to use it and its rules |
 | [`PLUGINS.md`](PLUGINS.md) | Agent compatibility, and how a server release reaches plugin users |
 
 Paste this into your agent to set it up:
@@ -182,17 +193,21 @@ Read https://raw.githubusercontent.com/sepehr071/awesome-iran-mcp/main/AGENTS.md
 ## Shared conventions
 
 - **Prices are always Toman**, even where the site's API returns Rial.
-- **Read-only by design.** Shop, travel, health and book servers never log in, fill a basket, book or pay.
+- **Site servers are read-only.** Shop, travel, health and book servers never log in, fill a basket, book or pay.
   `payping-mcp` and `bale-mcp` can write, but only to your own account, with your token, on your machine.
+  `swapwallet-mcp` works on your own SwapWallet account after you sign in, and a swap, transfer or withdrawal it asks
+  for runs only after you approve it in Telegram.
 - **Images:** product, stay, hotel and doctor results carry an `image` URL where the site has one.
-- **Proxy:** every server reads an optional `<NAME>_MCP_PROXY` env var (e.g. `DIGIKALA_MCP_PROXY`) for sites
+- **Proxy:** every package server reads an optional `<NAME>_MCP_PROXY` env var (e.g. `DIGIKALA_MCP_PROXY`) for sites
   that block your IP. System proxy settings are ignored. See [`servers.json`](servers.json) for exact names.
-- Same layout everywhere: `src/<pkg>/http.py`, `registry.py`, `server.py`, offline tests on recorded fixtures,
+- Same layout for every package server: `src/<pkg>/http.py`, `registry.py`, `server.py`, offline tests on recorded fixtures,
   `-m live` tests against the real site, published to PyPI and the [MCP Registry](https://registry.modelcontextprotocol.io).
 
 ## Working from source
 
-Each server lives in its own repo and is pinned here as a git submodule under `servers/`.
+Each server lives in its own repo and is pinned here as a git submodule under `servers/`. A hosted server's repo
+holds its `server.json` and client configs, not its code; `catalog.py` reads its tools from the server card it
+publishes.
 
 ```bash
 git clone --recurse-submodules https://github.com/sepehr071/awesome-iran-mcp
@@ -219,8 +234,9 @@ Bugs and feature requests for a server go to that server's own repo.
 <details>
 <summary><b>Are these official?</b></summary>
 
-No. They are unofficial and not affiliated with any of the sites. They call the same endpoints the sites' own web
+All but one are unofficial and not affiliated with the sites. They call the same endpoints the sites' own web
 apps use. Those APIs are undocumented and can change; open an issue on the server's repo when one breaks.
+`swapwallet-mcp` is SwapWallet's own server, documented at [swapwallet.app/docs/mcp](https://swapwallet.app/docs/mcp).
 </details>
 
 <details>
@@ -233,20 +249,23 @@ to a proxy with an Iranian exit.
 <details>
 <summary><b>Can my agent order or pay for me?</b></summary>
 
-No. The site servers are read-only on purpose. Your agent finds and compares; you buy.
+Not on the sites: the site servers are read-only on purpose. Your agent finds and compares; you buy. The exception
+is your own SwapWallet account: with `swapwallet-mcp` your agent can ask for a swap, transfer or withdrawal, and nothing
+moves until you approve it in Telegram.
 </details>
 
 <details>
 <summary><b>Do I need Python?</b></summary>
 
 You need [uv](https://docs.astral.sh/uv/getting-started/installation/). `uvx` downloads the right Python and the
-package on first run.
+package on first run. `swapwallet-mcp` runs on SwapWallet's servers and needs nothing installed.
 </details>
 
 <details>
 <summary><b>How do I get updates?</b></summary>
 
-Plugins pin each server to a release, so a plugin update is a server update. Turn on auto-update once in
+Plugins pin each package server to a release, so a plugin update is a server update. `swapwallet-mcp` is hosted: it
+changes whenever SwapWallet deploys it, and a plugin update only brings a new skill. Turn on auto-update once in
 `/plugin` → **Marketplaces** → `iran-mcp`, or run `claude plugin update <name>@iran-mcp`. A plain
 `uvx digikala-mcp` config keeps running its cached copy; run `uvx digikala-mcp@latest --help` once and restart
 your client to upgrade it.
@@ -256,4 +275,4 @@ If this saves you some tab-hopping, a star on the repo helps other people find i
 
 ## License
 
-[MIT](LICENSE). Each server is MIT licensed in its own repo. Site names, logos and trademarks belong to their owners and are shown only to identify each site.
+[MIT](LICENSE). Each package server is MIT licensed in its own repo. Site names, logos and trademarks belong to their owners and are shown only to identify each site.

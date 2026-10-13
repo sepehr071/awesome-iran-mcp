@@ -1,0 +1,24 @@
+{
+  "name": "swapwallet",
+  "displayName": "SwapWallet",
+  "version": "1.0.1",
+  "description": "Crypto wallet: balances, P&L, history. Swaps, transfers and withdrawals need Telegram approval.",
+  "author": {
+    "name": "sepehr071",
+    "url": "https://github.com/sepehr071"
+  },
+  "homepage": "https://github.com/sepehr071/awesome-iran-mcp",
+  "repository": "https://github.com/SwapWallet/swapwallet-mcp",
+  "license": "MIT",
+  "keywords": [
+    "iran",
+    "crypto",
+    "swapwallet.app"
+  ],
+  "mcpServers": {
+    "swapwallet": {
+      "type": "http",
+      "url": "https://swapwallet.app/mcp"
+    }
+  }
+}

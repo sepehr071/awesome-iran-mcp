@@ -1,7 +1,8 @@
 # AGENTS.md
 
-Guide for AI agents using or working on **awesome-iran-mcp**: 19 unofficial MCP servers for Iranian websites,
-308 tools in total. Each server is a Python package on PyPI, run as a stdio server with `uvx <package>`.
+Guide for AI agents using or working on **awesome-iran-mcp**: 20 MCP servers for Iranian websites, 321 tools in
+total. 19 are unofficial Python packages on PyPI, run as stdio servers with `uvx <package>`. `swapwallet-mcp` is
+SwapWallet's own hosted server (`https://swapwallet.app/mcp`), with OAuth sign-in.
 
 ## Pick a server
 
@@ -25,6 +26,7 @@ Guide for AI agents using or working on **awesome-iran-mcp**: 19 unofficial MCP 
 | Printed books | `30book-mcp` | `sb_search`, `sb_book`, `sb_deals` |
 | Merchant payments (user's own PayPing account) | `payping-mcp` | `payping_get_balance`, `payping_get_sales_summary` |
 | User's own Bale bot | `bale-mcp` | `bot_get_new_messages`, `bot_send_message` |
+| User's own crypto wallet: balances, history, swaps, withdrawals | `swapwallet-mcp` | `get_total_balance`, `get_transactions`; `request_swap`, then `get_action_request` |
 
 For the best price, query every server in a category (both doctor servers, all travel servers) and compare.
 Full tool list: [TOOLS.md](TOOLS.md). Machine-readable catalog with env vars: [servers.json](servers.json).
@@ -39,6 +41,12 @@ claude mcp add digikala -- uvx digikala-mcp          # Claude Code
 { "mcpServers": { "digikala": { "command": "uvx", "args": ["digikala-mcp"] } } }
 ```
 
+SwapWallet is hosted, so it is added by URL: `claude mcp add --transport http swapwallet https://swapwallet.app/mcp`.
+Other clients take the URL in their own shape; its skill and its
+[setup for each client](https://github.com/SwapWallet/swapwallet-mcp#connect) list them. The user then signs in with
+OAuth, in the client: Claude Code doesn't open a browser by itself, so tell the user to run `/mcp`, pick the server
+and choose Authenticate.
+
 As Claude Code plugins (MCP server plus a skill with usage rules), from the `iran-mcp` marketplace:
 
 ```bash
@@ -49,8 +57,8 @@ claude plugin install iran-all --marketplace sepehr071/awesome-iran-mcp     # al
 Bundles: `iran-all`, `iran-food`, `iran-shopping`, `iran-beauty`, `iran-travel`, `iran-health`, `iran-books`.
 Skills only, for any agent: `npx skills add sepehr071/awesome-iran-mcp`.
 
-The server key in config is the package name without `-mcp`. [`.mcp.json`](.mcp.json) holds all 19.
-Requires [uv](https://docs.astral.sh/uv/). Add only the servers the task needs: each one adds 11 to 23 tools.
+The server key in config is the package name without `-mcp`. [`.mcp.json`](.mcp.json) holds all 20.
+Requires [uv](https://docs.astral.sh/uv/) (`swapwallet-mcp` doesn't). Add only the servers the task needs: each one adds 11 to 23 tools.
 
 ## Rules every server follows
 
@@ -60,8 +68,14 @@ Requires [uv](https://docs.astral.sh/uv/). Add only the servers the task needs: 
 - `payping-mcp` (`PAYPING_TOKEN`) and `bale-mcp` (`BALE_BOT_TOKEN`) write to the user's own account.
   Confirm with the user before any `payping_create_*`, `payping_send_invoice`, `bot_send_*`, `bot_edit_message`
   or `bot_delete_message` call.
-- Timeouts or HTTP 403 outside Iran: set the server's `<NAME>_MCP_PROXY` env var (names in `servers.json`).
-- Keep request rates low. These are undocumented APIs; they can change or rate-limit.
+- `swapwallet-mcp` acts on the user's own SwapWallet account. Its `request_*` tools only file a request that the
+  user approves or cancels in Telegram within 15 minutes: tell them so, then call `get_action_request`, and never say
+  a swap, transfer or withdrawal happened before it reports `EXECUTED`. Confirm a crypto withdrawal's network and
+  address with the user first. Its skill covers the rest, including the `MCP_TELEGRAM_NOT_LINKED` and
+  `MCP_TWO_FACTOR_ACTIVE` errors.
+- Package servers, on timeouts or HTTP 403 outside Iran: set the server's `<NAME>_MCP_PROXY` env var (names in
+  `servers.json`).
+- Package servers call undocumented site APIs that can change or rate-limit. Keep request rates low.
 - `30book-mcp` is slow (2 to 5 s per list). `flytoday-mcp` searches are rate-limited per IP.
 
 ## Working on this repo
@@ -80,10 +94,17 @@ README.md / README.fa.md   English (default) and Persian docs; keep both in sync
 - Update servers: `git submodule update --init --remote && python scripts/catalog.py && python scripts/banner.py`,
   then commit the new pins and generated files.
 - Never edit `servers.json`, `TOOLS.md`, `.mcp.json`, `plugins/`, `.claude-plugin/` or the banners by hand.
-  Skill text comes from `skill()`, `USE` and `NOTES` in `scripts/catalog.py`; check with `claude plugin validate .`.
+  Skill text comes from `skill()`, `USE` and `NOTES` in `scripts/catalog.py`, except the rules of a server whose repo
+  ships its own `skills/<key>/SKILL.md`, which come from that file. Check with `claude plugin validate .`.
 - Add a server: `git submodule add https://github.com/sepehr071/<name>-mcp servers/<name>-mcp`, add it to
   `SERVERS` in `scripts/catalog.py` and `APPS` in `scripts/banner.py` (with its logo in `assets/logos/`), run both scripts, add a row to both
-  READMEs and the table above. Update the 19 / 308 counts written in both READMEs.
+  READMEs and the table above. Update the 20 / 321 counts written in both READMEs.
+- Add a hosted server: `git submodule add <its repo> servers/<name>-mcp` and an entry in `REMOTE` in
+  `scripts/catalog.py`, then the same `APPS`, logo, README, table and count steps. Its repo needs an MCP Registry
+  `server.json` with `remotes` (name, version, description, repository), and the server must publish a server card
+  at `<origin>/.well-known/mcp/server-card.json` with its `tools` (with annotations) and `authentication`.
+  `catalog.py` reads the tools from the card, marks the server read-only only when it needs no sign-in and every tool
+  is `readOnlyHint`, and stops on any sign-in other than OAuth.
 - Code changes to a server belong in that server's repo. Inside one: `uv sync`, `uv run ruff check .`,
   `uv run pytest -q` (offline), `uv run pytest -m live -q` (real site).
 - Release a server: bump `version` in its `pyproject.toml` and `server.json`, push a `v*` tag; CI publishes to

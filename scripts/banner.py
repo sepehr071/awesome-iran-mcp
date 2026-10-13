@@ -38,6 +38,7 @@ APPS = [
     ("30book", f"سی{ZWNJ}بوک", "30book.png", 0),
     ("PayPing", f"پی{ZWNJ}پینگ", "payping.png", 0),
     ("Bale", "بله", "bale.png", 0),
+    ("SwapWallet", f"سواپ{ZWNJ}ولت", "swapwallet.png", 0),
 ]
 
 # Vazirmatn is embedded into each banner (see embed_fonts); the rest is fallback

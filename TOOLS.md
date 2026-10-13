@@ -404,3 +404,21 @@ Private, local Bale bot for agents: read, search and answer messages, ask and wa
 - `bot_search_messages`: Search stored messages by text, newest first. Arabic and Persian yeh/kaf, Persian and Latin digits,
 - `bot_wait_for_reply`: Wait until someone writes in a chat or presses a button, then return the new messages (marked read).
 - `bot_download_file`: Download a file someone sent the bot to this computer (max 20 MB) and return its local path.
+
+## SwapWallet (`swapwallet-mcp`, 13 tools)
+
+Crypto wallet: balances, P&L, history. Swaps, transfers and withdrawals need Telegram approval.
+
+- `get_total_balance`: The user's total portfolio value plus a per-token breakdown of every non-zero holding.
+- `get_balance`: Balance and value of the given tokens only.
+- `get_user_info`: The user's profile, verification level and account settings.
+- `get_deposit_address`: The user's deposit address for a token on a network, creating one if needed.
+- `get_profit_and_loss`: Realized and unrealized profit and loss, for all assets or the given tokens.
+- `get_transactions`: Recent deposits, withdrawals, transfers and trades, newest first.
+- `get_contacts`: The user's saved SwapWallet contacts, ten per page.
+- `get_ibans`: The user's verified bank accounts, usable as a Rial withdrawal destination.
+- `get_action_request`: The current status of a request created by one of the request_* tools: PENDING while the user has not answered, then EXECUTED, REJECTED, EXPIRED or FAILED.
+- `request_swap`: Prices a swap between two tokens and sends it to the user's Telegram for approval.
+- `request_transfer`: Prepares a transfer to another SwapWallet user and sends it to the user's Telegram for approval.
+- `request_crypto_withdraw`: Prepares a crypto withdrawal and sends it to the user's Telegram for approval.
+- `request_fiat_withdraw`: Prepares a Rial (IRT) withdrawal to one of the user's verified IBANs and sends it to their Telegram for approval.

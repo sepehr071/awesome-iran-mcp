@@ -1,6 +1,6 @@
 {
   "name": "iran-mcp",
-  "description": "Unofficial MCP servers and skills for Iranian websites: shopping, food, travel, doctors, books.",
+  "description": "MCP servers and skills for Iranian websites: shopping, food, travel, doctors, books, crypto.",
   "owner": {
     "name": "sepehr071",
     "url": "https://github.com/sepehr071"
@@ -119,6 +119,12 @@
       "source": "./plugins/bale",
       "description": "Private, local Bale bot for agents: read, search and answer messages, ask and wait, files.",
       "category": "messaging"
+    },
+    {
+      "name": "swapwallet",
+      "source": "./plugins/swapwallet",
+      "description": "Crypto wallet: balances, P&L, history. Swaps, transfers and withdrawals need Telegram approval.",
+      "category": "crypto"
     },
     {
       "name": "iran-all",

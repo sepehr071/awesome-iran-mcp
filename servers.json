@@ -2024,5 +2024,87 @@
         "summary": "Download a file someone sent the bot to this computer (max 20 MB) and return its local path."
       }
     ]
+  },
+  {
+    "name": "swapwallet-mcp",
+    "title": "SwapWallet",
+    "category": "crypto",
+    "site": "https://swapwallet.app",
+    "description": "Crypto wallet: balances, P&L, history. Swaps, transfers and withdrawals need Telegram approval.",
+    "version": "1.0.1",
+    "url": "https://swapwallet.app/mcp",
+    "repository": "https://github.com/SwapWallet/swapwallet-mcp",
+    "registry_name": "app.swapwallet/mcp",
+    "auth": "oauth",
+    "read_only": false,
+    "env": [],
+    "tool_count": 13,
+    "tools": [
+      {
+        "name": "get_total_balance",
+        "title": "Total balance",
+        "summary": "The user's total portfolio value plus a per-token breakdown of every non-zero holding."
+      },
+      {
+        "name": "get_balance",
+        "title": "Balance of specific coins",
+        "summary": "Balance and value of the given tokens only."
+      },
+      {
+        "name": "get_user_info",
+        "title": "Account details",
+        "summary": "The user's profile, verification level and account settings."
+      },
+      {
+        "name": "get_deposit_address",
+        "title": "Deposit address",
+        "summary": "The user's deposit address for a token on a network, creating one if needed."
+      },
+      {
+        "name": "get_profit_and_loss",
+        "title": "Profit and loss",
+        "summary": "Realized and unrealized profit and loss, for all assets or the given tokens."
+      },
+      {
+        "name": "get_transactions",
+        "title": "Transaction history",
+        "summary": "Recent deposits, withdrawals, transfers and trades, newest first."
+      },
+      {
+        "name": "get_contacts",
+        "title": "Saved contacts",
+        "summary": "The user's saved SwapWallet contacts, ten per page."
+      },
+      {
+        "name": "get_ibans",
+        "title": "Verified IBANs",
+        "summary": "The user's verified bank accounts, usable as a Rial withdrawal destination."
+      },
+      {
+        "name": "get_action_request",
+        "title": "Check an approval request",
+        "summary": "The current status of a request created by one of the request_* tools: PENDING while the user has not answered, then EXECUTED, REJECTED, EXPIRED or FAILED."
+      },
+      {
+        "name": "request_swap",
+        "title": "Request a swap",
+        "summary": "Prices a swap between two tokens and sends it to the user's Telegram for approval."
+      },
+      {
+        "name": "request_transfer",
+        "title": "Request a transfer to another user",
+        "summary": "Prepares a transfer to another SwapWallet user and sends it to the user's Telegram for approval."
+      },
+      {
+        "name": "request_crypto_withdraw",
+        "title": "Request a crypto withdrawal",
+        "summary": "Prepares a crypto withdrawal and sends it to the user's Telegram for approval."
+      },
+      {
+        "name": "request_fiat_withdraw",
+        "title": "Request a Rial withdrawal",
+        "summary": "Prepares a Rial (IRT) withdrawal to one of the user's verified IBANs and sends it to their Telegram for approval."
+      }
+    ]
   }
 ]

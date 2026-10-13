@@ -4,11 +4,11 @@ How the `iran-mcp` plugin marketplace is built, which agents can use it, and wha
 
 ## What gets generated
 
-`python scripts/catalog.py` writes everything below from the submodules in `servers/`. Never edit these by hand.
+`python scripts/catalog.py` writes everything below from the submodules in `servers/` (and, for a hosted server, the server card it publishes). Never edit these by hand.
 
 ```
 .claude-plugin/marketplace.json        the `iran-mcp` marketplace: one entry per plugin
-plugins/<name>/                        one plugin per server (19)
+plugins/<name>/                        one plugin per server (20)
   .claude-plugin/plugin.json           manifest: version + the MCP server, pinned to that version
   skills/<name>/SKILL.md               when to use the server, its tools, its rules
 plugins/iran-<bundle>/                 bundles (7): a manifest with `dependencies` and nothing else
@@ -17,11 +17,16 @@ plugins/iran-<bundle>/                 bundles (7): a manifest with `dependencie
 
 - `<name>` is the package name without `-mcp` (`digikala`, `30book`, ...).
 - A server plugin's `version` is the server's release on PyPI. Its MCP server runs `uvx <package>@<version>`.
+  A hosted server's plugin (`swapwallet`) points its MCP server at the URL and takes `version` from the
+  `server.json` in its repo.
 - Bundles are `iran-all` (every read-only site server) plus one per category with two or more servers:
-  `iran-food`, `iran-shopping`, `iran-beauty`, `iran-travel`, `iran-health`, `iran-books`. `payping` and `bale`
-  act on the user's own account, so no bundle includes them.
+  `iran-food`, `iran-shopping`, `iran-beauty`, `iran-travel`, `iran-health`, `iran-books`. `payping`, `bale` and
+  `swapwallet` act on the user's own account, so no bundle includes them.
 - Bundles have no `version`. Claude Code then versions them by git commit, so a changed member list reaches users.
-- Skill text comes from `skill()`, `USE` and `NOTES` in `scripts/catalog.py`. Tool lists come from the server code.
+- Skill text comes from `skill()`, `USE` and `NOTES` in `scripts/catalog.py`. Tool lists come from the server code,
+  or a hosted server's card. A server whose repo ships `skills/<key>/SKILL.md` (`swapwallet`) keeps its own rules: they
+  replace the generated ones, so the skill here and the one in its own plugin say the same thing. SwapWallet's
+  `swapwallet@swapwallet` plugin runs the same server, so users install one of the two.
 
 Check after every change:
 
@@ -61,6 +66,8 @@ Notes:
   `"digikala": {"command": "uvx", "args": ["digikala-mcp"]}`. Antigravity keeps it in `mcp_config.json`
   (`~/.gemini/antigravity/` or `.agents/` in a project). Codex keeps it in `~/.codex/config.toml`
   (`codex mcp add digikala -- uvx digikala-mcp`). Cursor keeps it in `~/.cursor/mcp.json`.
+  A hosted server (`swapwallet`) is added by URL instead, in a shape that differs per client (`serverUrl` in
+  Windsurf, `codex mcp add swapwallet --url ...`, Settings → Connectors in Claude Desktop). Its skill lists each one.
 
 Native manifests for Codex (`.agents/plugins/`, `.codex-plugin/`) and Cursor (`.cursor-plugin/`) can be generated
 by `catalog.py` the same way, if those agents need one-command installs.
@@ -88,6 +95,7 @@ The chain from a commit in a server repo to a user's machine:
 | Version bumped on `main` but not on PyPI yet | unchanged | Nothing breaks. `released()` falls back to the newest version on PyPI. The next sync after the publish picks up the new version |
 | New or renamed tool | with the release | The skill lists it after the release. A renamed tool breaks anything that called the old name |
 | New or renamed env var in `server.json` | with the release | Required vars are passed through as `${VAR:-}`. Optional ones (like the proxy) are read from the user's environment |
+| Hosted server: new tools on the server, or a new `server.json` | new if `server.json`'s `version` changed | The new skill at their next plugin update; without a version bump, existing installs keep the old one. The server itself changes whenever its owner deploys it |
 
 ### Changes in this repo
 

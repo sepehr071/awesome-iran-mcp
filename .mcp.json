@@ -119,6 +119,10 @@
       "env": {
         "BALE_BOT_TOKEN": "${BALE_BOT_TOKEN:-}"
       }
+    },
+    "swapwallet": {
+      "type": "http",
+      "url": "https://swapwallet.app/mcp"
     }
   }
 }
