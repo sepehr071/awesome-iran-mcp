@@ -98,6 +98,12 @@
       "category": "health"
     },
     {
+      "name": "exiryab",
+      "source": "./plugins/exiryab",
+      "description": "Official read-only ExirYab: find Iranian doctors by name, city and specialty, with clinics and maps.",
+      "category": "health"
+    },
+    {
       "name": "taaghche",
       "source": "./plugins/taaghche",
       "description": "Unofficial read-only Taaghche: search Persian ebooks and audiobooks, compare prices, read reviews.",
@@ -166,7 +172,7 @@
     {
       "name": "iran-health",
       "source": "./plugins/iran-health",
-      "description": "Everything for a doctor, clinic or lab appointment in Iran: Paziresh24, Doctoreto.",
+      "description": "Everything for a doctor, clinic or lab appointment in Iran: Paziresh24, Doctoreto, ExirYab.",
       "category": "bundle"
     },
     {

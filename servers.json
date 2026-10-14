@@ -1706,6 +1706,51 @@
     ]
   },
   {
+    "name": "exiryab-mcp",
+    "title": "ExirYab",
+    "category": "health",
+    "site": "https://exiryab.com",
+    "description": "Official read-only ExirYab: find Iranian doctors by name, city and specialty, with clinics and maps.",
+    "version": "0.1.0",
+    "pypi": "exiryab-mcp",
+    "repository": "https://github.com/sshnevis/exiryab-mcp",
+    "registry_name": "io.github.sshnevis/exiryab-mcp",
+    "run": "uvx exiryab-mcp",
+    "read_only": true,
+    "env": [
+      {
+        "name": "EXIRYAB_MCP_PROXY",
+        "isRequired": false,
+        "isSecret": false,
+        "description": "Optional HTTP proxy URL for every request. System proxy settings are ignored."
+      },
+      {
+        "name": "EXIRYAB_MCP_BASE_URL",
+        "isRequired": false,
+        "isSecret": false,
+        "description": "Optional API base URL (default https://exiryab.com), e.g. a local ExirYab for development."
+      }
+    ],
+    "tool_count": 3,
+    "tools": [
+      {
+        "name": "ey_search_doctors",
+        "title": "Find a doctor",
+        "summary": "Find an Iranian doctor on exiryab.com by name, city and/or specialty: the best match plus alternatives, each with profile URL, clinics, phones, working hours and map links."
+      },
+      {
+        "name": "ey_cities",
+        "title": "List cities",
+        "summary": "Cities that have doctors on exiryab.com, with their province and doctor count, most doctors first."
+      },
+      {
+        "name": "ey_specialties",
+        "title": "List specialties",
+        "summary": "Medical specialties on exiryab.com with their doctor count, most doctors first; sub-specialties name their `parent`."
+      }
+    ]
+  },
+  {
     "name": "taaghche-mcp",
     "title": "Taaghche",
     "category": "books",

@@ -7,7 +7,7 @@
 # Iran MCP servers: awesome-iran-mcp
 
 **Give your AI agent the Iranian web.**<br>
-20 unofficial, open-source Persian-web MCP servers for Digikala, Divar, Snappfood, Jabama, MrBilit, Paziresh24, Taaghche and more, plus SwapWallet's official one.<br>
+20 unofficial, open-source Persian-web MCP servers for Digikala, Divar, Snappfood, Jabama, MrBilit, Paziresh24, Taaghche and more, plus official ones from ExirYab and SwapWallet.<br>
 Search, compare prices in Toman, find free slots and today's deals from Claude, Cursor, GitHub Copilot in VS Code or any MCP client.<br>
 Install them as Claude Code plugins with skills, or as Agent Skills for Codex, Cursor, Antigravity and Grok Build.
 
@@ -41,8 +41,8 @@ Full list, including changes for callers: [CHANGELOG.md](CHANGELOG.md).
 
 Iranian websites are not built for AI agents. Most have no public API, prices come in Rial on one page and Toman
 on the next, and every site hides its best deals behind a different menu. Each package server here maps one site's
-real (undocumented) API, tests it, and exposes it as clean MCP tools with prices in **Toman**. `swapwallet-mcp` is
-SwapWallet's own server, built on its documented API.
+real (undocumented) API, tests it, and exposes it as clean MCP tools with prices in **Toman**. `exiryab-mcp` and
+`swapwallet-mcp` are the sites' own servers, built on their documented APIs.
 
 Put a few of them together and one sentence does a day of tab-hopping (illustrative example):
 
@@ -169,6 +169,7 @@ cd awesome-iran-mcp && claude
 |---|---|---:|:---:|:---:|---|
 | [paziresh24-mcp](https://github.com/sepehr071/paziresh24-mcp) | [Paziresh24](https://www.paziresh24.com) | 12 | [![PyPI](https://img.shields.io/pypi/v/paziresh24-mcp?label=&color=2fe0cf)](https://pypi.org/project/paziresh24-mcp/) | [![Last commit](https://img.shields.io/github/last-commit/sepehr071/paziresh24-mcp?label=&color=ffc23d)](https://github.com/sepehr071/paziresh24-mcp/commits/main) | Doctors, visit prices, reviews, free appointment slots |
 | [doctoreto-mcp](https://github.com/sepehr071/doctoreto-mcp) | [Doctoreto](https://doctoreto.com) | 14 | [![PyPI](https://img.shields.io/pypi/v/doctoreto-mcp?label=&color=2fe0cf)](https://pypi.org/project/doctoreto-mcp/) | [![Last commit](https://img.shields.io/github/last-commit/sepehr071/doctoreto-mcp?label=&color=ffc23d)](https://github.com/sepehr071/doctoreto-mcp/commits/main) | Doctors, visit fees, free slots, reviews, clinics, labs, offers |
+| [exiryab-mcp](https://github.com/sshnevis/exiryab-mcp) | [ExirYab](https://exiryab.com) (official) | 3 | [![PyPI](https://img.shields.io/pypi/v/exiryab-mcp?label=&color=2fe0cf)](https://pypi.org/project/exiryab-mcp/) | [![Last commit](https://img.shields.io/github/last-commit/sshnevis/exiryab-mcp?label=&color=ffc23d)](https://github.com/sshnevis/exiryab-mcp/commits/main) | Find a doctor by name, city and specialty: profile, clinics, phones, hours, map location |
 
 ### 📚 Books
 
@@ -253,9 +254,10 @@ Bugs and feature requests for a server go to that server's own repo.
 <details>
 <summary><b>Are these official?</b></summary>
 
-All but one are unofficial and not affiliated with the sites. They call the same endpoints the sites' own web
+All but two are unofficial and not affiliated with the sites. They call the same endpoints the sites' own web
 apps use. Those APIs are undocumented and can change; open an issue on the server's repo when one breaks.
 `swapwallet-mcp` is SwapWallet's own server, documented at [swapwallet.app/docs/mcp](https://swapwallet.app/docs/mcp).
+`exiryab-mcp` is ExirYab's own server, on the public API listed in [exiryab.com/llms.txt](https://exiryab.com/llms.txt).
 </details>
 
 <details>

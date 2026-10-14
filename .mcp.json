@@ -90,6 +90,12 @@
         "doctoreto-mcp@0.3.0"
       ]
     },
+    "exiryab": {
+      "command": "uvx",
+      "args": [
+        "exiryab-mcp"
+      ]
+    },
     "taaghche": {
       "command": "uvx",
       "args": [

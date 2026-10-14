@@ -59,6 +59,7 @@ SERVERS = {
     "flytoday-mcp": ("travel", "https://www.flytoday.ir"),
     "paziresh24-mcp": ("health", "https://www.paziresh24.com"),
     "doctoreto-mcp": ("health", "https://doctoreto.com"),
+    "exiryab-mcp": ("health", "https://exiryab.com"),
     "taaghche-mcp": ("books", "https://taaghche.com"),
     "fidibo-mcp": ("books", "https://fidibo.com"),
     "30book-mcp": ("books", "https://www.30book.com"),
