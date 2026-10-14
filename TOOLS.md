@@ -309,6 +309,14 @@ Unofficial read-only Doctoreto: Iranian doctors, visit fees, free appointment ti
 - `dt_neighborhoods`: Neighborhoods of a city (most doctors first) and nearby cities, each with a doctor count.
 - `dt_insurances`: List basic and supplementary insurers with the ids dt_search_doctors(insurance_ids=...) takes.
 
+## ExirYab (`exiryab-mcp`, 3 tools)
+
+Official read-only ExirYab: find Iranian doctors by name, city and specialty, with clinics and maps.
+
+- `ey_search_doctors`: Find an Iranian doctor on exiryab.com by name, city and/or specialty: the best match plus alternatives, each with profile URL, clinics, phones, working hours and map links.
+- `ey_cities`: Cities that have doctors on exiryab.com, with their province and doctor count, most doctors first.
+- `ey_specialties`: Medical specialties on exiryab.com with their doctor count, most doctors first; sub-specialties name their `parent`.
+
 ## Taaghche (`taaghche-mcp`, 12 tools)
 
 Unofficial read-only Taaghche: search Persian ebooks and audiobooks, compare prices, read reviews.

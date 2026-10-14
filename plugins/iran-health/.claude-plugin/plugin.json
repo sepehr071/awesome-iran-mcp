@@ -1,6 +1,6 @@
 {
   "name": "iran-health",
-  "description": "Everything for a doctor, clinic or lab appointment in Iran: Paziresh24, Doctoreto.",
+  "description": "Everything for a doctor, clinic or lab appointment in Iran: Paziresh24, Doctoreto, ExirYab.",
   "author": {
     "name": "Sepehr Radmard",
     "email": "sepehrr80@gmail.com",
@@ -9,6 +9,7 @@
   "homepage": "https://github.com/sepehr071/awesome-iran-mcp",
   "dependencies": [
     "paziresh24",
-    "doctoreto"
+    "doctoreto",
+    "exiryab"
   ]
 }

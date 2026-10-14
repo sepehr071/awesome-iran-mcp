@@ -1,0 +1,27 @@
+{
+  "name": "exiryab",
+  "displayName": "ExirYab",
+  "version": "0.1.0",
+  "description": "Official read-only ExirYab: find Iranian doctors by name, city and specialty, with clinics and maps.",
+  "author": {
+    "name": "Sepehr Radmard",
+    "email": "sepehrr80@gmail.com",
+    "url": "https://github.com/sepehr071"
+  },
+  "homepage": "https://github.com/sepehr071/awesome-iran-mcp",
+  "repository": "https://github.com/sshnevis/exiryab-mcp",
+  "license": "MIT",
+  "keywords": [
+    "iran",
+    "health",
+    "exiryab.com"
+  ],
+  "mcpServers": {
+    "exiryab": {
+      "command": "uvx",
+      "args": [
+        "exiryab-mcp@0.1.0"
+      ]
+    }
+  }
+}

@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="assets/banner.fa.svg" alt="awesome-iran-mcp: ۲۰ سرور MCP و ۳۲۱ ابزار برای فروشگاه‌ها، غذا، سفر، سلامت، کتاب و صرافی رمزارز ایرانی، برای Claude، Cursor و Copilot" width="100%">
+<img src="assets/banner.fa.svg" alt="awesome-iran-mcp: ۲۱ سرور MCP و ۳۲۴ ابزار برای فروشگاه‌ها، غذا، سفر، سلامت، کتاب و صرافی رمزارز ایرانی، برای Claude، Cursor و Copilot" width="100%">
 
 [English](README.md) · **فارسی**
 
@@ -12,7 +12,7 @@
 
 <p align="center">
 <b>وب ایران را به ایجنت هوش مصنوعی‌تان بدهید.</b><br>
-۱۹ سرور MCP متن‌باز و غیررسمی برای ایران و سایت‌های فارسی: دیجی‌کالا، اسنپ‌فود، جاباما، مستربلیط، پذیرش۲۴، طاقچه و بقیه، به‌اضافهٔ سرور رسمی سواپ‌ولت.<br>
+۱۹ سرور MCP متن‌باز و غیررسمی برای ایران و سایت‌های فارسی: دیجی‌کالا، اسنپ‌فود، جاباما، مستربلیط، پذیرش۲۴، طاقچه و بقیه، به‌اضافهٔ سرورهای رسمی اکسیریاب و سواپ‌ولت.<br>
 جست‌وجو، مقایسهٔ قیمت به تومان، پیدا کردن نوبت خالی و تخفیف‌های امروز، از داخل Claude، Cursor، GitHub Copilot در VS Code یا هر کلاینت MCP.<br>
 به‌صورت پلاگین Claude Code همراه با اسکیل نصب کنید، یا به‌صورت Agent Skills برای Codex، Cursor، Antigravity و Grok Build.
 </p>
@@ -25,7 +25,7 @@
 
 ## چرا؟
 
-سایت‌های ایرانی برای ایجنت‌ها ساخته نشده‌اند. بیشترشان API عمومی ندارند، یک صفحه قیمت را ریال نشان می‌دهد و صفحهٔ بعد تومان، و هر سایت بهترین تخفیف‌هایش را پشت یک منوی متفاوت پنهان کرده است. هر سرور پایتونی این مجموعه API واقعی (و مستندنشدهٔ) یک سایت را نقشه‌برداری و تست کرده و آن را به شکل ابزارهای تمیز MCP با قیمت **تومان** در اختیار ایجنت می‌گذارد. `swapwallet-mcp` سرور خود سواپ‌ولت است و روی API مستند خودش ساخته شده.
+سایت‌های ایرانی برای ایجنت‌ها ساخته نشده‌اند. بیشترشان API عمومی ندارند، یک صفحه قیمت را ریال نشان می‌دهد و صفحهٔ بعد تومان، و هر سایت بهترین تخفیف‌هایش را پشت یک منوی متفاوت پنهان کرده است. هر سرور پایتونی این مجموعه API واقعی (و مستندنشدهٔ) یک سایت را نقشه‌برداری و تست کرده و آن را به شکل ابزارهای تمیز MCP با قیمت **تومان** در اختیار ایجنت می‌گذارد. `exiryab-mcp` و `swapwallet-mcp` سرورهای خود اکسیریاب و سواپ‌ولت‌اند و روی API مستند خودشان ساخته شده‌اند.
 
 چند سرور را کنار هم بگذارید تا یک جمله کار یک روز گشتن بین تب‌ها را انجام دهد (مثال نمایشی):
 
@@ -98,7 +98,7 @@ claude mcp add --transport http swapwallet https://swapwallet.app/mcp   # hosted
 
 `swapwallet-mcp` با آدرسش اضافه می‌شود و هر کلاینت آدرس را به شکل خودش می‌گیرد (Windsurf با `serverUrl`، و Claude Desktop از Settings ← Connectors): [راه‌اندازی آن در هر کلاینت](https://github.com/SwapWallet/swapwallet-mcp#connect).
 
-**هر ۲۰ سرور با هم:** این مخزن را کلون کنید و در Claude Code باز کنید. فایل [`.mcp.json`](.mcp.json) همهٔ سرورها را ثبت می‌کند؛ هر کدام را که لازم دارید تأیید کنید.
+**هر ۲۱ سرور با هم:** این مخزن را کلون کنید و در Claude Code باز کنید. فایل [`.mcp.json`](.mcp.json) همهٔ سرورها را ثبت می‌کند؛ هر کدام را که لازم دارید تأیید کنید.
 
 </div>
 
@@ -110,7 +110,7 @@ cd awesome-iran-mcp && claude
 <div dir="rtl">
 
 > [!TIP]
-> ۳۲۱ ابزار کانتکست زیادی می‌گیرد. به‌جای همه، فقط سرورهای لازم برای همان کار را فعال کنید.
+> ۳۲۴ ابزار کانتکست زیادی می‌گیرد. به‌جای همه، فقط سرورهای لازم برای همان کار را فعال کنید.
 
 ## سرورها
 
@@ -152,6 +152,7 @@ cd awesome-iran-mcp && claude
 |---|---|---:|:---:|:---:|---|
 | [paziresh24-mcp](https://github.com/sepehr071/paziresh24-mcp) | [پذیرش۲۴](https://www.paziresh24.com) | ۱۲ | [![PyPI](https://img.shields.io/pypi/v/paziresh24-mcp?label=&color=2fe0cf)](https://pypi.org/project/paziresh24-mcp/) | [![Last commit](https://img.shields.io/github/last-commit/sepehr071/paziresh24-mcp?label=&color=ffc23d)](https://github.com/sepehr071/paziresh24-mcp/commits/main) | پزشکان، هزینهٔ ویزیت، نظرها، نوبت‌های خالی |
 | [doctoreto-mcp](https://github.com/sepehr071/doctoreto-mcp) | [دکترتو](https://doctoreto.com) | ۱۴ | [![PyPI](https://img.shields.io/pypi/v/doctoreto-mcp?label=&color=2fe0cf)](https://pypi.org/project/doctoreto-mcp/) | [![Last commit](https://img.shields.io/github/last-commit/sepehr071/doctoreto-mcp?label=&color=ffc23d)](https://github.com/sepehr071/doctoreto-mcp/commits/main) | پزشکان، هزینهٔ ویزیت، نوبت خالی، نظرها، کلینیک‌ها، آزمایشگاه‌ها، تخفیف‌ها |
+| [exiryab-mcp](https://github.com/sshnevis/exiryab-mcp) | [اکسیریاب](https://exiryab.com) (رسمی) | ۳ | [![PyPI](https://img.shields.io/pypi/v/exiryab-mcp?label=&color=2fe0cf)](https://pypi.org/project/exiryab-mcp/) | [![Last commit](https://img.shields.io/github/last-commit/sshnevis/exiryab-mcp?label=&color=ffc23d)](https://github.com/sshnevis/exiryab-mcp/commits/main) | پیدا کردن پزشک با نام، شهر و تخصص: پروفایل، مطب‌ها، تلفن، ساعت کاری، موقعیت روی نقشه |
 
 ### 📚 کتاب
 
@@ -179,7 +180,7 @@ cd awesome-iran-mcp && claude
 |---|---|
 | [`AGENTS.md`](AGENTS.md) | کدام سرور برای کدام کار، قراردادها، قوانین ایمنی، نحوهٔ کار در این مخزن |
 | [`servers.json`](servers.json) | کاتالوگ ماشین‌خوان: پکیج یا آدرس، نسخه، دسته، متغیرهای محیطی و همهٔ ابزارهای هر سرور |
-| [`TOOLS.md`](TOOLS.md) | هر ۳۲۱ ابزار به تفکیک سرور |
+| [`TOOLS.md`](TOOLS.md) | هر ۳۲۴ ابزار به تفکیک سرور |
 | [`llms.txt`](llms.txt) | فهرست کوتاه برای LLMها |
 | [`.mcp.json`](.mcp.json) | تنظیمات آماده برای همهٔ سرورها |
 | [`.claude-plugin/marketplace.json`](.claude-plugin/marketplace.json) | مارکت‌پلیس پلاگین `iran-mcp`: یک پلاگین برای هر سرور به‌اضافهٔ بسته‌ها |
@@ -233,7 +234,7 @@ claude plugin validate .
 <details>
 <summary><b>این سرورها رسمی هستند؟</b></summary>
 
-همه جز یکی غیررسمی‌اند و به سایت‌ها وابسته نیستند. همان endpointهایی را صدا می‌زنند که اپ وب خود سایت استفاده می‌کند. این APIها مستند نیستند و ممکن است تغییر کنند؛ اگر چیزی خراب شد در مخزن همان سرور issue باز کنید. <code>swapwallet-mcp</code> سرور خود سواپ‌ولت است و مستنداتش در <a href="https://swapwallet.app/docs/mcp">swapwallet.app/docs/mcp</a> است.
+همه جز دو تا غیررسمی‌اند و به سایت‌ها وابسته نیستند. همان endpointهایی را صدا می‌زنند که اپ وب خود سایت استفاده می‌کند. این APIها مستند نیستند و ممکن است تغییر کنند؛ اگر چیزی خراب شد در مخزن همان سرور issue باز کنید. <code>swapwallet-mcp</code> سرور خود سواپ‌ولت است و مستنداتش در <a href="https://swapwallet.app/docs/mcp">swapwallet.app/docs/mcp</a> است. <code>exiryab-mcp</code> سرور خود اکسیریاب است و روی API عمومی‌ای کار می‌کند که در <a href="https://exiryab.com/llms.txt">exiryab.com/llms.txt</a> آمده است.
 </details>
 
 <details>

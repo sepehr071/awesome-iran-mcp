@@ -1,6 +1,6 @@
 {
   "name": "iran-all",
-  "description": "All 17 read-only Iranian site servers in one install.",
+  "description": "All 18 read-only Iranian site servers in one install.",
   "author": {
     "name": "Sepehr Radmard",
     "email": "sepehrr80@gmail.com",
@@ -22,6 +22,7 @@
     "flytoday",
     "paziresh24",
     "doctoreto",
+    "exiryab",
     "taaghche",
     "fidibo",
     "30book"

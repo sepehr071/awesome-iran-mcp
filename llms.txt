@@ -1,6 +1,6 @@
 # awesome-iran-mcp
 
-> 20 MCP servers (321 tools) that let AI agents search and compare Iranian websites: Digikala, Technolife, MasterKala, Shopino, Khanoumi, Asal Banoo, Snappfood, Okala, MrBilit, Flytoday, Jabama, Otaghak, Paziresh24, Doctoreto, Taaghche, Fidibo, 30book, plus PayPing and Bale for the user's own accounts, all unofficial and open source; and SwapWallet's official hosted server for the user's own crypto wallet, where swaps, transfers and withdrawals need the user's approval in Telegram. Prices in Toman. Site servers are read-only. Run any package server with `uvx <name>-mcp`; add SwapWallet by URL (`https://swapwallet.app/mcp`, OAuth sign-in). Also a Claude Code plugin marketplace (`iran-mcp`): `claude plugin install <name> --marketplace sepehr071/awesome-iran-mcp`, one plugin per server (MCP server + skill) plus bundles such as `iran-all`. Skills for other agents: `npx skills add sepehr071/awesome-iran-mcp`.
+> 21 MCP servers (324 tools) that let AI agents search and compare Iranian websites: Digikala, Technolife, MasterKala, Shopino, Khanoumi, Asal Banoo, Snappfood, Okala, MrBilit, Flytoday, Jabama, Otaghak, Paziresh24, Doctoreto, Taaghche, Fidibo, 30book, plus PayPing and Bale for the user's own accounts, all unofficial and open source; ExirYab's official server for its doctor directory; and SwapWallet's official hosted server for the user's own crypto wallet, where swaps, transfers and withdrawals need the user's approval in Telegram. Prices in Toman. Site servers are read-only. Run any package server with `uvx <name>-mcp`; add SwapWallet by URL (`https://swapwallet.app/mcp`, OAuth sign-in). Also a Claude Code plugin marketplace (`iran-mcp`): `claude plugin install <name> --marketplace sepehr071/awesome-iran-mcp`, one plugin per server (MCP server + skill) plus bundles such as `iran-all`. Skills for other agents: `npx skills add sepehr071/awesome-iran-mcp`.
 
 ## Docs
 
@@ -29,6 +29,7 @@
 - [otaghak-mcp](https://github.com/sepehr071/otaghak-mcp): Otaghak villas and cottages
 - [paziresh24-mcp](https://github.com/sepehr071/paziresh24-mcp): Paziresh24 doctors and appointments
 - [doctoreto-mcp](https://github.com/sepehr071/doctoreto-mcp): Doctoreto doctors, clinics, labs
+- [exiryab-mcp](https://github.com/sshnevis/exiryab-mcp): ExirYab doctor directory, official (find a doctor by name, city, specialty; clinics, phones, hours, map)
 - [taaghche-mcp](https://github.com/sepehr071/taaghche-mcp): Taaghche ebooks and audiobooks
 - [fidibo-mcp](https://github.com/sepehr071/fidibo-mcp): Fidibo ebooks and audiobooks
 - [30book-mcp](https://github.com/sepehr071/30book-mcp): 30book printed books

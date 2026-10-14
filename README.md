@@ -1,18 +1,18 @@
 <div align="center">
 
-<img src="assets/banner.svg" alt="awesome-iran-mcp: 20 MCP servers and 321 tools for Iranian shopping, food, travel, health, book and crypto sites, for Claude, Cursor and Copilot" width="100%">
+<img src="assets/banner.svg" alt="awesome-iran-mcp: 21 MCP servers and 324 tools for Iranian shopping, food, travel, health, book and crypto sites, for Claude, Cursor and Copilot" width="100%">
 
 **English** · [فارسی](README.fa.md)
 
 # Iran MCP servers: awesome-iran-mcp
 
 **Give your AI agent the Iranian web.**<br>
-19 unofficial, open-source Persian-web MCP servers for Digikala, Snappfood, Jabama, MrBilit, Paziresh24, Taaghche and more, plus SwapWallet's official one.<br>
+19 unofficial, open-source Persian-web MCP servers for Digikala, Snappfood, Jabama, MrBilit, Paziresh24, Taaghche and more, plus official ones from ExirYab and SwapWallet.<br>
 Search, compare prices in Toman, find free slots and today's deals from Claude, Cursor, GitHub Copilot in VS Code or any MCP client.<br>
 Install them as Claude Code plugins with skills, or as Agent Skills for Codex, Cursor, Antigravity and Grok Build.
 
-[![Servers](https://img.shields.io/badge/servers-20-3fd6c9)](#the-servers)
-[![Tools](https://img.shields.io/badge/tools-321-f4b54a)](TOOLS.md)
+[![Servers](https://img.shields.io/badge/servers-21-3fd6c9)](#the-servers)
+[![Tools](https://img.shields.io/badge/tools-324-f4b54a)](TOOLS.md)
 [![Claude Code plugins](https://img.shields.io/badge/Claude_Code-plugin_marketplace-d97757)](#quick-start)
 [![MCP Registry](https://img.shields.io/badge/MCP_Registry-io.github.sepehr071-7c3aed)](https://registry.modelcontextprotocol.io/?q=sepehr071)
 [![License: MIT](https://img.shields.io/badge/license-MIT-16a34a)](LICENSE)
@@ -28,8 +28,8 @@ Install them as Claude Code plugins with skills, or as Agent Skills for Codex, C
 
 Iranian websites are not built for AI agents. Most have no public API, prices come in Rial on one page and Toman
 on the next, and every site hides its best deals behind a different menu. Each package server here maps one site's
-real (undocumented) API, tests it, and exposes it as clean MCP tools with prices in **Toman**. `swapwallet-mcp` is
-SwapWallet's own server, built on its documented API.
+real (undocumented) API, tests it, and exposes it as clean MCP tools with prices in **Toman**. `exiryab-mcp` and
+`swapwallet-mcp` are the sites' own servers, built on their documented APIs.
 
 Put a few of them together and one sentence does a day of tab-hopping (illustrative example):
 
@@ -99,7 +99,7 @@ claude mcp add --transport http swapwallet https://swapwallet.app/mcp   # hosted
 `swapwallet-mcp` is added by URL, and each client takes a URL in its own shape (Windsurf uses `serverUrl`, Claude
 Desktop takes it under Settings → Connectors): see [its setup for each client](https://github.com/SwapWallet/swapwallet-mcp#connect).
 
-**All 20 at once:** clone this repo and open it in Claude Code. The [`.mcp.json`](.mcp.json) at the root
+**All 21 at once:** clone this repo and open it in Claude Code. The [`.mcp.json`](.mcp.json) at the root
 registers every server; approve the ones you want.
 
 ```bash
@@ -108,7 +108,7 @@ cd awesome-iran-mcp && claude
 ```
 
 > [!TIP]
-> 321 tools is a lot of context. Enable the servers for the task at hand rather than all of them.
+> 324 tools is a lot of context. Enable the servers for the task at hand rather than all of them.
 
 ## The servers
 
@@ -150,6 +150,7 @@ cd awesome-iran-mcp && claude
 |---|---|---:|:---:|:---:|---|
 | [paziresh24-mcp](https://github.com/sepehr071/paziresh24-mcp) | [Paziresh24](https://www.paziresh24.com) | 12 | [![PyPI](https://img.shields.io/pypi/v/paziresh24-mcp?label=&color=2fe0cf)](https://pypi.org/project/paziresh24-mcp/) | [![Last commit](https://img.shields.io/github/last-commit/sepehr071/paziresh24-mcp?label=&color=ffc23d)](https://github.com/sepehr071/paziresh24-mcp/commits/main) | Doctors, visit prices, reviews, free appointment slots |
 | [doctoreto-mcp](https://github.com/sepehr071/doctoreto-mcp) | [Doctoreto](https://doctoreto.com) | 14 | [![PyPI](https://img.shields.io/pypi/v/doctoreto-mcp?label=&color=2fe0cf)](https://pypi.org/project/doctoreto-mcp/) | [![Last commit](https://img.shields.io/github/last-commit/sepehr071/doctoreto-mcp?label=&color=ffc23d)](https://github.com/sepehr071/doctoreto-mcp/commits/main) | Doctors, visit fees, free slots, reviews, clinics, labs, offers |
+| [exiryab-mcp](https://github.com/sshnevis/exiryab-mcp) | [ExirYab](https://exiryab.com) (official) | 3 | [![PyPI](https://img.shields.io/pypi/v/exiryab-mcp?label=&color=2fe0cf)](https://pypi.org/project/exiryab-mcp/) | [![Last commit](https://img.shields.io/github/last-commit/sshnevis/exiryab-mcp?label=&color=ffc23d)](https://github.com/sshnevis/exiryab-mcp/commits/main) | Find a doctor by name, city and specialty: profile, clinics, phones, hours, map location |
 
 ### 📚 Books
 
@@ -177,7 +178,7 @@ This repo is built to be read by agents as much as by people:
 |---|---|
 | [`AGENTS.md`](AGENTS.md) | Which server to pick for which task, conventions, safety rules, how to work in this repo |
 | [`servers.json`](servers.json) | Machine-readable catalog: package or URL, version, category, env vars and every tool of each server |
-| [`TOOLS.md`](TOOLS.md) | All 321 tools grouped by server, one line each |
+| [`TOOLS.md`](TOOLS.md) | All 324 tools grouped by server, one line each |
 | [`llms.txt`](llms.txt) | Short index for LLMs ([llmstxt.org](https://llmstxt.org)) |
 | [`.mcp.json`](.mcp.json) | Ready-to-use config for every server |
 | [`.claude-plugin/marketplace.json`](.claude-plugin/marketplace.json) | The `iran-mcp` plugin marketplace: one plugin per server plus bundles |
@@ -234,9 +235,10 @@ Bugs and feature requests for a server go to that server's own repo.
 <details>
 <summary><b>Are these official?</b></summary>
 
-All but one are unofficial and not affiliated with the sites. They call the same endpoints the sites' own web
+All but two are unofficial and not affiliated with the sites. They call the same endpoints the sites' own web
 apps use. Those APIs are undocumented and can change; open an issue on the server's repo when one breaks.
 `swapwallet-mcp` is SwapWallet's own server, documented at [swapwallet.app/docs/mcp](https://swapwallet.app/docs/mcp).
+`exiryab-mcp` is ExirYab's own server, on the public API listed in [exiryab.com/llms.txt](https://exiryab.com/llms.txt).
 </details>
 
 <details>

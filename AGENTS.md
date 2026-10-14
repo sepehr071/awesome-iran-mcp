@@ -1,8 +1,9 @@
 # AGENTS.md
 
-Guide for AI agents using or working on **awesome-iran-mcp**: 20 MCP servers for Iranian websites, 321 tools in
-total. 19 are unofficial Python packages on PyPI, run as stdio servers with `uvx <package>`. `swapwallet-mcp` is
-SwapWallet's own hosted server (`https://swapwallet.app/mcp`), with OAuth sign-in.
+Guide for AI agents using or working on **awesome-iran-mcp**: 21 MCP servers for Iranian websites, 324 tools in
+total. 20 are Python packages on PyPI, run as stdio servers with `uvx <package>`; all of them are unofficial except
+`exiryab-mcp`, ExirYab's own server on its public API. `swapwallet-mcp` is SwapWallet's own hosted server
+(`https://swapwallet.app/mcp`), with OAuth sign-in.
 
 ## Pick a server
 
@@ -21,6 +22,7 @@ SwapWallet's own hosted server (`https://swapwallet.app/mcp`), with OAuth sign-i
 | Tours, events, theater tickets | `jabama-mcp` | `jb_search_tours`, `jb_search_events` |
 | CIP, eSIM, visas, activities abroad | `flytoday-mcp` | `ft_cip`, `ft_esim_plans`, `ft_visa`, `ft_activities` |
 | A doctor with a free appointment | `paziresh24-mcp`, `doctoreto-mcp` | `pz_search_doctors`, `pz_first_available`; `dt_search_doctors`, `dt_free_slots` |
+| A doctor by name, or a doctor's clinic address, phone, hours and map | `exiryab-mcp` | `ey_search_doctors`; `ey_cities`, `ey_specialties` for exact names |
 | Clinics, labs, medical offers | `doctoreto-mcp` | `dt_search_centers`, `dt_search_offers` |
 | Ebooks and audiobooks | `taaghche-mcp`, `fidibo-mcp` | `tg_search`, `tg_free_books`; `fd_search`, `fd_free` |
 | Printed books | `30book-mcp` | `sb_search`, `sb_book`, `sb_deals` |
@@ -28,7 +30,7 @@ SwapWallet's own hosted server (`https://swapwallet.app/mcp`), with OAuth sign-i
 | User's own Bale bot | `bale-mcp` | `bot_get_new_messages`, `bot_send_message` |
 | User's own crypto wallet: balances, history, swaps, withdrawals | `swapwallet-mcp` | `get_total_balance`, `get_transactions`; `request_swap`, then `get_action_request` |
 
-For the best price, query every server in a category (both doctor servers, all travel servers) and compare.
+For the best price, query every server in a category (all doctor servers, all travel servers) and compare.
 Full tool list: [TOOLS.md](TOOLS.md). Machine-readable catalog with env vars: [servers.json](servers.json).
 
 ## Install
@@ -57,8 +59,8 @@ claude plugin install iran-all --marketplace sepehr071/awesome-iran-mcp     # al
 Bundles: `iran-all`, `iran-food`, `iran-shopping`, `iran-beauty`, `iran-travel`, `iran-health`, `iran-books`.
 Skills only, for any agent: `npx skills add sepehr071/awesome-iran-mcp`.
 
-The server key in config is the package name without `-mcp`. [`.mcp.json`](.mcp.json) holds all 20.
-Requires [uv](https://docs.astral.sh/uv/) (`swapwallet-mcp` doesn't). Add only the servers the task needs: each one adds 11 to 23 tools.
+The server key in config is the package name without `-mcp`. [`.mcp.json`](.mcp.json) holds all 21.
+Requires [uv](https://docs.astral.sh/uv/) (`swapwallet-mcp` doesn't). Add only the servers the task needs: each one adds 3 to 23 tools.
 
 ## Rules every server follows
 
@@ -76,6 +78,7 @@ Requires [uv](https://docs.astral.sh/uv/) (`swapwallet-mcp` doesn't). Add only t
 - Package servers, on timeouts or HTTP 403 outside Iran: set the server's `<NAME>_MCP_PROXY` env var (names in
   `servers.json`).
 - Package servers call undocumented site APIs that can change or rate-limit. Keep request rates low.
+  `exiryab-mcp` uses ExirYab's public API, limited to 60 requests per minute per IP.
 - `30book-mcp` is slow (2 to 5 s per list). `flytoday-mcp` searches are rate-limited per IP.
 
 ## Working on this repo
@@ -98,7 +101,7 @@ README.md / README.fa.md   English (default) and Persian docs; keep both in sync
   ships its own `skills/<key>/SKILL.md`, which come from that file. Check with `claude plugin validate .`.
 - Add a server: `git submodule add https://github.com/sepehr071/<name>-mcp servers/<name>-mcp`, add it to
   `SERVERS` in `scripts/catalog.py` and `APPS` in `scripts/banner.py` (with its logo in `assets/logos/`), run both scripts, add a row to both
-  READMEs and the table above. Update the 20 / 321 counts written in both READMEs.
+  READMEs and the table above. Update the 21 / 324 counts written in both READMEs.
 - Add a hosted server: `git submodule add <its repo> servers/<name>-mcp` and an entry in `REMOTE` in
   `scripts/catalog.py`, then the same `APPS`, logo, README, table and count steps. Its repo needs an MCP Registry
   `server.json` with `remotes` (name, version, description, repository), and the server must publish a server card

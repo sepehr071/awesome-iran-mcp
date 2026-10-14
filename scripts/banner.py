@@ -36,6 +36,7 @@ APPS = [
     ("Flytoday", f"فلای{ZWNJ}تودی", "flytoday.png", 0),
     ("Paziresh24", "پذیرش۲۴", "paziresh24.png", 0),
     ("Doctoreto", "دکترتو", "doctoreto.png", 0),
+    ("ExirYab", "اکسیریاب", "exiryab.png", 0),
     ("Taaghche", "طاقچه", "taaghche.png", 0),
     ("Fidibo", "فیدیبو", "fidibo.png", 0),
     ("30book", f"سی{ZWNJ}بوک", "30book.png", 0),
@@ -116,12 +117,14 @@ def logo(file: str) -> str:
 
 def icons(px: float, py: float, fa: bool) -> str:
     out = []
-    size, pitch_x, pitch_y, cols = 70, 104, 94, 5
+    size, pitch_x, pitch_y, cols = 64, 86, 94, 6
+    full_rows, last_count = divmod(len(APPS), cols)
     for i, (en, fa_name, file, pad) in enumerate(APPS):
         row, col = divmod(i, cols)
         if fa:
             col = cols - 1 - col  # right to left
-        last_row_offset = pitch_x / 2 if row == len(APPS) // cols else 0
+        # centre a short last row
+        last_row_offset = (cols - last_count) * pitch_x / 2 if row == full_rows else 0
         x = px + col * pitch_x + (-last_row_offset if fa else last_row_offset)
         y = py + row * pitch_y
         label, font = (fa_name, PERSIAN) if fa else (en, LATIN)
