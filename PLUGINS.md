@@ -120,9 +120,11 @@ Claude Code's auto-update is off by default for third-party marketplaces like th
 
 Bare `uvx digikala-mcp` downloads the newest release on first use and then keeps running that cached copy. It does
 not upgrade on its own (see the uv docs on tools). Pinning `digikala-mcp@<version>` in the plugin makes the plugin
-version and the server version move together. A plugin update is then a server update.
+version and the server version move together. A plugin update is then a server update. `.mcp.json` pins the same
+versions, so pulling this repo updates it too. For a server whose repo isn't under `sepehr071`, `catalog.py` pins
+only a release that is on PyPI and never falls back to a newer, unreviewed one ([CONTRIBUTING.md](CONTRIBUTING.md)).
 
-People who added a server without the plugin (`claude mcp add ... -- uvx digikala-mcp`, `.mcp.json`, `npx skills`
+People who added a server without the plugin (`claude mcp add ... -- uvx digikala-mcp`, `npx skills`
 plus a manual config) stay on their cached copy. To upgrade, they run `uvx digikala-mcp@latest --help` once (or
 `uv cache clean digikala-mcp`) and restart the client.
 
