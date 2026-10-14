@@ -184,9 +184,9 @@ def main() -> None:
     old_total = sum(s["tool_count"] for s in previous.values())
     total = sum(s["tool_count"] for s in catalog)
     (ROOT / "servers.json").write_text(json.dumps(catalog, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
-    (ROOT / ".mcp.json").write_text(json.dumps({"mcpServers": mcp}, indent=2) + "\n", encoding="utf-8")
     (ROOT / "TOOLS.md").write_text("\n".join(md), encoding="utf-8")
-    plugins(catalog, mcp)
+    pinned = plugins(catalog, mcp)
+    (ROOT / ".mcp.json").write_text(json.dumps({"mcpServers": pinned}, indent=2) + "\n", encoding="utf-8")
     sync_docs(catalog, old_total, total)
     print(f"{len(catalog)} servers, {total} tools")
 
@@ -280,23 +280,31 @@ def install(s: dict, key: str, entry: dict) -> str:
     return "\n".join(lines)
 
 
-def released(package: str, version: str) -> str:
-    """`version` if PyPI has it, else PyPI's newest release (main can be bumped before the release is published)."""
+def released(package: str, version: str, ours: bool = True) -> str:
+    """`version` if PyPI has it, else PyPI's newest release (main can be bumped before the release is published).
+
+    A server we don't own gets no fallback: its newest release hasn't been reviewed, so only the pinned one ships.
+    """
     try:
         urllib.request.urlopen(f"https://pypi.org/pypi/{package}/{version}/json", timeout=30).close()
         return version
     except urllib.error.HTTPError as e:
         if e.code != 404:
             raise
+        if not ours:
+            raise SystemExit(f"{package} {version} is not on PyPI; move the fork only to a published, reviewed release")
     with urllib.request.urlopen(f"https://pypi.org/pypi/{package}/json", timeout=30) as r:
         return json.load(r)["info"]["version"]
 
 
-def plugins(catalog: list[dict], mcp: dict) -> None:
-    """One plugin per server (MCP server + skill), plus bundle plugins that only pull in others."""
+def plugins(catalog: list[dict], mcp: dict) -> dict:
+    """One plugin per server (MCP server + skill), plus bundle plugins that only pull in others.
+
+    Returns each server's MCP config pinned to the version its plugin runs, for .mcp.json.
+    """
     out = ROOT / "plugins"
     shutil.rmtree(out, ignore_errors=True)
-    entries = []
+    entries, pinned = [], {}
 
     def write(name: str, manifest: dict, category: str) -> None:
         (out / name / ".claude-plugin").mkdir(parents=True)
@@ -309,8 +317,9 @@ def plugins(catalog: list[dict], mcp: dict) -> None:
             version, server = s["version"], mcp[key]
         else:
             # pin the exact release: bare `uvx pkg` keeps running its cached copy forever
-            version = released(s["pypi"], s["version"])
+            version = released(s["pypi"], s["version"], s["repository"].startswith(OWNER["url"] + "/"))
             server = {**mcp[key], "args": [f"{s['pypi']}@{version}"]}
+        pinned[key] = server
         write(
             key,
             {
@@ -351,6 +360,7 @@ def plugins(catalog: list[dict], mcp: dict) -> None:
     path = ROOT / ".claude-plugin" / "marketplace.json"
     path.parent.mkdir(exist_ok=True)
     path.write_text(json.dumps(marketplace, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    return pinned
 
 
 def sync_docs(catalog: list[dict], old_total: int, total: int) -> None:
