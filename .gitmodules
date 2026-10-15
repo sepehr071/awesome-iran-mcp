@@ -60,4 +60,4 @@
 	url = https://github.com/SwapWallet/swapwallet-mcp.git
 [submodule "servers/exiryab-mcp"]
 	path = servers/exiryab-mcp
-	url = https://github.com/sshnevis/exiryab-mcp
+	url = https://github.com/sepehr071/exiryab-mcp.git

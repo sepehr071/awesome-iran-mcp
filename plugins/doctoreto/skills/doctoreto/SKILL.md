@@ -1,6 +1,6 @@
 ---
 name: doctoreto
-description: "Unofficial read-only Doctoreto: Iranian doctors, visit fees, free appointment times, clinics, labs. Use when the user asks about Doctoreto (doctoreto.com) or wants a doctor, clinic or lab appointment in Iran."
+description: "Unofficial read-only Doctoreto: Iranian doctors, visit fees, free appointment times, clinics, labs. Use when the user asks about Doctoreto (doctoreto.com) or wants to find a doctor, clinic or lab, or book an appointment in Iran."
 ---
 
 # Doctoreto
