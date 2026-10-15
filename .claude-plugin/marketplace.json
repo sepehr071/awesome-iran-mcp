@@ -166,7 +166,7 @@
     {
       "name": "iran-health",
       "source": "./plugins/iran-health",
-      "description": "Everything for to find a doctor, clinic or lab, or book an appointment in Iran: Paziresh24, Doctoreto, ExirYab.",
+      "description": "Everything for doctors, clinics, labs or appointments in Iran: Paziresh24, Doctoreto, ExirYab.",
       "category": "bundle"
     },
     {
