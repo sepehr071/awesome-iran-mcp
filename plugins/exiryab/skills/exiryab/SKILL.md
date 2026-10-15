@@ -1,6 +1,6 @@
 ---
 name: exiryab
-description: "Official read-only ExirYab: find Iranian doctors by name, city and specialty, with clinics and maps. Use when the user asks about ExirYab (exiryab.com) or wants to find a doctor, clinic or lab, or book an appointment in Iran."
+description: "Official read-only ExirYab: find Iranian doctors by name, city and specialty, with clinics and maps. Use when the user asks about ExirYab (exiryab.com) or wants doctors, clinics, labs or appointments in Iran."
 ---
 
 # ExirYab

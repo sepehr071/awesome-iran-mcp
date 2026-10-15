@@ -27,7 +27,7 @@ USE = {
     "fashion": "clothes, shoes or bags",
     "classifieds": "to find or price-check classified ads: homes, cars, phones and more",
     "travel": "flights, trains, buses, hotels, villas or tours",
-    "health": "to find a doctor, clinic or lab, or book an appointment",
+    "health": "doctors, clinics, labs or appointments",
     "books": "ebooks, audiobooks or printed books",
     "business": "to manage their own PayPing merchant account",
     "messaging": "to run their own Bale messenger bot",

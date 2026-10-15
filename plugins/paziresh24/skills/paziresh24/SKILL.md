@@ -1,6 +1,6 @@
 ---
 name: paziresh24
-description: "Unofficial read-only Paziresh24: find Iranian doctors, profiles, prices, reviews and free slots. Use when the user asks about Paziresh24 (paziresh24.com) or wants to find a doctor, clinic or lab, or book an appointment in Iran."
+description: "Unofficial read-only Paziresh24: find Iranian doctors, profiles, prices, reviews and free slots. Use when the user asks about Paziresh24 (paziresh24.com) or wants doctors, clinics, labs or appointments in Iran."
 ---
 
 # Paziresh24
