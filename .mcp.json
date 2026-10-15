@@ -93,7 +93,7 @@
     "exiryab": {
       "command": "uvx",
       "args": [
-        "exiryab-mcp"
+        "exiryab-mcp@0.1.0"
       ]
     },
     "taaghche": {
