@@ -64,3 +64,6 @@
 [submodule "servers/exiryab-mcp"]
 	path = servers/exiryab-mcp
 	url = https://github.com/sepehr071/exiryab-mcp.git
+[submodule "servers/pasavard-mcp"]
+	path = servers/pasavard-mcp
+	url = https://github.com/sepehr071/pasavard-mcp

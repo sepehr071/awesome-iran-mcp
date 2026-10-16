@@ -1,0 +1,25 @@
+{
+  "name": "pasavard",
+  "displayName": "Pasavard",
+  "version": "1.0.0",
+  "description": "Pasavard: hourly-tracked Digikala/Snappshop price lists by category and budget, with cashback links. Read-only.",
+  "author": {
+    "name": "Sepehr Radmard",
+    "email": "sepehrr80@gmail.com",
+    "url": "https://github.com/sepehr071"
+  },
+  "homepage": "https://github.com/sepehr071/awesome-iran-mcp",
+  "repository": "https://github.com/ashkancapella/pasavard-mcp",
+  "license": "MIT",
+  "keywords": [
+    "iran",
+    "shopping",
+    "pasavard.ir"
+  ],
+  "mcpServers": {
+    "pasavard": {
+      "type": "http",
+      "url": "https://pasavard.ir/api/mcp"
+    }
+  }
+}

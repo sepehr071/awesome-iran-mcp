@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="assets/banner.fa.svg" alt="awesome-iran-mcp: ۲۲ سرور MCP و ۳۵۵ ابزار برای فروشگاه‌ها، غذا، سفر، سلامت، کتاب و صرافی رمزارز ایرانی، برای Claude، Cursor و Copilot" width="100%">
+<img src="assets/banner.fa.svg" alt="awesome-iran-mcp: ۲۳ سرور MCP و ۳۵۹ ابزار برای فروشگاه‌ها، غذا، سفر، سلامت، کتاب و صرافی رمزارز ایرانی، برای Claude، Cursor و Copilot" width="100%">
 
 [English](README.md) · **فارسی**
 
@@ -12,7 +12,7 @@
 
 <p align="center">
 <b>وب ایران را به ایجنت هوش مصنوعی‌تان بدهید.</b><br>
-۲۰ سرور MCP متن‌باز و غیررسمی برای ایران و سایت‌های فارسی: دیجی‌کالا، دیوار، اسنپ‌فود، جاباما، مستربلیط، پذیرش۲۴، طاقچه و بقیه، به‌اضافهٔ سرورهای رسمی اکسیریاب و سواپ‌ولت.<br>
+۲۰ سرور MCP متن‌باز و غیررسمی برای ایران و سایت‌های فارسی: دیجی‌کالا، دیوار، اسنپ‌فود، جاباما، مستربلیط، پذیرش۲۴، طاقچه و بقیه، به‌اضافهٔ سرورهای رسمی اکسیریاب، پس‌آورد و سواپ‌ولت.<br>
 جست‌وجو، مقایسهٔ قیمت به تومان، پیدا کردن نوبت خالی و تخفیف‌های امروز، از داخل Claude، Cursor، GitHub Copilot در VS Code یا هر کلاینت MCP.<br>
 به‌صورت پلاگین Claude Code همراه با اسکیل نصب کنید، یا به‌صورت Agent Skills برای Codex، Cursor، Antigravity و Grok Build.
 </p>
@@ -36,7 +36,7 @@
 
 ## چرا؟
 
-سایت‌های ایرانی برای ایجنت‌ها ساخته نشده‌اند. بیشترشان API عمومی ندارند، یک صفحه قیمت را ریال نشان می‌دهد و صفحهٔ بعد تومان، و هر سایت بهترین تخفیف‌هایش را پشت یک منوی متفاوت پنهان کرده است. هر سرور پایتونی این مجموعه API واقعی (و مستندنشدهٔ) یک سایت را نقشه‌برداری و تست کرده و آن را به شکل ابزارهای تمیز MCP با قیمت **تومان** در اختیار ایجنت می‌گذارد. `exiryab-mcp` و `swapwallet-mcp` سرورهای خود اکسیریاب و سواپ‌ولت‌اند و روی API مستند خودشان ساخته شده‌اند.
+سایت‌های ایرانی برای ایجنت‌ها ساخته نشده‌اند. بیشترشان API عمومی ندارند، یک صفحه قیمت را ریال نشان می‌دهد و صفحهٔ بعد تومان، و هر سایت بهترین تخفیف‌هایش را پشت یک منوی متفاوت پنهان کرده است. هر سرور پایتونی این مجموعه API واقعی (و مستندنشدهٔ) یک سایت را نقشه‌برداری و تست کرده و آن را به شکل ابزارهای تمیز MCP با قیمت **تومان** در اختیار ایجنت می‌گذارد. `exiryab-mcp`، `pasavard-mcp` و `swapwallet-mcp` سرورهای خود اکسیریاب، پس‌آورد و سواپ‌ولت‌اند و روی API مستند خودشان ساخته شده‌اند.
 
 چند سرور را کنار هم بگذارید تا یک جمله کار یک روز گشتن بین تب‌ها را انجام دهد (مثال نمایشی):
 
@@ -52,7 +52,7 @@
 
 ## شروع سریع
 
-هر سرور یک پکیج کوچک پایتون روی PyPI است که با [`uvx`](https://docs.astral.sh/uv/) اجرا می‌شود، جز `swapwallet-mcp` که خود سواپ‌ولت میزبانی‌اش می‌کند: با آدرسش اضافه‌اش می‌کنید و یک بار با OAuth وارد حساب می‌شوید. سرورهای سایت‌ها نه حساب می‌خواهند و نه کلید API. `payping-mcp` و `bale-mcp` با توکن شما روی حساب خودتان کار می‌کنند و `swapwallet-mcp` با ورود شما به سواپ‌ولت.
+هر سرور یک پکیج کوچک پایتون روی PyPI است که با [`uvx`](https://docs.astral.sh/uv/) اجرا می‌شود، جز `pasavard-mcp` و `swapwallet-mcp` که خود سایت‌ها میزبانی‌شان می‌کنند: با آدرس اضافه‌شان می‌کنید و برای سواپ‌ولت یک بار با OAuth وارد حساب می‌شوید. سرورهای سایت‌ها نه حساب می‌خواهند و نه کلید API. `payping-mcp` و `bale-mcp` با توکن شما روی حساب خودتان کار می‌کنند و `swapwallet-mcp` با ورود شما به سواپ‌ولت.
 
 **پلاگین‌های Claude Code** (سرور + اسکیل، هر کدام را که خواستید): یک بار مارکت‌پلیس را اضافه کنید، بعد سرورها را در تب Discover دستور `/plugin` انتخاب کنید یا با نام نصب کنید.
 
@@ -88,6 +88,7 @@ npx skills add sepehr071/awesome-iran-mcp
 ```bash
 claude mcp add digikala -- uvx digikala-mcp
 claude mcp add --transport http swapwallet https://swapwallet.app/mcp   # hosted; then sign in from /mcp
+claude mcp add --transport http pasavard https://pasavard.ir/api/mcp      # hosted, no sign-in
 ```
 
 <div dir="rtl">
@@ -109,7 +110,7 @@ claude mcp add --transport http swapwallet https://swapwallet.app/mcp   # hosted
 
 `swapwallet-mcp` با آدرسش اضافه می‌شود و هر کلاینت آدرس را به شکل خودش می‌گیرد (Windsurf با `serverUrl`، و Claude Desktop از Settings ← Connectors): [راه‌اندازی آن در هر کلاینت](https://github.com/SwapWallet/swapwallet-mcp#connect).
 
-**هر ۲۲ سرور با هم:** این مخزن را کلون کنید و در Claude Code باز کنید. فایل [`.mcp.json`](.mcp.json) همهٔ سرورها را ثبت می‌کند؛ هر کدام را که لازم دارید تأیید کنید.
+**هر ۲۳ سرور با هم:** این مخزن را کلون کنید و در Claude Code باز کنید. فایل [`.mcp.json`](.mcp.json) همهٔ سرورها را ثبت می‌کند؛ هر کدام را که لازم دارید تأیید کنید.
 
 </div>
 
@@ -121,7 +122,7 @@ cd awesome-iran-mcp && claude
 <div dir="rtl">
 
 > [!TIP]
-> ۳۵۵ ابزار کانتکست زیادی می‌گیرد. به‌جای همه، فقط سرورهای لازم برای همان کار را فعال کنید.
+> ۳۵۹ ابزار کانتکست زیادی می‌گیرد. به‌جای همه، فقط سرورهای لازم برای همان کار را فعال کنید.
 
 ## سرورها
 
@@ -133,6 +134,7 @@ cd awesome-iran-mcp && claude
 | [technolife-mcp](https://github.com/sepehr071/technolife-mcp) | [تکنولایف](https://www.technolife.com) | ۱۹ | [![PyPI](https://img.shields.io/pypi/v/technolife-mcp?label=&color=2fe0cf)](https://pypi.org/project/technolife-mcp/) | [![Last commit](https://img.shields.io/github/last-commit/sepehr071/technolife-mcp?label=&color=ffc23d)](https://github.com/sepehr071/technolife-mcp/commits/main) | کالای دیجیتال: قیمت نقد و اقساط هر فروشنده، مشخصات، نظرها، تخفیف‌ها |
 | [masterkala-mcp](https://github.com/sepehr071/masterkala-mcp) | [مسترکالا](https://masterkala.com) | ۱۴ | [![PyPI](https://img.shields.io/pypi/v/masterkala-mcp?label=&color=2fe0cf)](https://pypi.org/project/masterkala-mcp/) | [![Last commit](https://img.shields.io/github/last-commit/sepehr071/masterkala-mcp?label=&color=ffc23d)](https://github.com/sepehr071/masterkala-mcp/commits/main) | گجت و لوازم جانبی: قیمت، مشخصات، تخفیف‌ها |
 | [shopino-mcp](https://github.com/sepehr071/shopino-mcp) | [شاپینو](https://shopino.app) | ۱۴ | [![PyPI](https://img.shields.io/pypi/v/shopino-mcp?label=&color=2fe0cf)](https://pypi.org/project/shopino-mcp/) | [![Last commit](https://img.shields.io/github/last-commit/sepehr071/shopino-mcp?label=&color=ffc23d)](https://github.com/sepehr071/shopino-mcp/commits/main) | پوشاک از هزاران فروشگاه: قیمت، سایز، موجودی، امتیاز فروشگاه |
+| [pasavard-mcp](https://github.com/ashkancapella/pasavard-mcp) | [پس‌آورد](https://pasavard.ir) (رسمی، میزبانی‌شده) | ۴ | [![Version](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fraw.githubusercontent.com%2Fashkancapella%2Fpasavard-mcp%2Fmain%2Fserver.json&query=%24.version&label=&color=2fe0cf)](https://github.com/ashkancapella/pasavard-mcp/blob/main/server.json) | [![Last commit](https://img.shields.io/github/last-commit/ashkancapella/pasavard-mcp?label=&color=ffc23d)](https://github.com/ashkancapella/pasavard-mcp/commits/main) | قیمت ساعتی دیجی‌کالا و اسنپ‌شاپ: بهترین‌ها در هر بازهٔ قیمت نسبت به کمترین قیمت ۳۰ روز اخیر هر کالا، با لینک همکاری در فروش و کش‌بک |
 
 ### 🏠 نیازمندی‌ها
 
@@ -197,7 +199,7 @@ cd awesome-iran-mcp && claude
 |---|---|
 | [`AGENTS.md`](AGENTS.md) | کدام سرور برای کدام کار، قراردادها، قوانین ایمنی، نحوهٔ کار در این مخزن |
 | [`servers.json`](servers.json) | کاتالوگ ماشین‌خوان: پکیج یا آدرس، نسخه، دسته، متغیرهای محیطی و همهٔ ابزارهای هر سرور |
-| [`TOOLS.md`](TOOLS.md) | هر ۳۵۵ ابزار به تفکیک سرور |
+| [`TOOLS.md`](TOOLS.md) | هر ۳۵۹ ابزار به تفکیک سرور |
 | [`llms.txt`](llms.txt) | فهرست کوتاه برای LLMها |
 | [`.mcp.json`](.mcp.json) | تنظیمات آماده برای همهٔ سرورها |
 | [`.claude-plugin/marketplace.json`](.claude-plugin/marketplace.json) | مارکت‌پلیس پلاگین `iran-mcp`: یک پلاگین برای هر سرور به‌اضافهٔ بسته‌ها |
@@ -251,7 +253,7 @@ claude plugin validate .
 <details>
 <summary><b>این سرورها رسمی هستند؟</b></summary>
 
-همه جز دو تا غیررسمی‌اند و به سایت‌ها وابسته نیستند. همان endpointهایی را صدا می‌زنند که اپ وب خود سایت استفاده می‌کند. این APIها مستند نیستند و ممکن است تغییر کنند؛ اگر چیزی خراب شد در مخزن همان سرور issue باز کنید. <code>swapwallet-mcp</code> سرور خود سواپ‌ولت است و مستنداتش در <a href="https://swapwallet.app/docs/mcp">swapwallet.app/docs/mcp</a> است. <code>exiryab-mcp</code> سرور خود اکسیریاب است و روی API عمومی‌ای کار می‌کند که در <a href="https://exiryab.com/llms.txt">exiryab.com/llms.txt</a> آمده است.
+همه جز سه تا غیررسمی‌اند و به سایت‌ها وابسته نیستند. همان endpointهایی را صدا می‌زنند که اپ وب خود سایت استفاده می‌کند. این APIها مستند نیستند و ممکن است تغییر کنند؛ اگر چیزی خراب شد در مخزن همان سرور issue باز کنید. <code>swapwallet-mcp</code> سرور خود سواپ‌ولت است و مستنداتش در <a href="https://swapwallet.app/docs/mcp">swapwallet.app/docs/mcp</a> است. <code>exiryab-mcp</code> سرور خود اکسیریاب است و روی API عمومی‌ای کار می‌کند که در <a href="https://exiryab.com/llms.txt">exiryab.com/llms.txt</a> آمده است. <code>pasavard-mcp</code> سرور میزبانی‌شدهٔ خود پس‌آورد است؛ لینک‌های خریدش لینک همکاری در فروش‌اند و هر نتیجه این را می‌گوید.
 </details>
 
 <details>
@@ -269,13 +271,13 @@ claude plugin validate .
 <details>
 <summary><b>پایتون لازم دارم؟</b></summary>
 
-فقط <a href="https://docs.astral.sh/uv/getting-started/installation/">uv</a> لازم است. <code>uvx</code> در اولین اجرا پایتون مناسب و پکیج را دانلود می‌کند. <code>swapwallet-mcp</code> روی سرورهای سواپ‌ولت اجرا می‌شود و نصب لازم ندارد.
+فقط <a href="https://docs.astral.sh/uv/getting-started/installation/">uv</a> لازم است. <code>uvx</code> در اولین اجرا پایتون مناسب و پکیج را دانلود می‌کند. <code>pasavard-mcp</code> و <code>swapwallet-mcp</code> روی سرورهای خود سایت‌ها اجرا می‌شوند و نصب لازم ندارند.
 </details>
 
 <details>
 <summary><b>به‌روزرسانی‌ها را چطور بگیرم؟</b></summary>
 
-پلاگین‌ها هر سرور پایتونی را روی یک نسخهٔ منتشرشده پین می‌کنند، پس به‌روزرسانی پلاگین یعنی به‌روزرسانی سرور. <code>swapwallet-mcp</code> میزبانی‌شده است: سواپ‌ولت هر بار که نسخهٔ تازه‌ای منتشر کند سرور به‌روز می‌شود و به‌روزرسانی پلاگین فقط اسکیل تازه را می‌آورد. یک بار در <code>/plugin</code> ← <b>Marketplaces</b> ← <code>iran-mcp</code> به‌روزرسانی خودکار را روشن کنید، یا <code>claude plugin update &lt;name&gt;@iran-mcp</code> را اجرا کنید. تنظیم سادهٔ <code>uvx digikala-mcp</code> همان نسخهٔ کش‌شده را اجرا می‌کند؛ برای ارتقا یک بار <code>uvx digikala-mcp@latest --help</code> را اجرا کنید و کلاینت را دوباره باز کنید.
+پلاگین‌ها هر سرور پایتونی را روی یک نسخهٔ منتشرشده پین می‌کنند، پس به‌روزرسانی پلاگین یعنی به‌روزرسانی سرور. <code>pasavard-mcp</code> و <code>swapwallet-mcp</code> میزبانی‌شده‌اند: هر بار که سایت نسخهٔ تازه‌ای منتشر کند سرور به‌روز می‌شود و به‌روزرسانی پلاگین فقط اسکیل تازه را می‌آورد. یک بار در <code>/plugin</code> ← <b>Marketplaces</b> ← <code>iran-mcp</code> به‌روزرسانی خودکار را روشن کنید، یا <code>claude plugin update &lt;name&gt;@iran-mcp</code> را اجرا کنید. تنظیم سادهٔ <code>uvx digikala-mcp</code> همان نسخهٔ کش‌شده را اجرا می‌کند؛ برای ارتقا یک بار <code>uvx digikala-mcp@latest --help</code> را اجرا کنید و کلاینت را دوباره باز کنید.
 </details>
 
 اگر این مجموعه چند بار گشتن بین تب‌ها را برایتان کم کرد، ستاره‌دار کردن مخزن به پیدا شدن آن توسط دیگران کمک می‌کند.

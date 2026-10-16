@@ -1,6 +1,6 @@
 {
   "name": "iran-shopping",
-  "description": "Everything for electronics, appliances or other goods in Iran: Digikala, Technolife, MasterKala.",
+  "description": "Everything for electronics, appliances or other goods in Iran: Digikala, Technolife, MasterKala, Pasavard.",
   "author": {
     "name": "Sepehr Radmard",
     "email": "sepehrr80@gmail.com",
@@ -10,6 +10,7 @@
   "dependencies": [
     "digikala",
     "technolife",
-    "masterkala"
+    "masterkala",
+    "pasavard"
   ]
 }

@@ -132,6 +132,10 @@
         "BALE_BOT_TOKEN": "${BALE_BOT_TOKEN:-}"
       }
     },
+    "pasavard": {
+      "type": "http",
+      "url": "https://pasavard.ir/api/mcp"
+    },
     "swapwallet": {
       "type": "http",
       "url": "https://swapwallet.app/mcp"

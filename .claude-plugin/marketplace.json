@@ -134,6 +134,12 @@
       "category": "messaging"
     },
     {
+      "name": "pasavard",
+      "source": "./plugins/pasavard",
+      "description": "Pasavard: hourly-tracked Digikala/Snappshop price lists by category and budget, with cashback links. Read-only.",
+      "category": "shopping"
+    },
+    {
       "name": "swapwallet",
       "source": "./plugins/swapwallet",
       "description": "Crypto wallet: balances, P&L, history. Swaps, transfers and withdrawals need Telegram approval.",
@@ -142,7 +148,7 @@
     {
       "name": "iran-all",
       "source": "./plugins/iran-all",
-      "description": "All 19 read-only Iranian site servers in one install.",
+      "description": "All 20 read-only Iranian site servers in one install.",
       "category": "bundle"
     },
     {
@@ -154,7 +160,7 @@
     {
       "name": "iran-shopping",
       "source": "./plugins/iran-shopping",
-      "description": "Everything for electronics, appliances or other goods in Iran: Digikala, Technolife, MasterKala.",
+      "description": "Everything for electronics, appliances or other goods in Iran: Digikala, Technolife, MasterKala, Pasavard.",
       "category": "bundle"
     },
     {

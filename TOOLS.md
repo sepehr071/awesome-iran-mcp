@@ -449,6 +449,15 @@ Private, local Bale bot for agents: read, search and answer messages, ask and wa
 - `bot_wait_for_reply`: Wait until someone writes in a chat or presses a button, then return the new messages (marked read).
 - `bot_download_file`: Download a file someone sent the bot (max 20 MB) and return its local path. Never overwrites (-1, -2, ... suffix).
 
+## Pasavard (`pasavard-mcp`, 4 tools)
+
+Pasavard: hourly-tracked Digikala/Snappshop price lists by category and budget, with cashback links. Read-only.
+
+- `search_products`: Searches Pasavard's hourly price-tracked catalog of Digikala and Snappshop products and returns up to 10 in-stock matches with Toman prices and buy links.
+- `best_lists`: Lists Pasavard's live price-bracket guides, one per product category and budget range, each with its slug, label and URL.
+- `best_list`: Ranks the products of one category and price bracket by how close today's price is to their own 30-day low.
+- `buy_link`: Builds Pasavard buy and cashback links for any Digikala or Snappshop product page URL, including products outside the tracked catalog.
+
 ## SwapWallet (`swapwallet-mcp`, 13 tools)
 
 Crypto wallet: balances, P&L, history. Swaps, transfers and withdrawals need Telegram approval.

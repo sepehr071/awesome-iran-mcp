@@ -68,10 +68,10 @@
   <text x="84" y="240" text-anchor="start" font-family="Vazirmatn,Vazir,Tahoma,'Segoe UI',sans-serif" font-size="30" font-weight="600" fill="#fff" fill-opacity="0.92">And now on Divar.</text>
   <rect x="84" y="300" width="150" height="48" rx="24" fill="#fff" fill-opacity="0.14" stroke="#fff" stroke-opacity="0.35"/>
   <circle cx="108" cy="324" r="6" fill="#2fe0cf"/>
-  <text x="169.0" y="331" text-anchor="middle" font-family="Vazirmatn,Vazir,Tahoma,'Segoe UI',sans-serif" font-size="19" font-weight="700" fill="#fff">22 servers</text>
+  <text x="169.0" y="331" text-anchor="middle" font-family="Vazirmatn,Vazir,Tahoma,'Segoe UI',sans-serif" font-size="19" font-weight="700" fill="#fff">23 servers</text>
 <rect x="248" y="300" width="140" height="48" rx="24" fill="#fff" fill-opacity="0.14" stroke="#fff" stroke-opacity="0.35"/>
   <circle cx="272" cy="324" r="6" fill="#ffc23d"/>
-  <text x="328.0" y="331" text-anchor="middle" font-family="Vazirmatn,Vazir,Tahoma,'Segoe UI',sans-serif" font-size="19" font-weight="700" fill="#fff">355 tools</text>
+  <text x="328.0" y="331" text-anchor="middle" font-family="Vazirmatn,Vazir,Tahoma,'Segoe UI',sans-serif" font-size="19" font-weight="700" fill="#fff">359 tools</text>
 <rect x="402" y="300" width="150" height="48" rx="24" fill="#fff" fill-opacity="0.14" stroke="#fff" stroke-opacity="0.35"/>
   <circle cx="426" cy="324" r="6" fill="#ff5c8f"/>
   <text x="487.0" y="331" text-anchor="middle" font-family="Vazirmatn,Vazir,Tahoma,'Segoe UI',sans-serif" font-size="19" font-weight="700" fill="#fff">Hardened</text>

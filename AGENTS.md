@@ -1,15 +1,17 @@
 # AGENTS.md
 
-Guide for AI agents using or working on **awesome-iran-mcp**: 22 MCP servers for Iranian websites, 355 tools in
+Guide for AI agents using or working on **awesome-iran-mcp**: 23 MCP servers for Iranian websites, 359 tools in
 total. 21 are Python packages on PyPI, run as stdio servers with `uvx <package>`; all of them are unofficial except
-`exiryab-mcp`, ExirYab's own server on its public API. `swapwallet-mcp` is SwapWallet's own hosted server
-(`https://swapwallet.app/mcp`), with OAuth sign-in.
+`exiryab-mcp`, ExirYab's own server on its public API. Two are hosted by their sites:
+`pasavard-mcp` (`https://pasavard.ir/api/mcp`, no sign-in) and `swapwallet-mcp` (`https://swapwallet.app/mcp`, OAuth
+sign-in).
 
 ## Pick a server
 
 | User wants to... | Server | Start with |
 |---|---|---|
 | Buy electronics, appliances, almost anything | `digikala-mcp` | `dk_find_cheapest`, `dk_best_for_budget`, then `dk_product`, `dk_price_history` |
+| The best buy in a price range on Digikala or Snappshop, or whether today's price is good | `pasavard-mcp` | `best_lists`, then `best_list`; `search_products` |
 | Find a flat, used car or phone in ads, or check if an ad's price is fair | `divar-mcp` | `dv_search`, `dv_cheapest`, `dv_best_for_budget`, `dv_appraise` |
 | Compare a phone or laptop across sellers, with installments | `technolife-mcp` | `tl_find_cheapest`, `tl_product`, `tl_compare` |
 | Gadgets and accessories | `masterkala-mcp` | `mk_find_cheapest`, `mk_product` |
@@ -48,7 +50,8 @@ SwapWallet is hosted, so it is added by URL: `claude mcp add --transport http sw
 Other clients take the URL in their own shape; its skill and its
 [setup for each client](https://github.com/SwapWallet/swapwallet-mcp#connect) list them. The user then signs in with
 OAuth, in the client: Claude Code doesn't open a browser by itself, so tell the user to run `/mcp`, pick the server
-and choose Authenticate.
+and choose Authenticate. Pasavard is hosted too, with no sign-in:
+`claude mcp add --transport http pasavard https://pasavard.ir/api/mcp`.
 
 As Claude Code plugins (MCP server plus a skill with usage rules), from the `iran-mcp` marketplace:
 
@@ -60,14 +63,16 @@ claude plugin install iran-all --marketplace sepehr071/awesome-iran-mcp     # al
 Bundles: `iran-all`, `iran-food`, `iran-shopping`, `iran-beauty`, `iran-travel`, `iran-health`, `iran-books`.
 Skills only, for any agent: `npx skills add sepehr071/awesome-iran-mcp`.
 
-The server key in config is the package name without `-mcp`. [`.mcp.json`](.mcp.json) holds all 22.
-Requires [uv](https://docs.astral.sh/uv/) (`swapwallet-mcp` doesn't). Add only the servers the task needs: each one adds 3 to 31 tools.
+The server key in config is the package name without `-mcp`. [`.mcp.json`](.mcp.json) holds all 23.
+Requires [uv](https://docs.astral.sh/uv/) (`pasavard-mcp` and `swapwallet-mcp` don't). Add only the servers the task needs: each one adds 3 to 31 tools.
 
 ## Rules every server follows
 
 - Prices are **Toman**. Convert before comparing with any Rial figure from elsewhere.
 - Site servers are **read-only**: no login, basket, booking, order or payment. Hand the user the link to buy.
 - `okala-mcp` has an optional OTP login (`ok_login`), read-only, only for text search. Ask the user first.
+- `pasavard-mcp` store links are affiliate links: say so when you share one. `cashback_url` returns part of the
+  commission after a one-time phone sign-in on pasavard.ir; `buy_url` goes straight to the store.
 - `payping-mcp` (`PAYPING_TOKEN`) and `bale-mcp` (`BALE_BOT_TOKEN`) write to the user's own account.
   Confirm with the user before any `payping_create_*`, `payping_send_invoice`, `bot_send_*`, `bot_edit_message`
   or `bot_delete_message` call.
@@ -102,7 +107,7 @@ README.md / README.fa.md   English (default) and Persian docs; keep both in sync
   ships its own `skills/<key>/SKILL.md`, which come from that file. Check with `claude plugin validate .`.
 - Add a server: `git submodule add https://github.com/sepehr071/<name>-mcp servers/<name>-mcp`, add it to
   `SERVERS` in `scripts/catalog.py` (and to `GROUPS` in `scripts/banner.py` if its category is new), run both scripts, add a row to both
-  READMEs and the table above. Update the 22 / 355 counts written in both READMEs.
+  READMEs and the table above. Update the 23 / 359 counts written in both READMEs.
 - Add a hosted server: `git submodule add <its repo> servers/<name>-mcp` and an entry in `REMOTE` in
   `scripts/catalog.py`, then the same `GROUPS`, README, table and count steps. Its repo needs an MCP Registry
   `server.json` with `remotes` (name, version, description, repository), and the server must publish a server card

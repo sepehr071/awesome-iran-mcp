@@ -1,5 +1,19 @@
 # Changelog
 
+## Unreleased
+
+### Added
+
+- **[exiryab-mcp](https://github.com/sshnevis/exiryab-mcp)**, ExirYab's official server, 3 tools: find a doctor by
+  name, city and specialty, with clinics, phones, weekly hours and map links. Contributed by @sshnevis (#3).
+- **[pasavard-mcp](https://github.com/ashkancapella/pasavard-mcp)**, Pasavard's official hosted server, 4 tools:
+  Digikala and Snappshop prices tracked hourly, best picks per budget against each product's 30-day low. No sign-in.
+  Its store links are affiliate links, and every result says so (#5).
+
+### Fixed
+
+- Bundle descriptions read as plain phrases: `iran-shopping` said "Everything for to buy electronics...".
+
 ## v1.5
 
 The 19 package servers get leaner, safer and steadier, and Divar joins the catalog. Every server keeps its tool names

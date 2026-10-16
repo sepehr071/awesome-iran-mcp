@@ -72,6 +72,7 @@ SERVERS = {
 # MCP Registry server.json (with `remotes`); tools/list needs the user's sign-in, so the tools, sign-in and read-only
 # status come from the server card the server publishes (card()).
 REMOTE = {
+    "pasavard-mcp": ("shopping", "https://pasavard.ir"),
     "swapwallet-mcp": ("crypto", "https://swapwallet.app"),
 }
 
