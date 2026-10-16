@@ -1,28 +1,41 @@
 <div align="center">
 
-<img src="assets/banner.svg" alt="awesome-iran-mcp: 20 MCP servers and 321 tools for Iranian shopping, food, travel, health, book and crypto sites, for Claude, Cursor and Copilot" width="100%">
+<img src="assets/banner.svg" alt="awesome-iran-mcp: 21 MCP servers and 352 tools for Iranian shopping, classifieds, food, travel, health, book and crypto sites, for Claude, Cursor and Copilot" width="100%">
 
 **English** · [فارسی](README.fa.md)
 
 # Iran MCP servers: awesome-iran-mcp
 
 **Give your AI agent the Iranian web.**<br>
-19 unofficial, open-source Persian-web MCP servers for Digikala, Snappfood, Jabama, MrBilit, Paziresh24, Taaghche and more, plus SwapWallet's official one.<br>
+20 unofficial, open-source Persian-web MCP servers for Digikala, Divar, Snappfood, Jabama, MrBilit, Paziresh24, Taaghche and more, plus SwapWallet's official one.<br>
 Search, compare prices in Toman, find free slots and today's deals from Claude, Cursor, GitHub Copilot in VS Code or any MCP client.<br>
 Install them as Claude Code plugins with skills, or as Agent Skills for Codex, Cursor, Antigravity and Grok Build.
 
-[![Servers](https://img.shields.io/badge/servers-20-3fd6c9)](#the-servers)
-[![Tools](https://img.shields.io/badge/tools-321-f4b54a)](TOOLS.md)
+[![Servers](https://img.shields.io/badge/servers-21-3fd6c9)](#the-servers)
+[![Tools](https://img.shields.io/badge/tools-352-f4b54a)](TOOLS.md)
 [![Claude Code plugins](https://img.shields.io/badge/Claude_Code-plugin_marketplace-d97757)](#quick-start)
 [![MCP Registry](https://img.shields.io/badge/MCP_Registry-io.github.sepehr071-7c3aed)](https://registry.modelcontextprotocol.io/?q=sepehr071)
 [![License: MIT](https://img.shields.io/badge/license-MIT-16a34a)](LICENSE)
 [![Stars](https://img.shields.io/github/stars/sepehr071/awesome-iran-mcp?style=social)](https://github.com/sepehr071/awesome-iran-mcp)
 
-[Quick start](#quick-start) · [The servers](#the-servers) · [For AI agents](#for-ai-agents) · [All tools](TOOLS.md) · [FAQ](#faq)
+[What's new](#whats-new-in-v15) · [Quick start](#quick-start) · [The servers](#the-servers) · [For AI agents](#for-ai-agents) · [All tools](TOOLS.md) · [FAQ](#faq)
 
 </div>
 
 ---
+
+## What's new in v1.5
+
+<img src="assets/release.svg" alt="awesome-iran-mcp v1.5: about 62% fewer tokens per tool call, a 19% smaller tool list, security hardening, and the new Divar server" width="100%">
+
+- **About 62% fewer tokens per tool call** and a 19% smaller tool list across the 19 package servers, with the same
+  rankings and cheapest prices as before.
+- **Security hardening** in 30book, Bale and Okala, and site text is treated as untrusted in every server.
+- **Caches, parallel requests and retries** where the servers were slow or fragile.
+- **New: [divar-mcp](https://github.com/sepehr071/divar-mcp)**, 31 tools for Divar classifieds: homes, cars, phones,
+  fair-price checks and new-ad alerts.
+
+Full list, including changes for callers: [CHANGELOG.md](CHANGELOG.md).
 
 ## Why
 
@@ -99,7 +112,7 @@ claude mcp add --transport http swapwallet https://swapwallet.app/mcp   # hosted
 `swapwallet-mcp` is added by URL, and each client takes a URL in its own shape (Windsurf uses `serverUrl`, Claude
 Desktop takes it under Settings → Connectors): see [its setup for each client](https://github.com/SwapWallet/swapwallet-mcp#connect).
 
-**All 20 at once:** clone this repo and open it in Claude Code. The [`.mcp.json`](.mcp.json) at the root
+**All 21 at once:** clone this repo and open it in Claude Code. The [`.mcp.json`](.mcp.json) at the root
 registers every server; approve the ones you want.
 
 ```bash
@@ -108,7 +121,7 @@ cd awesome-iran-mcp && claude
 ```
 
 > [!TIP]
-> 321 tools is a lot of context. Enable the servers for the task at hand rather than all of them.
+> 352 tools is a lot of context. Enable the servers for the task at hand rather than all of them.
 
 ## The servers
 
@@ -120,6 +133,12 @@ cd awesome-iran-mcp && claude
 | [technolife-mcp](https://github.com/sepehr071/technolife-mcp) | [Technolife](https://www.technolife.com) | 19 | [![PyPI](https://img.shields.io/pypi/v/technolife-mcp?label=&color=2fe0cf)](https://pypi.org/project/technolife-mcp/) | [![Last commit](https://img.shields.io/github/last-commit/sepehr071/technolife-mcp?label=&color=ffc23d)](https://github.com/sepehr071/technolife-mcp/commits/main) | Electronics: each seller's cash and installment price, specs, reviews, deals |
 | [masterkala-mcp](https://github.com/sepehr071/masterkala-mcp) | [MasterKala](https://masterkala.com) | 14 | [![PyPI](https://img.shields.io/pypi/v/masterkala-mcp?label=&color=2fe0cf)](https://pypi.org/project/masterkala-mcp/) | [![Last commit](https://img.shields.io/github/last-commit/sepehr071/masterkala-mcp?label=&color=ffc23d)](https://github.com/sepehr071/masterkala-mcp/commits/main) | Gadgets and accessories: prices, specs, deals |
 | [shopino-mcp](https://github.com/sepehr071/shopino-mcp) | [Shopino](https://shopino.app) | 14 | [![PyPI](https://img.shields.io/pypi/v/shopino-mcp?label=&color=2fe0cf)](https://pypi.org/project/shopino-mcp/) | [![Last commit](https://img.shields.io/github/last-commit/sepehr071/shopino-mcp?label=&color=ffc23d)](https://github.com/sepehr071/shopino-mcp/commits/main) | Fashion from thousands of shops: prices, sizes, stock, shop ratings |
+
+### 🏠 Classifieds
+
+| Server | Site | Tools | Version | Updated | What your agent can do |
+|---|---|---:|:---:|:---:|---|
+| [divar-mcp](https://github.com/sepehr071/divar-mcp) | [Divar](https://divar.ir) | 31 | [![PyPI](https://img.shields.io/pypi/v/divar-mcp?label=&color=2fe0cf)](https://pypi.org/project/divar-mcp/) | [![Last commit](https://img.shields.io/github/last-commit/sepehr071/divar-mcp?label=&color=ffc23d)](https://github.com/sepehr071/divar-mcp/commits/main) | Homes, cars, phones and more in any city: cheapest and best-value ads, fair-price check, market stats, new-ad alerts |
 
 ### 💄 Beauty
 
@@ -177,7 +196,7 @@ This repo is built to be read by agents as much as by people:
 |---|---|
 | [`AGENTS.md`](AGENTS.md) | Which server to pick for which task, conventions, safety rules, how to work in this repo |
 | [`servers.json`](servers.json) | Machine-readable catalog: package or URL, version, category, env vars and every tool of each server |
-| [`TOOLS.md`](TOOLS.md) | All 321 tools grouped by server, one line each |
+| [`TOOLS.md`](TOOLS.md) | All 352 tools grouped by server, one line each |
 | [`llms.txt`](llms.txt) | Short index for LLMs ([llmstxt.org](https://llmstxt.org)) |
 | [`.mcp.json`](.mcp.json) | Ready-to-use config for every server |
 | [`.claude-plugin/marketplace.json`](.claude-plugin/marketplace.json) | The `iran-mcp` plugin marketplace: one plugin per server plus bundles |

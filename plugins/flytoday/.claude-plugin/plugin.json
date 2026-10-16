@@ -1,7 +1,7 @@
 {
   "name": "flytoday",
   "displayName": "Flytoday",
-  "version": "0.1.2",
+  "version": "0.2.0",
   "description": "Unofficial read-only Flytoday: Iranian and international flights, hotels, villas, trains, buses.",
   "author": {
     "name": "Sepehr Radmard",
@@ -20,7 +20,7 @@
     "flytoday": {
       "command": "uvx",
       "args": [
-        "flytoday-mcp@0.1.2"
+        "flytoday-mcp@0.2.0"
       ]
     }
   }

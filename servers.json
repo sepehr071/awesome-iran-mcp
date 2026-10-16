@@ -5,7 +5,7 @@
     "category": "food",
     "site": "https://snappfood.ir",
     "description": "Unofficial read-only Snappfood & SnappMarket: search food and groceries, compare prices, deals.",
-    "version": "0.1.3",
+    "version": "0.2.0",
     "pypi": "snapp-mcp",
     "repository": "https://github.com/sepehr071/snapp-mcp",
     "registry_name": "io.github.sepehr071/snapp-mcp",
@@ -134,7 +134,7 @@
     "category": "food",
     "site": "https://okala.com",
     "description": "Unofficial read-only Okala: grocery stores that deliver to you, compare prices across stores.",
-    "version": "0.1.2",
+    "version": "0.2.0",
     "pypi": "okala-mcp",
     "repository": "https://github.com/sepehr071/okala-mcp",
     "registry_name": "io.github.sepehr071/okala-mcp",
@@ -184,12 +184,12 @@
       {
         "name": "ok_search",
         "title": "Search products near a point",
-        "summary": "Find products by text, best matches first, then cheapest (Toman). `mode` tells which way ran:"
+        "summary": "Find products by text near a point (or in one store with store_id), best matches first, then"
       },
       {
         "name": "ok_compare",
         "title": "Compare prices across stores",
-        "summary": "Which nearby store sells the same product cheapest. Fetches a category (and/or brand) from every store"
+        "summary": "Which open nearby store sells the same product cheapest: a category and/or brand from every store,"
       },
       {
         "name": "ok_store_products",
@@ -224,7 +224,7 @@
       {
         "name": "ok_stores",
         "title": "Stores that deliver to a point",
-        "summary": "List the Okala stores (supermarkets, bakeries, fruit shops, chains) that deliver to a point, in the"
+        "summary": "Okala stores that deliver to a point, in the site's order: id, type, rating, distance, earliest"
       },
       {
         "name": "ok_store",
@@ -244,7 +244,7 @@
     "category": "shopping",
     "site": "https://www.digikala.com",
     "description": "Unofficial read-only Digikala: search products, compare sellers, price history, reviews, deals.",
-    "version": "0.3.2",
+    "version": "0.4.0",
     "pypi": "digikala-mcp",
     "repository": "https://github.com/sepehr071/digikala-mcp",
     "registry_name": "io.github.sepehr071/digikala-mcp",
@@ -263,27 +263,27 @@
       {
         "name": "dk_search",
         "title": "Search products",
-        "summary": "Search Digikala products by name, with price (Toman), discount, seller and rating."
+        "summary": "Search products by name: price (Toman), discount, seller, rating, 20 per page."
       },
       {
         "name": "dk_find_cheapest",
         "title": "Find cheapest product",
-        "summary": "Find the cheapest in-stock products that really match a query, one flat list sorted by price."
+        "summary": "Find the cheapest in-stock products that really match a query, sorted by price (Toman)."
       },
       {
         "name": "dk_best_for_budget",
         "title": "Best picks for a budget",
-        "summary": "Rank the best-rated in-stock products within a budget, with the reasoning shown."
+        "summary": "Rank the best-rated in-stock products within a budget (Toman) by a rating weighted by its count."
       },
       {
         "name": "dk_suggest",
         "title": "Search suggestions",
-        "summary": "Autocomplete a vague or partial query into better search words, categories and brands."
+        "summary": "Autocomplete a vague or misspelled query into keywords, categories and brands."
       },
       {
         "name": "dk_filters",
         "title": "Filter options",
-        "summary": "List the filters Digikala offers for a category or a search: features, colors, sellers, price range."
+        "summary": "List the filters of a category or a search: attributes, colors, sellers, price range (Toman), brands."
       },
       {
         "name": "dk_categories",
@@ -293,17 +293,17 @@
       {
         "name": "dk_category_products",
         "title": "Browse a category",
-        "summary": "List the products of one category with sort and filters (price in Toman, brand, features, stock)."
+        "summary": "List one category's products with sort and filters (price in Toman), strict order."
       },
       {
         "name": "dk_brand_products",
         "title": "Browse a brand",
-        "summary": "List a brand's products on Digikala with sort and price filters (Toman), plus the brand id for brand_ids."
+        "summary": "List a brand's products with sort and price filters (Toman), plus the brand id for brand_ids."
       },
       {
         "name": "dk_seller",
         "title": "Seller profile and products",
-        "summary": "Get a marketplace seller's reputation (rating 0-5, on-time shipping, cancellations, returns) and products."
+        "summary": "Get a seller's reputation (rating 0-5, on-time shipping, cancellations, returns) and products."
       },
       {
         "name": "dk_deals",
@@ -313,12 +313,12 @@
       {
         "name": "dk_best_sellers",
         "title": "Best sellers",
-        "summary": "List Digikala's current best-selling products, overall or in one main category."
+        "summary": "List current best sellers, overall or in one main category; also returns the main categories' ids for category_id."
       },
       {
         "name": "dk_fresh_search",
         "title": "Search groceries",
-        "summary": "Search or browse Digikala Fresh (the supermarket: dairy, groceries, drinks, hygiene)."
+        "summary": "Search or browse Digikala Fresh (supermarket). category_code beats query and also returns sub-categories."
       },
       {
         "name": "dk_product",
@@ -328,22 +328,22 @@
       {
         "name": "dk_price_history",
         "title": "Price history",
-        "summary": "Get about 30 days of daily buy-box prices (Toman) per color/variant, with lowest and highest."
+        "summary": "Get ~30 days of daily buy-box prices (Toman) per color/variant, with lowest and highest."
       },
       {
         "name": "dk_reviews",
         "title": "Product reviews",
-        "summary": "Read customer reviews of a product: stars 1-5 (null = no stars given), text, pros/cons, verified buyer flag."
+        "summary": "Read customer reviews: stars 1-5 (null = none), text, pros/cons, verified buyer flag."
       },
       {
         "name": "dk_questions",
         "title": "Product questions and answers",
-        "summary": "Read customers' questions about a product and up to 2 answers each (answered_by: buyer, seller, ...)."
+        "summary": "Read customers' questions (20 per page) with up to 2 answers each (answered_by: buyer, seller, ...)."
       },
       {
         "name": "dk_similar",
         "title": "Similar products",
-        "summary": "List products similar to one product (same kind, other models and brands)."
+        "summary": "List products similar to one (same kind, other models and brands)."
       },
       {
         "name": "dk_compare",
@@ -353,22 +353,22 @@
       {
         "name": "dk_shortlist",
         "title": "Re-check a shortlist",
-        "summary": "Re-price up to 10 products in one call: today's price, cheapest offer, stock, rating and 30-day low."
+        "summary": "Re-price up to 10 products in one call: price, cheapest offer, stock, rating and 30-day low (Toman)."
       },
       {
         "name": "dk_installments",
         "title": "Installment plans",
-        "summary": "Get the Digipay credit-line offers available when buying a product, in Toman."
+        "summary": "Get the Digipay credit-line offers for a product, in Toman."
       },
       {
         "name": "dk_plus_plans",
         "title": "Digikala Plus plans",
-        "summary": "List Digikala Plus membership plans (free shipments) with their price in Toman and benefits."
+        "summary": "List Digikala Plus plans (free shipments per month: jet = same-day Tehran/Karaj, fresh = supermarket) with price in Toman and benefits."
       },
       {
         "name": "dk_gold_prices",
         "title": "Gold and coin prices",
-        "summary": "Get Digikala's live 18k gold price per gram and gold coin prices, in Toman."
+        "summary": "Get the live 18k gold price per gram and gold coin prices, in Toman."
       },
       {
         "name": "dk_location",
@@ -383,7 +383,7 @@
     "category": "shopping",
     "site": "https://www.technolife.com",
     "description": "Unofficial read-only Technolife: search electronics, compare sellers and installment prices, deals.",
-    "version": "0.2.2",
+    "version": "0.3.0",
     "pypi": "technolife-mcp",
     "repository": "https://github.com/sepehr071/technolife-mcp",
     "registry_name": "io.github.sepehr071/technolife-mcp",
@@ -502,7 +502,7 @@
     "category": "shopping",
     "site": "https://masterkala.com",
     "description": "Unofficial read-only MasterKala: search gadgets, compare prices and specs, stock, delivery, deals.",
-    "version": "0.2.2",
+    "version": "0.3.0",
     "pypi": "masterkala-mcp",
     "repository": "https://github.com/sepehr071/masterkala-mcp",
     "registry_name": "io.github.sepehr071/masterkala-mcp",
@@ -596,7 +596,7 @@
     "category": "beauty",
     "site": "https://www.khanoumi.com",
     "description": "Unofficial read-only Khanoumi: search cosmetics and skin care, compare prices, shades, reviews.",
-    "version": "0.1.4",
+    "version": "0.2.0",
     "pypi": "khanoumi-mcp",
     "repository": "https://github.com/sepehr071/khanoumi-mcp",
     "registry_name": "io.github.sepehr071/khanoumi-mcp",
@@ -615,17 +615,17 @@
       {
         "name": "kh_search",
         "title": "Search products",
-        "summary": "Search Khanoumi products by keyword: price, discount and stock of each match, sponsored items removed."
+        "summary": "Search products by keyword: price, discount and stock of each match. Also returns the best-matching"
       },
       {
         "name": "kh_find_cheapest",
         "title": "Find cheapest product",
-        "summary": "Find the cheapest in-stock products for a keyword, one flat list sorted by payable price (Toman)."
+        "summary": "Find the cheapest in-stock products for a keyword, one flat list by payable price (Toman)."
       },
       {
         "name": "kh_browse",
         "title": "Browse a category, brand or tag",
-        "summary": "List the products of a category, brand(s) or campaign tag with sorting, price range and filters."
+        "summary": "List products of a category, brand(s) or campaign tag with sorting, price range and filters."
       },
       {
         "name": "kh_filters",
@@ -640,22 +640,22 @@
       {
         "name": "kh_brands",
         "title": "Find brands",
-        "summary": "Find brands by name (about 3,200 brands) with their slugs."
+        "summary": "Find brands by name (about 3,200) with their slugs, for the `brands` of kh_browse / kh_filters."
       },
       {
         "name": "kh_deals",
         "title": "Current deals and discount codes",
-        "summary": "List today's featured deals from the Khanoumi home page (the daily pink box \"جعبه صورتی\" and the other"
+        "summary": "List today's home-page deals (daily pink box \"جعبه صورتی\" and other rows), biggest discount first,"
       },
       {
         "name": "kh_store_info",
         "title": "Shipping, returns and store rules",
-        "summary": "Get Khanoumi's order rules: packaging cost, shipping fees and times, returns, payment and refunds,"
+        "summary": "Get Khanoumi's order rules from the official FAQ: packaging cost, shipping fees and times, returns,"
       },
       {
         "name": "kh_blog_search",
         "title": "Search the beauty blog",
-        "summary": "Search the Khanoumi magazine (مجله خانومی): buying guides, skin and hair care routines, ingredient"
+        "summary": "Search the Khanoumi magazine (مجله خانومی): buying guides, care routines, ingredient explainers, with links."
       },
       {
         "name": "kh_product",
@@ -680,7 +680,7 @@
     "category": "beauty",
     "site": "https://asalbanooshop.com",
     "description": "Unofficial read-only Asal Banoo: search cosmetics and skin care, compare prices, sizes, deals.",
-    "version": "0.2.2",
+    "version": "0.3.0",
     "pypi": "asalbanoo-mcp",
     "repository": "https://github.com/sepehr071/asalbanoo-mcp",
     "registry_name": "io.github.sepehr071/asalbanoo-mcp",
@@ -699,37 +699,37 @@
       {
         "name": "ab_search",
         "title": "Search products",
-        "summary": "Search Asal Banoo products by keyword: price, discount, stock and rating of each match."
+        "summary": "Search products by keyword: price, discount, stock and rating of each match."
       },
       {
         "name": "ab_find_cheapest",
         "title": "Find cheapest product",
-        "summary": "Find the cheapest in-stock products for a keyword, one flat list sorted by current price (Toman)."
+        "summary": "Find the cheapest in-stock products for a keyword, one list sorted by price (Toman)."
       },
       {
         "name": "ab_browse",
         "title": "Browse a category or brand",
-        "summary": "List the products of a category or brand (or the whole shop) with sorting, price range, stock and attribute filters."
+        "summary": "List products of a category or brand (or the whole shop) with sort, price range, stock and attribute filters."
       },
       {
         "name": "ab_filters",
         "title": "Filters of a category or brand",
-        "summary": "List the attribute filters of a category or brand listing (volume, hair type, skin type, gender, origin...)"
+        "summary": "List the attribute filters of a category or brand (volume, hair/skin type, gender, origin) with in-stock counts."
       },
       {
         "name": "ab_categories",
         "title": "List categories",
-        "summary": "List Asal Banoo's product categories (about 70: skin, make-up, hair, perfume, kids) with slugs and counts."
+        "summary": "List product categories (about 70) with slugs and counts."
       },
       {
         "name": "ab_brands",
         "title": "List brands",
-        "summary": "List the brands Asal Banoo sells (about 250) with their slugs and product counts, biggest first."
+        "summary": "List brands (about 250) with slugs and product counts, biggest first."
       },
       {
         "name": "ab_deals",
         "title": "Current deals",
-        "summary": "List the discounted in-stock products right now, biggest discount first (the site's \"تخفیفات\" page)."
+        "summary": "List discounted in-stock products, biggest discount first."
       },
       {
         "name": "ab_shop_info",
@@ -749,12 +749,12 @@
       {
         "name": "ab_product",
         "title": "Product details",
-        "summary": "Get one product's record: price and discount (Toman), stock (with the exact count when low),"
+        "summary": "Get one product: price/discount (Toman), stock (exact count when low), every size/color variant with its own"
       },
       {
         "name": "ab_reviews",
         "title": "Product reviews",
-        "summary": "Read customers' reviews and questions about a product (1-5 stars, newest first) with the shop's answers."
+        "summary": "Read customers' reviews and questions about a product (newest first) with the shop's answers."
       }
     ]
   },
@@ -764,7 +764,7 @@
     "category": "fashion",
     "site": "https://shopino.app",
     "description": "Unofficial read-only Shopino: search fashion across Iranian shops, compare prices, sizes, stock.",
-    "version": "0.2.2",
+    "version": "0.3.0",
     "pypi": "shopino-mcp",
     "repository": "https://github.com/sepehr071/shopino-mcp",
     "registry_name": "io.github.sepehr071/shopino-mcp",
@@ -783,72 +783,251 @@
       {
         "name": "sh_search",
         "title": "Search products",
-        "summary": "Search products across all Shopino shops by keyword: price to pay, discount, stock and selling shop."
+        "summary": "Search products across all shops by keyword: price to pay, discount, stock, selling shop."
       },
       {
         "name": "sh_find_cheapest",
         "title": "Find cheapest product",
-        "summary": "Find the cheapest in-stock products for a keyword across all shops, one flat list sorted by price to pay (Toman)."
+        "summary": "Find the cheapest in-stock products for a keyword across all shops, one flat list sorted by price to pay."
       },
       {
         "name": "sh_browse",
         "title": "Browse a category, shop, tag or listing",
-        "summary": "List products of a category, a shop, a product tag or a curated listing, with sorting, price range and filters."
+        "summary": "List products of a category, shop, tag or curated listing, with sort, price range and filters."
       },
       {
         "name": "sh_filters",
         "title": "Filters for listings",
-        "summary": "List the filter values sh_search / sh_browse accept: size systems with their sizes, sort orders,"
+        "summary": "List the filter values sh_search / sh_browse accept: size systems and sizes, sorts, courier cities,"
       },
       {
         "name": "sh_categories",
         "title": "List categories",
-        "summary": "List Shopino's category tree (clothing, bags, shoes, accessories, watches, jewelry, gold, cosmetics, ...)"
+        "summary": "List the category tree with ids, URL paths and levels, plus total product and shop counts."
       },
       {
         "name": "sh_brands",
         "title": "Brands",
-        "summary": "Without shop_id: the official brand shops Shopino features (each is a shop: browse it with"
+        "summary": "Without shop_id: featured official brand shops (browse one with sh_browse(shop_id=...)). With shop_id:"
       },
       {
         "name": "sh_deals",
         "title": "Deals, flash sale and campaigns",
-        "summary": "List today's featured deals from the Shopino home page: the flash sale (شگفت انگیز) with its end"
+        "summary": "List today's home-page deals (flash sale with end time, best sellers, themed rows), biggest discount"
       },
       {
         "name": "sh_campaign",
         "title": "Campaign page",
-        "summary": "Open a Shopino campaign or landing page: its product rows (with prices) and its tabs."
+        "summary": "Open a campaign or landing page: its product rows (with prices) and tabs."
       },
       {
         "name": "sh_blog_search",
         "title": "Search the style blog",
-        "summary": "Search the Shopino blog (style guides and model galleries: manteau, dress, bag, shoe models, ...),"
+        "summary": "Search the style blog (guides and model galleries), newest first; no query = latest posts."
       },
       {
         "name": "sh_blog_post",
         "title": "Read a blog post",
-        "summary": "Read one Shopino blog post as plain text, with its category id for sh_browse."
+        "summary": "Read one blog post as plain text, with its category id for sh_browse (after sh_blog_search)."
       },
       {
         "name": "sh_product",
         "title": "Product details",
-        "summary": "Get one product's full record: price and discount (Toman), every color / size variant with its own"
+        "summary": "Get one product's full record: price, every color / size variant with its own price and stock, size"
       },
       {
         "name": "sh_similar",
         "title": "Similar products",
-        "summary": "Find products like this one at other shops, with prices, discount, stock and shop."
+        "summary": "Find products like this one at other shops (itself left out)."
       },
       {
         "name": "sh_shops",
         "title": "Find shops",
-        "summary": "Find Shopino shops (online and Instagram shops) by name, category group, gender or courier city,"
+        "summary": "Find shops by name, category group, gender or courier city, with rating, surveys, followers and product count."
       },
       {
         "name": "sh_shop",
         "title": "Shop profile",
-        "summary": "Get a shop's profile: rating, customer rating, buyer survey (satisfied, quality, price, on-time"
+        "summary": "Get a shop's profile: ratings, buyer survey %, followers, product count, main categories, courier city,"
+      }
+    ]
+  },
+  {
+    "name": "divar-mcp",
+    "title": "Divar",
+    "category": "classifieds",
+    "site": "https://divar.ir",
+    "description": "Unofficial read-only Divar: search Iran's classified ads, cheapest and best-value ads, price checks.",
+    "version": "0.1.0",
+    "pypi": "divar-mcp",
+    "repository": "https://github.com/sepehr071/divar-mcp",
+    "registry_name": "io.github.sepehr071/divar-mcp",
+    "run": "uvx divar-mcp",
+    "read_only": true,
+    "env": [
+      {
+        "name": "DIVAR_MCP_PROXY",
+        "isRequired": false,
+        "isSecret": false,
+        "description": "Optional HTTP proxy URL for requests to divar.ir; system proxy settings are ignored."
+      }
+    ],
+    "tool_count": 31,
+    "tools": [
+      {
+        "name": "dv_categories",
+        "title": "Browse categories",
+        "summary": "The Divar category tree (236 nodes, up to 4 levels): slug, Persian name, path and whether it is a leaf."
+      },
+      {
+        "name": "dv_filters",
+        "title": "Category filters",
+        "summary": "Every filter a category supports: key, type, Persian label, unit and the allowed options."
+      },
+      {
+        "name": "dv_filter_options",
+        "title": "Filter options",
+        "summary": "Allowed values of a filter: brand and model keys (161 car brands), districts, or any option list."
+      },
+      {
+        "name": "dv_suggest",
+        "title": "Search suggestions",
+        "summary": "What Divar's search box would suggest for some text, and which categories the text belongs to."
+      },
+      {
+        "name": "dv_parse_query",
+        "title": "Question to search",
+        "summary": "Turn a plain Persian request into dv_search arguments: city, neighbourhoods, price bounds, category and leftover words."
+      },
+      {
+        "name": "dv_market",
+        "title": "Market price statistics",
+        "summary": "Asking-price statistics of a search: min, p10, p25, median, p75, p90, max, mean; split by district and by day."
+      },
+      {
+        "name": "dv_appraise",
+        "title": "Is this price fair",
+        "summary": "Is an ad's price (or a price you have in mind) high or low compared with similar ads? Percentile, verdict, confidence."
+      },
+      {
+        "name": "dv_status",
+        "title": "Server status",
+        "summary": "Is Divar reachable and how fast: version, a live latency check, caches and local watch state."
+      },
+      {
+        "name": "dv_cities",
+        "title": "Find cities",
+        "summary": "City ids for a name (1,177 cities; Tehran is 1, Mashhad 3). Returns id, name, URL slug, province id and centre."
+      },
+      {
+        "name": "dv_districts",
+        "title": "City neighbourhoods",
+        "summary": "Neighbourhoods (محله) of one city with ids, centre point and the main streets inside (Tehran has about 450)."
+      },
+      {
+        "name": "dv_neighbours",
+        "title": "Adjacent neighbourhoods",
+        "summary": "Neighbourhoods adjacent to a district, to widen a neighbourhood search to the surrounding area."
+      },
+      {
+        "name": "dv_locate",
+        "title": "Locate a GPS point",
+        "summary": "The city, neighbourhood and street address of a GPS point."
+      },
+      {
+        "name": "dv_place_search",
+        "title": "Search a place on the map",
+        "summary": "Map autocomplete: turn a landmark or street name into coordinates and a bounding box."
+      },
+      {
+        "name": "dv_place_mapping",
+        "title": "Map old place ids",
+        "summary": "Convert old Divar place ids to the current ones (Divar merged and renumbered places)."
+      },
+      {
+        "name": "dv_boundary",
+        "title": "City boundary",
+        "summary": "Neighbourhood borders of a city from Divar's GeoJSON: the city's bounding box, or one neighbourhood's polygon."
+      },
+      {
+        "name": "dv_post",
+        "title": "Ad details",
+        "summary": "Everything public about one ad: price in Toman, specs, features, description, images, map position, seller type."
+      },
+      {
+        "name": "dv_posts",
+        "title": "Several ads",
+        "summary": "Details of up to 10 ads in one call (compact: specs and one image, description cut at 300 characters)."
+      },
+      {
+        "name": "dv_compare",
+        "title": "Compare ads",
+        "summary": "Side by side: the price of each ad and only the specs that differ (the identical ones are listed once)."
+      },
+      {
+        "name": "dv_seller",
+        "title": "Seller and their ads",
+        "summary": "The seller behind an ad: how many personal and business ads they have, the business card (name, brand_token) and their ads."
+      },
+      {
+        "name": "dv_dealer",
+        "title": "Dealer page",
+        "summary": "A business account's public page: name, active ad count, member since and its first 11 ads."
+      },
+      {
+        "name": "dv_similar",
+        "title": "Similar ads",
+        "summary": "Ads similar to one ad: same brand/model (or category) and neighbourhood, widening step by step until enough are found."
+      },
+      {
+        "name": "dv_search",
+        "title": "Search ads",
+        "summary": "Search Divar ads in one or more cities by category, text and filters; compact cards, prices in Toman."
+      },
+      {
+        "name": "dv_count",
+        "title": "Count matching ads",
+        "summary": "How many active ads match a search, in one cheap call (capped: 10,000 means '10,000 or more')."
+      },
+      {
+        "name": "dv_cheapest",
+        "title": "Find cheapest ads",
+        "summary": "The cheapest ads of a search, cheapest first. Skips negotiable ads, placeholder or absurd prices and far-below-median outliers."
+      },
+      {
+        "name": "dv_best_for_budget",
+        "title": "Best ads for a budget",
+        "summary": "Within a budget: the best-value ads (furthest below their peers' median) and the most you can get (closest to the budget)."
+      },
+      {
+        "name": "dv_find_deals",
+        "title": "Find deals",
+        "summary": "Ads priced well below the median of the same search, without a budget: scored deals, with bait and junk prices removed."
+      },
+      {
+        "name": "dv_new_since",
+        "title": "New ads since a time",
+        "summary": "Ads published after a moment, newest first: poll this to watch a search (a new flat, a cheap car) without repeats."
+      },
+      {
+        "name": "dv_export",
+        "title": "Export ads",
+        "summary": "The ads of a search as CSV or JSON lines text, ready to save to a spreadsheet or analyse."
+      },
+      {
+        "name": "dv_nearby",
+        "title": "Ads near a point",
+        "summary": "Ads on the map around a GPS point, nearest first, with coordinates, distance, price chips and a thumbnail."
+      },
+      {
+        "name": "dv_watch",
+        "title": "Saved watches",
+        "summary": "Save a search and later get only the ads that appeared since the last check; stored in a local file, nothing is pushed."
+      },
+      {
+        "name": "dv_price_trend",
+        "title": "Price trend",
+        "summary": "The median asking price of a search over the days you have checked it: records one point per day in a local file."
       }
     ]
   },
@@ -858,7 +1037,7 @@
     "category": "travel",
     "site": "https://www.otaghak.com",
     "description": "Unofficial read-only Otaghak: search Iranian villas, availability, exact stay prices, reviews.",
-    "version": "0.1.4",
+    "version": "0.2.0",
     "pypi": "otaghak-mcp",
     "repository": "https://github.com/sepehr071/otaghak-mcp",
     "registry_name": "io.github.sepehr071/otaghak-mcp",
@@ -957,7 +1136,7 @@
     "category": "travel",
     "site": "https://www.jabama.com",
     "description": "Unofficial read-only Jabama: villas and stays with exact prices, group tours, events and theater.",
-    "version": "0.2.2",
+    "version": "0.3.0",
     "pypi": "jabama-mcp",
     "repository": "https://github.com/sepehr071/jabama-mcp",
     "registry_name": "io.github.sepehr071/jabama-mcp",
@@ -1086,7 +1265,7 @@
     "category": "travel",
     "site": "https://mrbilit.com",
     "description": "Unofficial read-only MrBilit: Iranian flights, trains, buses, taxis and hotels, seats and prices.",
-    "version": "0.2.2",
+    "version": "0.3.0",
     "pypi": "mrbilit-mcp",
     "repository": "https://github.com/sepehr071/mrbilit-mcp",
     "registry_name": "io.github.sepehr071/mrbilit-mcp",
@@ -1220,7 +1399,7 @@
     "category": "travel",
     "site": "https://www.flytoday.ir",
     "description": "Unofficial read-only Flytoday: Iranian and international flights, hotels, villas, trains, buses.",
-    "version": "0.1.2",
+    "version": "0.2.0",
     "pypi": "flytoday-mcp",
     "repository": "https://github.com/sepehr071/flytoday-mcp",
     "registry_name": "io.github.sepehr071/flytoday-mcp",
@@ -1354,7 +1533,7 @@
     "category": "health",
     "site": "https://www.paziresh24.com",
     "description": "Unofficial read-only Paziresh24: find Iranian doctors, profiles, prices, reviews and free slots.",
-    "version": "0.2.2",
+    "version": "0.3.0",
     "pypi": "paziresh24-mcp",
     "repository": "https://github.com/sepehr071/paziresh24-mcp",
     "registry_name": "io.github.sepehr071/paziresh24-mcp",
@@ -1373,62 +1552,62 @@
       {
         "name": "pz_doctor",
         "title": "Doctor profile",
-        "summary": "Full profile of one doctor: specialties, about text, medical council code, rating averages, insurance contracts, online visit (channels, price in Toman), and every office/hospital/clinic with address, phone, map, first free slot and services (ids, price, duration, weekly hours)."
+        "summary": "Full profile of one doctor: specialties, about, rating averages, insurances, online visit (channels, price in Toman) and every center with address, phone, map, first free slot and services (ids, price, duration, hours)."
       },
       {
         "name": "pz_first_available",
         "title": "Earliest free appointment",
-        "summary": "Whether a doctor can be booked now and the nearest free slot, for in-person and online visits and per center (Tehran time)."
+        "summary": "Whether a doctor can be booked now and the nearest free slot, in person, online and per center (Tehran time)."
       },
       {
         "name": "pz_reviews",
         "title": "Doctor reviews",
-        "summary": "Patient reviews of a doctor (stars 1-5 for behaviour, explanation and treatment, text, visit reason, center, verified visit), paged, plus on the first page a summary: rating averages, counts and average waiting time per center."
+        "summary": "Patient reviews (stars 1-5, text clipped to 400 chars, visit reason, center, verified visit), paged, plus on the first page a summary: rating averages, counts and waiting time per center."
       },
       {
         "name": "pz_faq",
         "title": "Paziresh24 FAQ",
-        "summary": "Answers from the official Paziresh24 FAQ: how booking works, cancelling or moving an appointment, online visits (channels, prescriptions), payment and refunds."
+        "summary": "Answers from the official Paziresh24 FAQ: booking, cancelling or moving, online visits, payment and refunds."
       },
       {
         "name": "pz_suggest",
         "title": "Suggest cities, specialties and queries",
-        "summary": "Turn words into pz_search_doctors arguments: matching cities (city slug), specialties (specialty slug) and the site's type-ahead query completions (use one as `text`)."
+        "summary": "Turn words into pz_search_doctors arguments: matching cities, specialties (with slugs) and the site's query completions (use one as `text`)."
       },
       {
         "name": "pz_search_doctors",
         "title": "Search doctors",
-        "summary": "Search Paziresh24 doctors (or hospitals and clinics) by city, specialty, name, online visit, gender, degree, with sorting and paging."
+        "summary": "Search doctors (or hospitals and clinics) by city, specialty, name, visit type, gender and degree, sorted and paged."
       },
       {
         "name": "pz_resolve_url",
         "title": "Resolve a Paziresh24 URL",
-        "summary": "Turn a paziresh24.com link into its kind ('doctor' or 'center') and slug, plus the clean URL."
+        "summary": "Turn a paziresh24.com link into its kind ('doctor' or 'center'), slug and clean URL."
       },
       {
         "name": "pz_center",
         "title": "Hospital or clinic profile",
-        "summary": "Profile of a hospital or clinic: type, address, phone, website, map, about text, departments, and its doctors (slug, department, specialty, basic insurance flags)."
+        "summary": "Profile of a hospital or clinic: type, address, phone, website, map, about, departments and its doctors (slug, department, specialty, basic insurances)."
       },
       {
         "name": "pz_free_days",
         "title": "Free appointment days",
-        "summary": "Days with at least one free appointment for one service of a doctor at one center, over the whole booking window (often 6-8 weeks), with the weekly days off and holidays in that window."
+        "summary": "Days with a free appointment for one service at one center over the whole booking window (often 6-8 weeks), with weekly days off and holidays."
       },
       {
         "name": "pz_free_slots",
         "title": "Free appointment slots",
-        "summary": "Free appointment start times (Tehran HH:MM) per day for one service of a doctor at one center, for a date range."
+        "summary": "Free appointment start times (Tehran HH:MM) per day for one service at one center, for a date range."
       },
       {
         "name": "pz_visit_price",
         "title": "Visit price",
-        "summary": "Exact price of one service in Toman: the doctor's fee, VAT and the payable total (what the online-visit invoice shows), plus Paziresh24's refund-on-cancel setting."
+        "summary": "Exact price of one service in Toman: fee, VAT and payable total (the online-visit invoice), plus the refund-on-cancel setting."
       },
       {
         "name": "pz_holidays",
         "title": "Public holidays",
-        "summary": "Official Iranian public holidays and occasions between two dates (Persian occasion name and the Hijri date)."
+        "summary": "Official Iranian public holidays and occasions between two dates (Persian name, Hijri date)."
       }
     ]
   },
@@ -1438,7 +1617,7 @@
     "category": "health",
     "site": "https://doctoreto.com",
     "description": "Unofficial read-only Doctoreto: Iranian doctors, visit fees, free appointment times, clinics, labs.",
-    "version": "0.2.2",
+    "version": "0.3.0",
     "pypi": "doctoreto-mcp",
     "repository": "https://github.com/sepehr071/doctoreto-mcp",
     "registry_name": "io.github.sepehr071/doctoreto-mcp",
@@ -1477,7 +1656,7 @@
       {
         "name": "dt_reviews",
         "title": "Reviews",
-        "summary": "Patient reviews in the site's order (doctors and centers newest first, offers oldest first): stars 1-5,"
+        "summary": "Patient reviews (doctors and centers newest first, offers oldest first): stars 1-5, recommends, text"
       },
       {
         "name": "dt_health_articles",
@@ -1487,7 +1666,7 @@
       {
         "name": "dt_search_offers",
         "title": "Search clinic offers",
-        "summary": "Search Doctoreto clinic offers: fixed-price procedures and packages (ultrasound, echo, laser, dental,"
+        "summary": "Search clinic offers: fixed-price procedures and packages (ultrasound, laser, dental, check-ups)."
       },
       {
         "name": "dt_offer",
@@ -1497,22 +1676,22 @@
       {
         "name": "dt_suggest",
         "title": "Suggest doctors, specialities and centers",
-        "summary": "Search-box suggestions: matching doctors (with hash id), speciality slugs, service tags and centers."
+        "summary": "Search-box suggestions: doctors (hash id), speciality slugs, service tags and centers for a free phrase."
       },
       {
         "name": "dt_search_doctors",
         "title": "Search doctors",
-        "summary": "Search doctors on Doctoreto by city, speciality, neighborhood, service tag, name, gender, insurance and visit type."
+        "summary": "Search doctors by city, speciality, neighborhood, service tag, name, gender, insurance and visit type."
       },
       {
         "name": "dt_specialities",
         "title": "Specialities",
-        "summary": "List medical, paramedical and dental specialities with the slug dt_search_doctors needs."
+        "summary": "List specialities with the slug dt_search_doctors needs; `total` counts all matches."
       },
       {
         "name": "dt_cities",
         "title": "Cities",
-        "summary": "Find a city's slug (for search filters) and numeric id (for dt_suggest)."
+        "summary": "Find a city's slug (for search filters) and numeric id (for dt_suggest); main cities first."
       },
       {
         "name": "dt_neighborhoods",
@@ -1532,7 +1711,7 @@
     "category": "books",
     "site": "https://taaghche.com",
     "description": "Unofficial read-only Taaghche: search Persian ebooks and audiobooks, compare prices, read reviews.",
-    "version": "0.1.2",
+    "version": "0.2.0",
     "pypi": "taaghche-mcp",
     "repository": "https://github.com/sepehr071/taaghche-mcp",
     "registry_name": "io.github.sepehr071/taaghche-mcp",
@@ -1551,62 +1730,62 @@
       {
         "name": "tg_search",
         "title": "Search books",
-        "summary": "Search Taaghche's ebooks and audiobooks by title, author or topic: price in Toman, discount, rating, format."
+        "summary": "Search ebooks and audiobooks by title, author or topic: price, discount, rating, format."
       },
       {
         "name": "tg_suggest",
         "title": "Search suggestions",
-        "summary": "Typeahead of the Taaghche search box: up to about 10 book titles (with publisher) that match the text."
+        "summary": "Search-box typeahead: up to about 10 matching book titles with id and publisher. For prices use tg_search."
       },
       {
         "name": "tg_book",
         "title": "Book details",
-        "summary": "Everything about one book: price in Toman and discount, ebook or audiobook, pages or listening time, publisher,"
+        "summary": "One book: price, discount, format, pages or duration, people, rating breakdown, categories, ISBN."
       },
       {
         "name": "tg_reviews",
         "title": "Book reviews",
-        "summary": "Reader reviews of a book, most liked first: star rating, text, likes, number of replies."
+        "summary": "Reader reviews, most liked first: rating, text, likes, reply count. Page with offset."
       },
       {
         "name": "tg_similar",
         "title": "Similar books",
-        "summary": "Books Taaghche suggests next to this one (similar works, other books of the same author and publisher),"
+        "summary": "Related books as separate lists (similar works, same author, same publisher): price, format, rating."
       },
       {
         "name": "tg_browse",
         "title": "Browse a category",
-        "summary": "List books of a category (or the whole catalog) 16 at a time with a sort, a format and a price ceiling."
+        "summary": "List books of a category (or the whole catalog), 16 per page, by sort, format and price ceiling."
       },
       {
         "name": "tg_bestsellers",
         "title": "Bestsellers",
-        "summary": "The hottest books right now (Taaghche's «داغ‌ترین» ranking, the closest thing to a bestseller list; no sales"
+        "summary": "Hottest books now (Taaghche's trending ranking; no sales numbers are public), overall or per category."
       },
       {
         "name": "tg_new_releases",
         "title": "New releases",
-        "summary": "The newest books on Taaghche (most recently added first), overall or in one category and format."
+        "summary": "Newest books (most recently added first), overall or per category. Next: tg_book."
       },
       {
         "name": "tg_free_books",
         "title": "Free books",
-        "summary": "Free books and audiobooks (price 0), by default the most downloaded first, overall or in one category."
+        "summary": "Free books and audiobooks (price 0), most downloaded first by default. Next: tg_book."
       },
       {
         "name": "tg_categories",
         "title": "Categories",
-        "summary": "Taaghche's category tree for ebooks and audiobooks: top-level groups (with their category id and the"
+        "summary": "Category tree: top-level groups (id) and standalone categories, each with a slug."
       },
       {
         "name": "tg_author",
         "title": "Author and books",
-        "summary": "An author's profile (nationality, life dates, biography; with a slug) and their books, 16 at a time."
+        "summary": "An author's profile (with a slug: nationality, life dates, bio) and their books, 16 per page."
       },
       {
         "name": "tg_publisher",
         "title": "Publisher and books",
-        "summary": "A publisher's description and its books, 16 at a time."
+        "summary": "A publisher's description and its books, 16 per page."
       }
     ]
   },
@@ -1616,7 +1795,7 @@
     "category": "books",
     "site": "https://fidibo.com",
     "description": "Unofficial read-only Fidibo: search Persian ebooks and audiobooks, compare prices, free books.",
-    "version": "0.1.3",
+    "version": "0.2.0",
     "pypi": "fidibo-mcp",
     "repository": "https://github.com/sepehr071/fidibo-mcp",
     "registry_name": "io.github.sepehr071/fidibo-mcp",
@@ -1635,57 +1814,57 @@
       {
         "name": "fd_search",
         "title": "Search books",
-        "summary": "Search Fidibo's ebooks and audiobooks by title, author or keyword: price in Toman, discount, free and"
+        "summary": "Search ebooks and audiobooks by title, author or keyword; cards with price (Toman), rating, authors."
       },
       {
         "name": "fd_browse",
         "title": "Browse book lists",
-        "summary": "List books of a category (or all of Fidibo) in a chosen order, with optional free / Fidibo Plus / price filters."
+        "summary": "List books of a category (or all) in a chosen order, with free / Plus / price filters."
       },
       {
         "name": "fd_bestsellers",
         "title": "Bestsellers",
-        "summary": "Top-selling Fidibo books of the week, month or all time, optionally per kind and category, with prices in Toman."
+        "summary": "Top sellers of the week, month or all time, per kind and category (Toman)."
       },
       {
         "name": "fd_new",
         "title": "New releases",
-        "summary": "Newest Fidibo books and audiobooks, optionally per kind and category, with prices in Toman."
+        "summary": "Newest books and audiobooks, per kind and category (Toman)."
       },
       {
         "name": "fd_free",
         "title": "Free books",
-        "summary": "Free ebooks and audiobooks on Fidibo (price 0), optionally per kind and category."
+        "summary": "Free ebooks and audiobooks (price 0), per kind and category."
       },
       {
         "name": "fd_categories",
         "title": "Categories",
-        "summary": "List Fidibo's categories and sub-categories (slug + Persian title) of one top level."
+        "summary": "List category and sub-category slugs (with Persian titles) of one top level."
       },
       {
         "name": "fd_book",
         "title": "Book details",
-        "summary": "Get one book's full record: price and discount (Toman), format (ebook / audiobook), pages or duration, file size,"
+        "summary": "One book's full record: price (Toman), format, pages or duration, size, people, rating and star"
       },
       {
         "name": "fd_reviews",
         "title": "Book reviews",
-        "summary": "Read reader reviews of a book: text, 1-5 stars, date, likes and replies count, plus the total number of reviews."
+        "summary": "Reader reviews of a book: text (cut at 400 chars unless full_text), 1-5 stars, date, likes, replies, total count."
       },
       {
         "name": "fd_similar",
         "title": "Similar books",
-        "summary": "Find books like this one: the bestsellers of its category (the book itself left out), with prices in Toman."
+        "summary": "Books like this one: bestsellers of its category, the book itself left out (Toman)."
       },
       {
         "name": "fd_author",
         "title": "Author or translator",
-        "summary": "An author's, translator's or narrator's profile and their books on Fidibo, with prices in Toman."
+        "summary": "An author's, translator's or narrator's profile and books (Toman)."
       },
       {
         "name": "fd_publisher",
         "title": "Publisher",
-        "summary": "A publisher's profile and its books on Fidibo, with prices in Toman."
+        "summary": "A publisher's profile and books (Toman)."
       }
     ]
   },
@@ -1695,7 +1874,7 @@
     "category": "books",
     "site": "https://www.30book.com",
     "description": "Unofficial read-only 30book: search Iranian printed books, compare editions and prices.",
-    "version": "0.1.2",
+    "version": "0.2.0",
     "pypi": "30book-mcp",
     "repository": "https://github.com/sepehr071/30book-mcp",
     "registry_name": "io.github.sepehr071/30book-mcp",
@@ -1714,37 +1893,37 @@
       {
         "name": "sb_search",
         "title": "Search books",
-        "summary": "Search 30book (about 200,000 printed books) by title. Each book has price (list), final_price (what you pay),"
+        "summary": "Search books by title: price, final_price, discount_pct, in_stock, publisher, id."
       },
       {
         "name": "sb_browse",
         "title": "Browse a category, genre, nation, award or tag",
-        "summary": "List the books of a category (subject bta-N-M or topic btf-N-M-K; sections bts-N are only landing pages), a fiction genre, a national"
+        "summary": "Books of a category (bta-N-M or btf-N-M-K; bts-N sections are landing pages only), genre, nation, award list or tag."
       },
       {
         "name": "sb_publisher",
         "title": "Books of a publisher",
-        "summary": "One publisher's books with a short description of the publisher. Use to see a publisher's catalogue, best"
+        "summary": "One publisher's books plus a short about text. Try sort='bestselling' or 'cheapest'."
       },
       {
         "name": "sb_author",
         "title": "Books of an author or translator",
-        "summary": "Everything by one author or translator (title shows the Persian and Latin name). Default order: newest."
+        "summary": "Books by one author or translator (default newest first)."
       },
       {
         "name": "sb_bestsellers",
         "title": "Best sellers",
-        "summary": "The site-wide best-selling books right now (10 pages of 20). Use for 'what is popular'."
+        "summary": "Site-wide best sellers (10 pages)."
       },
       {
         "name": "sb_new_releases",
         "title": "New releases",
-        "summary": "The newest books added to the store (10 pages of 20)."
+        "summary": "Newest books (10 pages)."
       },
       {
         "name": "sb_deals",
         "title": "Discounted books",
-        "summary": "Books with the biggest discount first: among the best sellers, or inside one subject. (The site's own"
+        "summary": "Best sellers (or one subject) by biggest discount. Some publishers inflate list prices: compare final_price."
       },
       {
         "name": "sb_find_publisher",
@@ -1759,27 +1938,27 @@
       {
         "name": "sb_book",
         "title": "Book details",
-        "summary": "Full details of one book: title, authors, translators, publisher, price (list) and final_price in Toman,"
+        "summary": "One book: authors, translators, publisher, price, final_price, discount_pct, in_stock, ISBN, pages, cover, size,"
       },
       {
         "name": "sb_similar",
         "title": "Similar books and more by the author",
-        "summary": "The lists on a book's page: similar books from the same topic, more by the same author and, for translations,"
+        "summary": "Similar books, more by the author and (translations) by the translator, up to 20 each."
       },
       {
         "name": "sb_reviews",
         "title": "Reader reviews of a book",
-        "summary": "Reader comments on a book (name, Shamsi date, 1-5 stars, text, likes) plus the rating summary. Only the"
+        "summary": "Reader comments (author, date, stars, text cut to 400 chars unless full_text, likes) and the rating summary;"
       },
       {
         "name": "sb_categories",
         "title": "Category sections and subjects",
-        "summary": "The top of the category tree: sections (کتاب عمومی, کتاب کودک و نوجوان, ...) and, for one section, its"
+        "summary": "Category sections (کتاب عمومی, ...) or, for one section, its subjects (تاریخ, ...). Codes go to"
       },
       {
         "name": "sb_collections",
         "title": "Genres, nations, awards and tags",
-        "summary": "Curated collections linked from the home page: fiction genres, national literatures, literary award lists and"
+        "summary": "Home-page genres, nations, award lists and tags; ids go to sb_browse(kind=...)."
       }
     ]
   },
@@ -1789,7 +1968,7 @@
     "category": "business",
     "site": "https://www.payping.ir",
     "description": "PayPing merchant account for agents: balance, sales, invoices; create invoices and payment links.",
-    "version": "0.1.2",
+    "version": "0.2.0",
     "pypi": "payping-mcp",
     "repository": "https://github.com/sepehr071/payping-mcp",
     "registry_name": "io.github.sepehr071/payping-mcp",
@@ -1834,7 +2013,7 @@
       {
         "name": "payping_get_payment",
         "title": "PayPing: payment detail",
-        "summary": "Full detail of one payment by its payment code: amount, dates, payer, card, fees, refund state and"
+        "summary": "One payment by payment code: amount, dates, payer, card, fees, refund state, paymentStatus plus"
       },
       {
         "name": "payping_list_withdrawals",
@@ -1899,7 +2078,7 @@
       {
         "name": "payping_create_payment_link",
         "title": "PayPing: create payment link",
-        "summary": "Make a permanent public payment page for a product and return its `url` (https://ppng.ir/d/...), which"
+        "summary": "Make a permanent public payment page for a product; returns its `url` (https://ppng.ir/d/...)."
       },
       {
         "name": "payping_create_coupon",
@@ -1909,7 +2088,7 @@
       {
         "name": "payping_create_invoice",
         "title": "PayPing: create invoice",
-        "summary": "Create an invoice for a saved customer, ready to pay, and return its `code`, `payCode` and `url` (the"
+        "summary": "Create an invoice for a saved customer; returns `code`, `payCode` and `url` (public pay page). Not sent:"
       },
       {
         "name": "payping_send_invoice",
@@ -1924,7 +2103,7 @@
     "category": "messaging",
     "site": "https://bale.ai",
     "description": "Private, local Bale bot for agents: read, search and answer messages, ask and wait, files.",
-    "version": "0.1.2",
+    "version": "0.2.0",
     "pypi": "bale-mcp",
     "repository": "https://github.com/sepehr071/bale-mcp",
     "registry_name": "io.github.sepehr071/bale-mcp",
@@ -1950,6 +2129,12 @@
         "description": "Local message history file (default ~/.bale-mcp/messages.db); ':memory:' keeps nothing on disk."
       },
       {
+        "name": "BALE_MCP_SEND_DIRS",
+        "isRequired": false,
+        "isSecret": false,
+        "description": "Folders bot_send_file may upload local files from (os.pathsep-separated); default is the download folder and the working directory."
+      },
+      {
         "name": "BALE_MCP_PROXY",
         "isRequired": false,
         "isSecret": false,
@@ -1961,12 +2146,12 @@
       {
         "name": "bot_get_me",
         "title": "Bot: who am I",
-        "summary": "Check BALE_BOT_TOKEN and show the bot's id, username and name. Use first to confirm the bot works."
+        "summary": "Check BALE_BOT_TOKEN and show the bot's id, username and name."
       },
       {
         "name": "bot_get_chat",
         "title": "Bot: chat info",
-        "summary": "Get a chat's type, title or name, username and description, as seen by the bot."
+        "summary": "Get a chat's type, title or name, username and description."
       },
       {
         "name": "bot_get_webhook_info",
@@ -1976,22 +2161,22 @@
       {
         "name": "bot_send_message",
         "title": "Bot: send message",
-        "summary": "Send a text message from the bot. Sends a real message. Confirm recipient and text with the user before calling."
+        "summary": "Send a real text message from the bot. Confirm recipient and text with the user first."
       },
       {
         "name": "bot_send_file",
         "title": "Bot: send file",
-        "summary": "Send a photo, document, video, audio or voice file from the bot. Sends a real message. Confirm recipient and file with the user before calling."
+        "summary": "Send a real photo, document, video, audio or voice file from the bot. Confirm recipient and file with the user first."
       },
       {
         "name": "bot_edit_message",
         "title": "Bot: edit message",
-        "summary": "Replace the text of a message the bot sent earlier. Changes a real message. Confirm with the user before calling."
+        "summary": "Replace the text of a message the bot sent earlier. Changes a real message; confirm with the user first."
       },
       {
         "name": "bot_delete_message",
         "title": "Bot: delete message",
-        "summary": "Delete a message in a chat where the bot may delete it (its own messages, or as admin). Cannot be undone; confirm with the user first."
+        "summary": "Delete a message the bot may delete (its own, or as admin). Irreversible; confirm with the user first."
       },
       {
         "name": "bot_get_new_messages",
@@ -2011,7 +2196,7 @@
       {
         "name": "bot_search_messages",
         "title": "Bot: search messages",
-        "summary": "Search stored messages by text, newest first. Arabic and Persian yeh/kaf, Persian and Latin digits,"
+        "summary": "Search stored messages by text, newest first. Persian/Arabic yeh, kaf, digits and ZWNJ match each other."
       },
       {
         "name": "bot_wait_for_reply",
@@ -2021,7 +2206,7 @@
       {
         "name": "bot_download_file",
         "title": "Bot: download file",
-        "summary": "Download a file someone sent the bot to this computer (max 20 MB) and return its local path."
+        "summary": "Download a file someone sent the bot (max 20 MB) and return its local path. Never overwrites (-1, -2, ... suffix)."
       }
     ]
   },

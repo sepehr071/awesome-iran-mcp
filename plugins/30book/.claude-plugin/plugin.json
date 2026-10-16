@@ -1,7 +1,7 @@
 {
   "name": "30book",
   "displayName": "30book",
-  "version": "0.1.2",
+  "version": "0.2.0",
   "description": "Unofficial read-only 30book: search Iranian printed books, compare editions and prices.",
   "author": {
     "name": "Sepehr Radmard",
@@ -20,7 +20,7 @@
     "30book": {
       "command": "uvx",
       "args": [
-        "30book-mcp@0.1.2"
+        "30book-mcp@0.2.0"
       ]
     }
   }

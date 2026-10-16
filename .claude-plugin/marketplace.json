@@ -1,6 +1,6 @@
 {
   "name": "iran-mcp",
-  "description": "MCP servers and skills for Iranian websites: shopping, food, travel, doctors, books, crypto.",
+  "description": "MCP servers and skills for Iranian websites: shopping, classifieds, food, travel, doctors, books, crypto.",
   "owner": {
     "name": "Sepehr Radmard",
     "email": "sepehrr80@gmail.com",
@@ -54,6 +54,12 @@
       "source": "./plugins/shopino",
       "description": "Unofficial read-only Shopino: search fashion across Iranian shops, compare prices, sizes, stock.",
       "category": "fashion"
+    },
+    {
+      "name": "divar",
+      "source": "./plugins/divar",
+      "description": "Unofficial read-only Divar: search Iran's classified ads, cheapest and best-value ads, price checks.",
+      "category": "classifieds"
     },
     {
       "name": "otaghak",
@@ -130,7 +136,7 @@
     {
       "name": "iran-all",
       "source": "./plugins/iran-all",
-      "description": "All 17 read-only Iranian site servers in one install.",
+      "description": "All 18 read-only Iranian site servers in one install.",
       "category": "bundle"
     },
     {

@@ -58,3 +58,6 @@
 [submodule "servers/swapwallet-mcp"]
 	path = servers/swapwallet-mcp
 	url = https://github.com/SwapWallet/swapwallet-mcp.git
+[submodule "servers/divar-mcp"]
+	path = servers/divar-mcp
+	url = https://github.com/sepehr071/divar-mcp

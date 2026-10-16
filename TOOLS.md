@@ -37,15 +37,15 @@ Unofficial read-only Okala: grocery stores that deliver to you, compare prices a
 - `ok_account`: Whether the server is logged in to Okala (and as which phone, masked). Logged in = ok_search uses
 - `ok_logout`: Delete the saved Okala login on this machine; the server continues as a guest.
 - `ok_categories`: Category tree (id, slug, Persian name, children) of everything sold near a point, or in one store.
-- `ok_search`: Find products by text, best matches first, then cheapest (Toman). `mode` tells which way ran:
-- `ok_compare`: Which nearby store sells the same product cheapest. Fetches a category (and/or brand) from every store
+- `ok_search`: Find products by text near a point (or in one store with store_id), best matches first, then
+- `ok_compare`: Which open nearby store sells the same product cheapest: a category and/or brand from every store,
 - `ok_store_products`: A whole category of one store (the API returns all of it at once), sorted and optionally filtered by
 - `ok_product`: One product in one store: price and discount (Toman), stock, max per order, brand, category,
 - `ok_brands`: Brand ids for ok_compare (`brand_id`) and slugs. Okala publishes only a short list of featured brands;
 - `ok_deals`: Deal rows running now, with their end time (UTC) and top products (Toman, discount, store).
 - `ok_offer`: Every product of one deal row (from ok_deals), Toman. Without store_id: across all open stores that
 - `ok_locate`: Turn an address into coordinates (lat, lon) for every other tool, plus the street address of the best hit.
-- `ok_stores`: List the Okala stores (supermarkets, bakeries, fruit shops, chains) that deliver to a point, in the
+- `ok_stores`: Okala stores that deliver to a point, in the site's order: id, type, rating, distance, earliest
 - `ok_store`: One store as seen from the delivery point: whether it delivers there now, minimum order (Toman),
 - `ok_store_reviews`: Read customers' reviews of a store: 1-5 stars, comment, date and the reasons they ticked
 
@@ -53,28 +53,28 @@ Unofficial read-only Okala: grocery stores that deliver to you, compare prices a
 
 Unofficial read-only Digikala: search products, compare sellers, price history, reviews, deals.
 
-- `dk_search`: Search Digikala products by name, with price (Toman), discount, seller and rating.
-- `dk_find_cheapest`: Find the cheapest in-stock products that really match a query, one flat list sorted by price.
-- `dk_best_for_budget`: Rank the best-rated in-stock products within a budget, with the reasoning shown.
-- `dk_suggest`: Autocomplete a vague or partial query into better search words, categories and brands.
-- `dk_filters`: List the filters Digikala offers for a category or a search: features, colors, sellers, price range.
+- `dk_search`: Search products by name: price (Toman), discount, seller, rating, 20 per page.
+- `dk_find_cheapest`: Find the cheapest in-stock products that really match a query, sorted by price (Toman).
+- `dk_best_for_budget`: Rank the best-rated in-stock products within a budget (Toman) by a rating weighted by its count.
+- `dk_suggest`: Autocomplete a vague or misspelled query into keywords, categories and brands.
+- `dk_filters`: List the filters of a category or a search: attributes, colors, sellers, price range (Toman), brands.
 - `dk_categories`: Find category codes for dk_category_products and main-category ids for dk_best_sellers.
-- `dk_category_products`: List the products of one category with sort and filters (price in Toman, brand, features, stock).
-- `dk_brand_products`: List a brand's products on Digikala with sort and price filters (Toman), plus the brand id for brand_ids.
-- `dk_seller`: Get a marketplace seller's reputation (rating 0-5, on-time shipping, cancellations, returns) and products.
+- `dk_category_products`: List one category's products with sort and filters (price in Toman), strict order.
+- `dk_brand_products`: List a brand's products with sort and price filters (Toman), plus the brand id for brand_ids.
+- `dk_seller`: Get a seller's reputation (rating 0-5, on-time shipping, cancellations, returns) and products.
 - `dk_deals`: List today's Incredible Offers (flash deals), biggest discount first, in-stock only.
-- `dk_best_sellers`: List Digikala's current best-selling products, overall or in one main category.
-- `dk_fresh_search`: Search or browse Digikala Fresh (the supermarket: dairy, groceries, drinks, hygiene).
+- `dk_best_sellers`: List current best sellers, overall or in one main category; also returns the main categories' ids for category_id.
+- `dk_fresh_search`: Search or browse Digikala Fresh (supermarket). category_code beats query and also returns sub-categories.
 - `dk_product`: Get one product's price, stock, rating, specs and every seller's offer (cheapest first).
-- `dk_price_history`: Get about 30 days of daily buy-box prices (Toman) per color/variant, with lowest and highest.
-- `dk_reviews`: Read customer reviews of a product: stars 1-5 (null = no stars given), text, pros/cons, verified buyer flag.
-- `dk_questions`: Read customers' questions about a product and up to 2 answers each (answered_by: buyer, seller, ...).
-- `dk_similar`: List products similar to one product (same kind, other models and brands).
+- `dk_price_history`: Get ~30 days of daily buy-box prices (Toman) per color/variant, with lowest and highest.
+- `dk_reviews`: Read customer reviews: stars 1-5 (null = none), text, pros/cons, verified buyer flag.
+- `dk_questions`: Read customers' questions (20 per page) with up to 2 answers each (answered_by: buyer, seller, ...).
+- `dk_similar`: List products similar to one (same kind, other models and brands).
 - `dk_compare`: Compare 2-4 products side by side: price and rating, then the spec rows where they differ.
-- `dk_shortlist`: Re-price up to 10 products in one call: today's price, cheapest offer, stock, rating and 30-day low.
-- `dk_installments`: Get the Digipay credit-line offers available when buying a product, in Toman.
-- `dk_plus_plans`: List Digikala Plus membership plans (free shipments) with their price in Toman and benefits.
-- `dk_gold_prices`: Get Digikala's live 18k gold price per gram and gold coin prices, in Toman.
+- `dk_shortlist`: Re-price up to 10 products in one call: price, cheapest offer, stock, rating and 30-day low (Toman).
+- `dk_installments`: Get the Digipay credit-line offers for a product, in Toman.
+- `dk_plus_plans`: List Digikala Plus plans (free shipments per month: jet = same-day Tehran/Karaj, fresh = supermarket) with price in Toman and benefits.
+- `dk_gold_prices`: Get the live 18k gold price per gram and gold coin prices, in Toman.
 - `dk_location`: Turn an address into coordinates, or coordinates into an address with Digikala's city_id and state_id.
 
 ## Technolife (`technolife-mcp`, 19 tools)
@@ -124,15 +124,15 @@ Unofficial read-only MasterKala: search gadgets, compare prices and specs, stock
 
 Unofficial read-only Khanoumi: search cosmetics and skin care, compare prices, shades, reviews.
 
-- `kh_search`: Search Khanoumi products by keyword: price, discount and stock of each match, sponsored items removed.
-- `kh_find_cheapest`: Find the cheapest in-stock products for a keyword, one flat list sorted by payable price (Toman).
-- `kh_browse`: List the products of a category, brand(s) or campaign tag with sorting, price range and filters.
+- `kh_search`: Search products by keyword: price, discount and stock of each match. Also returns the best-matching
+- `kh_find_cheapest`: Find the cheapest in-stock products for a keyword, one flat list by payable price (Toman).
+- `kh_browse`: List products of a category, brand(s) or campaign tag with sorting, price range and filters.
 - `kh_filters`: List the filters of a category, brand, tag or search: sub-categories, brands, colors and attribute facets
 - `kh_categories`: List Khanoumi's category tree with ids, URL paths and product counts.
-- `kh_brands`: Find brands by name (about 3,200 brands) with their slugs.
-- `kh_deals`: List today's featured deals from the Khanoumi home page (the daily pink box "جعبه صورتی" and the other
-- `kh_store_info`: Get Khanoumi's order rules: packaging cost, shipping fees and times, returns, payment and refunds,
-- `kh_blog_search`: Search the Khanoumi magazine (مجله خانومی): buying guides, skin and hair care routines, ingredient
+- `kh_brands`: Find brands by name (about 3,200) with their slugs, for the `brands` of kh_browse / kh_filters.
+- `kh_deals`: List today's home-page deals (daily pink box "جعبه صورتی" and other rows), biggest discount first,
+- `kh_store_info`: Get Khanoumi's order rules from the official FAQ: packaging cost, shipping fees and times, returns,
+- `kh_blog_search`: Search the Khanoumi magazine (مجله خانومی): buying guides, care routines, ingredient explainers, with links.
 - `kh_product`: Get one product's full record: price and discount (Toman), every shade / size / seller variant with its
 - `kh_reviews`: Read customer comments on a product, newest first, with a verified-buyer flag and photos.
 - `kh_similar`: List alternatives to a product (about 20) or the products the shop pairs with it, with prices and stock.
@@ -141,37 +141,73 @@ Unofficial read-only Khanoumi: search cosmetics and skin care, compare prices, s
 
 Unofficial read-only Asal Banoo: search cosmetics and skin care, compare prices, sizes, deals.
 
-- `ab_search`: Search Asal Banoo products by keyword: price, discount, stock and rating of each match.
-- `ab_find_cheapest`: Find the cheapest in-stock products for a keyword, one flat list sorted by current price (Toman).
-- `ab_browse`: List the products of a category or brand (or the whole shop) with sorting, price range, stock and attribute filters.
-- `ab_filters`: List the attribute filters of a category or brand listing (volume, hair type, skin type, gender, origin...)
-- `ab_categories`: List Asal Banoo's product categories (about 70: skin, make-up, hair, perfume, kids) with slugs and counts.
-- `ab_brands`: List the brands Asal Banoo sells (about 250) with their slugs and product counts, biggest first.
-- `ab_deals`: List the discounted in-stock products right now, biggest discount first (the site's "تخفیفات" page).
+- `ab_search`: Search products by keyword: price, discount, stock and rating of each match.
+- `ab_find_cheapest`: Find the cheapest in-stock products for a keyword, one list sorted by price (Toman).
+- `ab_browse`: List products of a category or brand (or the whole shop) with sort, price range, stock and attribute filters.
+- `ab_filters`: List the attribute filters of a category or brand (volume, hair/skin type, gender, origin) with in-stock counts.
+- `ab_categories`: List product categories (about 70) with slugs and counts.
+- `ab_brands`: List brands (about 250) with slugs and product counts, biggest first.
+- `ab_deals`: List discounted in-stock products, biggest discount first.
 - `ab_shop_info`: Read one of the shop's policy pages as plain text: FAQ as question/answer pairs, other pages as text.
 - `ab_blog_posts`: List Asal Banoo blog posts (skin and hair care guides, routines, "X vs Y" comparisons), newest first.
 - `ab_blog_post`: Read one blog post as plain text, plus the products and categories it links to.
-- `ab_product`: Get one product's record: price and discount (Toman), stock (with the exact count when low),
-- `ab_reviews`: Read customers' reviews and questions about a product (1-5 stars, newest first) with the shop's answers.
+- `ab_product`: Get one product: price/discount (Toman), stock (exact count when low), every size/color variant with its own
+- `ab_reviews`: Read customers' reviews and questions about a product (newest first) with the shop's answers.
 
 ## Shopino (`shopino-mcp`, 14 tools)
 
 Unofficial read-only Shopino: search fashion across Iranian shops, compare prices, sizes, stock.
 
-- `sh_search`: Search products across all Shopino shops by keyword: price to pay, discount, stock and selling shop.
-- `sh_find_cheapest`: Find the cheapest in-stock products for a keyword across all shops, one flat list sorted by price to pay (Toman).
-- `sh_browse`: List products of a category, a shop, a product tag or a curated listing, with sorting, price range and filters.
-- `sh_filters`: List the filter values sh_search / sh_browse accept: size systems with their sizes, sort orders,
-- `sh_categories`: List Shopino's category tree (clothing, bags, shoes, accessories, watches, jewelry, gold, cosmetics, ...)
-- `sh_brands`: Without shop_id: the official brand shops Shopino features (each is a shop: browse it with
-- `sh_deals`: List today's featured deals from the Shopino home page: the flash sale (شگفت انگیز) with its end
-- `sh_campaign`: Open a Shopino campaign or landing page: its product rows (with prices) and its tabs.
-- `sh_blog_search`: Search the Shopino blog (style guides and model galleries: manteau, dress, bag, shoe models, ...),
-- `sh_blog_post`: Read one Shopino blog post as plain text, with its category id for sh_browse.
-- `sh_product`: Get one product's full record: price and discount (Toman), every color / size variant with its own
-- `sh_similar`: Find products like this one at other shops, with prices, discount, stock and shop.
-- `sh_shops`: Find Shopino shops (online and Instagram shops) by name, category group, gender or courier city,
-- `sh_shop`: Get a shop's profile: rating, customer rating, buyer survey (satisfied, quality, price, on-time
+- `sh_search`: Search products across all shops by keyword: price to pay, discount, stock, selling shop.
+- `sh_find_cheapest`: Find the cheapest in-stock products for a keyword across all shops, one flat list sorted by price to pay.
+- `sh_browse`: List products of a category, shop, tag or curated listing, with sort, price range and filters.
+- `sh_filters`: List the filter values sh_search / sh_browse accept: size systems and sizes, sorts, courier cities,
+- `sh_categories`: List the category tree with ids, URL paths and levels, plus total product and shop counts.
+- `sh_brands`: Without shop_id: featured official brand shops (browse one with sh_browse(shop_id=...)). With shop_id:
+- `sh_deals`: List today's home-page deals (flash sale with end time, best sellers, themed rows), biggest discount
+- `sh_campaign`: Open a campaign or landing page: its product rows (with prices) and tabs.
+- `sh_blog_search`: Search the style blog (guides and model galleries), newest first; no query = latest posts.
+- `sh_blog_post`: Read one blog post as plain text, with its category id for sh_browse (after sh_blog_search).
+- `sh_product`: Get one product's full record: price, every color / size variant with its own price and stock, size
+- `sh_similar`: Find products like this one at other shops (itself left out).
+- `sh_shops`: Find shops by name, category group, gender or courier city, with rating, surveys, followers and product count.
+- `sh_shop`: Get a shop's profile: ratings, buyer survey %, followers, product count, main categories, courier city,
+
+## Divar (`divar-mcp`, 31 tools)
+
+Unofficial read-only Divar: search Iran's classified ads, cheapest and best-value ads, price checks.
+
+- `dv_categories`: The Divar category tree (236 nodes, up to 4 levels): slug, Persian name, path and whether it is a leaf.
+- `dv_filters`: Every filter a category supports: key, type, Persian label, unit and the allowed options.
+- `dv_filter_options`: Allowed values of a filter: brand and model keys (161 car brands), districts, or any option list.
+- `dv_suggest`: What Divar's search box would suggest for some text, and which categories the text belongs to.
+- `dv_parse_query`: Turn a plain Persian request into dv_search arguments: city, neighbourhoods, price bounds, category and leftover words.
+- `dv_market`: Asking-price statistics of a search: min, p10, p25, median, p75, p90, max, mean; split by district and by day.
+- `dv_appraise`: Is an ad's price (or a price you have in mind) high or low compared with similar ads? Percentile, verdict, confidence.
+- `dv_status`: Is Divar reachable and how fast: version, a live latency check, caches and local watch state.
+- `dv_cities`: City ids for a name (1,177 cities; Tehran is 1, Mashhad 3). Returns id, name, URL slug, province id and centre.
+- `dv_districts`: Neighbourhoods (محله) of one city with ids, centre point and the main streets inside (Tehran has about 450).
+- `dv_neighbours`: Neighbourhoods adjacent to a district, to widen a neighbourhood search to the surrounding area.
+- `dv_locate`: The city, neighbourhood and street address of a GPS point.
+- `dv_place_search`: Map autocomplete: turn a landmark or street name into coordinates and a bounding box.
+- `dv_place_mapping`: Convert old Divar place ids to the current ones (Divar merged and renumbered places).
+- `dv_boundary`: Neighbourhood borders of a city from Divar's GeoJSON: the city's bounding box, or one neighbourhood's polygon.
+- `dv_post`: Everything public about one ad: price in Toman, specs, features, description, images, map position, seller type.
+- `dv_posts`: Details of up to 10 ads in one call (compact: specs and one image, description cut at 300 characters).
+- `dv_compare`: Side by side: the price of each ad and only the specs that differ (the identical ones are listed once).
+- `dv_seller`: The seller behind an ad: how many personal and business ads they have, the business card (name, brand_token) and their ads.
+- `dv_dealer`: A business account's public page: name, active ad count, member since and its first 11 ads.
+- `dv_similar`: Ads similar to one ad: same brand/model (or category) and neighbourhood, widening step by step until enough are found.
+- `dv_search`: Search Divar ads in one or more cities by category, text and filters; compact cards, prices in Toman.
+- `dv_count`: How many active ads match a search, in one cheap call (capped: 10,000 means '10,000 or more').
+- `dv_cheapest`: The cheapest ads of a search, cheapest first. Skips negotiable ads, placeholder or absurd prices and far-below-median outliers.
+- `dv_best_for_budget`: Within a budget: the best-value ads (furthest below their peers' median) and the most you can get (closest to the budget).
+- `dv_find_deals`: Ads priced well below the median of the same search, without a budget: scored deals, with bait and junk prices removed.
+- `dv_new_since`: Ads published after a moment, newest first: poll this to watch a search (a new flat, a cheap car) without repeats.
+- `dv_export`: The ads of a search as CSV or JSON lines text, ready to save to a spreadsheet or analyse.
+- `dv_nearby`: Ads on the map around a GPS point, nearest first, with coordinates, distance, price chips and a thumbnail.
+- `dv_watch`: Save a search and later get only the ads that appeared since the last check; stored in a local file, nothing is pushed.
+- `dv_price_trend`: The median asking price of a search over the days you have checked it: records one point per day in a local file.
 
 ## Otaghak (`otaghak-mcp`, 15 tools)
 
@@ -277,18 +313,18 @@ Unofficial read-only Flytoday: Iranian and international flights, hotels, villas
 
 Unofficial read-only Paziresh24: find Iranian doctors, profiles, prices, reviews and free slots.
 
-- `pz_doctor`: Full profile of one doctor: specialties, about text, medical council code, rating averages, insurance contracts, online visit (channels, price in Toman), and every office/hospital/clinic with address, phone, map, first free slot and services (ids, price, duration, weekly hours).
-- `pz_first_available`: Whether a doctor can be booked now and the nearest free slot, for in-person and online visits and per center (Tehran time).
-- `pz_reviews`: Patient reviews of a doctor (stars 1-5 for behaviour, explanation and treatment, text, visit reason, center, verified visit), paged, plus on the first page a summary: rating averages, counts and average waiting time per center.
-- `pz_faq`: Answers from the official Paziresh24 FAQ: how booking works, cancelling or moving an appointment, online visits (channels, prescriptions), payment and refunds.
-- `pz_suggest`: Turn words into pz_search_doctors arguments: matching cities (city slug), specialties (specialty slug) and the site's type-ahead query completions (use one as `text`).
-- `pz_search_doctors`: Search Paziresh24 doctors (or hospitals and clinics) by city, specialty, name, online visit, gender, degree, with sorting and paging.
-- `pz_resolve_url`: Turn a paziresh24.com link into its kind ('doctor' or 'center') and slug, plus the clean URL.
-- `pz_center`: Profile of a hospital or clinic: type, address, phone, website, map, about text, departments, and its doctors (slug, department, specialty, basic insurance flags).
-- `pz_free_days`: Days with at least one free appointment for one service of a doctor at one center, over the whole booking window (often 6-8 weeks), with the weekly days off and holidays in that window.
-- `pz_free_slots`: Free appointment start times (Tehran HH:MM) per day for one service of a doctor at one center, for a date range.
-- `pz_visit_price`: Exact price of one service in Toman: the doctor's fee, VAT and the payable total (what the online-visit invoice shows), plus Paziresh24's refund-on-cancel setting.
-- `pz_holidays`: Official Iranian public holidays and occasions between two dates (Persian occasion name and the Hijri date).
+- `pz_doctor`: Full profile of one doctor: specialties, about, rating averages, insurances, online visit (channels, price in Toman) and every center with address, phone, map, first free slot and services (ids, price, duration, hours).
+- `pz_first_available`: Whether a doctor can be booked now and the nearest free slot, in person, online and per center (Tehran time).
+- `pz_reviews`: Patient reviews (stars 1-5, text clipped to 400 chars, visit reason, center, verified visit), paged, plus on the first page a summary: rating averages, counts and waiting time per center.
+- `pz_faq`: Answers from the official Paziresh24 FAQ: booking, cancelling or moving, online visits, payment and refunds.
+- `pz_suggest`: Turn words into pz_search_doctors arguments: matching cities, specialties (with slugs) and the site's query completions (use one as `text`).
+- `pz_search_doctors`: Search doctors (or hospitals and clinics) by city, specialty, name, visit type, gender and degree, sorted and paged.
+- `pz_resolve_url`: Turn a paziresh24.com link into its kind ('doctor' or 'center'), slug and clean URL.
+- `pz_center`: Profile of a hospital or clinic: type, address, phone, website, map, about, departments and its doctors (slug, department, specialty, basic insurances).
+- `pz_free_days`: Days with a free appointment for one service at one center over the whole booking window (often 6-8 weeks), with weekly days off and holidays.
+- `pz_free_slots`: Free appointment start times (Tehran HH:MM) per day for one service at one center, for a date range.
+- `pz_visit_price`: Exact price of one service in Toman: fee, VAT and payable total (the online-visit invoice), plus the refund-on-cancel setting.
+- `pz_holidays`: Official Iranian public holidays and occasions between two dates (Persian name, Hijri date).
 
 ## Doctoreto (`doctoreto-mcp`, 14 tools)
 
@@ -298,14 +334,14 @@ Unofficial read-only Doctoreto: Iranian doctors, visit fees, free appointment ti
 - `dt_center`: A center's page: address, coordinates, departments, services, accepted insurances, attributes, opening
 - `dt_doctor`: A doctor's profile with every bookable service, its price in Toman and its next free time.
 - `dt_free_slots`: Free appointment times of one service (office visit, phone/video call, clinic offer, lab admission).
-- `dt_reviews`: Patient reviews in the site's order (doctors and centers newest first, offers oldest first): stars 1-5,
+- `dt_reviews`: Patient reviews (doctors and centers newest first, offers oldest first): stars 1-5, recommends, text
 - `dt_health_articles`: Search Doctoreto's health magazine (about 5,000 articles) for background on a condition, test or treatment.
-- `dt_search_offers`: Search Doctoreto clinic offers: fixed-price procedures and packages (ultrasound, echo, laser, dental,
+- `dt_search_offers`: Search clinic offers: fixed-price procedures and packages (ultrasound, laser, dental, check-ups).
 - `dt_offer`: One clinic offer in full: price, discount, deposit, who performs it and where, description, terms,
-- `dt_suggest`: Search-box suggestions: matching doctors (with hash id), speciality slugs, service tags and centers.
-- `dt_search_doctors`: Search doctors on Doctoreto by city, speciality, neighborhood, service tag, name, gender, insurance and visit type.
-- `dt_specialities`: List medical, paramedical and dental specialities with the slug dt_search_doctors needs.
-- `dt_cities`: Find a city's slug (for search filters) and numeric id (for dt_suggest).
+- `dt_suggest`: Search-box suggestions: doctors (hash id), speciality slugs, service tags and centers for a free phrase.
+- `dt_search_doctors`: Search doctors by city, speciality, neighborhood, service tag, name, gender, insurance and visit type.
+- `dt_specialities`: List specialities with the slug dt_search_doctors needs; `total` counts all matches.
+- `dt_cities`: Find a city's slug (for search filters) and numeric id (for dt_suggest); main cities first.
 - `dt_neighborhoods`: Neighborhoods of a city (most doctors first) and nearby cities, each with a doctor count.
 - `dt_insurances`: List basic and supplementary insurers with the ids dt_search_doctors(insurance_ids=...) takes.
 
@@ -313,53 +349,53 @@ Unofficial read-only Doctoreto: Iranian doctors, visit fees, free appointment ti
 
 Unofficial read-only Taaghche: search Persian ebooks and audiobooks, compare prices, read reviews.
 
-- `tg_search`: Search Taaghche's ebooks and audiobooks by title, author or topic: price in Toman, discount, rating, format.
-- `tg_suggest`: Typeahead of the Taaghche search box: up to about 10 book titles (with publisher) that match the text.
-- `tg_book`: Everything about one book: price in Toman and discount, ebook or audiobook, pages or listening time, publisher,
-- `tg_reviews`: Reader reviews of a book, most liked first: star rating, text, likes, number of replies.
-- `tg_similar`: Books Taaghche suggests next to this one (similar works, other books of the same author and publisher),
-- `tg_browse`: List books of a category (or the whole catalog) 16 at a time with a sort, a format and a price ceiling.
-- `tg_bestsellers`: The hottest books right now (Taaghche's «داغ‌ترین» ranking, the closest thing to a bestseller list; no sales
-- `tg_new_releases`: The newest books on Taaghche (most recently added first), overall or in one category and format.
-- `tg_free_books`: Free books and audiobooks (price 0), by default the most downloaded first, overall or in one category.
-- `tg_categories`: Taaghche's category tree for ebooks and audiobooks: top-level groups (with their category id and the
-- `tg_author`: An author's profile (nationality, life dates, biography; with a slug) and their books, 16 at a time.
-- `tg_publisher`: A publisher's description and its books, 16 at a time.
+- `tg_search`: Search ebooks and audiobooks by title, author or topic: price, discount, rating, format.
+- `tg_suggest`: Search-box typeahead: up to about 10 matching book titles with id and publisher. For prices use tg_search.
+- `tg_book`: One book: price, discount, format, pages or duration, people, rating breakdown, categories, ISBN.
+- `tg_reviews`: Reader reviews, most liked first: rating, text, likes, reply count. Page with offset.
+- `tg_similar`: Related books as separate lists (similar works, same author, same publisher): price, format, rating.
+- `tg_browse`: List books of a category (or the whole catalog), 16 per page, by sort, format and price ceiling.
+- `tg_bestsellers`: Hottest books now (Taaghche's trending ranking; no sales numbers are public), overall or per category.
+- `tg_new_releases`: Newest books (most recently added first), overall or per category. Next: tg_book.
+- `tg_free_books`: Free books and audiobooks (price 0), most downloaded first by default. Next: tg_book.
+- `tg_categories`: Category tree: top-level groups (id) and standalone categories, each with a slug.
+- `tg_author`: An author's profile (with a slug: nationality, life dates, bio) and their books, 16 per page.
+- `tg_publisher`: A publisher's description and its books, 16 per page.
 
 ## Fidibo (`fidibo-mcp`, 11 tools)
 
 Unofficial read-only Fidibo: search Persian ebooks and audiobooks, compare prices, free books.
 
-- `fd_search`: Search Fidibo's ebooks and audiobooks by title, author or keyword: price in Toman, discount, free and
-- `fd_browse`: List books of a category (or all of Fidibo) in a chosen order, with optional free / Fidibo Plus / price filters.
-- `fd_bestsellers`: Top-selling Fidibo books of the week, month or all time, optionally per kind and category, with prices in Toman.
-- `fd_new`: Newest Fidibo books and audiobooks, optionally per kind and category, with prices in Toman.
-- `fd_free`: Free ebooks and audiobooks on Fidibo (price 0), optionally per kind and category.
-- `fd_categories`: List Fidibo's categories and sub-categories (slug + Persian title) of one top level.
-- `fd_book`: Get one book's full record: price and discount (Toman), format (ebook / audiobook), pages or duration, file size,
-- `fd_reviews`: Read reader reviews of a book: text, 1-5 stars, date, likes and replies count, plus the total number of reviews.
-- `fd_similar`: Find books like this one: the bestsellers of its category (the book itself left out), with prices in Toman.
-- `fd_author`: An author's, translator's or narrator's profile and their books on Fidibo, with prices in Toman.
-- `fd_publisher`: A publisher's profile and its books on Fidibo, with prices in Toman.
+- `fd_search`: Search ebooks and audiobooks by title, author or keyword; cards with price (Toman), rating, authors.
+- `fd_browse`: List books of a category (or all) in a chosen order, with free / Plus / price filters.
+- `fd_bestsellers`: Top sellers of the week, month or all time, per kind and category (Toman).
+- `fd_new`: Newest books and audiobooks, per kind and category (Toman).
+- `fd_free`: Free ebooks and audiobooks (price 0), per kind and category.
+- `fd_categories`: List category and sub-category slugs (with Persian titles) of one top level.
+- `fd_book`: One book's full record: price (Toman), format, pages or duration, size, people, rating and star
+- `fd_reviews`: Reader reviews of a book: text (cut at 400 chars unless full_text), 1-5 stars, date, likes, replies, total count.
+- `fd_similar`: Books like this one: bestsellers of its category, the book itself left out (Toman).
+- `fd_author`: An author's, translator's or narrator's profile and books (Toman).
+- `fd_publisher`: A publisher's profile and books (Toman).
 
 ## 30book (`30book-mcp`, 14 tools)
 
 Unofficial read-only 30book: search Iranian printed books, compare editions and prices.
 
-- `sb_search`: Search 30book (about 200,000 printed books) by title. Each book has price (list), final_price (what you pay),
-- `sb_browse`: List the books of a category (subject bta-N-M or topic btf-N-M-K; sections bts-N are only landing pages), a fiction genre, a national
-- `sb_publisher`: One publisher's books with a short description of the publisher. Use to see a publisher's catalogue, best
-- `sb_author`: Everything by one author or translator (title shows the Persian and Latin name). Default order: newest.
-- `sb_bestsellers`: The site-wide best-selling books right now (10 pages of 20). Use for 'what is popular'.
-- `sb_new_releases`: The newest books added to the store (10 pages of 20).
-- `sb_deals`: Books with the biggest discount first: among the best sellers, or inside one subject. (The site's own
+- `sb_search`: Search books by title: price, final_price, discount_pct, in_stock, publisher, id.
+- `sb_browse`: Books of a category (bta-N-M or btf-N-M-K; bts-N sections are landing pages only), genre, nation, award list or tag.
+- `sb_publisher`: One publisher's books plus a short about text. Try sort='bestselling' or 'cheapest'.
+- `sb_author`: Books by one author or translator (default newest first).
+- `sb_bestsellers`: Site-wide best sellers (10 pages).
+- `sb_new_releases`: Newest books (10 pages).
+- `sb_deals`: Best sellers (or one subject) by biggest discount. Some publishers inflate list prices: compare final_price.
 - `sb_find_publisher`: Look up publisher ids by name. Pass the id to sb_search(publisher_id=...) or sb_publisher.
 - `sb_find_person`: Look up author / translator ids by name. Pass the id to sb_author or sb_search(author_id=...). The box matches
-- `sb_book`: Full details of one book: title, authors, translators, publisher, price (list) and final_price in Toman,
-- `sb_similar`: The lists on a book's page: similar books from the same topic, more by the same author and, for translations,
-- `sb_reviews`: Reader comments on a book (name, Shamsi date, 1-5 stars, text, likes) plus the rating summary. Only the
-- `sb_categories`: The top of the category tree: sections (کتاب عمومی, کتاب کودک و نوجوان, ...) and, for one section, its
-- `sb_collections`: Curated collections linked from the home page: fiction genres, national literatures, literary award lists and
+- `sb_book`: One book: authors, translators, publisher, price, final_price, discount_pct, in_stock, ISBN, pages, cover, size,
+- `sb_similar`: Similar books, more by the author and (translations) by the translator, up to 20 each.
+- `sb_reviews`: Reader comments (author, date, stars, text cut to 400 chars unless full_text, likes) and the rating summary;
+- `sb_categories`: Category sections (کتاب عمومی, ...) or, for one section, its subjects (تاریخ, ...). Codes go to
+- `sb_collections`: Home-page genres, nations, award lists and tags; ids go to sb_browse(kind=...).
 
 ## PayPing (`payping-mcp`, 21 tools)
 
@@ -369,7 +405,7 @@ PayPing merchant account for agents: balance, sales, invoices; create invoices a
 - `payping_get_balance`: Current PayPing wallet balance in Toman (money received and not yet withdrawn).
 - `payping_get_sales_summary`: Sales totals for a period: total amount (Toman), transaction count and daily averages.
 - `payping_list_transactions`: List payments (newest first) with amount (Toman), payer, description, isPaid and payment code, plus the
-- `payping_get_payment`: Full detail of one payment by its payment code: amount, dates, payer, card, fees, refund state and
+- `payping_get_payment`: One payment by payment code: amount, dates, payer, card, fees, refund state, paymentStatus plus
 - `payping_list_withdrawals`: List settlements (withdrawals to your bank account): date, amount (Toman), code and whether it was paid
 - `payping_get_withdrawal`: Detail of one settlement by code: amount (Toman), request and payout dates, IBAN, bank tracking number.
 - `payping_list_customers`: List saved customers (code, name, phone, email, business name) with the total count.
@@ -382,28 +418,28 @@ PayPing merchant account for agents: balance, sales, invoices; create invoices a
 - `payping_get_invoice`: One invoice by code with its items, customer, status and payment code, plus `url`, the public page where
 - `payping_create_customer`: Save a new customer in the PayPing account and return it with its `code` (needed for invoices).
 - `payping_create_product`: Create a product (financial item) and return its `code`. Then payping_create_payment_link makes a public
-- `payping_create_payment_link`: Make a permanent public payment page for a product and return its `url` (https://ppng.ir/d/...), which
+- `payping_create_payment_link`: Make a permanent public payment page for a product; returns its `url` (https://ppng.ir/d/...).
 - `payping_create_coupon`: Create an active discount coupon and return its `code`. Creates real data: confirm with the user first.
-- `payping_create_invoice`: Create an invoice for a saved customer, ready to pay, and return its `code`, `payCode` and `url` (the
+- `payping_create_invoice`: Create an invoice for a saved customer; returns `code`, `payCode` and `url` (public pay page). Not sent:
 - `payping_send_invoice`: Send an invoice to its customer by SMS/email from PayPing. Messages a real person: confirm with the user
 
 ## Bale Bot (`bale-mcp`, 13 tools)
 
 Private, local Bale bot for agents: read, search and answer messages, ask and wait, files.
 
-- `bot_get_me`: Check BALE_BOT_TOKEN and show the bot's id, username and name. Use first to confirm the bot works.
-- `bot_get_chat`: Get a chat's type, title or name, username and description, as seen by the bot.
+- `bot_get_me`: Check BALE_BOT_TOKEN and show the bot's id, username and name.
+- `bot_get_chat`: Get a chat's type, title or name, username and description.
 - `bot_get_webhook_info`: Show whether a webhook is set (url empty = the reading tools work), pending updates and the last error.
-- `bot_send_message`: Send a text message from the bot. Sends a real message. Confirm recipient and text with the user before calling.
-- `bot_send_file`: Send a photo, document, video, audio or voice file from the bot. Sends a real message. Confirm recipient and file with the user before calling.
-- `bot_edit_message`: Replace the text of a message the bot sent earlier. Changes a real message. Confirm with the user before calling.
-- `bot_delete_message`: Delete a message in a chat where the bot may delete it (its own messages, or as admin). Cannot be undone; confirm with the user first.
+- `bot_send_message`: Send a real text message from the bot. Confirm recipient and text with the user first.
+- `bot_send_file`: Send a real photo, document, video, audio or voice file from the bot. Confirm recipient and file with the user first.
+- `bot_edit_message`: Replace the text of a message the bot sent earlier. Changes a real message; confirm with the user first.
+- `bot_delete_message`: Delete a message the bot may delete (its own, or as admin). Irreversible; confirm with the user first.
 - `bot_get_new_messages`: Get messages people sent the bot since the last check, from all chats, oldest first, and mark them read.
 - `bot_list_chats`: List the chats this bot has talked in, newest first, with unread count and last message. Use to find chat ids.
 - `bot_read_chat`: Show a chat's recent messages in both directions, oldest first, and mark the chat read.
-- `bot_search_messages`: Search stored messages by text, newest first. Arabic and Persian yeh/kaf, Persian and Latin digits,
+- `bot_search_messages`: Search stored messages by text, newest first. Persian/Arabic yeh, kaf, digits and ZWNJ match each other.
 - `bot_wait_for_reply`: Wait until someone writes in a chat or presses a button, then return the new messages (marked read).
-- `bot_download_file`: Download a file someone sent the bot to this computer (max 20 MB) and return its local path.
+- `bot_download_file`: Download a file someone sent the bot (max 20 MB) and return its local path. Never overwrites (-1, -2, ... suffix).
 
 ## SwapWallet (`swapwallet-mcp`, 13 tools)
 

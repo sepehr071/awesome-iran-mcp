@@ -11,18 +11,18 @@ The tools below come from the `taaghche-mcp` MCP server. If they are not availab
 
 ## Tools
 
-- `tg_search`: Search Taaghche's ebooks and audiobooks by title, author or topic: price in Toman, discount, rating, format.
-- `tg_suggest`: Typeahead of the Taaghche search box: up to about 10 book titles (with publisher) that match the text.
-- `tg_book`: Everything about one book: price in Toman and discount, ebook or audiobook, pages or listening time, publisher,
-- `tg_reviews`: Reader reviews of a book, most liked first: star rating, text, likes, number of replies.
-- `tg_similar`: Books Taaghche suggests next to this one (similar works, other books of the same author and publisher),
-- `tg_browse`: List books of a category (or the whole catalog) 16 at a time with a sort, a format and a price ceiling.
-- `tg_bestsellers`: The hottest books right now (Taaghche's «داغ‌ترین» ranking, the closest thing to a bestseller list; no sales
-- `tg_new_releases`: The newest books on Taaghche (most recently added first), overall or in one category and format.
-- `tg_free_books`: Free books and audiobooks (price 0), by default the most downloaded first, overall or in one category.
-- `tg_categories`: Taaghche's category tree for ebooks and audiobooks: top-level groups (with their category id and the
-- `tg_author`: An author's profile (nationality, life dates, biography; with a slug) and their books, 16 at a time.
-- `tg_publisher`: A publisher's description and its books, 16 at a time.
+- `tg_search`: Search ebooks and audiobooks by title, author or topic: price, discount, rating, format.
+- `tg_suggest`: Search-box typeahead: up to about 10 matching book titles with id and publisher. For prices use tg_search.
+- `tg_book`: One book: price, discount, format, pages or duration, people, rating breakdown, categories, ISBN.
+- `tg_reviews`: Reader reviews, most liked first: rating, text, likes, reply count. Page with offset.
+- `tg_similar`: Related books as separate lists (similar works, same author, same publisher): price, format, rating.
+- `tg_browse`: List books of a category (or the whole catalog), 16 per page, by sort, format and price ceiling.
+- `tg_bestsellers`: Hottest books now (Taaghche's trending ranking; no sales numbers are public), overall or per category.
+- `tg_new_releases`: Newest books (most recently added first), overall or per category. Next: tg_book.
+- `tg_free_books`: Free books and audiobooks (price 0), most downloaded first by default. Next: tg_book.
+- `tg_categories`: Category tree: top-level groups (id) and standalone categories, each with a slug.
+- `tg_author`: An author's profile (with a slug: nationality, life dates, bio) and their books, 16 per page.
+- `tg_publisher`: A publisher's description and its books, 16 per page.
 
 ## Rules
 

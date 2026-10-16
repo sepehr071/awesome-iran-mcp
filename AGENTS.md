@@ -1,7 +1,7 @@
 # AGENTS.md
 
-Guide for AI agents using or working on **awesome-iran-mcp**: 20 MCP servers for Iranian websites, 321 tools in
-total. 19 are unofficial Python packages on PyPI, run as stdio servers with `uvx <package>`. `swapwallet-mcp` is
+Guide for AI agents using or working on **awesome-iran-mcp**: 21 MCP servers for Iranian websites, 352 tools in
+total. 20 are unofficial Python packages on PyPI, run as stdio servers with `uvx <package>`. `swapwallet-mcp` is
 SwapWallet's own hosted server (`https://swapwallet.app/mcp`), with OAuth sign-in.
 
 ## Pick a server
@@ -9,6 +9,7 @@ SwapWallet's own hosted server (`https://swapwallet.app/mcp`), with OAuth sign-i
 | User wants to... | Server | Start with |
 |---|---|---|
 | Buy electronics, appliances, almost anything | `digikala-mcp` | `dk_find_cheapest`, `dk_best_for_budget`, then `dk_product`, `dk_price_history` |
+| Find a flat, used car or phone in ads, or check if an ad's price is fair | `divar-mcp` | `dv_search`, `dv_cheapest`, `dv_best_for_budget`, `dv_appraise` |
 | Compare a phone or laptop across sellers, with installments | `technolife-mcp` | `tl_find_cheapest`, `tl_product`, `tl_compare` |
 | Gadgets and accessories | `masterkala-mcp` | `mk_find_cheapest`, `mk_product` |
 | Clothes, shoes, bags | `shopino-mcp` | `sh_find_cheapest`, `sh_product` |
@@ -57,7 +58,7 @@ claude plugin install iran-all --marketplace sepehr071/awesome-iran-mcp     # al
 Bundles: `iran-all`, `iran-food`, `iran-shopping`, `iran-beauty`, `iran-travel`, `iran-health`, `iran-books`.
 Skills only, for any agent: `npx skills add sepehr071/awesome-iran-mcp`.
 
-The server key in config is the package name without `-mcp`. [`.mcp.json`](.mcp.json) holds all 20.
+The server key in config is the package name without `-mcp`. [`.mcp.json`](.mcp.json) holds all 21.
 Requires [uv](https://docs.astral.sh/uv/) (`swapwallet-mcp` doesn't). Add only the servers the task needs: each one adds 11 to 23 tools.
 
 ## Rules every server follows
@@ -97,10 +98,10 @@ README.md / README.fa.md   English (default) and Persian docs; keep both in sync
   Skill text comes from `skill()`, `USE` and `NOTES` in `scripts/catalog.py`, except the rules of a server whose repo
   ships its own `skills/<key>/SKILL.md`, which come from that file. Check with `claude plugin validate .`.
 - Add a server: `git submodule add https://github.com/sepehr071/<name>-mcp servers/<name>-mcp`, add it to
-  `SERVERS` in `scripts/catalog.py` and `APPS` in `scripts/banner.py` (with its logo in `assets/logos/`), run both scripts, add a row to both
-  READMEs and the table above. Update the 20 / 321 counts written in both READMEs.
+  `SERVERS` in `scripts/catalog.py` (and to `GROUPS` in `scripts/banner.py` if its category is new), run both scripts, add a row to both
+  READMEs and the table above. Update the 21 / 352 counts written in both READMEs.
 - Add a hosted server: `git submodule add <its repo> servers/<name>-mcp` and an entry in `REMOTE` in
-  `scripts/catalog.py`, then the same `APPS`, logo, README, table and count steps. Its repo needs an MCP Registry
+  `scripts/catalog.py`, then the same `GROUPS`, README, table and count steps. Its repo needs an MCP Registry
   `server.json` with `remotes` (name, version, description, repository), and the server must publish a server card
   at `<origin>/.well-known/mcp/server-card.json` with its `tools` (with annotations) and `authentication`.
   `catalog.py` reads the tools from the card, marks the server read-only only when it needs no sign-in and every tool

@@ -96,15 +96,14 @@ applies here too, plus:
    `git submodule add https://github.com/sepehr071/<name>-mcp.git servers/<name>-mcp`
 5. **Register it:**
    - `SERVERS` in `scripts/catalog.py`: `"<name>-mcp": ("<category>", "<site url>")`, next to its category.
-   - `APPS` in `scripts/banner.py`: English name, Persian name, logo file, padding.
-   - The logo in `assets/logos/<name>.png` (square, at least 128 px).
+   - `GROUPS` in `scripts/banner.py`, only if the server brings a new category.
 6. **Regenerate:** `python scripts/catalog.py && python scripts/banner.py`.
 7. **Docs:**
    - A row in the server's category table in both `README.md` and `README.fa.md`.
    - A row in the "Pick a server" table in `AGENTS.md`, and any rule the server adds to "Rules every server follows".
    - A line in `llms.txt`.
    - Check that every server and tool count changed.
-8. **Check:** `claude plugin validate .`, and look at the banners (the logo grid must still fit the panel).
+8. **Check:** `claude plugin validate .`, and look at the banners.
 9. **Open the PR** with the template filled in.
 
 ## Flow: add a hosted server

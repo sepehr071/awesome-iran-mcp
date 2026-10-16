@@ -11,20 +11,20 @@ The tools below come from the `30book-mcp` MCP server. If they are not available
 
 ## Tools
 
-- `sb_search`: Search 30book (about 200,000 printed books) by title. Each book has price (list), final_price (what you pay),
-- `sb_browse`: List the books of a category (subject bta-N-M or topic btf-N-M-K; sections bts-N are only landing pages), a fiction genre, a national
-- `sb_publisher`: One publisher's books with a short description of the publisher. Use to see a publisher's catalogue, best
-- `sb_author`: Everything by one author or translator (title shows the Persian and Latin name). Default order: newest.
-- `sb_bestsellers`: The site-wide best-selling books right now (10 pages of 20). Use for 'what is popular'.
-- `sb_new_releases`: The newest books added to the store (10 pages of 20).
-- `sb_deals`: Books with the biggest discount first: among the best sellers, or inside one subject. (The site's own
+- `sb_search`: Search books by title: price, final_price, discount_pct, in_stock, publisher, id.
+- `sb_browse`: Books of a category (bta-N-M or btf-N-M-K; bts-N sections are landing pages only), genre, nation, award list or tag.
+- `sb_publisher`: One publisher's books plus a short about text. Try sort='bestselling' or 'cheapest'.
+- `sb_author`: Books by one author or translator (default newest first).
+- `sb_bestsellers`: Site-wide best sellers (10 pages).
+- `sb_new_releases`: Newest books (10 pages).
+- `sb_deals`: Best sellers (or one subject) by biggest discount. Some publishers inflate list prices: compare final_price.
 - `sb_find_publisher`: Look up publisher ids by name. Pass the id to sb_search(publisher_id=...) or sb_publisher.
 - `sb_find_person`: Look up author / translator ids by name. Pass the id to sb_author or sb_search(author_id=...). The box matches
-- `sb_book`: Full details of one book: title, authors, translators, publisher, price (list) and final_price in Toman,
-- `sb_similar`: The lists on a book's page: similar books from the same topic, more by the same author and, for translations,
-- `sb_reviews`: Reader comments on a book (name, Shamsi date, 1-5 stars, text, likes) plus the rating summary. Only the
-- `sb_categories`: The top of the category tree: sections (کتاب عمومی, کتاب کودک و نوجوان, ...) and, for one section, its
-- `sb_collections`: Curated collections linked from the home page: fiction genres, national literatures, literary award lists and
+- `sb_book`: One book: authors, translators, publisher, price, final_price, discount_pct, in_stock, ISBN, pages, cover, size,
+- `sb_similar`: Similar books, more by the author and (translations) by the translator, up to 20 each.
+- `sb_reviews`: Reader comments (author, date, stars, text cut to 400 chars unless full_text, likes) and the rating summary;
+- `sb_categories`: Category sections (کتاب عمومی, ...) or, for one section, its subjects (تاریخ, ...). Codes go to
+- `sb_collections`: Home-page genres, nations, award lists and tags; ids go to sb_browse(kind=...).
 
 ## Rules
 

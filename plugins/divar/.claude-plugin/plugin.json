@@ -1,0 +1,27 @@
+{
+  "name": "divar",
+  "displayName": "Divar",
+  "version": "0.1.0",
+  "description": "Unofficial read-only Divar: search Iran's classified ads, cheapest and best-value ads, price checks.",
+  "author": {
+    "name": "Sepehr Radmard",
+    "email": "sepehrr80@gmail.com",
+    "url": "https://github.com/sepehr071"
+  },
+  "homepage": "https://github.com/sepehr071/awesome-iran-mcp",
+  "repository": "https://github.com/sepehr071/divar-mcp",
+  "license": "MIT",
+  "keywords": [
+    "iran",
+    "classifieds",
+    "divar.ir"
+  ],
+  "mcpServers": {
+    "divar": {
+      "command": "uvx",
+      "args": [
+        "divar-mcp@0.1.0"
+      ]
+    }
+  }
+}

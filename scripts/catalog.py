@@ -25,6 +25,7 @@ USE = {
     "shopping": "to buy electronics, appliances or other goods",
     "beauty": "cosmetics, skin and hair care or perfume",
     "fashion": "clothes, shoes or bags",
+    "classifieds": "to find or price-check classified ads: homes, cars, phones and more",
     "travel": "flights, trains, buses, hotels, villas or tours",
     "health": "a doctor, clinic or lab appointment",
     "books": "ebooks, audiobooks or printed books",
@@ -51,6 +52,7 @@ SERVERS = {
     "khanoumi-mcp": ("beauty", "https://www.khanoumi.com"),
     "asalbanoo-mcp": ("beauty", "https://asalbanooshop.com"),
     "shopino-mcp": ("fashion", "https://shopino.app"),
+    "divar-mcp": ("classifieds", "https://divar.ir"),
     "otaghak-mcp": ("travel", "https://www.otaghak.com"),
     "jabama-mcp": ("travel", "https://www.jabama.com"),
     "mrbilit-mcp": ("travel", "https://mrbilit.com"),
@@ -353,7 +355,7 @@ def plugins(catalog: list[dict], mcp: dict) -> dict:
 
     marketplace = {
         "name": MARKETPLACE,
-        "description": "MCP servers and skills for Iranian websites: shopping, food, travel, doctors, books, crypto.",
+        "description": "MCP servers and skills for Iranian websites: shopping, classifieds, food, travel, doctors, books, crypto.",
         "owner": OWNER,
         "plugins": entries,
     }

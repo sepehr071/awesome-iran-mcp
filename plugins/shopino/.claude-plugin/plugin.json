@@ -1,7 +1,7 @@
 {
   "name": "shopino",
   "displayName": "Shopino",
-  "version": "0.2.2",
+  "version": "0.3.0",
   "description": "Unofficial read-only Shopino: search fashion across Iranian shops, compare prices, sizes, stock.",
   "author": {
     "name": "Sepehr Radmard",
@@ -20,7 +20,7 @@
     "shopino": {
       "command": "uvx",
       "args": [
-        "shopino-mcp@0.2.2"
+        "shopino-mcp@0.3.0"
       ]
     }
   }

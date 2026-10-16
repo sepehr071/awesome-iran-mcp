@@ -15,7 +15,7 @@ The tools below come from the `payping-mcp` MCP server. If they are not availabl
 - `payping_get_balance`: Current PayPing wallet balance in Toman (money received and not yet withdrawn).
 - `payping_get_sales_summary`: Sales totals for a period: total amount (Toman), transaction count and daily averages.
 - `payping_list_transactions`: List payments (newest first) with amount (Toman), payer, description, isPaid and payment code, plus the
-- `payping_get_payment`: Full detail of one payment by its payment code: amount, dates, payer, card, fees, refund state and
+- `payping_get_payment`: One payment by payment code: amount, dates, payer, card, fees, refund state, paymentStatus plus
 - `payping_list_withdrawals`: List settlements (withdrawals to your bank account): date, amount (Toman), code and whether it was paid
 - `payping_get_withdrawal`: Detail of one settlement by code: amount (Toman), request and payout dates, IBAN, bank tracking number.
 - `payping_list_customers`: List saved customers (code, name, phone, email, business name) with the total count.
@@ -28,9 +28,9 @@ The tools below come from the `payping-mcp` MCP server. If they are not availabl
 - `payping_get_invoice`: One invoice by code with its items, customer, status and payment code, plus `url`, the public page where
 - `payping_create_customer`: Save a new customer in the PayPing account and return it with its `code` (needed for invoices).
 - `payping_create_product`: Create a product (financial item) and return its `code`. Then payping_create_payment_link makes a public
-- `payping_create_payment_link`: Make a permanent public payment page for a product and return its `url` (https://ppng.ir/d/...), which
+- `payping_create_payment_link`: Make a permanent public payment page for a product; returns its `url` (https://ppng.ir/d/...).
 - `payping_create_coupon`: Create an active discount coupon and return its `code`. Creates real data: confirm with the user first.
-- `payping_create_invoice`: Create an invoice for a saved customer, ready to pay, and return its `code`, `payCode` and `url` (the
+- `payping_create_invoice`: Create an invoice for a saved customer; returns `code`, `payCode` and `url` (public pay page). Not sent:
 - `payping_send_invoice`: Send an invoice to its customer by SMS/email from PayPing. Messages a real person: confirm with the user
 
 ## Rules

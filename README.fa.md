@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="assets/banner.fa.svg" alt="awesome-iran-mcp: ۲۰ سرور MCP و ۳۲۱ ابزار برای فروشگاه‌ها، غذا، سفر، سلامت، کتاب و صرافی رمزارز ایرانی، برای Claude، Cursor و Copilot" width="100%">
+<img src="assets/banner.fa.svg" alt="awesome-iran-mcp: ۲۱ سرور MCP و ۳۵۲ ابزار برای فروشگاه‌ها، غذا، سفر، سلامت، کتاب و صرافی رمزارز ایرانی، برای Claude، Cursor و Copilot" width="100%">
 
 [English](README.md) · **فارسی**
 
@@ -12,16 +12,27 @@
 
 <p align="center">
 <b>وب ایران را به ایجنت هوش مصنوعی‌تان بدهید.</b><br>
-۱۹ سرور MCP متن‌باز و غیررسمی برای ایران و سایت‌های فارسی: دیجی‌کالا، اسنپ‌فود، جاباما، مستربلیط، پذیرش۲۴، طاقچه و بقیه، به‌اضافهٔ سرور رسمی سواپ‌ولت.<br>
+۲۰ سرور MCP متن‌باز و غیررسمی برای ایران و سایت‌های فارسی: دیجی‌کالا، دیوار، اسنپ‌فود، جاباما، مستربلیط، پذیرش۲۴، طاقچه و بقیه، به‌اضافهٔ سرور رسمی سواپ‌ولت.<br>
 جست‌وجو، مقایسهٔ قیمت به تومان، پیدا کردن نوبت خالی و تخفیف‌های امروز، از داخل Claude، Cursor، GitHub Copilot در VS Code یا هر کلاینت MCP.<br>
 به‌صورت پلاگین Claude Code همراه با اسکیل نصب کنید، یا به‌صورت Agent Skills برای Codex، Cursor، Antigravity و Grok Build.
 </p>
 
 <p align="center">
-<a href="#سرورها">سرورها</a> · <a href="#شروع-سریع">شروع سریع</a> · <a href="#برای-ایجنت‌ها">برای ایجنت‌ها</a> · <a href="TOOLS.md">همهٔ ابزارها</a> · <a href="#پرسش‌های-رایج">پرسش‌های رایج</a>
+<a href="#تازه‌های-نسخهٔ-۱۵">تازه‌ها</a> · <a href="#سرورها">سرورها</a> · <a href="#شروع-سریع">شروع سریع</a> · <a href="#برای-ایجنت‌ها">برای ایجنت‌ها</a> · <a href="TOOLS.md">همهٔ ابزارها</a> · <a href="#پرسش‌های-رایج">پرسش‌های رایج</a>
 </p>
 
 ---
+
+## تازه‌های نسخهٔ ۱٫۵
+
+<img src="assets/release.fa.svg" alt="awesome-iran-mcp نسخهٔ ۱٫۵: حدود ۶۲٪ توکن کمتر در هر فراخوانی ابزار، فهرست ابزار ۱۹٪ کوچک‌تر، امنیت بیشتر و سرور تازهٔ دیوار" width="100%">
+
+- **حدود ۶۲٪ توکن کمتر در هر فراخوانی ابزار** و فهرست ابزار ۱۹٪ کوچک‌تر در ۱۹ سرور پایتونی، با همان رتبه‌بندی و ارزان‌ترین قیمت‌های قبل.
+- **امنیت بیشتر** در سی‌بوک، بله و اکالا، و در همهٔ سرورها متن سایت داده‌ای نامطمئن حساب می‌شود.
+- **کش، درخواست‌های موازی و تلاش دوباره** هر جا که سرورها کند یا شکننده بودند.
+- **تازه: [divar-mcp](https://github.com/sepehr071/divar-mcp)**، ۳۱ ابزار برای آگهی‌های دیوار: خانه، خودرو، موبایل، سنجش قیمت و هشدار آگهی تازه.
+
+فهرست کامل، با تغییرهایی که روی کلاینت‌ها اثر دارد: [CHANGELOG.md](CHANGELOG.md) (انگلیسی).
 
 ## چرا؟
 
@@ -98,7 +109,7 @@ claude mcp add --transport http swapwallet https://swapwallet.app/mcp   # hosted
 
 `swapwallet-mcp` با آدرسش اضافه می‌شود و هر کلاینت آدرس را به شکل خودش می‌گیرد (Windsurf با `serverUrl`، و Claude Desktop از Settings ← Connectors): [راه‌اندازی آن در هر کلاینت](https://github.com/SwapWallet/swapwallet-mcp#connect).
 
-**هر ۲۰ سرور با هم:** این مخزن را کلون کنید و در Claude Code باز کنید. فایل [`.mcp.json`](.mcp.json) همهٔ سرورها را ثبت می‌کند؛ هر کدام را که لازم دارید تأیید کنید.
+**هر ۲۱ سرور با هم:** این مخزن را کلون کنید و در Claude Code باز کنید. فایل [`.mcp.json`](.mcp.json) همهٔ سرورها را ثبت می‌کند؛ هر کدام را که لازم دارید تأیید کنید.
 
 </div>
 
@@ -110,7 +121,7 @@ cd awesome-iran-mcp && claude
 <div dir="rtl">
 
 > [!TIP]
-> ۳۲۱ ابزار کانتکست زیادی می‌گیرد. به‌جای همه، فقط سرورهای لازم برای همان کار را فعال کنید.
+> ۳۵۲ ابزار کانتکست زیادی می‌گیرد. به‌جای همه، فقط سرورهای لازم برای همان کار را فعال کنید.
 
 ## سرورها
 
@@ -122,6 +133,12 @@ cd awesome-iran-mcp && claude
 | [technolife-mcp](https://github.com/sepehr071/technolife-mcp) | [تکنولایف](https://www.technolife.com) | ۱۹ | [![PyPI](https://img.shields.io/pypi/v/technolife-mcp?label=&color=2fe0cf)](https://pypi.org/project/technolife-mcp/) | [![Last commit](https://img.shields.io/github/last-commit/sepehr071/technolife-mcp?label=&color=ffc23d)](https://github.com/sepehr071/technolife-mcp/commits/main) | کالای دیجیتال: قیمت نقد و اقساط هر فروشنده، مشخصات، نظرها، تخفیف‌ها |
 | [masterkala-mcp](https://github.com/sepehr071/masterkala-mcp) | [مسترکالا](https://masterkala.com) | ۱۴ | [![PyPI](https://img.shields.io/pypi/v/masterkala-mcp?label=&color=2fe0cf)](https://pypi.org/project/masterkala-mcp/) | [![Last commit](https://img.shields.io/github/last-commit/sepehr071/masterkala-mcp?label=&color=ffc23d)](https://github.com/sepehr071/masterkala-mcp/commits/main) | گجت و لوازم جانبی: قیمت، مشخصات، تخفیف‌ها |
 | [shopino-mcp](https://github.com/sepehr071/shopino-mcp) | [شاپینو](https://shopino.app) | ۱۴ | [![PyPI](https://img.shields.io/pypi/v/shopino-mcp?label=&color=2fe0cf)](https://pypi.org/project/shopino-mcp/) | [![Last commit](https://img.shields.io/github/last-commit/sepehr071/shopino-mcp?label=&color=ffc23d)](https://github.com/sepehr071/shopino-mcp/commits/main) | پوشاک از هزاران فروشگاه: قیمت، سایز، موجودی، امتیاز فروشگاه |
+
+### 🏠 نیازمندی‌ها
+
+| سرور | سایت | ابزار | نسخه | آخرین تغییر | ایجنت چه می‌تواند بکند |
+|---|---|---:|:---:|:---:|---|
+| [divar-mcp](https://github.com/sepehr071/divar-mcp) | [دیوار](https://divar.ir) | ۳۱ | [![PyPI](https://img.shields.io/pypi/v/divar-mcp?label=&color=2fe0cf)](https://pypi.org/project/divar-mcp/) | [![Last commit](https://img.shields.io/github/last-commit/sepehr071/divar-mcp?label=&color=ffc23d)](https://github.com/sepehr071/divar-mcp/commits/main) | خانه، خودرو، موبایل و بقیه در هر شهر: ارزان‌ترین و به‌صرفه‌ترین آگهی‌ها، سنجش منصفانه بودن قیمت، آمار بازار، هشدار آگهی تازه |
 
 ### 💄 آرایشی و بهداشتی
 
@@ -179,7 +196,7 @@ cd awesome-iran-mcp && claude
 |---|---|
 | [`AGENTS.md`](AGENTS.md) | کدام سرور برای کدام کار، قراردادها، قوانین ایمنی، نحوهٔ کار در این مخزن |
 | [`servers.json`](servers.json) | کاتالوگ ماشین‌خوان: پکیج یا آدرس، نسخه، دسته، متغیرهای محیطی و همهٔ ابزارهای هر سرور |
-| [`TOOLS.md`](TOOLS.md) | هر ۳۲۱ ابزار به تفکیک سرور |
+| [`TOOLS.md`](TOOLS.md) | هر ۳۵۲ ابزار به تفکیک سرور |
 | [`llms.txt`](llms.txt) | فهرست کوتاه برای LLMها |
 | [`.mcp.json`](.mcp.json) | تنظیمات آماده برای همهٔ سرورها |
 | [`.claude-plugin/marketplace.json`](.claude-plugin/marketplace.json) | مارکت‌پلیس پلاگین `iran-mcp`: یک پلاگین برای هر سرور به‌اضافهٔ بسته‌ها |

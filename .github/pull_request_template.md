@@ -26,9 +26,9 @@ See [CONTRIBUTING.md](../CONTRIBUTING.md) for the rules behind each item.
 - [ ] Prices in Toman; optional `<NAME>_MCP_PROXY` env var supported
 - [ ] Released from a `v*` tag by CI: on PyPI with trusted-publishing provenance, and in the MCP Registry
 - [ ] Submodule URL is a `sepehr071` repo (the maintainer's fork if the server isn't ours)
-- [ ] Added to `SERVERS` or `REMOTE` in `scripts/catalog.py` and `APPS` in `scripts/banner.py`, with a logo in `assets/logos/`
+- [ ] Added to `SERVERS` or `REMOTE` in `scripts/catalog.py`
 - [ ] Rows added in both READMEs, `AGENTS.md` ("Pick a server") and `llms.txt`
-- [ ] Banners checked: the logo grid fits the panel
+- [ ] Banners checked
 
 **Hosted server**
 - [ ] Server card live at `<origin>/.well-known/mcp/server-card.json`, with tool annotations and `authentication`

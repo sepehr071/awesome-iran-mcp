@@ -1,7 +1,7 @@
 {
   "name": "otaghak",
   "displayName": "Otaghak",
-  "version": "0.1.4",
+  "version": "0.2.0",
   "description": "Unofficial read-only Otaghak: search Iranian villas, availability, exact stay prices, reviews.",
   "author": {
     "name": "Sepehr Radmard",
@@ -20,7 +20,7 @@
     "otaghak": {
       "command": "uvx",
       "args": [
-        "otaghak-mcp@0.1.4"
+        "otaghak-mcp@0.2.0"
       ]
     }
   }

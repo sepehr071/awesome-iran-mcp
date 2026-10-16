@@ -11,15 +11,15 @@ The tools below come from the `khanoumi-mcp` MCP server. If they are not availab
 
 ## Tools
 
-- `kh_search`: Search Khanoumi products by keyword: price, discount and stock of each match, sponsored items removed.
-- `kh_find_cheapest`: Find the cheapest in-stock products for a keyword, one flat list sorted by payable price (Toman).
-- `kh_browse`: List the products of a category, brand(s) or campaign tag with sorting, price range and filters.
+- `kh_search`: Search products by keyword: price, discount and stock of each match. Also returns the best-matching
+- `kh_find_cheapest`: Find the cheapest in-stock products for a keyword, one flat list by payable price (Toman).
+- `kh_browse`: List products of a category, brand(s) or campaign tag with sorting, price range and filters.
 - `kh_filters`: List the filters of a category, brand, tag or search: sub-categories, brands, colors and attribute facets
 - `kh_categories`: List Khanoumi's category tree with ids, URL paths and product counts.
-- `kh_brands`: Find brands by name (about 3,200 brands) with their slugs.
-- `kh_deals`: List today's featured deals from the Khanoumi home page (the daily pink box "جعبه صورتی" and the other
-- `kh_store_info`: Get Khanoumi's order rules: packaging cost, shipping fees and times, returns, payment and refunds,
-- `kh_blog_search`: Search the Khanoumi magazine (مجله خانومی): buying guides, skin and hair care routines, ingredient
+- `kh_brands`: Find brands by name (about 3,200) with their slugs, for the `brands` of kh_browse / kh_filters.
+- `kh_deals`: List today's home-page deals (daily pink box "جعبه صورتی" and other rows), biggest discount first,
+- `kh_store_info`: Get Khanoumi's order rules from the official FAQ: packaging cost, shipping fees and times, returns,
+- `kh_blog_search`: Search the Khanoumi magazine (مجله خانومی): buying guides, care routines, ingredient explainers, with links.
 - `kh_product`: Get one product's full record: price and discount (Toman), every shade / size / seller variant with its
 - `kh_reviews`: Read customer comments on a product, newest first, with a verified-buyer flag and photos.
 - `kh_similar`: List alternatives to a product (about 20) or the products the shop pairs with it, with prices and stock.

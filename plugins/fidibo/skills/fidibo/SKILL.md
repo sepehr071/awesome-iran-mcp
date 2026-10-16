@@ -11,17 +11,17 @@ The tools below come from the `fidibo-mcp` MCP server. If they are not available
 
 ## Tools
 
-- `fd_search`: Search Fidibo's ebooks and audiobooks by title, author or keyword: price in Toman, discount, free and
-- `fd_browse`: List books of a category (or all of Fidibo) in a chosen order, with optional free / Fidibo Plus / price filters.
-- `fd_bestsellers`: Top-selling Fidibo books of the week, month or all time, optionally per kind and category, with prices in Toman.
-- `fd_new`: Newest Fidibo books and audiobooks, optionally per kind and category, with prices in Toman.
-- `fd_free`: Free ebooks and audiobooks on Fidibo (price 0), optionally per kind and category.
-- `fd_categories`: List Fidibo's categories and sub-categories (slug + Persian title) of one top level.
-- `fd_book`: Get one book's full record: price and discount (Toman), format (ebook / audiobook), pages or duration, file size,
-- `fd_reviews`: Read reader reviews of a book: text, 1-5 stars, date, likes and replies count, plus the total number of reviews.
-- `fd_similar`: Find books like this one: the bestsellers of its category (the book itself left out), with prices in Toman.
-- `fd_author`: An author's, translator's or narrator's profile and their books on Fidibo, with prices in Toman.
-- `fd_publisher`: A publisher's profile and its books on Fidibo, with prices in Toman.
+- `fd_search`: Search ebooks and audiobooks by title, author or keyword; cards with price (Toman), rating, authors.
+- `fd_browse`: List books of a category (or all) in a chosen order, with free / Plus / price filters.
+- `fd_bestsellers`: Top sellers of the week, month or all time, per kind and category (Toman).
+- `fd_new`: Newest books and audiobooks, per kind and category (Toman).
+- `fd_free`: Free ebooks and audiobooks (price 0), per kind and category.
+- `fd_categories`: List category and sub-category slugs (with Persian titles) of one top level.
+- `fd_book`: One book's full record: price (Toman), format, pages or duration, size, people, rating and star
+- `fd_reviews`: Reader reviews of a book: text (cut at 400 chars unless full_text), 1-5 stars, date, likes, replies, total count.
+- `fd_similar`: Books like this one: bestsellers of its category, the book itself left out (Toman).
+- `fd_author`: An author's, translator's or narrator's profile and books (Toman).
+- `fd_publisher`: A publisher's profile and books (Toman).
 
 ## Rules
 

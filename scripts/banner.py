@@ -1,5 +1,7 @@
 """Draw assets/banner.svg (English) and assets/banner.fa.svg (Persian) in a frosted-glass style.
 
+Also assets/release.svg and assets/release.fa.svg, the README's "What's new" banner (edit RELEASE and HIGHLIGHTS).
+
 Counts come from servers.json, so run scripts/catalog.py first:  python scripts/banner.py
 
 Also writes assets/social.svg (1280x640) for GitHub's social preview, which needs a PNG:
@@ -20,28 +22,15 @@ ROOT = pathlib.Path(__file__).resolve().parent.parent
 W, H = 1280, 460
 ZWNJ = "&#x200C;"
 
-# English name, Persian name, logo in assets/logos, inner padding (0 = logo fills the tile)
-APPS = [
-    ("Digikala", f"دیجی{ZWNJ}کالا", "digikala.png", 0),
-    ("Snappfood", f"اسنپ{ZWNJ}فود", "snappfood.svg", 8),
-    ("Okala", "اکالا", "okala.png", 0),
-    ("Technolife", "تکنولایف", "technolife.png", 0),
-    ("MasterKala", "مسترکالا", "masterkala.png", 0),
-    ("Khanoumi", "خانومی", "khanoumi.png", 0),
-    ("Asal Banoo", "عسل بانو", "asalbanoo.png", 0),
-    ("Shopino", "شاپینو", "shopino.png", 0),
-    ("Jabama", "جاباما", "jabama.png", 0),
-    ("Otaghak", "اتاقک", "otaghak.png", 0),
-    ("MrBilit", "مستربلیط", "mrbilit.svg", 0),
-    ("Flytoday", f"فلای{ZWNJ}تودی", "flytoday.png", 0),
-    ("Paziresh24", "پذیرش۲۴", "paziresh24.png", 0),
-    ("Doctoreto", "دکترتو", "doctoreto.png", 0),
-    ("Taaghche", "طاقچه", "taaghche.png", 0),
-    ("Fidibo", "فیدیبو", "fidibo.png", 0),
-    ("30book", f"سی{ZWNJ}بوک", "30book.png", 0),
-    ("PayPing", f"پی{ZWNJ}پینگ", "payping.png", 0),
-    ("Bale", "بله", "bale.png", 0),
-    ("SwapWallet", f"سواپ{ZWNJ}ولت", "swapwallet.png", 0),
+# Banner tiles: English label, Persian label, servers.json categories, accent colour.
+# A new server lands in its category's tile; only a new category needs a line here.
+GROUPS = [
+    ("Buy &amp; sell", "خرید و فروش", {"shopping", "fashion", "beauty", "classifieds"}, "#2fe0cf"),
+    ("Food &amp; groceries", "غذا و سوپرمارکت", {"food"}, "#ff5c8f"),
+    ("Travel &amp; stays", "سفر و اقامت", {"travel"}, "#6aa0ff"),
+    ("Doctors &amp; clinics", "پزشک و درمان", {"health"}, "#7ee08a"),
+    ("Books", "کتاب", {"books"}, "#ffc23d"),
+    ("Your own accounts", f"حساب{ZWNJ}های شخصی", {"business", "messaging", "crypto"}, "#b88cff"),
 ]
 
 # Vazirmatn is embedded into each banner (see embed_fonts); the rest is fallback
@@ -108,42 +97,36 @@ def pill(x: float, y: float, w: float, text: str, font: str, color: str, fa: boo
   <text x="{mid}" y="{y + 31}" text-anchor="middle" font-family="{font}" font-size="19" font-weight="700" fill="#fff">{text}</text>"""
 
 
-def logo(file: str) -> str:
-    data = (ROOT / "assets" / "logos" / file).read_bytes()
-    mime = "image/svg+xml" if file.endswith(".svg") else "image/png"
-    return f"data:{mime};base64,{base64.b64encode(data).decode()}"
-
-
-def icons(px: float, py: float, fa: bool) -> str:
+def tiles(catalog: list, px: float, py: float, fa: bool) -> str:
+    known = set().union(*(g[2] for g in GROUPS))
+    if missing := {s["category"] for s in catalog} - known:
+        raise SystemExit(f"add categories {sorted(missing)} to GROUPS in scripts/banner.py")
     out = []
-    size, pitch_x, pitch_y, cols = 70, 104, 94, 5
-    for i, (en, fa_name, file, pad) in enumerate(APPS):
-        row, col = divmod(i, cols)
+    w, h, gap_x, gap_y = 240, 100, 18, 16
+    for i, (en, fa_name, cats, color) in enumerate(GROUPS):
+        group = [s for s in catalog if s["category"] in cats]
+        n, t = len(group), sum(s["tool_count"] for s in group)
+        row, col = divmod(i, 2)
         if fa:
-            col = cols - 1 - col  # right to left
-        last_row_offset = pitch_x / 2 if row == len(APPS) // cols else 0
-        x = px + col * pitch_x + (-last_row_offset if fa else last_row_offset)
-        y = py + row * pitch_y
-        label, font = (fa_name, PERSIAN) if fa else (en, LATIN)
-        fit = "xMidYMid meet" if pad else "xMidYMid slice"
-        out.append(f"""<clipPath id="c{i}"><rect x="{x}" y="{y}" width="{size}" height="{size}" rx="18"/></clipPath>
-  <g filter="url(#iconlift)">
-    <rect x="{x}" y="{y}" width="{size}" height="{size}" rx="18" fill="#fff"/>
-    <image x="{x + pad}" y="{y + pad}" width="{size - 2 * pad}" height="{size - 2 * pad}" preserveAspectRatio="{fit}" clip-path="url(#c{i})" href="{logo(file)}"/>
-    <rect x="{x}" y="{y}" width="{size}" height="{size / 2}" rx="18" fill="url(#gloss)"/>
-    <rect x="{x + 0.5}" y="{y + 0.5}" width="{size - 1}" height="{size - 1}" rx="17.5" fill="none" stroke="#fff" stroke-opacity="0.45"/>
-  </g>
-  <text x="{x + size / 2}" y="{y + size + 16}" text-anchor="middle" font-family="{font}" font-size="12.5" font-weight="600" fill="#fff" fill-opacity="0.92">{label}</text>""")
+            col = 1 - col  # right to left
+        x, y = px + col * (w + gap_x), py + row * (h + gap_y)
+        if fa:
+            # rtl keeps "n servers · t tools" in Persian order; under rtl, "start" is the right edge
+            label, sub, font, anchor, tx, bar = fa_name, f"{n} سرور · {t} ابزار".translate(FA_DIGITS), PERSIAN, "start", x + w - 30, x + w - 14
+        else:
+            label, sub, font, anchor, tx, bar = en, f"{n} servers · {t} tools", LATIN, "start", x + 30, x + 8
+        out.append(f"""<rect x="{x}" y="{y}" width="{w}" height="{h}" rx="22" fill="#fff" fill-opacity="0.10" stroke="#fff" stroke-opacity="0.28"/>
+  <rect x="{bar}" y="{y + 24}" width="6" height="{h - 48}" rx="3" fill="{color}"/>
+  <text x="{tx}" y="{y + 45}" text-anchor="{anchor}" direction="{"rtl" if fa else "ltr"}" font-family="{font}" font-size="21" font-weight="700" fill="#fff">{label}</text>
+  <text x="{tx}" y="{y + 73}" text-anchor="{anchor}" direction="{"rtl" if fa else "ltr"}" font-family="{font}" font-size="16" font-weight="600" fill="#fff" fill-opacity="0.8">{sub}</text>""")
     return "\n  ".join(out)
 
 
-def banner(fa: bool, servers: int, tools: int, h: int = H) -> str:
-    """h > H centres the banner on a taller full-bleed canvas (GitHub social preview is 1280x640)."""
-    oy, rx = (h - H) // 2, 28 if h == H else 0
+def banner(fa: bool, catalog: list, h: int = H) -> str:
+    servers, tools = len(catalog), sum(s["tool_count"] for s in catalog)
     card_x, panel_x = (650, 40) if fa else (40, 670)
-    card_w, panel_w = 590, 570
     if fa:
-        anchor, tx = "end", card_x + card_w - 44
+        anchor, tx = "end", card_x + 590 - 44
         subtitle = f"وب ایران، آماده برای ایجنت{ZWNJ}های هوش مصنوعی"
         stats = [(f"{servers} سرور".translate(FA_DIGITS), "#2fe0cf", 140),
                  (f"{tools} ابزار".translate(FA_DIGITS), "#ffc23d", 140),
@@ -156,13 +139,82 @@ def banner(fa: bool, servers: int, tools: int, h: int = H) -> str:
                  ("Toman prices", "#ff5c8f", 170)]
         font, desc = LATIN, f"{servers} MCP servers and {tools} tools that give AI agents the Iranian web"
 
-    pills, x = [], tx
+    return frame(fa, h, desc, f"""<rect x="{tx - (490 if fa else 0)}" y="70" width="490" height="38" rx="19" fill="#000" fill-opacity="0.28" stroke="#fff" stroke-opacity="0.25"/>
+  <text x="{tx + (-245 if fa else 245)}" y="95" text-anchor="middle" font-family="{MONO}" font-size="15" fill="#d9fff9">/plugin marketplace add sepehr071/awesome-iran-mcp</text>
+  <text x="{tx}" y="196" text-anchor="{anchor}" font-family="{LATIN}" font-size="58" font-weight="800" fill="url(#ink)" letter-spacing="-1.5">awesome-iran-mcp</text>
+  <text x="{tx}" y="250" text-anchor="{anchor}" font-family="{font}" font-size="25" fill="#fff" fill-opacity="0.92">{subtitle}</text>
+  {pills(tx, stats, font, fa)}
+  <text x="{tx}" y="396" text-anchor="{anchor}" font-family="{LATIN}" font-size="15" fill="#fff" fill-opacity="0.7">Claude Code plugins · Agent Skills · any MCP client</text>
+
+  {tiles(catalog, panel_x + 36, 49, fa)}""")
+
+
+# Release banner: version and the changelog's headline numbers, updated by hand each release.
+# (figure, Persian figure, English line, Persian line, colour)
+RELEASE = "v1.5"
+HIGHLIGHTS = [
+    ("−62%", "−۶۲٪", "tokens per tool call", "توکن کمتر در هر فراخوانی", "#2fe0cf"),
+    ("−19%", "−۱۹٪", "smaller tool list", f"فهرست ابزار کوچک{ZWNJ}تر", "#ffc23d"),
+    ("Same", "همان", "rankings and prices", f"رتبه{ZWNJ}بندی و قیمت{ZWNJ}ها", "#ff5c8f"),
+    ("+31", "+۳۱", "new Divar tools", "ابزار تازهٔ دیوار", "#7c3aed"),
+]
+
+
+def release(fa: bool, catalog: list, h: int = H) -> str:
+    servers, tools = len(catalog), sum(s["tool_count"] for s in catalog)
+    card_x, panel_x = (650, 40) if fa else (40, 670)
+    if fa:
+        anchor, tx, font = "end", card_x + 590 - 44, PERSIAN
+        title, subtitle, changes = f"سبک{ZWNJ}تر و امن{ZWNJ}تر", "و حالا با دیوار", "همهٔ تغییرها: CHANGELOG.md"
+        stats = [(f"{servers} سرور".translate(FA_DIGITS), "#2fe0cf", 140),
+                 (f"{tools} ابزار".translate(FA_DIGITS), "#ffc23d", 140),
+                 ("امنیت بیشتر", "#ff5c8f", 170)]
+        desc = f"awesome-iran-mcp {RELEASE}: " + "، ".join(f"{n} {fa_line}" for _, n, _, fa_line, _ in HIGHLIGHTS)
+    else:
+        anchor, tx, font = "start", card_x + 44, LATIN
+        title, subtitle, changes = "Leaner. Safer.", "And now on Divar.", "Full changelog: CHANGELOG.md"
+        stats = [(f"{servers} servers", "#2fe0cf", 150), (f"{tools} tools", "#ffc23d", 140),
+                 ("Hardened", "#ff5c8f", 150)]
+        desc = f"awesome-iran-mcp {RELEASE}: " + ", ".join(f"{n} {en_line}" for n, _, en_line, _, _ in HIGHLIGHTS)
+
+    out = []
+    w, th, gap = 240, 164, 18
+    for i, (num, fa_num, en_line, fa_line, color) in enumerate(HIGHLIGHTS):
+        row, col = divmod(i, 2)
+        if fa:
+            col = 1 - col
+        x, y = panel_x + 36 + col * (w + gap), 57 + row * (th + gap)
+        nx, num, line = (x + w - 28, fa_num, fa_line) if fa else (x + 28, num, en_line)
+        # figures stay left-to-right in both languages; under rtl, "start" is the right edge
+        out.append(f"""<rect x="{x}" y="{y}" width="{w}" height="{th}" rx="26" fill="#fff" fill-opacity="0.10" stroke="#fff" stroke-opacity="0.28"/>
+  <text x="{nx}" y="{y + 88}" text-anchor="{"end" if fa else "start"}" font-family="{LATIN}" font-size="60" font-weight="800" fill="{color}" letter-spacing="-1">{num}</text>
+  <text x="{nx}" y="{y + 130}" text-anchor="start" direction="{"rtl" if fa else "ltr"}" font-family="{font}" font-size="18" font-weight="600" fill="#fff" fill-opacity="0.85">{line}</text>""")
+
+    return frame(fa, h, desc, f"""<rect x="{tx - (220 if fa else 0)}" y="70" width="220" height="38" rx="19" fill="#000" fill-opacity="0.28" stroke="#fff" stroke-opacity="0.25"/>
+  <text x="{tx + (-110 if fa else 110)}" y="95" text-anchor="middle" font-family="{MONO}" font-size="15" fill="#d9fff9">awesome-iran-mcp {RELEASE}</text>
+  <text x="{tx}" y="186" text-anchor="{anchor}" font-family="{font}" font-size="58" font-weight="800" fill="url(#ink)" letter-spacing="{0 if fa else -1.5}">{title}</text>
+  <text x="{tx}" y="240" text-anchor="{anchor}" font-family="{font}" font-size="30" font-weight="600" fill="#fff" fill-opacity="0.92">{subtitle}</text>
+  {pills(tx, stats, font, fa)}
+  <text x="{tx}" y="396" text-anchor="start" direction="{"rtl" if fa else "ltr"}" font-family="{font}" font-size="15" fill="#fff" fill-opacity="0.7">{changes}</text>
+
+  {chr(10).join(out)}""")
+
+
+def pills(tx: float, stats: list, font: str, fa: bool) -> str:
+    out, x = [], tx
     for text, color, w in stats:
         if fa:
             x -= w
-        pills.append(pill(x, 300, w, text, font, color, fa))
+        out.append(pill(x, 300, w, text, font, color, fa))
         x = x + w + 14 if not fa else x - 14
+    return "\n".join(out)
 
+
+def frame(fa: bool, h: int, desc: str, body: str) -> str:
+    """The shared canvas: background blobs and two glass panels (card with text, panel beside it).
+    h > H centres it on a taller full-bleed canvas (GitHub social preview is 1280x640)."""
+    oy, rx = (h - H) // 2, 28 if h == H else 0
+    card_x, panel_x = (650, 40) if fa else (40, 670)
     return f"""<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="{W}" height="{h}" viewBox="0 0 {W} {h}" role="img" aria-labelledby="t d">
   <title id="t">awesome-iran-mcp</title>
   <desc id="d">{desc}</desc>
@@ -173,17 +225,10 @@ def banner(fa: bool, servers: int, tools: int, h: int = H) -> str:
   <g clip-path="url(#frame)"><use href="#blobs" filter="url(#soft)" opacity="0.85"/></g>
   <clipPath id="frame"><rect y="{-oy}" width="{W}" height="{h}" rx="{rx}"/></clipPath>
 
-  {glass("card", card_x, 30, card_w, 400, 40)}
-  {glass("panel", panel_x, 30, panel_w, 400, 40)}
+  {glass("card", card_x, 30, 590, 400, 40)}
+  {glass("panel", panel_x, 30, 570, 400, 40)}
 
-  <rect x="{tx - (490 if fa else 0)}" y="70" width="490" height="38" rx="19" fill="#000" fill-opacity="0.28" stroke="#fff" stroke-opacity="0.25"/>
-  <text x="{tx + (-245 if fa else 245)}" y="95" text-anchor="middle" font-family="{MONO}" font-size="15" fill="#d9fff9">/plugin marketplace add sepehr071/awesome-iran-mcp</text>
-  <text x="{tx}" y="196" text-anchor="{anchor}" font-family="{LATIN}" font-size="58" font-weight="800" fill="url(#ink)" letter-spacing="-1.5">awesome-iran-mcp</text>
-  <text x="{tx}" y="250" text-anchor="{anchor}" font-family="{font}" font-size="25" fill="#fff" fill-opacity="0.92">{subtitle}</text>
-  {chr(10).join(pills)}
-  <text x="{tx}" y="396" text-anchor="{anchor}" font-family="{LATIN}" font-size="15" fill="#fff" fill-opacity="0.7">Claude Code plugins · Agent Skills · any MCP client</text>
-
-  {icons(panel_x + 38, 46, fa)}
+  {body}
   </g>
 </svg>
 """
@@ -212,8 +257,10 @@ def embed_fonts(svg: str) -> str:
 def main() -> None:
     catalog = json.loads((ROOT / "servers.json").read_text(encoding="utf-8"))
     servers, tools = len(catalog), sum(s["tool_count"] for s in catalog)
-    for name, fa, h in (("banner.svg", False, H), ("banner.fa.svg", True, H), ("social.svg", False, 640)):
-        svg = embed_fonts(banner(fa, servers, tools, h))
+    for name, draw, fa, h in (("banner.svg", banner, False, H), ("banner.fa.svg", banner, True, H),
+                              ("social.svg", banner, False, 640),
+                              ("release.svg", release, False, H), ("release.fa.svg", release, True, H)):
+        svg = embed_fonts(draw(fa, catalog, h))
         (ROOT / "assets" / name).write_text(svg, encoding="utf-8", newline="\n")
     print(f"banners written: {servers} servers, {tools} tools")
 

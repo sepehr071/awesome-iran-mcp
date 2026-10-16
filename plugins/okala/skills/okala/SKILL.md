@@ -16,15 +16,15 @@ The tools below come from the `okala-mcp` MCP server. If they are not available,
 - `ok_account`: Whether the server is logged in to Okala (and as which phone, masked). Logged in = ok_search uses
 - `ok_logout`: Delete the saved Okala login on this machine; the server continues as a guest.
 - `ok_categories`: Category tree (id, slug, Persian name, children) of everything sold near a point, or in one store.
-- `ok_search`: Find products by text, best matches first, then cheapest (Toman). `mode` tells which way ran:
-- `ok_compare`: Which nearby store sells the same product cheapest. Fetches a category (and/or brand) from every store
+- `ok_search`: Find products by text near a point (or in one store with store_id), best matches first, then
+- `ok_compare`: Which open nearby store sells the same product cheapest: a category and/or brand from every store,
 - `ok_store_products`: A whole category of one store (the API returns all of it at once), sorted and optionally filtered by
 - `ok_product`: One product in one store: price and discount (Toman), stock, max per order, brand, category,
 - `ok_brands`: Brand ids for ok_compare (`brand_id`) and slugs. Okala publishes only a short list of featured brands;
 - `ok_deals`: Deal rows running now, with their end time (UTC) and top products (Toman, discount, store).
 - `ok_offer`: Every product of one deal row (from ok_deals), Toman. Without store_id: across all open stores that
 - `ok_locate`: Turn an address into coordinates (lat, lon) for every other tool, plus the street address of the best hit.
-- `ok_stores`: List the Okala stores (supermarkets, bakeries, fruit shops, chains) that deliver to a point, in the
+- `ok_stores`: Okala stores that deliver to a point, in the site's order: id, type, rating, distance, earliest
 - `ok_store`: One store as seen from the delivery point: whether it delivers there now, minimum order (Toman),
 - `ok_store_reviews`: Read customers' reviews of a store: 1-5 stars, comment, date and the reasons they ticked
 
