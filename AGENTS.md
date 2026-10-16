@@ -1,6 +1,6 @@
 # AGENTS.md
 
-Guide for AI agents using or working on **awesome-iran-mcp**: 22 MCP servers for Iranian websites, 352 tools in
+Guide for AI agents using or working on **awesome-iran-mcp**: 22 MCP servers for Iranian websites, 355 tools in
 total. 21 are Python packages on PyPI, run as stdio servers with `uvx <package>`; all of them are unofficial except
 `exiryab-mcp`, ExirYab's own server on its public API. `swapwallet-mcp` is SwapWallet's own hosted server
 (`https://swapwallet.app/mcp`), with OAuth sign-in.
@@ -60,7 +60,7 @@ claude plugin install iran-all --marketplace sepehr071/awesome-iran-mcp     # al
 Bundles: `iran-all`, `iran-food`, `iran-shopping`, `iran-beauty`, `iran-travel`, `iran-health`, `iran-books`.
 Skills only, for any agent: `npx skills add sepehr071/awesome-iran-mcp`.
 
-The server key in config is the package name without `-mcp`. [`.mcp.json`](.mcp.json) holds all 21.
+The server key in config is the package name without `-mcp`. [`.mcp.json`](.mcp.json) holds all 22.
 Requires [uv](https://docs.astral.sh/uv/) (`swapwallet-mcp` doesn't). Add only the servers the task needs: each one adds 3 to 31 tools.
 
 ## Rules every server follows
@@ -102,7 +102,7 @@ README.md / README.fa.md   English (default) and Persian docs; keep both in sync
   ships its own `skills/<key>/SKILL.md`, which come from that file. Check with `claude plugin validate .`.
 - Add a server: `git submodule add https://github.com/sepehr071/<name>-mcp servers/<name>-mcp`, add it to
   `SERVERS` in `scripts/catalog.py` (and to `GROUPS` in `scripts/banner.py` if its category is new), run both scripts, add a row to both
-  READMEs and the table above. Update the 21 / 352 counts written in both READMEs.
+  READMEs and the table above. Update the 22 / 355 counts written in both READMEs.
 - Add a hosted server: `git submodule add <its repo> servers/<name>-mcp` and an entry in `REMOTE` in
   `scripts/catalog.py`, then the same `GROUPS`, README, table and count steps. Its repo needs an MCP Registry
   `server.json` with `remotes` (name, version, description, repository), and the server must publish a server card

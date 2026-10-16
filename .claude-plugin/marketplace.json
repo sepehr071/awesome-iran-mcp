@@ -142,7 +142,7 @@
     {
       "name": "iran-all",
       "source": "./plugins/iran-all",
-      "description": "All 18 read-only Iranian site servers in one install.",
+      "description": "All 19 read-only Iranian site servers in one install.",
       "category": "bundle"
     },
     {
@@ -154,7 +154,7 @@
     {
       "name": "iran-shopping",
       "source": "./plugins/iran-shopping",
-      "description": "Everything for to buy electronics, appliances or other goods in Iran: Digikala, Technolife, MasterKala.",
+      "description": "Everything for electronics, appliances or other goods in Iran: Digikala, Technolife, MasterKala.",
       "category": "bundle"
     },
     {

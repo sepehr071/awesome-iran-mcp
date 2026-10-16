@@ -1,6 +1,6 @@
 ---
 name: technolife
-description: "Unofficial read-only Technolife: search electronics, compare sellers and installment prices, deals. Use when the user asks about Technolife (technolife.com) or wants to buy electronics, appliances or other goods in Iran."
+description: "Unofficial read-only Technolife: search electronics, compare sellers and installment prices, deals. Use when the user asks about Technolife (technolife.com) or wants electronics, appliances or other goods in Iran."
 ---
 
 # Technolife

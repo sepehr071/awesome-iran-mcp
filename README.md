@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="assets/banner.svg" alt="awesome-iran-mcp: 21 MCP servers and 352 tools for Iranian shopping, classifieds, food, travel, health, book and crypto sites, for Claude, Cursor and Copilot" width="100%">
+<img src="assets/banner.svg" alt="awesome-iran-mcp: 22 MCP servers and 355 tools for Iranian shopping, classifieds, food, travel, health, book and crypto sites, for Claude, Cursor and Copilot" width="100%">
 
 **English** · [فارسی](README.fa.md)
 
@@ -11,8 +11,8 @@
 Search, compare prices in Toman, find free slots and today's deals from Claude, Cursor, GitHub Copilot in VS Code or any MCP client.<br>
 Install them as Claude Code plugins with skills, or as Agent Skills for Codex, Cursor, Antigravity and Grok Build.
 
-[![Servers](https://img.shields.io/badge/servers-21-3fd6c9)](#the-servers)
-[![Tools](https://img.shields.io/badge/tools-352-f4b54a)](TOOLS.md)
+[![Servers](https://img.shields.io/badge/servers-22-3fd6c9)](#the-servers)
+[![Tools](https://img.shields.io/badge/tools-355-f4b54a)](TOOLS.md)
 [![Claude Code plugins](https://img.shields.io/badge/Claude_Code-plugin_marketplace-d97757)](#quick-start)
 [![MCP Registry](https://img.shields.io/badge/MCP_Registry-io.github.sepehr071-7c3aed)](https://registry.modelcontextprotocol.io/?q=sepehr071)
 [![License: MIT](https://img.shields.io/badge/license-MIT-16a34a)](LICENSE)
@@ -112,7 +112,7 @@ claude mcp add --transport http swapwallet https://swapwallet.app/mcp   # hosted
 `swapwallet-mcp` is added by URL, and each client takes a URL in its own shape (Windsurf uses `serverUrl`, Claude
 Desktop takes it under Settings → Connectors): see [its setup for each client](https://github.com/SwapWallet/swapwallet-mcp#connect).
 
-**All 21 at once:** clone this repo and open it in Claude Code. The [`.mcp.json`](.mcp.json) at the root
+**All 22 at once:** clone this repo and open it in Claude Code. The [`.mcp.json`](.mcp.json) at the root
 registers every server; approve the ones you want.
 
 ```bash
@@ -121,7 +121,7 @@ cd awesome-iran-mcp && claude
 ```
 
 > [!TIP]
-> 352 tools is a lot of context. Enable the servers for the task at hand rather than all of them.
+> 355 tools is a lot of context. Enable the servers for the task at hand rather than all of them.
 
 ## The servers
 
@@ -197,7 +197,7 @@ This repo is built to be read by agents as much as by people:
 |---|---|
 | [`AGENTS.md`](AGENTS.md) | Which server to pick for which task, conventions, safety rules, how to work in this repo |
 | [`servers.json`](servers.json) | Machine-readable catalog: package or URL, version, category, env vars and every tool of each server |
-| [`TOOLS.md`](TOOLS.md) | All 352 tools grouped by server, one line each |
+| [`TOOLS.md`](TOOLS.md) | All 355 tools grouped by server, one line each |
 | [`llms.txt`](llms.txt) | Short index for LLMs ([llmstxt.org](https://llmstxt.org)) |
 | [`.mcp.json`](.mcp.json) | Ready-to-use config for every server |
 | [`.claude-plugin/marketplace.json`](.claude-plugin/marketplace.json) | The `iran-mcp` plugin marketplace: one plugin per server plus bundles |

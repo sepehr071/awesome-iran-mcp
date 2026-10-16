@@ -19,13 +19,14 @@ MARKETPLACE = "iran-mcp"
 OWNER = {"name": "Sepehr Radmard", "email": "sepehrr80@gmail.com", "url": "https://github.com/sepehr071"}
 HOME = "https://github.com/sepehr071/awesome-iran-mcp"
 
-# category -> what a user wants when they need it; used in skill and bundle descriptions
+# category -> what a user wants when they need it; used in skill and bundle descriptions, so for read-only
+# categories write a noun phrase that reads after both "wants ..." and "Everything for ..."
 USE = {
     "food": "food or groceries delivered",
-    "shopping": "to buy electronics, appliances or other goods",
+    "shopping": "electronics, appliances or other goods",
     "beauty": "cosmetics, skin and hair care or perfume",
     "fashion": "clothes, shoes or bags",
-    "classifieds": "to find or price-check classified ads: homes, cars, phones and more",
+    "classifieds": "classified ads for homes, cars, phones and more",
     "travel": "flights, trains, buses, hotels, villas or tours",
     "health": "doctors, clinics, labs or appointments",
     "books": "ebooks, audiobooks or printed books",

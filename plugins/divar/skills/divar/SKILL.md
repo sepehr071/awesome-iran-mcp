@@ -1,6 +1,6 @@
 ---
 name: divar
-description: "Unofficial read-only Divar: search Iran's classified ads, cheapest and best-value ads, price checks. Use when the user asks about Divar (divar.ir) or wants to find or price-check classified ads: homes, cars, phones and more in Iran."
+description: "Unofficial read-only Divar: search Iran's classified ads, cheapest and best-value ads, price checks. Use when the user asks about Divar (divar.ir) or wants classified ads for homes, cars, phones and more in Iran."
 ---
 
 # Divar

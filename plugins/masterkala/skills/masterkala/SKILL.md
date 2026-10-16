@@ -1,6 +1,6 @@
 ---
 name: masterkala
-description: "Unofficial read-only MasterKala: search gadgets, compare prices and specs, stock, delivery, deals. Use when the user asks about MasterKala (masterkala.com) or wants to buy electronics, appliances or other goods in Iran."
+description: "Unofficial read-only MasterKala: search gadgets, compare prices and specs, stock, delivery, deals. Use when the user asks about MasterKala (masterkala.com) or wants electronics, appliances or other goods in Iran."
 ---
 
 # MasterKala

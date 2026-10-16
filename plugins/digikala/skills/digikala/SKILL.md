@@ -1,6 +1,6 @@
 ---
 name: digikala
-description: "Unofficial read-only Digikala: search products, compare sellers, price history, reviews, deals. Use when the user asks about Digikala (digikala.com) or wants to buy electronics, appliances or other goods in Iran."
+description: "Unofficial read-only Digikala: search products, compare sellers, price history, reviews, deals. Use when the user asks about Digikala (digikala.com) or wants electronics, appliances or other goods in Iran."
 ---
 
 # Digikala
