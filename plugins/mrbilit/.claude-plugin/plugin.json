@@ -1,7 +1,7 @@
 {
   "name": "mrbilit",
   "displayName": "MrBilit",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "description": "Unofficial read-only MrBilit: Iranian flights, trains, buses, taxis and hotels, seats and prices.",
   "author": {
     "name": "Sepehr Radmard",
@@ -20,7 +20,7 @@
     "mrbilit": {
       "command": "uvx",
       "args": [
-        "mrbilit-mcp@0.3.0"
+        "mrbilit-mcp@0.4.0"
       ]
     }
   }

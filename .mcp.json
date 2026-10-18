@@ -3,91 +3,91 @@
     "snapp": {
       "command": "uvx",
       "args": [
-        "snapp-mcp@0.2.0"
+        "snapp-mcp@0.3.0"
       ]
     },
     "okala": {
       "command": "uvx",
       "args": [
-        "okala-mcp@0.2.0"
+        "okala-mcp@0.3.0"
       ]
     },
     "digikala": {
       "command": "uvx",
       "args": [
-        "digikala-mcp@0.4.0"
+        "digikala-mcp@0.5.0"
       ]
     },
     "technolife": {
       "command": "uvx",
       "args": [
-        "technolife-mcp@0.3.0"
+        "technolife-mcp@0.4.0"
       ]
     },
     "masterkala": {
       "command": "uvx",
       "args": [
-        "masterkala-mcp@0.3.0"
+        "masterkala-mcp@0.4.0"
       ]
     },
     "khanoumi": {
       "command": "uvx",
       "args": [
-        "khanoumi-mcp@0.2.0"
+        "khanoumi-mcp@0.3.0"
       ]
     },
     "asalbanoo": {
       "command": "uvx",
       "args": [
-        "asalbanoo-mcp@0.3.0"
+        "asalbanoo-mcp@0.4.0"
       ]
     },
     "shopino": {
       "command": "uvx",
       "args": [
-        "shopino-mcp@0.3.0"
+        "shopino-mcp@0.4.0"
       ]
     },
     "divar": {
       "command": "uvx",
       "args": [
-        "divar-mcp@0.1.0"
+        "divar-mcp@0.2.0"
       ]
     },
     "otaghak": {
       "command": "uvx",
       "args": [
-        "otaghak-mcp@0.2.0"
+        "otaghak-mcp@0.3.0"
       ]
     },
     "jabama": {
       "command": "uvx",
       "args": [
-        "jabama-mcp@0.3.0"
+        "jabama-mcp@0.4.0"
       ]
     },
     "mrbilit": {
       "command": "uvx",
       "args": [
-        "mrbilit-mcp@0.3.0"
+        "mrbilit-mcp@0.4.0"
       ]
     },
     "flytoday": {
       "command": "uvx",
       "args": [
-        "flytoday-mcp@0.2.0"
+        "flytoday-mcp@0.3.0"
       ]
     },
     "paziresh24": {
       "command": "uvx",
       "args": [
-        "paziresh24-mcp@0.3.0"
+        "paziresh24-mcp@0.4.0"
       ]
     },
     "doctoreto": {
       "command": "uvx",
       "args": [
-        "doctoreto-mcp@0.3.0"
+        "doctoreto-mcp@0.4.0"
       ]
     },
     "exiryab": {
@@ -99,19 +99,19 @@
     "taaghche": {
       "command": "uvx",
       "args": [
-        "taaghche-mcp@0.2.0"
+        "taaghche-mcp@0.3.0"
       ]
     },
     "fidibo": {
       "command": "uvx",
       "args": [
-        "fidibo-mcp@0.2.0"
+        "fidibo-mcp@0.3.0"
       ]
     },
     "30book": {
       "command": "uvx",
       "args": [
-        "30book-mcp@0.2.0"
+        "30book-mcp@0.3.0"
       ]
     },
     "payping": {

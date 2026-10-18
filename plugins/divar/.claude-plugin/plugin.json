@@ -1,7 +1,7 @@
 {
   "name": "divar",
   "displayName": "Divar",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Unofficial read-only Divar: search Iran's classified ads, cheapest and best-value ads, price checks.",
   "author": {
     "name": "Sepehr Radmard",
@@ -20,7 +20,7 @@
     "divar": {
       "command": "uvx",
       "args": [
-        "divar-mcp@0.1.0"
+        "divar-mcp@0.2.0"
       ]
     }
   }

@@ -5,7 +5,7 @@
     "category": "food",
     "site": "https://snappfood.ir",
     "description": "Unofficial read-only Snappfood & SnappMarket: search food and groceries, compare prices, deals.",
-    "version": "0.2.0",
+    "version": "0.3.0",
     "pypi": "snapp-mcp",
     "repository": "https://github.com/sepehr071/snapp-mcp",
     "registry_name": "io.github.sepehr071/snapp-mcp",
@@ -16,7 +16,7 @@
         "name": "SNAPP_MCP_PROXY",
         "isRequired": false,
         "isSecret": false,
-        "description": "Optional HTTP proxy URL. Snappfood only accepts Iranian IP addresses; system proxy settings are ignored."
+        "description": "Optional HTTP proxy URL. Snappfood only accepts Iranian IP addresses; system proxy settings are ignored. Also accepts a comma-separated list: one is used until it gets blocked or fails to connect, then the next."
       }
     ],
     "tool_count": 21,
@@ -134,7 +134,7 @@
     "category": "food",
     "site": "https://okala.com",
     "description": "Unofficial read-only Okala: grocery stores that deliver to you, compare prices across stores.",
-    "version": "0.2.0",
+    "version": "0.3.0",
     "pypi": "okala-mcp",
     "repository": "https://github.com/sepehr071/okala-mcp",
     "registry_name": "io.github.sepehr071/okala-mcp",
@@ -145,7 +145,7 @@
         "name": "OKALA_MCP_PROXY",
         "isRequired": false,
         "isSecret": false,
-        "description": "Optional HTTP proxy URL for requests to okala.com; system proxy settings are ignored."
+        "description": "Optional HTTP proxy URL for requests to okala.com, or a comma-separated list used one at a time (next one after a block); system proxy settings are ignored."
       },
       {
         "name": "OKALA_MCP_TOKEN",
@@ -244,7 +244,7 @@
     "category": "shopping",
     "site": "https://www.digikala.com",
     "description": "Unofficial read-only Digikala: search products, compare sellers, price history, reviews, deals.",
-    "version": "0.4.0",
+    "version": "0.5.0",
     "pypi": "digikala-mcp",
     "repository": "https://github.com/sepehr071/digikala-mcp",
     "registry_name": "io.github.sepehr071/digikala-mcp",
@@ -255,7 +255,7 @@
         "name": "DIGIKALA_MCP_PROXY",
         "isRequired": false,
         "isSecret": false,
-        "description": "Optional HTTP proxy URL for every request (e.g. one with an Iranian exit if Digikala blocks yours); system proxy settings are ignored."
+        "description": "Optional HTTP proxy URL for every request (e.g. one with an Iranian exit if Digikala blocks yours), or a comma-separated list: one is used until it gets blocked or fails to connect, then the next. System proxy settings are ignored."
       }
     ],
     "tool_count": 23,
@@ -383,7 +383,7 @@
     "category": "shopping",
     "site": "https://www.technolife.com",
     "description": "Unofficial read-only Technolife: search electronics, compare sellers and installment prices, deals.",
-    "version": "0.3.0",
+    "version": "0.4.0",
     "pypi": "technolife-mcp",
     "repository": "https://github.com/sepehr071/technolife-mcp",
     "registry_name": "io.github.sepehr071/technolife-mcp",
@@ -394,7 +394,7 @@
         "name": "TECHNOLIFE_MCP_PROXY",
         "isRequired": false,
         "isSecret": false,
-        "description": "Optional HTTP proxy URL for every request. System proxy settings are ignored."
+        "description": "Optional HTTP proxy URL for every request, or a comma-separated list used one at a time (next one after a block). System proxy settings are ignored."
       }
     ],
     "tool_count": 19,
@@ -502,7 +502,7 @@
     "category": "shopping",
     "site": "https://masterkala.com",
     "description": "Unofficial read-only MasterKala: search gadgets, compare prices and specs, stock, delivery, deals.",
-    "version": "0.3.0",
+    "version": "0.4.0",
     "pypi": "masterkala-mcp",
     "repository": "https://github.com/sepehr071/masterkala-mcp",
     "registry_name": "io.github.sepehr071/masterkala-mcp",
@@ -513,7 +513,7 @@
         "name": "MASTERKALA_MCP_PROXY",
         "isRequired": false,
         "isSecret": false,
-        "description": "Optional HTTP proxy URL for requests to masterkala.com; system proxy settings are ignored."
+        "description": "Optional HTTP proxy URL for requests to masterkala.com, or a comma-separated list: one is used until it gets blocked or fails to connect, then the next. System proxy settings are ignored."
       }
     ],
     "tool_count": 14,
@@ -596,7 +596,7 @@
     "category": "beauty",
     "site": "https://www.khanoumi.com",
     "description": "Unofficial read-only Khanoumi: search cosmetics and skin care, compare prices, shades, reviews.",
-    "version": "0.2.0",
+    "version": "0.3.0",
     "pypi": "khanoumi-mcp",
     "repository": "https://github.com/sepehr071/khanoumi-mcp",
     "registry_name": "io.github.sepehr071/khanoumi-mcp",
@@ -607,7 +607,7 @@
         "name": "KHANOUMI_MCP_PROXY",
         "isRequired": false,
         "isSecret": false,
-        "description": "Optional HTTP proxy URL for requests to khanoumi.com; system proxy settings are ignored."
+        "description": "Optional HTTP proxy URL, or a comma-separated list tried one at a time, for requests to khanoumi.com; system proxy settings are ignored."
       }
     ],
     "tool_count": 12,
@@ -680,7 +680,7 @@
     "category": "beauty",
     "site": "https://asalbanooshop.com",
     "description": "Unofficial read-only Asal Banoo: search cosmetics and skin care, compare prices, sizes, deals.",
-    "version": "0.3.0",
+    "version": "0.4.0",
     "pypi": "asalbanoo-mcp",
     "repository": "https://github.com/sepehr071/asalbanoo-mcp",
     "registry_name": "io.github.sepehr071/asalbanoo-mcp",
@@ -691,7 +691,7 @@
         "name": "ASALBANOO_MCP_PROXY",
         "isRequired": false,
         "isSecret": false,
-        "description": "Optional HTTP proxy URL for requests to asalbanooshop.com; system proxy settings are ignored."
+        "description": "Optional HTTP proxy URL, or a comma-separated list tried in turn, for asalbanooshop.com; system proxies are ignored."
       }
     ],
     "tool_count": 12,
@@ -764,7 +764,7 @@
     "category": "fashion",
     "site": "https://shopino.app",
     "description": "Unofficial read-only Shopino: search fashion across Iranian shops, compare prices, sizes, stock.",
-    "version": "0.3.0",
+    "version": "0.4.0",
     "pypi": "shopino-mcp",
     "repository": "https://github.com/sepehr071/shopino-mcp",
     "registry_name": "io.github.sepehr071/shopino-mcp",
@@ -775,7 +775,7 @@
         "name": "SHOPINO_MCP_PROXY",
         "isRequired": false,
         "isSecret": false,
-        "description": "Optional HTTP proxy URL for requests to shopino.app; system proxy settings are ignored."
+        "description": "Optional HTTP proxy URL for requests to shopino.app, or a comma-separated list: one is used until it gets blocked or fails to connect, then the next. System proxy settings are ignored."
       }
     ],
     "tool_count": 14,
@@ -858,7 +858,7 @@
     "category": "classifieds",
     "site": "https://divar.ir",
     "description": "Unofficial read-only Divar: search Iran's classified ads, cheapest and best-value ads, price checks.",
-    "version": "0.1.0",
+    "version": "0.2.0",
     "pypi": "divar-mcp",
     "repository": "https://github.com/sepehr071/divar-mcp",
     "registry_name": "io.github.sepehr071/divar-mcp",
@@ -869,7 +869,7 @@
         "name": "DIVAR_MCP_PROXY",
         "isRequired": false,
         "isSecret": false,
-        "description": "Optional HTTP proxy URL for requests to divar.ir; system proxy settings are ignored."
+        "description": "Optional HTTP proxy URL for requests to divar.ir, or a comma-separated list: one is used until it gets blocked or fails to connect, then the next. System proxy settings are ignored."
       }
     ],
     "tool_count": 31,
@@ -1037,7 +1037,7 @@
     "category": "travel",
     "site": "https://www.otaghak.com",
     "description": "Unofficial read-only Otaghak: search Iranian villas, availability, exact stay prices, reviews.",
-    "version": "0.2.0",
+    "version": "0.3.0",
     "pypi": "otaghak-mcp",
     "repository": "https://github.com/sepehr071/otaghak-mcp",
     "registry_name": "io.github.sepehr071/otaghak-mcp",
@@ -1048,7 +1048,7 @@
         "name": "OTAGHAK_MCP_PROXY",
         "isRequired": false,
         "isSecret": false,
-        "description": "Optional HTTP proxy URL for every request. System proxy settings are ignored."
+        "description": "Optional HTTP proxy URL for every request, or a comma-separated list: one is used until it gets blocked or fails to connect, then the next. System proxy settings are ignored."
       }
     ],
     "tool_count": 15,
@@ -1136,7 +1136,7 @@
     "category": "travel",
     "site": "https://www.jabama.com",
     "description": "Unofficial read-only Jabama: villas and stays with exact prices, group tours, events and theater.",
-    "version": "0.3.0",
+    "version": "0.4.0",
     "pypi": "jabama-mcp",
     "repository": "https://github.com/sepehr071/jabama-mcp",
     "registry_name": "io.github.sepehr071/jabama-mcp",
@@ -1147,7 +1147,7 @@
         "name": "JABAMA_MCP_PROXY",
         "isRequired": false,
         "isSecret": false,
-        "description": "Optional HTTP proxy URL for every request. System proxy settings are ignored."
+        "description": "Optional HTTP proxy URL for every request, or a comma-separated list: one is used until it gets blocked or fails to connect, then the next. System proxy settings are ignored."
       }
     ],
     "tool_count": 21,
@@ -1265,7 +1265,7 @@
     "category": "travel",
     "site": "https://mrbilit.com",
     "description": "Unofficial read-only MrBilit: Iranian flights, trains, buses, taxis and hotels, seats and prices.",
-    "version": "0.3.0",
+    "version": "0.4.0",
     "pypi": "mrbilit-mcp",
     "repository": "https://github.com/sepehr071/mrbilit-mcp",
     "registry_name": "io.github.sepehr071/mrbilit-mcp",
@@ -1276,7 +1276,7 @@
         "name": "MRBILIT_MCP_PROXY",
         "isRequired": false,
         "isSecret": false,
-        "description": "Optional HTTP proxy URL for every request (only needed if your network cannot reach MrBilit's API servers). System proxy settings are ignored."
+        "description": "Optional HTTP proxy URL, or a comma-separated list used one at a time and rotated on a block or connect error (only needed if your network cannot reach MrBilit's API servers). System proxy settings are ignored."
       }
     ],
     "tool_count": 22,
@@ -1399,7 +1399,7 @@
     "category": "travel",
     "site": "https://www.flytoday.ir",
     "description": "Unofficial read-only Flytoday: Iranian and international flights, hotels, villas, trains, buses.",
-    "version": "0.2.0",
+    "version": "0.3.0",
     "pypi": "flytoday-mcp",
     "repository": "https://github.com/sepehr071/flytoday-mcp",
     "registry_name": "io.github.sepehr071/flytoday-mcp",
@@ -1410,7 +1410,7 @@
         "name": "FLYTODAY_MCP_PROXY",
         "isRequired": false,
         "isSecret": false,
-        "description": "Optional HTTP proxy URL for every request (only needed if your network cannot reach flytoday.ir or is rate limited). System proxy settings are ignored."
+        "description": "Optional HTTP proxy URL, or a comma-separated list used one at a time (next one after a block or connect error). Only needed if your network cannot reach flytoday.ir or is rate limited. System proxy settings are ignored."
       }
     ],
     "tool_count": 22,
@@ -1533,7 +1533,7 @@
     "category": "health",
     "site": "https://www.paziresh24.com",
     "description": "Unofficial read-only Paziresh24: find Iranian doctors, profiles, prices, reviews and free slots.",
-    "version": "0.3.0",
+    "version": "0.4.0",
     "pypi": "paziresh24-mcp",
     "repository": "https://github.com/sepehr071/paziresh24-mcp",
     "registry_name": "io.github.sepehr071/paziresh24-mcp",
@@ -1544,7 +1544,7 @@
         "name": "PAZIRESH24_MCP_PROXY",
         "isRequired": false,
         "isSecret": false,
-        "description": "Optional HTTP proxy URL for every request. System proxy settings are ignored."
+        "description": "Optional HTTP proxy URL for every request, or a comma-separated list used one at a time (the next one after a block or connect error). System proxy settings are ignored."
       }
     ],
     "tool_count": 12,
@@ -1617,7 +1617,7 @@
     "category": "health",
     "site": "https://doctoreto.com",
     "description": "Unofficial read-only Doctoreto: Iranian doctors, visit fees, free appointment times, clinics, labs.",
-    "version": "0.3.0",
+    "version": "0.4.0",
     "pypi": "doctoreto-mcp",
     "repository": "https://github.com/sepehr071/doctoreto-mcp",
     "registry_name": "io.github.sepehr071/doctoreto-mcp",
@@ -1628,7 +1628,7 @@
         "name": "DOCTORETO_MCP_PROXY",
         "isRequired": false,
         "isSecret": false,
-        "description": "Optional HTTP proxy URL for every request. System proxy settings are ignored."
+        "description": "Optional HTTP proxy URL for every request, or a comma-separated list tried one at a time (next one after a block or connect error). System proxy settings are ignored."
       }
     ],
     "tool_count": 14,
@@ -1756,7 +1756,7 @@
     "category": "books",
     "site": "https://taaghche.com",
     "description": "Unofficial read-only Taaghche: search Persian ebooks and audiobooks, compare prices, read reviews.",
-    "version": "0.2.0",
+    "version": "0.3.0",
     "pypi": "taaghche-mcp",
     "repository": "https://github.com/sepehr071/taaghche-mcp",
     "registry_name": "io.github.sepehr071/taaghche-mcp",
@@ -1767,7 +1767,7 @@
         "name": "TAAGHCHE_MCP_PROXY",
         "isRequired": false,
         "isSecret": false,
-        "description": "Optional HTTP proxy URL for requests to taaghche.com; system proxy settings are ignored."
+        "description": "Optional HTTP proxy URL for requests to taaghche.com, or a comma-separated list: one is used until it gets blocked or fails to connect, then the next. System proxy settings are ignored."
       }
     ],
     "tool_count": 12,
@@ -1840,7 +1840,7 @@
     "category": "books",
     "site": "https://fidibo.com",
     "description": "Unofficial read-only Fidibo: search Persian ebooks and audiobooks, compare prices, free books.",
-    "version": "0.2.0",
+    "version": "0.3.0",
     "pypi": "fidibo-mcp",
     "repository": "https://github.com/sepehr071/fidibo-mcp",
     "registry_name": "io.github.sepehr071/fidibo-mcp",
@@ -1851,7 +1851,7 @@
         "name": "FIDIBO_MCP_PROXY",
         "isRequired": false,
         "isSecret": false,
-        "description": "Optional HTTP proxy URL for requests to fidibo.com; system proxy settings are ignored."
+        "description": "Optional HTTP proxy URL for every request, or a comma-separated list: one is used until it gets blocked or fails to connect, then the next. System proxy settings are ignored."
       }
     ],
     "tool_count": 11,
@@ -1919,7 +1919,7 @@
     "category": "books",
     "site": "https://www.30book.com",
     "description": "Unofficial read-only 30book: search Iranian printed books, compare editions and prices.",
-    "version": "0.2.0",
+    "version": "0.3.0",
     "pypi": "30book-mcp",
     "repository": "https://github.com/sepehr071/30book-mcp",
     "registry_name": "io.github.sepehr071/30book-mcp",
@@ -1930,7 +1930,7 @@
         "name": "SIBOOK_MCP_PROXY",
         "isRequired": false,
         "isSecret": false,
-        "description": "Optional HTTP proxy URL for requests to 30book.com; system proxy settings are ignored."
+        "description": "Optional HTTP proxy URL for requests to 30book.com, or a comma-separated list used one at a time (next one after a block or connect error); system proxy settings are ignored."
       }
     ],
     "tool_count": 14,

@@ -1,7 +1,7 @@
 {
   "name": "doctoreto",
   "displayName": "Doctoreto",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "description": "Unofficial read-only Doctoreto: Iranian doctors, visit fees, free appointment times, clinics, labs.",
   "author": {
     "name": "Sepehr Radmard",
@@ -20,7 +20,7 @@
     "doctoreto": {
       "command": "uvx",
       "args": [
-        "doctoreto-mcp@0.3.0"
+        "doctoreto-mcp@0.4.0"
       ]
     }
   }
