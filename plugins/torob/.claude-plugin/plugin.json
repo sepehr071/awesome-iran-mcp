@@ -1,0 +1,27 @@
+{
+  "name": "torob",
+  "displayName": "Torob",
+  "version": "0.1.1",
+  "description": "Unofficial read-only Torob: compare Iranian shop prices, price history, deal checks and baskets.",
+  "author": {
+    "name": "Sepehr Radmard",
+    "email": "sepehrr80@gmail.com",
+    "url": "https://github.com/sepehr071"
+  },
+  "homepage": "https://github.com/sepehr071/awesome-iran-mcp",
+  "repository": "https://github.com/sepehr071/torob-mcp",
+  "license": "MIT",
+  "keywords": [
+    "iran",
+    "shopping",
+    "torob.com"
+  ],
+  "mcpServers": {
+    "torob": {
+      "command": "uvx",
+      "args": [
+        "torob-mcp@0.1.1"
+      ]
+    }
+  }
+}

@@ -9,6 +9,14 @@
 - **[pasavard-mcp](https://github.com/ashkancapella/pasavard-mcp)**, Pasavard's official hosted server, 4 tools:
   Digikala and Snappshop prices tracked hourly, best picks per budget against each product's 30-day low. No sign-in.
   Its store links are affiliate links, and every result says so (#5).
+- **[torob-mcp](https://github.com/sepehr071/torob-mcp)**, 26 tools: every Iranian shop's price for a product on
+  Torob, price history, deal checks, installments and the cheapest shop for a whole basket.
+
+### Changed
+
+- The 18 unofficial shop servers present themselves as Chrome (TLS, HTTP/2 and headers), pace their calls, honour
+  `Retry-After`, take a comma-separated proxy list and can clear a challenge page with an optional headless browser
+  (`<package>[browser]`). On Torob the old client was blocked after 4-6 calls; the new one made 100 without a block.
 
 ### Fixed
 

@@ -591,6 +591,160 @@
     ]
   },
   {
+    "name": "torob-mcp",
+    "title": "Torob",
+    "category": "shopping",
+    "site": "https://torob.com",
+    "description": "Unofficial read-only Torob: compare Iranian shop prices, price history, deal checks and baskets.",
+    "version": "0.1.1",
+    "pypi": "torob-mcp",
+    "repository": "https://github.com/sepehr071/torob-mcp",
+    "registry_name": "io.github.sepehr071/torob-mcp",
+    "run": "uvx torob-mcp",
+    "read_only": true,
+    "env": [
+      {
+        "name": "TOROB_MCP_PROXY",
+        "isRequired": false,
+        "isSecret": false,
+        "description": "Optional HTTP proxy URL for requests to torob.com, or a comma-separated list used one at a time (the next one takes over when one is blocked or unreachable); system proxy settings are ignored. Torob blocks many foreign and cloud IPs, so an Iranian exit may be needed."
+      }
+    ],
+    "tool_count": 26,
+    "tools": [
+      {
+        "name": "tb_cheapest",
+        "title": "Cheapest offer",
+        "summary": "Cheapest trustworthy offer for a product named in words: searches, then looks at every shop's offer."
+      },
+      {
+        "name": "tb_compare",
+        "title": "Compare products",
+        "summary": "Side-by-side comparison of 2-5 products: only the specs that differ, the price window, and which is cheapest."
+      },
+      {
+        "name": "tb_best_value",
+        "title": "Best value under budget",
+        "summary": "Ranked product picks that fit a budget (Toman), for \"best phone under 30 million\"."
+      },
+      {
+        "name": "tb_deal_check",
+        "title": "Deal check",
+        "summary": "Is this a good price? Score 0-100 from the product's price history and today's competing offers."
+      },
+      {
+        "name": "tb_basket",
+        "title": "Shopping basket",
+        "summary": "Cheapest shop for a whole shopping list: best single shop that sells everything, and the split-cart total."
+      },
+      {
+        "name": "tb_product",
+        "title": "Product details",
+        "summary": "Full record of one product: name, price range across shops (Toman), category path, brand, key specs, cheapest offer."
+      },
+      {
+        "name": "tb_sellers",
+        "title": "Sellers",
+        "summary": "Every online shop offer for a product, cheapest first, with trust, warranty, installment and delivery info."
+      },
+      {
+        "name": "tb_stores",
+        "title": "In-person stores",
+        "summary": "In-person (offline) shops that stock a product: address, opening hours, open now, shelf price and its age."
+      },
+      {
+        "name": "tb_presence",
+        "title": "Shop presence",
+        "summary": "How widely a product is sold: online shops, in-person stores, installment shops, Torob-warranty shops, price window."
+      },
+      {
+        "name": "tb_variants",
+        "title": "Variants",
+        "summary": "Sibling variants of a product (storage + RAM, colour, region ...) each with its own cheapest price."
+      },
+      {
+        "name": "tb_price_chart",
+        "title": "Price chart",
+        "summary": "Price chart of a product (about a year, weekly): minimum and average price in Toman, with a buy-now verdict."
+      },
+      {
+        "name": "tb_price_history",
+        "title": "Price history events",
+        "summary": "Notable price moves of a product, newest first: drops, rises, lowest and highest point, last change."
+      },
+      {
+        "name": "tb_similar",
+        "title": "Similar products",
+        "summary": "Products Torob shows as similar (alternatives in the same class), with cheapest price and shop count."
+      },
+      {
+        "name": "tb_product_url",
+        "title": "Product URL",
+        "summary": "Clean torob.com URL for a product id, '/p/<id>/...' path or any torob.com product link (no request is sent)."
+      },
+      {
+        "name": "tb_products_batch",
+        "title": "Product cards",
+        "summary": "Short records (name, price window, shop counts, category, brand) for up to 10 products at once."
+      },
+      {
+        "name": "tb_search",
+        "title": "Search products",
+        "summary": "Search Torob for products; each card has the cheapest shop price (Toman), shop count, image and URL."
+      },
+      {
+        "name": "tb_suggest",
+        "title": "Suggestions",
+        "summary": "Torob's own autocomplete: up to 8 search phrases for the typed text (also fixes Finglish and colloquial wording)."
+      },
+      {
+        "name": "tb_filters",
+        "title": "Search filters",
+        "summary": "Which filters exist for a query/category: category children, brands, price span, sort options, attributes."
+      },
+      {
+        "name": "tb_category",
+        "title": "Browse category",
+        "summary": "A category page: where it sits in the tree, its sub-categories, and its top products."
+      },
+      {
+        "name": "tb_brands",
+        "title": "Brands",
+        "summary": "All brands of a category with their ids (for tb_search brand=)."
+      },
+      {
+        "name": "tb_trends",
+        "title": "Search trends",
+        "summary": "What people search on Torob right now, each with the category it lands in and one sample product."
+      },
+      {
+        "name": "tb_offers",
+        "title": "Special offers",
+        "summary": "Torob's special-offers feed (\"پیشنهاد ویژه\"): themed rows with discounted or promoted products."
+      },
+      {
+        "name": "tb_cities",
+        "title": "Cities",
+        "summary": "City ids for the `city` filter of tb_search, tb_sellers and tb_stores (392 Tehran, 468 Mashhad, 240 Isfahan)."
+      },
+      {
+        "name": "tb_shop",
+        "title": "Shop profile",
+        "summary": "A shop's trust profile: score and votes, e-Namad seal, time on Torob, city, website, delivery and payment terms."
+      },
+      {
+        "name": "tb_find_shops",
+        "title": "Find shops",
+        "summary": "Find shops in Torob's directory by name or domain; returns ids for tb_shop and tb_shop_products."
+      },
+      {
+        "name": "tb_shop_products",
+        "title": "Shop catalogue",
+        "summary": "Products one shop sells on Torob, with the price range of the page."
+      }
+    ]
+  },
+  {
     "name": "khanoumi-mcp",
     "title": "Khanoumi",
     "category": "beauty",

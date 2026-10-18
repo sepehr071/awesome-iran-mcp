@@ -1,7 +1,7 @@
 # AGENTS.md
 
-Guide for AI agents using or working on **awesome-iran-mcp**: 23 MCP servers for Iranian websites, 359 tools in
-total. 21 are Python packages on PyPI, run as stdio servers with `uvx <package>`; all of them are unofficial except
+Guide for AI agents using or working on **awesome-iran-mcp**: 24 MCP servers for Iranian websites, 385 tools in
+total. 22 are Python packages on PyPI, run as stdio servers with `uvx <package>`; all of them are unofficial except
 `exiryab-mcp`, ExirYab's own server on its public API. Two are hosted by their sites:
 `pasavard-mcp` (`https://pasavard.ir/api/mcp`, no sign-in) and `swapwallet-mcp` (`https://swapwallet.app/mcp`, OAuth
 sign-in).
@@ -11,6 +11,7 @@ sign-in).
 | User wants to... | Server | Start with |
 |---|---|---|
 | Buy electronics, appliances, almost anything | `digikala-mcp` | `dk_find_cheapest`, `dk_best_for_budget`, then `dk_product`, `dk_price_history` |
+| Every Iranian shop's price for one product, price history, whether now is a good time to buy | `torob-mcp` | `tb_cheapest`, `tb_sellers`, `tb_deal_check` |
 | The best buy in a price range on Digikala or Snappshop, or whether today's price is good | `pasavard-mcp` | `best_lists`, then `best_list`; `search_products` |
 | Find a flat, used car or phone in ads, or check if an ad's price is fair | `divar-mcp` | `dv_search`, `dv_cheapest`, `dv_best_for_budget`, `dv_appraise` |
 | Compare a phone or laptop across sellers, with installments | `technolife-mcp` | `tl_find_cheapest`, `tl_product`, `tl_compare` |
@@ -107,7 +108,7 @@ README.md / README.fa.md   English (default) and Persian docs; keep both in sync
   ships its own `skills/<key>/SKILL.md`, which come from that file. Check with `claude plugin validate .`.
 - Add a server: `git submodule add https://github.com/sepehr071/<name>-mcp servers/<name>-mcp`, add it to
   `SERVERS` in `scripts/catalog.py` (and to `GROUPS` in `scripts/banner.py` if its category is new), run both scripts, add a row to both
-  READMEs and the table above. Update the 23 / 359 counts written in both READMEs.
+  READMEs and the table above. Update the 24 / 385 counts written in both READMEs.
 - Add a hosted server: `git submodule add <its repo> servers/<name>-mcp` and an entry in `REMOTE` in
   `scripts/catalog.py`, then the same `GROUPS`, README, table and count steps. Its repo needs an MCP Registry
   `server.json` with `remotes` (name, version, description, repository), and the server must publish a server card

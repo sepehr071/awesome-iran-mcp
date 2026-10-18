@@ -38,6 +38,12 @@
       "category": "shopping"
     },
     {
+      "name": "torob",
+      "source": "./plugins/torob",
+      "description": "Unofficial read-only Torob: compare Iranian shop prices, price history, deal checks and baskets.",
+      "category": "shopping"
+    },
+    {
       "name": "khanoumi",
       "source": "./plugins/khanoumi",
       "description": "Unofficial read-only Khanoumi: search cosmetics and skin care, compare prices, shades, reviews.",
@@ -148,7 +154,7 @@
     {
       "name": "iran-all",
       "source": "./plugins/iran-all",
-      "description": "All 20 read-only Iranian site servers in one install.",
+      "description": "All 21 read-only Iranian site servers in one install.",
       "category": "bundle"
     },
     {
@@ -160,7 +166,7 @@
     {
       "name": "iran-shopping",
       "source": "./plugins/iran-shopping",
-      "description": "Everything for electronics, appliances or other goods in Iran: Digikala, Technolife, MasterKala, Pasavard.",
+      "description": "Everything for electronics, appliances or other goods in Iran: Digikala, Technolife, MasterKala, Torob, Pasavard.",
       "category": "bundle"
     },
     {

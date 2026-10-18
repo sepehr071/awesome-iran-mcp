@@ -67,3 +67,6 @@
 [submodule "servers/pasavard-mcp"]
 	path = servers/pasavard-mcp
 	url = https://github.com/sepehr071/pasavard-mcp
+[submodule "servers/torob-mcp"]
+	path = servers/torob-mcp
+	url = https://github.com/sepehr071/torob-mcp

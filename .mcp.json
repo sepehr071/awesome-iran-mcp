@@ -30,6 +30,12 @@
         "masterkala-mcp@0.4.0"
       ]
     },
+    "torob": {
+      "command": "uvx",
+      "args": [
+        "torob-mcp@0.1.1"
+      ]
+    },
     "khanoumi": {
       "command": "uvx",
       "args": [

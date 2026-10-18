@@ -41,6 +41,8 @@ NOTES = {
     "read-only. Ask the user before starting it.",
     "flytoday-mcp": "Searches are rate-limited per IP. Do not repeat a search the user did not ask for.",
     "30book-mcp": "Lists are slow (2 to 5 s each). Prefer one good query over many.",
+    "torob-mcp": "Torob blocks bursts of calls from one IP (HTTP 490), so calls are spaced 2 s apart. Ask for a few "
+    "products at a time and do not repeat a search the user did not ask for.",
 }
 
 # name -> (category, site url); order here is the order everywhere else
@@ -50,6 +52,7 @@ SERVERS = {
     "digikala-mcp": ("shopping", "https://www.digikala.com"),
     "technolife-mcp": ("shopping", "https://www.technolife.com"),
     "masterkala-mcp": ("shopping", "https://masterkala.com"),
+    "torob-mcp": ("shopping", "https://torob.com"),
     "khanoumi-mcp": ("beauty", "https://www.khanoumi.com"),
     "asalbanoo-mcp": ("beauty", "https://asalbanooshop.com"),
     "shopino-mcp": ("fashion", "https://shopino.app"),
