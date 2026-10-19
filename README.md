@@ -18,15 +18,33 @@ Install them as Claude Code plugins with skills, or as Agent Skills for Codex, C
 [![License: MIT](https://img.shields.io/badge/license-MIT-16a34a)](LICENSE)
 [![Stars](https://img.shields.io/github/stars/sepehr071/awesome-iran-mcp?style=social)](https://github.com/sepehr071/awesome-iran-mcp)
 
-[What's new](#whats-new-in-v15) · [Quick start](#quick-start) · [The servers](#the-servers) · [For AI agents](#for-ai-agents) · [All tools](TOOLS.md) · [FAQ](#faq)
+[What's new](#whats-new-in-v17) · [Quick start](#quick-start) · [The servers](#the-servers) · [For AI agents](#for-ai-agents) · [All tools](TOOLS.md) · [FAQ](#faq)
 
 </div>
 
 ---
 
-## What's new in v1.5
+## What's new in v1.7
 
-<img src="assets/release.svg" alt="awesome-iran-mcp v1.5: about 62% fewer tokens per tool call, a 19% smaller tool list, security hardening, and the new Divar server" width="100%">
+<img src="assets/release.svg" alt="awesome-iran-mcp v1.7: fewer blocks, 100 Torob calls without a block, 18 steadier shop servers, 3 new servers, same tools and parameters" width="100%">
+
+- **Fewer blocks and failed calls.** The 18 unofficial shop servers now talk to each site like a normal browser,
+  pace their requests and wait when a site asks them to slow down. On Torob the old client was blocked after 4-6
+  calls; the new one made 100 without a block.
+- **Proxy lists.** `<NAME>_MCP_PROXY` takes several proxies, separated by commas. When one is blocked, the next takes
+  over.
+- **Optional browser fallback** for sites that show a bot-check page: install `<package>[browser]`.
+- **New: [torob-mcp](https://github.com/sepehr071/torob-mcp)** (every Iranian shop's price for one product),
+  **[pasavard-mcp](https://github.com/ashkancapella/pasavard-mcp)** (hosted, best buys per budget) and
+  **[exiryab-mcp](https://github.com/sshnevis/exiryab-mcp)** (ExirYab's own doctor finder).
+- Tool names and parameters are unchanged.
+
+Full list: [CHANGELOG.md](CHANGELOG.md).
+
+<details>
+<summary><b>What's new in v1.5</b></summary>
+
+<img src="assets/release-v1.5.svg" alt="awesome-iran-mcp v1.5: about 62% fewer tokens per tool call, a 19% smaller tool list, security hardening, and the new Divar server" width="100%">
 
 - **About 62% fewer tokens per tool call** and a 19% smaller tool list across the 19 package servers, with the same
   rankings and cheapest prices as before.
@@ -36,6 +54,7 @@ Install them as Claude Code plugins with skills, or as Agent Skills for Codex, C
   fair-price checks and new-ad alerts.
 
 Full list, including changes for callers: [CHANGELOG.md](CHANGELOG.md).
+</details>
 
 ## Why
 

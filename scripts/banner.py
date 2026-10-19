@@ -151,12 +151,12 @@ def banner(fa: bool, catalog: list, h: int = H) -> str:
 
 # Release banner: version and the changelog's headline numbers, updated by hand each release.
 # (figure, Persian figure, English line, Persian line, colour)
-RELEASE = "v1.5"
+RELEASE = "v1.7"
 HIGHLIGHTS = [
-    ("−62%", "−۶۲٪", "tokens per tool call", "توکن کمتر در هر فراخوانی", "#2fe0cf"),
-    ("−19%", "−۱۹٪", "smaller tool list", f"فهرست ابزار کوچک{ZWNJ}تر", "#ffc23d"),
-    ("Same", "همان", "rankings and prices", f"رتبه{ZWNJ}بندی و قیمت{ZWNJ}ها", "#ff5c8f"),
-    ("+31", "+۳۱", "new Divar tools", "ابزار تازهٔ دیوار", "#7c3aed"),
+    ("100", "۱۰۰", "Torob calls, no block", "درخواست به ترب، بی مسدودی", "#2fe0cf"),
+    ("18", "۱۸", "shop servers steadier", "سرور فروشگاهی پایدارتر", "#ffc23d"),
+    ("+3", "+۳", "new servers", "سرور تازه", "#ff5c8f"),
+    ("Same", "همان", "tools and parameters", "ابزارها و پارامترها", "#7c3aed"),
 ]
 
 
@@ -165,16 +165,16 @@ def release(fa: bool, catalog: list, h: int = H) -> str:
     card_x, panel_x = (650, 40) if fa else (40, 670)
     if fa:
         anchor, tx, font = "end", card_x + 590 - 44, PERSIAN
-        title, subtitle, changes = f"سبک{ZWNJ}تر و امن{ZWNJ}تر", "و حالا با دیوار", "همهٔ تغییرها: CHANGELOG.md"
+        title, subtitle, changes = "پایدارتر از همیشه", "و حالا با ترب", "همهٔ تغییرها: CHANGELOG.md"
         stats = [(f"{servers} سرور".translate(FA_DIGITS), "#2fe0cf", 140),
                  (f"{tools} ابزار".translate(FA_DIGITS), "#ffc23d", 140),
-                 ("امنیت بیشتر", "#ff5c8f", 170)]
+                 (f"درخواست{ZWNJ}های آرام", "#ff5c8f", 190)]
         desc = f"awesome-iran-mcp {RELEASE}: " + "، ".join(f"{n} {fa_line}" for _, n, _, fa_line, _ in HIGHLIGHTS)
     else:
         anchor, tx, font = "start", card_x + 44, LATIN
-        title, subtitle, changes = "Leaner. Safer.", "And now on Divar.", "Full changelog: CHANGELOG.md"
+        title, subtitle, changes = "Fewer blocks.", "And now on Torob.", "Full changelog: CHANGELOG.md"
         stats = [(f"{servers} servers", "#2fe0cf", 150), (f"{tools} tools", "#ffc23d", 140),
-                 ("Hardened", "#ff5c8f", 150)]
+                 ("Paced calls", "#ff5c8f", 150)]
         desc = f"awesome-iran-mcp {RELEASE}: " + ", ".join(f"{n} {en_line}" for n, _, en_line, _, _ in HIGHLIGHTS)
 
     out = []
