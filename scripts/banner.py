@@ -1,6 +1,6 @@
 """Draw assets/banner.svg (English) and assets/banner.fa.svg (Persian) in a frosted-glass style.
 
-Also assets/release.svg and assets/release.fa.svg, the README's "What's new" banner (edit RELEASE and HIGHLIGHTS).
+Also assets/release-<RELEASE>.svg and assets/release-<RELEASE>.fa.svg, the README's "What's new" banner (edit RELEASE and HIGHLIGHTS).
 
 Counts come from servers.json, so run scripts/catalog.py first:  python scripts/banner.py
 
@@ -259,7 +259,9 @@ def main() -> None:
     servers, tools = len(catalog), sum(s["tool_count"] for s in catalog)
     for name, draw, fa, h in (("banner.svg", banner, False, H), ("banner.fa.svg", banner, True, H),
                               ("social.svg", banner, False, 640),
-                              ("release.svg", release, False, H), ("release.fa.svg", release, True, H)):
+                              # versioned names: a new URL per release, so GitHub's image cache can't show the old one
+                              (f"release-{RELEASE}.svg", release, False, H),
+                              (f"release-{RELEASE}.fa.svg", release, True, H)):
         svg = embed_fonts(draw(fa, catalog, h))
         (ROOT / "assets" / name).write_text(svg, encoding="utf-8", newline="\n")
     print(f"banners written: {servers} servers, {tools} tools")

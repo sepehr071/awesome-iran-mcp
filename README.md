@@ -26,7 +26,7 @@ Install them as Claude Code plugins with skills, or as Agent Skills for Codex, C
 
 ## What's new in v1.7
 
-<img src="assets/release.svg" alt="awesome-iran-mcp v1.7: fewer blocks, 100 Torob calls without a block, 18 steadier shop servers, 3 new servers, same tools and parameters" width="100%">
+<img src="assets/release-v1.7.svg" alt="awesome-iran-mcp v1.7: fewer blocks, 100 Torob calls without a block, 18 steadier shop servers, 3 new servers, same tools and parameters" width="100%">
 
 - **Fewer blocks and failed calls.** The 18 unofficial shop servers now talk to each site like a normal browser,
   pace their requests and wait when a site asks them to slow down. On Torob the old client was blocked after 4-6
