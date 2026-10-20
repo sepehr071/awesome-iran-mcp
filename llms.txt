@@ -24,12 +24,12 @@
 - [divar-mcp](https://github.com/sepehr071/divar-mcp): Divar classified ads: homes, cars, phones, fair-price checks
 - [khanoumi-mcp](https://github.com/sepehr071/khanoumi-mcp): Khanoumi cosmetics and perfume
 - [asalbanoo-mcp](https://github.com/sepehr071/asalbanoo-mcp): Asal Banoo cosmetics and hair care
-- [snapp-mcp](https://github.com/sepehr071/snapp-mcp): Snappfood food delivery and SnappMarket groceries
+- [snapp-mcp](https://github.com/sepehr071/snapp-mcp): Snappfood food delivery and SnappMarket groceries (snappfood.ir, snapp.market)
 - [okala-mcp](https://github.com/sepehr071/okala-mcp): Okala groceries from nearby stores
 - [tapsifood-mcp](https://github.com/sepehr071/tapsifood-mcp): Tapsi Food dishes and restaurants, menus, flash deals
 - [mrbilit-mcp](https://github.com/sepehr071/mrbilit-mcp): MrBilit flights, trains, buses, taxis, hotels
 - [flytoday-mcp](https://github.com/sepehr071/flytoday-mcp): Flytoday flights, trains, buses, hotels, villas, CIP, eSIM, visas
-- [jabama-mcp](https://github.com/sepehr071/jabama-mcp): Jabama stays, tours, events
+- [jabama-mcp](https://github.com/sepehr071/jabama-mcp): Jabama stays, tours, events (jabama.com, jabama.tours, jabama.events)
 - [otaghak-mcp](https://github.com/sepehr071/otaghak-mcp): Otaghak villas and cottages
 - [paziresh24-mcp](https://github.com/sepehr071/paziresh24-mcp): Paziresh24 doctors and appointments
 - [doctoreto-mcp](https://github.com/sepehr071/doctoreto-mcp): Doctoreto doctors, clinics, labs
@@ -37,11 +37,13 @@
 - [taaghche-mcp](https://github.com/sepehr071/taaghche-mcp): Taaghche ebooks and audiobooks
 - [fidibo-mcp](https://github.com/sepehr071/fidibo-mcp): Fidibo ebooks and audiobooks
 - [30book-mcp](https://github.com/sepehr071/30book-mcp): 30book printed books
+- [iran-apps-mcp](https://github.com/sepehr071/iran-apps-mcp): Android apps on Cafe Bazaar and Myket: search, compare across both stores, top lists
+- [iran-downloads-mcp](https://github.com/sepehr071/iran-downloads-mcp): metadata-only search of Soft98, P30Download, Downloadly and VGDL (item page links, never download links)
 - [tgju-mcp](https://github.com/sepehr071/tgju-mcp): TGJU live gold, coin, currency and crypto prices with daily history
-- [iran-news-mcp](https://github.com/sepehr071/iran-news-mcp): news from Mehr, Khabaronline, Hamshahri, Tabnak, Zoomit, Digiato: headlines, search, full article text
+- [iran-news-mcp](https://github.com/sepehr071/iran-news-mcp): news from Mehr, Khabaronline, Hamshahri, Tabnak, Entekhab, Asriran, Zoomit, Digiato, Varzesh3, Khabarvarzeshi: headlines, search, full article text
 - [iran-quake-mcp](https://github.com/sepehr071/iran-quake-mcp): earthquakes in Iran from USGS, EMSC and IRSC: latest, strongest, history, stats
 - [qavanin-mcp](https://github.com/sepehr071/qavanin-mcp): qavanin.ir national laws database: search, full text, articles, amendments
-- [iran-tax-mcp](https://github.com/sepehr071/iran-tax-mcp): tax administration public services: e-invoice goods IDs and VAT, activity codes, property values, tax laws and circulars
+- [iran-tax-mcp](https://github.com/sepehr071/iran-tax-mcp): tax administration public services (tax.gov.ir, stuffid.tax.gov.ir, regulation.tax.gov.ir): e-invoice goods IDs and VAT, activity codes, property values, tax laws and circulars
 - [payping-mcp](https://github.com/sepehr071/payping-mcp): PayPing merchant account (token, can write)
 - [bale-mcp](https://github.com/sepehr071/bale-mcp): Bale messenger bot (token, can write)
 - [pasavard-mcp](https://github.com/ashkancapella/pasavard-mcp): Pasavard hourly-tracked Digikala and Snappshop prices, official and hosted (no sign-in; affiliate and cashback links)

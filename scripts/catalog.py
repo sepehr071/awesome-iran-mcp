@@ -54,9 +54,16 @@ NOTES = {
     "baneh-mcp": "Some prices are unusually low or high: they are the shop's own data, not a bug. Searches default to "
     "in-stock items only.",
     "iran-downloads-mcp": "Metadata only: it returns the item page URL on the source site and never a download link. "
-    "Say that the user must check each item's licence on that page.",
+    "Say that the user must check each item's licence on that page. Sites: Soft98, P30Download, Downloadly, VGDL.",
+    "iran-news-mcp": "Sites: Mehr, Khabaronline, Hamshahri, Tabnak, Entekhab, Asriran, Zoomit, Digiato, Varzesh3, "
+    "Khabarvarzeshi.",
+    "iran-quake-mcp": "Sites: IRSC (Iranian Seismological Center), USGS, EMSC.",
+    "snapp-mcp": "Sites: Snappfood (food delivery), SnappMarket (groceries).",
+    "jabama-mcp": "Sites: jabama.com (stays), jabama.tours (group tours), jabama.events (events and theater).",
+    "iran-apps-mcp": "Sites: Cafe Bazaar, Myket.",
     "iran-tax-mcp": "The first goods-ID search for a phrase takes 15 to 30 s; repeats are cached. The tax sites often "
-    "refuse foreign connections; outside Iran the user needs IRAN_TAX_MCP_PROXY.",
+    "refuse foreign connections; outside Iran the user needs IRAN_TAX_MCP_PROXY. Sites: tax.gov.ir, "
+    "stuffid.tax.gov.ir (goods IDs), regulation.tax.gov.ir (laws and circulars).",
 }
 
 # name -> (category, site url); order here is the order everywhere else

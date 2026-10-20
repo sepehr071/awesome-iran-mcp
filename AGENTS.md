@@ -19,12 +19,12 @@ sign-in).
 | Home appliances, TVs, tools | `baneh-mcp` | `bn_find_cheapest`, `bn_product` |
 | Clothes, shoes, bags | `shopino-mcp`, `banimode-mcp` | `sh_find_cheapest`, `sh_product`; `bm_search`, `bm_deals` |
 | Cosmetics, skin and hair care, perfume | `khanoumi-mcp`, `asalbanoo-mcp` | `kh_find_cheapest`, `ab_find_cheapest` |
-| Cheapest food delivered to an address | `snapp-mcp` | `find_location`, then `food_find_cheapest`, `food_party_deals` |
-| Groceries delivered to an address | `snapp-mcp`, `okala-mcp` | `market_find_cheapest`; `ok_locate`, `ok_stores`, `ok_compare` |
+| Cheapest food delivered to an address (Snappfood) | `snapp-mcp` | `find_location`, then `food_find_cheapest`, `food_party_deals` |
+| Groceries delivered to an address (SnappMarket, Okala) | `snapp-mcp`, `okala-mcp` | `market_find_cheapest`; `ok_locate`, `ok_stores`, `ok_compare` |
 | Flights, trains, buses, taxis | `mrbilit-mcp`, `flytoday-mcp` | `mb_search_flights`, `mb_flight_price_calendar`; `ft_search_flights` |
 | Hotels | `mrbilit-mcp`, `flytoday-mcp` | `mb_search_hotels`; `ft_search_hotels` |
 | Villas, cottages, short stays | `jabama-mcp`, `otaghak-mcp` | `jb_search_stays`, `jb_price_quote`; `ot_search_rooms`, `ot_price_quote` |
-| Tours, events, theater tickets | `jabama-mcp` | `jb_search_tours`, `jb_search_events` |
+| Tours, events, theater tickets (jabama.tours, jabama.events) | `jabama-mcp` | `jb_search_tours`, `jb_search_events` |
 | CIP, eSIM, visas, activities abroad | `flytoday-mcp` | `ft_cip`, `ft_esim_plans`, `ft_visa`, `ft_activities` |
 | A doctor with a free appointment | `paziresh24-mcp`, `doctoreto-mcp` | `pz_search_doctors`, `pz_first_available`; `dt_search_doctors`, `dt_free_slots` |
 | A doctor by name, or a doctor's clinic address, phone, hours and map | `exiryab-mcp` | `ey_search_doctors`; `ey_cities`, `ey_specialties` for exact names |
@@ -33,12 +33,12 @@ sign-in).
 | Printed books | `30book-mcp` | `sb_search`, `sb_book`, `sb_deals` |
 | Persian online courses, free courses | `maktabkhooneh-mcp` | `mkh_search`, `mkh_free_courses`, `mkh_cheapest`, `mkh_course` |
 | Android apps on Cafe Bazaar and Myket | `iran-apps-mcp` | `ap_search`, `ap_compare`, `ap_top` |
-| Find software or a game on Iranian download sites (metadata and item page only, no download links) | `iran-downloads-mcp` | `dl_search`, `dl_latest`, `dl_item` |
+| Find software or a game on Soft98, P30Download, Downloadly and VGDL (metadata and item page only, no download links) | `iran-downloads-mcp` | `dl_search`, `dl_latest`, `dl_item` |
 | Goods from thousands of small Iranian shops (handmade, local products) | `basalam-mcp` | `bs_find_cheapest`, `bs_search`, then `bs_product` |
 | Food near an address on Tapsi Food, flash deals | `tapsifood-mcp` | `tf_find_location`, then `tf_search_dishes`, `tf_deals` |
 | Live gold, coin, dollar or crypto prices, price history | `tgju-mcp` | `tj_get_prices`, `tj_market_summary`, `tj_price_history` |
-| Latest Iranian news, a topic in the news, a full article | `iran-news-mcp` | `nw_latest_all`, `nw_search`, then `nw_article` |
-| Recent or strong earthquakes in Iran | `iran-quake-mcp` | `eq_latest`, `eq_significant`, `eq_detail` |
+| Latest Iranian news (Mehr, Khabaronline, Hamshahri, Tabnak, Entekhab, Asriran, Zoomit, Digiato, Varzesh3, Khabarvarzeshi), a topic in the news, a full article | `iran-news-mcp` | `nw_latest_all`, `nw_search`, then `nw_article` |
+| Recent or strong earthquakes in Iran (IRSC, USGS, EMSC) | `iran-quake-mcp` | `eq_latest`, `eq_significant`, `eq_detail` |
 | An Iranian law, regulation or court vote, one article, its amendments | `qavanin-mcp` | `qv_search`, then `qv_law`, `qv_amendments` |
 | E-invoice goods ID and VAT rate, activity code, property value, a tax law or circular | `iran-tax-mcp` | `tx_goods_search`, `tx_activity_codes`, `tx_regulations_search` |
 | Merchant payments (user's own PayPing account) | `payping-mcp` | `payping_get_balance`, `payping_get_sales_summary` |

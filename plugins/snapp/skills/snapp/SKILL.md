@@ -39,3 +39,4 @@ The tools below come from the `snapp-mcp` MCP server. If they are not available,
 - Read-only: no login, basket, booking, order or payment. Give the user the link to finish on the site.
 - Keep request rates low. These are undocumented site APIs that can change or rate-limit.
 - On timeouts or HTTP 403 outside Iran, set `SNAPP_MCP_PROXY` to an HTTP proxy with an Iranian IP.
+- Sites: Snappfood (food delivery), SnappMarket (groceries).
