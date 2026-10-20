@@ -24,4 +24,4 @@ The tools below come from the `iran-tax-mcp` MCP server. If they are not availab
 - Read-only: no login, basket, booking, order or payment. Give the user the link to finish on the site.
 - Keep request rates low. These are undocumented site APIs that can change or rate-limit.
 - On timeouts or HTTP 403 outside Iran, set `IRAN_TAX_MCP_PROXY` to an HTTP proxy with an Iranian IP.
-- The first goods-ID search for a phrase takes 15 to 30 s; repeats are cached. The tax sites often refuse foreign connections; outside Iran the user needs IRAN_TAX_MCP_PROXY.
+- The first goods-ID search for a phrase takes 15 to 30 s; repeats are cached. The tax sites often refuse foreign connections; outside Iran the user needs IRAN_TAX_MCP_PROXY. Sites: tax.gov.ir, stuffid.tax.gov.ir (goods IDs), regulation.tax.gov.ir (laws and circulars).

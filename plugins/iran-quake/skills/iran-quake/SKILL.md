@@ -23,3 +23,4 @@ The tools below come from the `iran-quake-mcp` MCP server. If they are not avail
 - Read-only: no login, basket, booking, order or payment. Give the user the link to finish on the site.
 - Keep request rates low. These are undocumented site APIs that can change or rate-limit.
 - On timeouts or HTTP 403 outside Iran, set `IRAN_QUAKE_MCP_PROXY` to an HTTP proxy with an Iranian IP.
+- Sites: IRSC (Iranian Seismological Center), USGS, EMSC.
