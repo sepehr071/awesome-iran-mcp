@@ -2440,62 +2440,62 @@
     "tool_count": 12,
     "tools": [
       {
-        "name": "mk_search",
+        "name": "mkh_search",
         "title": "Search courses",
         "summary": "Full-text search of courses by title/topic: price, discount, hours, rating, students, teachers."
       },
       {
-        "name": "mk_browse",
+        "name": "mkh_browse",
         "title": "Browse courses with filters",
         "summary": "List courses of a category (or all about 5700) with the site's own filters: type, level, hours, rating, publisher, feature."
       },
       {
-        "name": "mk_free_courses",
+        "name": "mkh_free_courses",
         "title": "Free courses",
         "summary": "List the free courses (final_price 0, about 740 of them), optionally in one category: hours, rating, students."
       },
       {
-        "name": "mk_cheapest",
+        "name": "mkh_cheapest",
         "title": "Cheapest courses",
         "summary": "Cheapest paid courses for a topic or category, ascending by final_price (what the customer pays)."
       },
       {
-        "name": "mk_deals",
+        "name": "mkh_deals",
         "title": "Discounted courses",
         "summary": "Currently discounted courses, biggest discount first (discount_pct, price before and final_price after)."
       },
       {
-        "name": "mk_course",
+        "name": "mkh_course",
         "title": "Course details",
         "summary": "One course: prices (full vs content-only), discount end, level, hours, teachers, publisher, prerequisites, FAQ."
       },
       {
-        "name": "mk_curriculum",
+        "name": "mkh_curriculum",
         "title": "Course curriculum",
         "summary": "The chapters and lessons of a course with type (lecture, quiz, project...) and duration (mm:ss)."
       },
       {
-        "name": "mk_reviews",
+        "name": "mkh_reviews",
         "title": "Course reviews",
         "summary": "Learner reviews of a course (stars 1-5, text, date, instructor reply) plus the star histogram."
       },
       {
-        "name": "mk_categories",
+        "name": "mkh_categories",
         "title": "Course categories",
-        "summary": "Category tree (about 680 nodes in 11 top-level groups): slugs for mk_browse, mk_free_courses, mk_cheapest, mk_deals."
+        "summary": "Category tree (about 680 nodes in 11 top-level groups): slugs for mkh_browse, mkh_free_courses, mkh_cheapest, mkh_deals."
       },
       {
-        "name": "mk_teacher",
+        "name": "mkh_teacher",
         "title": "Teacher profile",
         "summary": "A teacher's profile (bio, students, rating, teaching hours, links) and their courses with prices."
       },
       {
-        "name": "mk_organizations",
+        "name": "mkh_organizations",
         "title": "Publishers",
         "summary": "Course publishers (universities, companies, Maktabkhooneh itself, about 180) with the id used as a filter."
       },
       {
-        "name": "mk_organization",
+        "name": "mkh_organization",
         "title": "Publisher profile",
         "summary": "A publisher's totals (courses, students, rating) and its most popular courses."
       }

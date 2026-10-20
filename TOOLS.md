@@ -492,18 +492,18 @@ Unofficial read-only 30book: search Iranian printed books, compare editions and 
 
 Unofficial read-only Maktabkhooneh: search Persian online courses, compare prices, find free ones.
 
-- `mk_search`: Full-text search of courses by title/topic: price, discount, hours, rating, students, teachers.
-- `mk_browse`: List courses of a category (or all about 5700) with the site's own filters: type, level, hours, rating, publisher, feature.
-- `mk_free_courses`: List the free courses (final_price 0, about 740 of them), optionally in one category: hours, rating, students.
-- `mk_cheapest`: Cheapest paid courses for a topic or category, ascending by final_price (what the customer pays).
-- `mk_deals`: Currently discounted courses, biggest discount first (discount_pct, price before and final_price after).
-- `mk_course`: One course: prices (full vs content-only), discount end, level, hours, teachers, publisher, prerequisites, FAQ.
-- `mk_curriculum`: The chapters and lessons of a course with type (lecture, quiz, project...) and duration (mm:ss).
-- `mk_reviews`: Learner reviews of a course (stars 1-5, text, date, instructor reply) plus the star histogram.
-- `mk_categories`: Category tree (about 680 nodes in 11 top-level groups): slugs for mk_browse, mk_free_courses, mk_cheapest, mk_deals.
-- `mk_teacher`: A teacher's profile (bio, students, rating, teaching hours, links) and their courses with prices.
-- `mk_organizations`: Course publishers (universities, companies, Maktabkhooneh itself, about 180) with the id used as a filter.
-- `mk_organization`: A publisher's totals (courses, students, rating) and its most popular courses.
+- `mkh_search`: Full-text search of courses by title/topic: price, discount, hours, rating, students, teachers.
+- `mkh_browse`: List courses of a category (or all about 5700) with the site's own filters: type, level, hours, rating, publisher, feature.
+- `mkh_free_courses`: List the free courses (final_price 0, about 740 of them), optionally in one category: hours, rating, students.
+- `mkh_cheapest`: Cheapest paid courses for a topic or category, ascending by final_price (what the customer pays).
+- `mkh_deals`: Currently discounted courses, biggest discount first (discount_pct, price before and final_price after).
+- `mkh_course`: One course: prices (full vs content-only), discount end, level, hours, teachers, publisher, prerequisites, FAQ.
+- `mkh_curriculum`: The chapters and lessons of a course with type (lecture, quiz, project...) and duration (mm:ss).
+- `mkh_reviews`: Learner reviews of a course (stars 1-5, text, date, instructor reply) plus the star histogram.
+- `mkh_categories`: Category tree (about 680 nodes in 11 top-level groups): slugs for mkh_browse, mkh_free_courses, mkh_cheapest, mkh_deals.
+- `mkh_teacher`: A teacher's profile (bio, students, rating, teaching hours, links) and their courses with prices.
+- `mkh_organizations`: Course publishers (universities, companies, Maktabkhooneh itself, about 180) with the id used as a filter.
+- `mkh_organization`: A publisher's totals (courses, students, rating) and its most popular courses.
 
 ## Iran Apps (`iran-apps-mcp`, 6 tools)
 
