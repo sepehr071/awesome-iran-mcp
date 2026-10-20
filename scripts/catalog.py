@@ -30,6 +30,8 @@ USE = {
     "travel": "flights, trains, buses, hotels, villas or tours",
     "health": "doctors, clinics, labs or appointments",
     "books": "ebooks, audiobooks or printed books",
+    "learning": "online courses, lessons or certificates",
+    "software": "Android apps or software and game download listings",
     "prices": "live gold, coin, currency or crypto prices",
     "news": "news headlines or full news articles",
     "quakes": "recent or past earthquake data",
@@ -49,6 +51,10 @@ NOTES = {
     "torob-mcp": "Torob blocks bursts of calls from one IP (HTTP 490), so calls are spaced 2 s apart. Ask for a few "
     "products at a time and do not repeat a search the user did not ask for.",
     "qavanin-mcp": "qavanin.ir is slow (1 to 15 s per call; a whole law can take 15 s). Prefer one good query over many.",
+    "baneh-mcp": "Some prices are unusually low or high: they are the shop's own data, not a bug. Searches default to "
+    "in-stock items only.",
+    "iran-downloads-mcp": "Metadata only: it returns the item page URL on the source site and never a download link. "
+    "Say that the user must check each item's licence on that page.",
     "iran-tax-mcp": "The first goods-ID search for a phrase takes 15 to 30 s; repeats are cached. The tax sites often "
     "refuse foreign connections; outside Iran the user needs IRAN_TAX_MCP_PROXY.",
 }
@@ -61,11 +67,13 @@ SERVERS = {
     "digikala-mcp": ("shopping", "https://www.digikala.com"),
     "technolife-mcp": ("shopping", "https://www.technolife.com"),
     "masterkala-mcp": ("shopping", "https://masterkala.com"),
+    "baneh-mcp": ("shopping", "https://baaneeh.com"),
     "torob-mcp": ("shopping", "https://torob.com"),
     "basalam-mcp": ("shopping", "https://basalam.com"),
     "khanoumi-mcp": ("beauty", "https://www.khanoumi.com"),
     "asalbanoo-mcp": ("beauty", "https://asalbanooshop.com"),
     "shopino-mcp": ("fashion", "https://shopino.app"),
+    "banimode-mcp": ("fashion", "https://www.banimode.com"),
     "divar-mcp": ("classifieds", "https://divar.ir"),
     "otaghak-mcp": ("travel", "https://www.otaghak.com"),
     "jabama-mcp": ("travel", "https://www.jabama.com"),
@@ -77,6 +85,9 @@ SERVERS = {
     "taaghche-mcp": ("books", "https://taaghche.com"),
     "fidibo-mcp": ("books", "https://fidibo.com"),
     "30book-mcp": ("books", "https://www.30book.com"),
+    "maktabkhooneh-mcp": ("learning", "https://maktabkhooneh.org"),
+    "iran-apps-mcp": ("software", "https://cafebazaar.ir"),
+    "iran-downloads-mcp": ("software", "https://soft98.ir"),
     "tgju-mcp": ("prices", "https://www.tgju.org"),
     "iran-news-mcp": ("news", "https://www.mehrnews.com"),
     "iran-quake-mcp": ("quakes", "https://irsc.ut.ac.ir"),

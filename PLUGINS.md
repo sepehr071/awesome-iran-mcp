@@ -8,10 +8,10 @@ How the `iran-mcp` plugin marketplace is built, which agents can use it, and wha
 
 ```
 .claude-plugin/marketplace.json        the `iran-mcp` marketplace: one entry per plugin
-plugins/<name>/                        one plugin per server (23)
+plugins/<name>/                        one plugin per server (36)
   .claude-plugin/plugin.json           manifest: version + the MCP server, pinned to that version
   skills/<name>/SKILL.md               when to use the server, its tools, its rules
-plugins/iran-<bundle>/                 bundles (7): a manifest with `dependencies` and nothing else
+plugins/iran-<bundle>/                 bundles (9): a manifest with `dependencies` and nothing else
   .claude-plugin/plugin.json
 ```
 
@@ -20,7 +20,7 @@ plugins/iran-<bundle>/                 bundles (7): a manifest with `dependencie
   A hosted server's plugin (`swapwallet`) points its MCP server at the URL and takes `version` from the
   `server.json` in its repo.
 - Bundles are `iran-all` (every read-only site server) plus one per category with two or more servers:
-  `iran-food`, `iran-shopping`, `iran-beauty`, `iran-travel`, `iran-health`, `iran-books`. `payping`, `bale` and
+  `iran-food`, `iran-shopping`, `iran-beauty`, `iran-travel`, `iran-health`, `iran-books`, `iran-fashion`, `iran-software`. `payping`, `bale` and
   `swapwallet` act on the user's own account, so no bundle includes them.
 - Bundles have no `version`. Claude Code then versions them by git commit, so a changed member list reaches users.
 - Skill text comes from `skill()`, `USE` and `NOTES` in `scripts/catalog.py`. Tool lists come from the server code,

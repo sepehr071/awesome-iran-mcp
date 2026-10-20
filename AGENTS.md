@@ -1,7 +1,7 @@
 # AGENTS.md
 
-Guide for AI agents using or working on **awesome-iran-mcp**: 31 MCP servers for Iranian websites, 432 tools in
-total. 29 are Python packages on PyPI, run as stdio servers with `uvx <package>`; all of them are unofficial except
+Guide for AI agents using or working on **awesome-iran-mcp**: 36 MCP servers for Iranian websites, 468 tools in
+total. 34 are Python packages on PyPI, run as stdio servers with `uvx <package>`; all of them are unofficial except
 `exiryab-mcp`, ExirYab's own server on its public API. Two are hosted by their sites:
 `pasavard-mcp` (`https://pasavard.ir/api/mcp`, no sign-in) and `swapwallet-mcp` (`https://swapwallet.app/mcp`, OAuth
 sign-in).
@@ -16,7 +16,8 @@ sign-in).
 | Find a flat, used car or phone in ads, or check if an ad's price is fair | `divar-mcp` | `dv_search`, `dv_cheapest`, `dv_best_for_budget`, `dv_appraise` |
 | Compare a phone or laptop across sellers, with installments | `technolife-mcp` | `tl_find_cheapest`, `tl_product`, `tl_compare` |
 | Gadgets and accessories | `masterkala-mcp` | `mk_find_cheapest`, `mk_product` |
-| Clothes, shoes, bags | `shopino-mcp` | `sh_find_cheapest`, `sh_product` |
+| Home appliances, TVs, tools | `baneh-mcp` | `bn_find_cheapest`, `bn_product` |
+| Clothes, shoes, bags | `shopino-mcp`, `banimode-mcp` | `sh_find_cheapest`, `sh_product`; `bm_search`, `bm_deals` |
 | Cosmetics, skin and hair care, perfume | `khanoumi-mcp`, `asalbanoo-mcp` | `kh_find_cheapest`, `ab_find_cheapest` |
 | Cheapest food delivered to an address | `snapp-mcp` | `find_location`, then `food_find_cheapest`, `food_party_deals` |
 | Groceries delivered to an address | `snapp-mcp`, `okala-mcp` | `market_find_cheapest`; `ok_locate`, `ok_stores`, `ok_compare` |
@@ -30,6 +31,9 @@ sign-in).
 | Clinics, labs, medical offers | `doctoreto-mcp` | `dt_search_centers`, `dt_search_offers` |
 | Ebooks and audiobooks | `taaghche-mcp`, `fidibo-mcp` | `tg_search`, `tg_free_books`; `fd_search`, `fd_free` |
 | Printed books | `30book-mcp` | `sb_search`, `sb_book`, `sb_deals` |
+| Persian online courses, free courses | `maktabkhooneh-mcp` | `mk_search`, `mk_free_courses`, `mk_cheapest`, `mk_course` |
+| Android apps on Cafe Bazaar and Myket | `iran-apps-mcp` | `ap_search`, `ap_compare`, `ap_top` |
+| Find software or a game on Iranian download sites (metadata and item page only, no download links) | `iran-downloads-mcp` | `dl_search`, `dl_latest`, `dl_item` |
 | Goods from thousands of small Iranian shops (handmade, local products) | `basalam-mcp` | `bs_find_cheapest`, `bs_search`, then `bs_product` |
 | Food near an address on Tapsi Food, flash deals | `tapsifood-mcp` | `tf_find_location`, then `tf_search_dishes`, `tf_deals` |
 | Live gold, coin, dollar or crypto prices, price history | `tgju-mcp` | `tj_get_prices`, `tj_market_summary`, `tj_price_history` |
@@ -68,10 +72,10 @@ claude plugin install digikala --marketplace sepehr071/awesome-iran-mcp     # on
 claude plugin install iran-all --marketplace sepehr071/awesome-iran-mcp     # all read-only site servers
 ```
 
-Bundles: `iran-all`, `iran-food`, `iran-shopping`, `iran-beauty`, `iran-travel`, `iran-health`, `iran-books`.
+Bundles: `iran-all`, `iran-food`, `iran-shopping`, `iran-beauty`, `iran-travel`, `iran-health`, `iran-books`, `iran-fashion`, `iran-software`.
 Skills only, for any agent: `npx skills add sepehr071/awesome-iran-mcp`.
 
-The server key in config is the package name without `-mcp`. [`.mcp.json`](.mcp.json) holds all 31.
+The server key in config is the package name without `-mcp`. [`.mcp.json`](.mcp.json) holds all 36.
 Requires [uv](https://docs.astral.sh/uv/) (`pasavard-mcp` and `swapwallet-mcp` don't). Add only the servers the task needs: each one adds 3 to 31 tools.
 
 ## Rules every server follows
@@ -115,7 +119,7 @@ README.md / README.fa.md   English (default) and Persian docs; keep both in sync
   ships its own `skills/<key>/SKILL.md`, which come from that file. Check with `claude plugin validate .`.
 - Add a server: `git submodule add https://github.com/sepehr071/<name>-mcp servers/<name>-mcp`, add it to
   `SERVERS` in `scripts/catalog.py` (and to `GROUPS` in `scripts/banner.py` if its category is new), run both scripts, add a row to both
-  READMEs and the table above. Update the 31 / 432 counts written in both READMEs.
+  READMEs and the table above. Update the 36 / 468 counts written in both READMEs.
 - Add a hosted server: `git submodule add <its repo> servers/<name>-mcp` and an entry in `REMOTE` in
   `scripts/catalog.py`, then the same `GROUPS`, README, table and count steps. Its repo needs an MCP Registry
   `server.json` with `remotes` (name, version, description, repository), and the server must publish a server card

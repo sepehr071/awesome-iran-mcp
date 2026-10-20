@@ -670,6 +670,65 @@
     ]
   },
   {
+    "name": "baneh-mcp",
+    "title": "Baneh",
+    "category": "shopping",
+    "site": "https://baaneeh.com",
+    "description": "Unofficial read-only Baneh: search appliances, TVs, electronics, find the cheapest in-stock price.",
+    "version": "0.1.0",
+    "pypi": "baneh-mcp",
+    "repository": "https://github.com/sepehr071/baneh-mcp",
+    "registry_name": "io.github.sepehr071/baneh-mcp",
+    "run": "uvx baneh-mcp",
+    "read_only": true,
+    "env": [
+      {
+        "name": "BANEH_MCP_PROXY",
+        "isRequired": false,
+        "isSecret": false,
+        "description": "Optional HTTP proxy URL, or a comma-separated list tried in turn, for baaneeh.com; system proxies are ignored."
+      }
+    ],
+    "tool_count": 7,
+    "tools": [
+      {
+        "name": "bn_search",
+        "title": "Search products",
+        "summary": "Search Baneh products by name in Persian or English, with price (Toman), stock and rating."
+      },
+      {
+        "name": "bn_find_cheapest",
+        "title": "Find cheapest product",
+        "summary": "Find the cheapest products whose title contains every word of the query, one list sorted by price (Toman)."
+      },
+      {
+        "name": "bn_browse",
+        "title": "Browse a category or brand",
+        "summary": "List products of a category and/or brand, optionally in a price range, sorted by price or rating."
+      },
+      {
+        "name": "bn_categories",
+        "title": "List categories",
+        "summary": "List shop categories with slug and product count, biggest first."
+      },
+      {
+        "name": "bn_brands",
+        "title": "List brands",
+        "summary": "List brands (about 150, e.g. LG, Samsung, Bosch, Xiaomi) with slug and product count, biggest first."
+      },
+      {
+        "name": "bn_product",
+        "title": "Get product details",
+        "summary": "Get one product: price (Toman), stock, rating, brand, categories, spec attributes, highlights, description, images."
+      },
+      {
+        "name": "bn_reviews",
+        "title": "Get product reviews",
+        "summary": "Get buyer reviews of one product, newest first: rating 1-5, author, date, text."
+      }
+    ]
+  },
+  {
     "name": "torob-mcp",
     "title": "Torob",
     "category": "shopping",
@@ -1141,6 +1200,65 @@
         "name": "sh_shop",
         "title": "Shop profile",
         "summary": "Get a shop's profile: ratings, buyer survey %, followers, product count, main categories, courier city,"
+      }
+    ]
+  },
+  {
+    "name": "banimode-mcp",
+    "title": "Banimode",
+    "category": "fashion",
+    "site": "https://www.banimode.com",
+    "description": "Unofficial read-only Banimode: search fashion, compare prices, sizes, stock and flash deals.",
+    "version": "0.1.0",
+    "pypi": "banimode-mcp",
+    "repository": "https://github.com/sepehr071/banimode-mcp",
+    "registry_name": "io.github.sepehr071/banimode-mcp",
+    "run": "uvx banimode-mcp",
+    "read_only": true,
+    "env": [
+      {
+        "name": "BANIMODE_MCP_PROXY",
+        "isRequired": false,
+        "isSecret": false,
+        "description": "Optional HTTP proxy URL, or a comma-separated list tried in turn, for banimode.com; system proxies are ignored."
+      }
+    ],
+    "tool_count": 7,
+    "tools": [
+      {
+        "name": "bm_search",
+        "title": "Search products",
+        "summary": "Search Banimode fashion products by keyword and return priced cards with discount, color and sizes in stock."
+      },
+      {
+        "name": "bm_browse",
+        "title": "Browse a category or brand",
+        "summary": "List the products of a category and/or brand, with the same filters and cards as bm_search."
+      },
+      {
+        "name": "bm_categories",
+        "title": "Product categories",
+        "summary": "Find category ids by name, or walk the tree: no arguments lists the top sections, parent_id lists children."
+      },
+      {
+        "name": "bm_brands",
+        "title": "Brands",
+        "summary": "Find brand ids by name (Persian or Latin), or list the first brands when no name is given."
+      },
+      {
+        "name": "bm_deals",
+        "title": "Flash-sale deals",
+        "summary": "List today's flash-sale products (deep time-limited discounts) with the time left."
+      },
+      {
+        "name": "bm_product",
+        "title": "Product details",
+        "summary": "Get one product: every color with its price, discount, stock per size, features and short description."
+      },
+      {
+        "name": "bm_reviews",
+        "title": "Product reviews",
+        "summary": "Read customer reviews of a product: stars (1-5, null if only text), text, date and the shop's answer."
       }
     ]
   },
@@ -2296,6 +2414,188 @@
         "name": "sb_collections",
         "title": "Genres, nations, awards and tags",
         "summary": "Home-page genres, nations, award lists and tags; ids go to sb_browse(kind=...)."
+      }
+    ]
+  },
+  {
+    "name": "maktabkhooneh-mcp",
+    "title": "Maktabkhooneh",
+    "category": "learning",
+    "site": "https://maktabkhooneh.org",
+    "description": "Unofficial read-only Maktabkhooneh: search Persian online courses, compare prices, find free ones.",
+    "version": "0.1.0",
+    "pypi": "maktabkhooneh-mcp",
+    "repository": "https://github.com/sepehr071/maktabkhooneh-mcp",
+    "registry_name": "io.github.sepehr071/maktabkhooneh-mcp",
+    "run": "uvx maktabkhooneh-mcp",
+    "read_only": true,
+    "env": [
+      {
+        "name": "MAKTABKHOONEH_MCP_PROXY",
+        "isRequired": false,
+        "isSecret": false,
+        "description": "Optional HTTP proxy URL for requests to maktabkhooneh.org, or a comma-separated list: one is used until it gets blocked or fails to connect, then the next. System proxy settings are ignored."
+      }
+    ],
+    "tool_count": 12,
+    "tools": [
+      {
+        "name": "mk_search",
+        "title": "Search courses",
+        "summary": "Full-text search of courses by title/topic: price, discount, hours, rating, students, teachers."
+      },
+      {
+        "name": "mk_browse",
+        "title": "Browse courses with filters",
+        "summary": "List courses of a category (or all about 5700) with the site's own filters: type, level, hours, rating, publisher, feature."
+      },
+      {
+        "name": "mk_free_courses",
+        "title": "Free courses",
+        "summary": "List the free courses (final_price 0, about 740 of them), optionally in one category: hours, rating, students."
+      },
+      {
+        "name": "mk_cheapest",
+        "title": "Cheapest courses",
+        "summary": "Cheapest paid courses for a topic or category, ascending by final_price (what the customer pays)."
+      },
+      {
+        "name": "mk_deals",
+        "title": "Discounted courses",
+        "summary": "Currently discounted courses, biggest discount first (discount_pct, price before and final_price after)."
+      },
+      {
+        "name": "mk_course",
+        "title": "Course details",
+        "summary": "One course: prices (full vs content-only), discount end, level, hours, teachers, publisher, prerequisites, FAQ."
+      },
+      {
+        "name": "mk_curriculum",
+        "title": "Course curriculum",
+        "summary": "The chapters and lessons of a course with type (lecture, quiz, project...) and duration (mm:ss)."
+      },
+      {
+        "name": "mk_reviews",
+        "title": "Course reviews",
+        "summary": "Learner reviews of a course (stars 1-5, text, date, instructor reply) plus the star histogram."
+      },
+      {
+        "name": "mk_categories",
+        "title": "Course categories",
+        "summary": "Category tree (about 680 nodes in 11 top-level groups): slugs for mk_browse, mk_free_courses, mk_cheapest, mk_deals."
+      },
+      {
+        "name": "mk_teacher",
+        "title": "Teacher profile",
+        "summary": "A teacher's profile (bio, students, rating, teaching hours, links) and their courses with prices."
+      },
+      {
+        "name": "mk_organizations",
+        "title": "Publishers",
+        "summary": "Course publishers (universities, companies, Maktabkhooneh itself, about 180) with the id used as a filter."
+      },
+      {
+        "name": "mk_organization",
+        "title": "Publisher profile",
+        "summary": "A publisher's totals (courses, students, rating) and its most popular courses."
+      }
+    ]
+  },
+  {
+    "name": "iran-apps-mcp",
+    "title": "Iran Apps",
+    "category": "software",
+    "site": "https://cafebazaar.ir",
+    "description": "Unofficial read-only Cafe Bazaar and Myket: search apps, compare versions and ratings, top lists.",
+    "version": "0.1.0",
+    "pypi": "iran-apps-mcp",
+    "repository": "https://github.com/sepehr071/iran-apps-mcp",
+    "registry_name": "io.github.sepehr071/iran-apps-mcp",
+    "run": "uvx iran-apps-mcp",
+    "read_only": true,
+    "env": [
+      {
+        "name": "IRAN_APPS_MCP_PROXY",
+        "isRequired": false,
+        "isSecret": false,
+        "description": "Optional HTTP proxy URL, or a comma-separated list tried in turn, for cafebazaar.ir and myket.ir; system proxies are ignored."
+      }
+    ],
+    "tool_count": 6,
+    "tools": [
+      {
+        "name": "ap_search",
+        "title": "Search apps",
+        "summary": "Search Cafe Bazaar and/or Myket for apps and games by name; returns package names, ratings and store URLs."
+      },
+      {
+        "name": "ap_app",
+        "title": "App details",
+        "summary": "Get one app's metadata from one store: version, rating and rating count, installs, size, update date, developer, price, description."
+      },
+      {
+        "name": "ap_compare",
+        "title": "Compare stores",
+        "summary": "Compare one package across Cafe Bazaar and Myket: version, rating, rating count, installs, size, update date, price."
+      },
+      {
+        "name": "ap_top",
+        "title": "Top and new apps",
+        "summary": "List the top ('best') or newest ('new') apps or games of a store, per category or store-wide."
+      },
+      {
+        "name": "ap_categories",
+        "title": "Categories",
+        "summary": "List the category slugs of a store for apps and games, to pass as ap_top category."
+      },
+      {
+        "name": "ap_similar",
+        "title": "Related apps",
+        "summary": "List apps the store shows as related to one app: Bazaar gives three groups (related, others also installed, similar), Myket one."
+      }
+    ]
+  },
+  {
+    "name": "iran-downloads-mcp",
+    "title": "Iran Software Downloads",
+    "category": "software",
+    "site": "https://soft98.ir",
+    "description": "Unofficial read-only metadata search of Soft98, P30Download, Downloadly and VGDL. Links only.",
+    "version": "0.1.0",
+    "pypi": "iran-downloads-mcp",
+    "repository": "https://github.com/sepehr071/iran-downloads-mcp",
+    "registry_name": "io.github.sepehr071/iran-downloads-mcp",
+    "run": "uvx iran-downloads-mcp",
+    "read_only": true,
+    "env": [
+      {
+        "name": "IRAN_DOWNLOADS_MCP_PROXY",
+        "isRequired": false,
+        "isSecret": false,
+        "description": "Optional HTTP proxy URL. System proxy settings are ignored. Also accepts a comma-separated list: one is used until it gets blocked or fails to connect, then the next."
+      }
+    ],
+    "tool_count": 4,
+    "tools": [
+      {
+        "name": "dl_list_sources",
+        "title": "List download sources",
+        "summary": "List the four download-site sources and their latest-listing categories; call this first for valid ids."
+      },
+      {
+        "name": "dl_search",
+        "title": "Search download sites",
+        "summary": "Search the download sites by name and return metadata (title, item page url, category, date, short summary)."
+      },
+      {
+        "name": "dl_latest",
+        "title": "Latest downloads",
+        "summary": "Return the newest uploads of the download sites (soft98 has no latest listing), merged and sorted by date."
+      },
+      {
+        "name": "dl_item",
+        "title": "Download item details",
+        "summary": "Return the details of one download item: name, version, size, category, date, description and system requirements."
       }
     ]
   },

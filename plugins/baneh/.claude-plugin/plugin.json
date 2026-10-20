@@ -1,0 +1,27 @@
+{
+  "name": "baneh",
+  "displayName": "Baneh",
+  "version": "0.1.0",
+  "description": "Unofficial read-only Baneh: search appliances, TVs, electronics, find the cheapest in-stock price.",
+  "author": {
+    "name": "Sepehr Radmard",
+    "email": "sepehrr80@gmail.com",
+    "url": "https://github.com/sepehr071"
+  },
+  "homepage": "https://github.com/sepehr071/awesome-iran-mcp",
+  "repository": "https://github.com/sepehr071/baneh-mcp",
+  "license": "MIT",
+  "keywords": [
+    "iran",
+    "shopping",
+    "baaneeh.com"
+  ],
+  "mcpServers": {
+    "baneh": {
+      "command": "uvx",
+      "args": [
+        "baneh-mcp@0.1.0"
+      ]
+    }
+  }
+}

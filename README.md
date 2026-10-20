@@ -1,18 +1,18 @@
 <div align="center">
 
-<img src="assets/banner.svg" alt="awesome-iran-mcp: 31 MCP servers and 432 tools for Iranian shopping, classifieds, food, travel, health, book, price, news, law, tax and crypto sites, for Claude, Cursor and Copilot" width="100%">
+<img src="assets/banner.svg" alt="awesome-iran-mcp: 36 MCP servers and 468 tools for Iranian shopping, classifieds, food, travel, health, book, course, app, price, news, law, tax and crypto sites, for Claude, Cursor and Copilot" width="100%">
 
 **English** · [فارسی](README.fa.md)
 
 # Iran MCP servers: awesome-iran-mcp
 
 **Give your AI agent the Iranian web.**<br>
-28 unofficial, open-source Persian-web MCP servers for Digikala, Torob, Divar, Snappfood, Jabama, MrBilit, Paziresh24, Taaghche, the tax administration, qavanin.ir laws and more, plus official ones from ExirYab, Pasavard and SwapWallet.<br>
+33 unofficial, open-source Persian-web MCP servers for Digikala, Torob, Divar, Snappfood, Jabama, MrBilit, Paziresh24, Taaghche, the tax administration, qavanin.ir laws and more, plus official ones from ExirYab, Pasavard and SwapWallet.<br>
 Search, compare prices in Toman, find free slots and today's deals from Claude, Cursor, GitHub Copilot in VS Code or any MCP client.<br>
 Install them as Claude Code plugins with skills, or as Agent Skills for Codex, Cursor, Antigravity and Grok Build.
 
-[![Servers](https://img.shields.io/badge/servers-31-3fd6c9)](#the-servers)
-[![Tools](https://img.shields.io/badge/tools-432-f4b54a)](TOOLS.md)
+[![Servers](https://img.shields.io/badge/servers-36-3fd6c9)](#the-servers)
+[![Tools](https://img.shields.io/badge/tools-468-f4b54a)](TOOLS.md)
 [![Claude Code plugins](https://img.shields.io/badge/Claude_Code-plugin_marketplace-d97757)](#quick-start)
 [![MCP Registry](https://img.shields.io/badge/MCP_Registry-io.github.sepehr071-7c3aed)](https://registry.modelcontextprotocol.io/?q=sepehr071)
 [![License: MIT](https://img.shields.io/badge/license-MIT-16a34a)](LICENSE)
@@ -133,7 +133,7 @@ claude mcp add --transport http pasavard https://pasavard.ir/api/mcp      # host
 `swapwallet-mcp` is added by URL, and each client takes a URL in its own shape (Windsurf uses `serverUrl`, Claude
 Desktop takes it under Settings → Connectors): see [its setup for each client](https://github.com/SwapWallet/swapwallet-mcp#connect).
 
-**All 31 at once:** clone this repo and open it in Claude Code. The [`.mcp.json`](.mcp.json) at the root
+**All 36 at once:** clone this repo and open it in Claude Code. The [`.mcp.json`](.mcp.json) at the root
 registers every server; approve the ones you want.
 
 ```bash
@@ -142,7 +142,7 @@ cd awesome-iran-mcp && claude
 ```
 
 > [!TIP]
-> 432 tools is a lot of context. Enable the servers for the task at hand rather than all of them.
+> 468 tools is a lot of context. Enable the servers for the task at hand rather than all of them.
 
 ## The servers
 
@@ -153,9 +153,11 @@ cd awesome-iran-mcp && claude
 | [digikala-mcp](https://github.com/sepehr071/digikala-mcp) | [Digikala](https://www.digikala.com) (incl. Fresh) | 23 | [![PyPI](https://img.shields.io/pypi/v/digikala-mcp?label=&color=2fe0cf)](https://pypi.org/project/digikala-mcp/) | [![Last commit](https://img.shields.io/github/last-commit/sepehr071/digikala-mcp?label=&color=ffc23d)](https://github.com/sepehr071/digikala-mcp/commits/main) | Search with feature filters, best picks for a budget, every seller, price history, reviews, deals |
 | [technolife-mcp](https://github.com/sepehr071/technolife-mcp) | [Technolife](https://www.technolife.com) | 19 | [![PyPI](https://img.shields.io/pypi/v/technolife-mcp?label=&color=2fe0cf)](https://pypi.org/project/technolife-mcp/) | [![Last commit](https://img.shields.io/github/last-commit/sepehr071/technolife-mcp?label=&color=ffc23d)](https://github.com/sepehr071/technolife-mcp/commits/main) | Electronics: each seller's cash and installment price, specs, reviews, deals |
 | [masterkala-mcp](https://github.com/sepehr071/masterkala-mcp) | [MasterKala](https://masterkala.com) | 14 | [![PyPI](https://img.shields.io/pypi/v/masterkala-mcp?label=&color=2fe0cf)](https://pypi.org/project/masterkala-mcp/) | [![Last commit](https://img.shields.io/github/last-commit/sepehr071/masterkala-mcp?label=&color=ffc23d)](https://github.com/sepehr071/masterkala-mcp/commits/main) | Gadgets and accessories: prices, specs, deals |
+| [baneh-mcp](https://github.com/sepehr071/baneh-mcp) | [Baneh](https://baaneeh.com) | 7 | [![PyPI](https://img.shields.io/pypi/v/baneh-mcp?label=&color=2fe0cf)](https://pypi.org/project/baneh-mcp/) | [![Last commit](https://img.shields.io/github/last-commit/sepehr071/baneh-mcp?label=&color=ffc23d)](https://github.com/sepehr071/baneh-mcp/commits/main) | Appliances, TVs and electronics: cheapest in-stock price, brands, reviews |
 | [torob-mcp](https://github.com/sepehr071/torob-mcp) | [Torob](https://torob.com) (price comparison) | 26 | [![PyPI](https://img.shields.io/pypi/v/torob-mcp?label=&color=2fe0cf)](https://pypi.org/project/torob-mcp/) | [![Last commit](https://img.shields.io/github/last-commit/sepehr071/torob-mcp?label=&color=ffc23d)](https://github.com/sepehr071/torob-mcp/commits/main) | Every shop's price for a product, price history, deal checks, installments, cheapest shop for a basket |
 | [basalam-mcp](https://github.com/sepehr071/basalam-mcp) | [Basalam](https://basalam.com) (marketplace) | 7 | [![PyPI](https://img.shields.io/pypi/v/basalam-mcp?label=&color=2fe0cf)](https://pypi.org/project/basalam-mcp/) | [![Last commit](https://img.shields.io/github/last-commit/sepehr071/basalam-mcp?label=&color=ffc23d)](https://github.com/sepehr071/basalam-mcp/commits/main) | Goods from thousands of small shops: price, shipping and discount filters, cheapest offers, shop ratings, reviews |
 | [shopino-mcp](https://github.com/sepehr071/shopino-mcp) | [Shopino](https://shopino.app) | 14 | [![PyPI](https://img.shields.io/pypi/v/shopino-mcp?label=&color=2fe0cf)](https://pypi.org/project/shopino-mcp/) | [![Last commit](https://img.shields.io/github/last-commit/sepehr071/shopino-mcp?label=&color=ffc23d)](https://github.com/sepehr071/shopino-mcp/commits/main) | Fashion from thousands of shops: prices, sizes, stock, shop ratings |
+| [banimode-mcp](https://github.com/sepehr071/banimode-mcp) | [Banimode](https://www.banimode.com) | 7 | [![PyPI](https://img.shields.io/pypi/v/banimode-mcp?label=&color=2fe0cf)](https://pypi.org/project/banimode-mcp/) | [![Last commit](https://img.shields.io/github/last-commit/sepehr071/banimode-mcp?label=&color=ffc23d)](https://github.com/sepehr071/banimode-mcp/commits/main) | Fashion: prices, sizes, stock, brands, deals, reviews |
 | [pasavard-mcp](https://github.com/ashkancapella/pasavard-mcp) | [Pasavard](https://pasavard.ir) (official, hosted) | 4 | [![Version](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fraw.githubusercontent.com%2Fashkancapella%2Fpasavard-mcp%2Fmain%2Fserver.json&query=%24.version&label=&color=2fe0cf)](https://github.com/ashkancapella/pasavard-mcp/blob/main/server.json) | [![Last commit](https://img.shields.io/github/last-commit/ashkancapella/pasavard-mcp?label=&color=ffc23d)](https://github.com/ashkancapella/pasavard-mcp/commits/main) | Digikala and Snappshop prices tracked hourly: best picks per budget against each product's 30-day low, with affiliate and cashback links |
 
 ### 🏠 Classifieds
@@ -204,6 +206,14 @@ cd awesome-iran-mcp && claude
 | [fidibo-mcp](https://github.com/sepehr071/fidibo-mcp) | [Fidibo](https://fidibo.com) | 11 | [![PyPI](https://img.shields.io/pypi/v/fidibo-mcp?label=&color=2fe0cf)](https://pypi.org/project/fidibo-mcp/) | [![Last commit](https://img.shields.io/github/last-commit/sepehr071/fidibo-mcp?label=&color=ffc23d)](https://github.com/sepehr071/fidibo-mcp/commits/main) | Ebooks and audiobooks: prices, Fidibo Plus, reviews, bestsellers, free books |
 | [30book-mcp](https://github.com/sepehr071/30book-mcp) | [30book](https://www.30book.com) | 14 | [![PyPI](https://img.shields.io/pypi/v/30book-mcp?label=&color=2fe0cf)](https://pypi.org/project/30book-mcp/) | [![Last commit](https://img.shields.io/github/last-commit/sepehr071/30book-mcp?label=&color=ffc23d)](https://github.com/sepehr071/30book-mcp/commits/main) | Printed books: list and discounted price, stock, editions, ISBN, deals |
 
+### 🎓 Learning, apps and downloads
+
+| Server | Site | Tools | Version | Updated | What your agent can do |
+|---|---|---:|:---:|:---:|---|
+| [maktabkhooneh-mcp](https://github.com/sepehr071/maktabkhooneh-mcp) | [Maktabkhooneh](https://maktabkhooneh.org) | 12 | [![PyPI](https://img.shields.io/pypi/v/maktabkhooneh-mcp?label=&color=2fe0cf)](https://pypi.org/project/maktabkhooneh-mcp/) | [![Last commit](https://img.shields.io/github/last-commit/sepehr071/maktabkhooneh-mcp?label=&color=ffc23d)](https://github.com/sepehr071/maktabkhooneh-mcp/commits/main) | Persian online courses: cheapest and free courses, deals, curriculum, teachers, reviews |
+| [iran-apps-mcp](https://github.com/sepehr071/iran-apps-mcp) | [Cafe Bazaar](https://cafebazaar.ir) and [Myket](https://myket.ir) | 6 | [![PyPI](https://img.shields.io/pypi/v/iran-apps-mcp?label=&color=2fe0cf)](https://pypi.org/project/iran-apps-mcp/) | [![Last commit](https://img.shields.io/github/last-commit/sepehr071/iran-apps-mcp?label=&color=ffc23d)](https://github.com/sepehr071/iran-apps-mcp/commits/main) | Android apps: search, compare across both stores, top lists, similar apps |
+| [iran-downloads-mcp](https://github.com/sepehr071/iran-downloads-mcp) | [Soft98](https://soft98.ir), P30Download, Downloadly, VGDL | 4 | [![PyPI](https://img.shields.io/pypi/v/iran-downloads-mcp?label=&color=2fe0cf)](https://pypi.org/project/iran-downloads-mcp/) | [![Last commit](https://img.shields.io/github/last-commit/sepehr071/iran-downloads-mcp?label=&color=ffc23d)](https://github.com/sepehr071/iran-downloads-mcp/commits/main) | Metadata-only search of software and game download sites: returns the item page, never a download link |
+
 ### 📊 Prices, news and public records
 
 | Server | Site | Tools | Version | Updated | What your agent can do |
@@ -232,7 +242,7 @@ This repo is built to be read by agents as much as by people:
 |---|---|
 | [`AGENTS.md`](AGENTS.md) | Which server to pick for which task, conventions, safety rules, how to work in this repo |
 | [`servers.json`](servers.json) | Machine-readable catalog: package or URL, version, category, env vars and every tool of each server |
-| [`TOOLS.md`](TOOLS.md) | All 432 tools grouped by server, one line each |
+| [`TOOLS.md`](TOOLS.md) | All 468 tools grouped by server, one line each |
 | [`llms.txt`](llms.txt) | Short index for LLMs ([llmstxt.org](https://llmstxt.org)) |
 | [`.mcp.json`](.mcp.json) | Ready-to-use config for every server |
 | [`.claude-plugin/marketplace.json`](.claude-plugin/marketplace.json) | The `iran-mcp` plugin marketplace: one plugin per server plus bundles |

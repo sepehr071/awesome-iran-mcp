@@ -1,0 +1,14 @@
+{
+  "name": "iran-software",
+  "description": "Everything for Android apps or software and game download listings in Iran: Iran Apps, Iran Software Downloads.",
+  "author": {
+    "name": "Sepehr Radmard",
+    "email": "sepehrr80@gmail.com",
+    "url": "https://github.com/sepehr071"
+  },
+  "homepage": "https://github.com/sepehr071/awesome-iran-mcp",
+  "dependencies": [
+    "iran-apps",
+    "iran-downloads"
+  ]
+}

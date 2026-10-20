@@ -1,0 +1,27 @@
+{
+  "name": "iran-apps",
+  "displayName": "Iran Apps",
+  "version": "0.1.0",
+  "description": "Unofficial read-only Cafe Bazaar and Myket: search apps, compare versions and ratings, top lists.",
+  "author": {
+    "name": "Sepehr Radmard",
+    "email": "sepehrr80@gmail.com",
+    "url": "https://github.com/sepehr071"
+  },
+  "homepage": "https://github.com/sepehr071/awesome-iran-mcp",
+  "repository": "https://github.com/sepehr071/iran-apps-mcp",
+  "license": "MIT",
+  "keywords": [
+    "iran",
+    "software",
+    "cafebazaar.ir"
+  ],
+  "mcpServers": {
+    "iran-apps": {
+      "command": "uvx",
+      "args": [
+        "iran-apps-mcp@0.1.0"
+      ]
+    }
+  }
+}
