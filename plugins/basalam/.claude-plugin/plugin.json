@@ -1,0 +1,27 @@
+{
+  "name": "basalam",
+  "displayName": "Basalam",
+  "version": "0.1.0",
+  "description": "Unofficial read-only Basalam marketplace: search products, cheapest offers, shops, reviews.",
+  "author": {
+    "name": "Sepehr Radmard",
+    "email": "sepehrr80@gmail.com",
+    "url": "https://github.com/sepehr071"
+  },
+  "homepage": "https://github.com/sepehr071/awesome-iran-mcp",
+  "repository": "https://github.com/sepehr071/basalam-mcp",
+  "license": "MIT",
+  "keywords": [
+    "iran",
+    "shopping",
+    "basalam.com"
+  ],
+  "mcpServers": {
+    "basalam": {
+      "command": "uvx",
+      "args": [
+        "basalam-mcp@0.1.0"
+      ]
+    }
+  }
+}

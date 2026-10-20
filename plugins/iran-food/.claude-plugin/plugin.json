@@ -1,6 +1,6 @@
 {
   "name": "iran-food",
-  "description": "Everything for food or groceries delivered in Iran: Snappfood & SnappMarket, Okala.",
+  "description": "Everything for food or groceries delivered in Iran: Snappfood & SnappMarket, Okala, Tapsi Food.",
   "author": {
     "name": "Sepehr Radmard",
     "email": "sepehrr80@gmail.com",
@@ -9,6 +9,7 @@
   "homepage": "https://github.com/sepehr071/awesome-iran-mcp",
   "dependencies": [
     "snapp",
-    "okala"
+    "okala",
+    "tapsifood"
   ]
 }

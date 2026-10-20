@@ -12,6 +12,12 @@
         "okala-mcp@0.3.0"
       ]
     },
+    "tapsifood": {
+      "command": "uvx",
+      "args": [
+        "tapsifood-mcp@0.1.0"
+      ]
+    },
     "digikala": {
       "command": "uvx",
       "args": [
@@ -34,6 +40,12 @@
       "command": "uvx",
       "args": [
         "torob-mcp@0.1.1"
+      ]
+    },
+    "basalam": {
+      "command": "uvx",
+      "args": [
+        "basalam-mcp@0.1.0"
       ]
     },
     "khanoumi": {
@@ -118,6 +130,36 @@
       "command": "uvx",
       "args": [
         "30book-mcp@0.3.0"
+      ]
+    },
+    "tgju": {
+      "command": "uvx",
+      "args": [
+        "tgju-mcp@0.1.0"
+      ]
+    },
+    "iran-news": {
+      "command": "uvx",
+      "args": [
+        "iran-news-mcp@0.1.0"
+      ]
+    },
+    "iran-quake": {
+      "command": "uvx",
+      "args": [
+        "iran-quake-mcp@0.1.0"
+      ]
+    },
+    "qavanin": {
+      "command": "uvx",
+      "args": [
+        "qavanin-mcp@0.1.0"
+      ]
+    },
+    "iran-tax": {
+      "command": "uvx",
+      "args": [
+        "iran-tax-mcp@0.1.0"
       ]
     },
     "payping": {

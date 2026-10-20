@@ -1,6 +1,6 @@
 {
   "name": "iran-all",
-  "description": "All 21 read-only Iranian site servers in one install.",
+  "description": "All 28 read-only Iranian site servers in one install.",
   "author": {
     "name": "Sepehr Radmard",
     "email": "sepehrr80@gmail.com",
@@ -10,10 +10,12 @@
   "dependencies": [
     "snapp",
     "okala",
+    "tapsifood",
     "digikala",
     "technolife",
     "masterkala",
     "torob",
+    "basalam",
     "khanoumi",
     "asalbanoo",
     "shopino",
@@ -28,6 +30,11 @@
     "taaghche",
     "fidibo",
     "30book",
+    "tgju",
+    "iran-news",
+    "iran-quake",
+    "qavanin",
+    "iran-tax",
     "pasavard"
   ]
 }

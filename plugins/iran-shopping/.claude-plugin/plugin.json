@@ -1,6 +1,6 @@
 {
   "name": "iran-shopping",
-  "description": "Everything for electronics, appliances or other goods in Iran: Digikala, Technolife, MasterKala, Torob, Pasavard.",
+  "description": "Everything for electronics, appliances or other goods in Iran: Digikala, Technolife, MasterKala, Torob, Basalam, Pasavard.",
   "author": {
     "name": "Sepehr Radmard",
     "email": "sepehrr80@gmail.com",
@@ -12,6 +12,7 @@
     "technolife",
     "masterkala",
     "torob",
+    "basalam",
     "pasavard"
   ]
 }

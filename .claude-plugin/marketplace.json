@@ -20,6 +20,12 @@
       "category": "food"
     },
     {
+      "name": "tapsifood",
+      "source": "./plugins/tapsifood",
+      "description": "Unofficial read-only Tapsi Food: search dishes and restaurants, menus, reviews, flash deals.",
+      "category": "food"
+    },
+    {
       "name": "digikala",
       "source": "./plugins/digikala",
       "description": "Unofficial read-only Digikala: search products, compare sellers, price history, reviews, deals.",
@@ -41,6 +47,12 @@
       "name": "torob",
       "source": "./plugins/torob",
       "description": "Unofficial read-only Torob: compare Iranian shop prices, price history, deal checks and baskets.",
+      "category": "shopping"
+    },
+    {
+      "name": "basalam",
+      "source": "./plugins/basalam",
+      "description": "Unofficial read-only Basalam marketplace: search products, cheapest offers, shops, reviews.",
       "category": "shopping"
     },
     {
@@ -128,6 +140,36 @@
       "category": "books"
     },
     {
+      "name": "tgju",
+      "source": "./plugins/tgju",
+      "description": "Unofficial read-only TGJU: live Iranian gold, coin, currency and crypto prices with daily history.",
+      "category": "prices"
+    },
+    {
+      "name": "iran-news",
+      "source": "./plugins/iran-news",
+      "description": "Unofficial read-only Iranian news: Mehr, Khabaronline, Hamshahri, Tabnak, Zoomit, Digiato RSS.",
+      "category": "news"
+    },
+    {
+      "name": "iran-quake",
+      "source": "./plugins/iran-quake",
+      "description": "Unofficial read-only Iran earthquakes: latest, search, strongest, detail, stats (USGS, EMSC, IRSC).",
+      "category": "quakes"
+    },
+    {
+      "name": "qavanin",
+      "source": "./plugins/qavanin",
+      "description": "Unofficial read-only qavanin.ir: search Iranian laws and regulations, read full text and status.",
+      "category": "law"
+    },
+    {
+      "name": "iran-tax",
+      "source": "./plugins/iran-tax",
+      "description": "Unofficial read-only Iranian tax: goods IDs and VAT, activity codes, property values, tax laws.",
+      "category": "tax"
+    },
+    {
       "name": "payping",
       "source": "./plugins/payping",
       "description": "PayPing merchant account for agents: balance, sales, invoices; create invoices and payment links.",
@@ -154,19 +196,19 @@
     {
       "name": "iran-all",
       "source": "./plugins/iran-all",
-      "description": "All 21 read-only Iranian site servers in one install.",
+      "description": "All 28 read-only Iranian site servers in one install.",
       "category": "bundle"
     },
     {
       "name": "iran-food",
       "source": "./plugins/iran-food",
-      "description": "Everything for food or groceries delivered in Iran: Snappfood & SnappMarket, Okala.",
+      "description": "Everything for food or groceries delivered in Iran: Snappfood & SnappMarket, Okala, Tapsi Food.",
       "category": "bundle"
     },
     {
       "name": "iran-shopping",
       "source": "./plugins/iran-shopping",
-      "description": "Everything for electronics, appliances or other goods in Iran: Digikala, Technolife, MasterKala, Torob, Pasavard.",
+      "description": "Everything for electronics, appliances or other goods in Iran: Digikala, Technolife, MasterKala, Torob, Basalam, Pasavard.",
       "category": "bundle"
     },
     {

@@ -49,6 +49,22 @@ Unofficial read-only Okala: grocery stores that deliver to you, compare prices a
 - `ok_store`: One store as seen from the delivery point: whether it delivers there now, minimum order (Toman),
 - `ok_store_reviews`: Read customers' reviews of a store: 1-5 stars, comment, date and the reasons they ticked
 
+## Tapsi Food (`tapsifood-mcp`, 11 tools)
+
+Unofficial read-only Tapsi Food: search dishes and restaurants, menus, reviews, flash deals.
+
+- `tf_search_dishes`: Search dishes by name near a delivery point, with price, discount and restaurant.
+- `tf_search_vendors`: Search restaurants and stores by name or cuisine near a delivery point.
+- `tf_restaurants`: List restaurants (or grocery stores) delivering to a point, with rating, delivery fee, minimum order and ETA.
+- `tf_deals`: List the Tap Time flash deals (تپ تایم): discounted dishes with a limited stock, near a point.
+- `tf_discounted_vendors`: List the vendors in Tapsi Food's 'Food Shots' (فودشات) discount campaign near a point.
+- `tf_find_location`: Turn a place name or address into latitude/longitude.
+- `tf_reverse_geocode`: Describe coordinates as an address with province and city.
+- `tf_list_cities`: List the cities Tapsi Food shows, with a center point and whether it delivers there.
+- `tf_menu`: Read a vendor's live menu: every dish (one entry per size/variation) with price, discount and stock.
+- `tf_vendor_info`: Get a vendor's delivery fee to a point, minimum order, packaging, ETA, open_now, hours, address and rating spread.
+- `tf_reviews`: Read customer reviews of a vendor, newest first, with the rating of each ordered dish.
+
 ## Digikala (`digikala-mcp`, 23 tools)
 
 Unofficial read-only Digikala: search products, compare sellers, price history, reviews, deals.
@@ -150,6 +166,18 @@ Unofficial read-only Torob: compare Iranian shop prices, price history, deal che
 - `tb_shop`: A shop's trust profile: score and votes, e-Namad seal, time on Torob, city, website, delivery and payment terms.
 - `tb_find_shops`: Find shops in Torob's directory by name or domain; returns ids for tb_shop and tb_shop_products.
 - `tb_shop_products`: Products one shop sells on Torob, with the price range of the page.
+
+## Basalam (`basalam-mcp`, 7 tools)
+
+Unofficial read-only Basalam marketplace: search products, cheapest offers, shops, reviews.
+
+- `bs_search`: Search Basalam products and return a page of cards with prices in Toman.
+- `bs_find_cheapest`: List the cheapest in-stock offers for a query, cheapest first, prices in Toman.
+- `bs_categories`: Browse Basalam's category tree and return ids for the category_id filter of bs_search.
+- `bs_product`: Get one product: price in Toman, discount, stock, options (colors, sizes), attributes, rating and its shop.
+- `bs_vendor`: Get a Basalam shop's profile: city, product count, shipping methods, activity and notice.
+- `bs_vendor_products`: List one shop's products with prices in Toman, searchable and sortable.
+- `bs_reviews`: Read customer reviews of a product with the star histogram, newest first.
 
 ## Khanoumi (`khanoumi-mcp`, 12 tools)
 
@@ -435,6 +463,60 @@ Unofficial read-only 30book: search Iranian printed books, compare editions and 
 - `sb_reviews`: Reader comments (author, date, stars, text cut to 400 chars unless full_text, likes) and the rating summary;
 - `sb_categories`: Category sections (کتاب عمومی, ...) or, for one section, its subjects (تاریخ, ...). Codes go to
 - `sb_collections`: Home-page genres, nations, award lists and tags; ids go to sb_browse(kind=...).
+
+## TGJU Prices (`tgju-mcp`, 6 tools)
+
+Unofficial read-only TGJU: live Iranian gold, coin, currency and crypto prices with daily history.
+
+- `tj_search_symbols`: Find TGJU symbols by name.
+- `tj_list_categories`: Browse TGJU's market tree: folders (with ids) and symbols.
+- `tj_category_table`: Live price table of one TGJU group: price, change, day high/low/open per symbol.
+- `tj_get_prices`: Live price, day change, high and low for one or more TGJU symbols.
+- `tj_market_summary`: Key Iranian market rates in one call: dollar, euro, dirham, pound, lira, gold gram and ounce, coins, silver, Brent, Bitcoin, Ethereum, Tether.
+- `tj_price_history`: Daily history (open, low, high, close, change) of a TGJU symbol, for charts and trend questions.
+
+## Iran News RSS (`iran-news-mcp`, 5 tools)
+
+Unofficial read-only Iranian news: Mehr, Khabaronline, Hamshahri, Tabnak, Zoomit, Digiato RSS.
+
+- `nw_article`: Fetch one article page and return its full body text, split into parts for long stories.
+- `nw_list_sources`: List the six news sources and their category slugs; call this first to know valid `source` and `category` values.
+- `nw_latest`: Return the newest headlines of one news source, optionally of one category.
+- `nw_search`: Search recent headlines of several sources for a keyword (client-side over their current feeds, newest first).
+- `nw_latest_all`: Return the newest headlines from every source (or the chosen ones), merged and sorted by time.
+
+## Iran Earthquakes (`iran-quake-mcp`, 5 tools)
+
+Unofficial read-only Iran earthquakes: latest, search, strongest, detail, stats (USGS, EMSC, IRSC).
+
+- `eq_latest`: List the most recent earthquakes in Iran, newest first.
+- `eq_search`: Search earthquakes in Iran by date range, magnitude, bounding box and place text.
+- `eq_significant`: List the strongest recent earthquakes in Iran, largest magnitude first.
+- `eq_detail`: Get one earthquake in full: location, depth_km, magnitude type and source quality fields.
+- `eq_stats`: Count earthquakes in Iran over a window: by magnitude band, by place, plus the strongest event.
+
+## Qavanin (`qavanin-mcp`, 7 tools)
+
+Unofficial read-only qavanin.ir: search Iranian laws and regulations, read full text and status.
+
+- `qv_law`: Read the full text of a law, regulation, court vote or opinion as sections (articles, notes, headings).
+- `qv_law_info`: Metadata of a law: type, approving body, approval, notification and gazette dates and numbers, last status,
+- `qv_amendments`: Which laws amended this one, which this one amends, and which of its articles were amended.
+- `qv_article_history`: Every amendment of one article: type (اصلاحی...), date, the amending law and the replacing text.
+- `qv_related`: Documents related to a law: other laws, and regulations, court votes and legal opinions that cite or
+- `qv_search`: Search the Iranian law and regulation database (qavanin.ir, 168,000 documents) and list matching titles.
+- `qv_lookup`: Find the ids that qv_search filters take: approving bodies, executing bodies, subjects, types, statuses, lists.
+
+## Iran Tax (`iran-tax-mcp`, 6 tools)
+
+Unofficial read-only Iranian tax: goods IDs and VAT, activity codes, property values, tax laws.
+
+- `tx_goods_search`: Find e-invoice goods/service IDs (شناسه کالا و خدمات) and their VAT rate by description or ID.
+- `tx_regulations_search`: Search the official tax regulation database (laws, circulars, rulings, opinions), newest first.
+- `tx_regulation_text`: Return the full text of one tax law, circular, ruling or opinion, or just one article of it.
+- `tx_activity_codes`: Find tax activity codes (کد فعالیت / اینتاکد) with their VAT status and official profit ratios.
+- `tx_property_value`: Return the official property transaction value (ارزش معاملاتی املاک) per square metre at a map point.
+- `tx_faq_search`: Search the tax administration's official FAQ (پرسش های متداول) and return matching questions with links.
 
 ## PayPing (`payping-mcp`, 21 tools)
 

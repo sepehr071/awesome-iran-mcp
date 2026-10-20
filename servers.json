@@ -239,6 +239,85 @@
     ]
   },
   {
+    "name": "tapsifood-mcp",
+    "title": "Tapsi Food",
+    "category": "food",
+    "site": "https://tapsi.food",
+    "description": "Unofficial read-only Tapsi Food: search dishes and restaurants, menus, reviews, flash deals.",
+    "version": "0.1.0",
+    "pypi": "tapsifood-mcp",
+    "repository": "https://github.com/sepehr071/tapsifood-mcp",
+    "registry_name": "io.github.sepehr071/tapsifood-mcp",
+    "run": "uvx tapsifood-mcp",
+    "read_only": true,
+    "env": [
+      {
+        "name": "TAPSIFOOD_MCP_PROXY",
+        "isRequired": false,
+        "isSecret": false,
+        "description": "Optional HTTP proxy URL. Tapsi Food does not answer non-Iranian exit IPs (connections hang); system proxy settings are ignored. Also accepts a comma-separated list: one is used until it gets blocked or fails to connect, then the next."
+      }
+    ],
+    "tool_count": 11,
+    "tools": [
+      {
+        "name": "tf_search_dishes",
+        "title": "Search dishes",
+        "summary": "Search dishes by name near a delivery point, with price, discount and restaurant."
+      },
+      {
+        "name": "tf_search_vendors",
+        "title": "Search vendors",
+        "summary": "Search restaurants and stores by name or cuisine near a delivery point."
+      },
+      {
+        "name": "tf_restaurants",
+        "title": "List restaurants",
+        "summary": "List restaurants (or grocery stores) delivering to a point, with rating, delivery fee, minimum order and ETA."
+      },
+      {
+        "name": "tf_deals",
+        "title": "Flash deals",
+        "summary": "List the Tap Time flash deals (تپ تایم): discounted dishes with a limited stock, near a point."
+      },
+      {
+        "name": "tf_discounted_vendors",
+        "title": "Discounted vendors",
+        "summary": "List the vendors in Tapsi Food's 'Food Shots' (فودشات) discount campaign near a point."
+      },
+      {
+        "name": "tf_find_location",
+        "title": "Find location",
+        "summary": "Turn a place name or address into latitude/longitude."
+      },
+      {
+        "name": "tf_reverse_geocode",
+        "title": "Describe coordinates",
+        "summary": "Describe coordinates as an address with province and city."
+      },
+      {
+        "name": "tf_list_cities",
+        "title": "List cities",
+        "summary": "List the cities Tapsi Food shows, with a center point and whether it delivers there."
+      },
+      {
+        "name": "tf_menu",
+        "title": "Vendor menu",
+        "summary": "Read a vendor's live menu: every dish (one entry per size/variation) with price, discount and stock."
+      },
+      {
+        "name": "tf_vendor_info",
+        "title": "Vendor costs and hours",
+        "summary": "Get a vendor's delivery fee to a point, minimum order, packaging, ETA, open_now, hours, address and rating spread."
+      },
+      {
+        "name": "tf_reviews",
+        "title": "Vendor reviews",
+        "summary": "Read customer reviews of a vendor, newest first, with the rating of each ordered dish."
+      }
+    ]
+  },
+  {
     "name": "digikala-mcp",
     "title": "Digikala",
     "category": "shopping",
@@ -741,6 +820,65 @@
         "name": "tb_shop_products",
         "title": "Shop catalogue",
         "summary": "Products one shop sells on Torob, with the price range of the page."
+      }
+    ]
+  },
+  {
+    "name": "basalam-mcp",
+    "title": "Basalam",
+    "category": "shopping",
+    "site": "https://basalam.com",
+    "description": "Unofficial read-only Basalam marketplace: search products, cheapest offers, shops, reviews.",
+    "version": "0.1.0",
+    "pypi": "basalam-mcp",
+    "repository": "https://github.com/sepehr071/basalam-mcp",
+    "registry_name": "io.github.sepehr071/basalam-mcp",
+    "run": "uvx basalam-mcp",
+    "read_only": true,
+    "env": [
+      {
+        "name": "BASALAM_MCP_PROXY",
+        "isRequired": false,
+        "isSecret": false,
+        "description": "Optional HTTP proxy URL; system proxy settings are ignored. Also accepts a comma-separated list: one is used until it gets blocked or fails to connect, then the next."
+      }
+    ],
+    "tool_count": 7,
+    "tools": [
+      {
+        "name": "bs_search",
+        "title": "Search products",
+        "summary": "Search Basalam products and return a page of cards with prices in Toman."
+      },
+      {
+        "name": "bs_find_cheapest",
+        "title": "Find cheapest products",
+        "summary": "List the cheapest in-stock offers for a query, cheapest first, prices in Toman."
+      },
+      {
+        "name": "bs_categories",
+        "title": "List categories",
+        "summary": "Browse Basalam's category tree and return ids for the category_id filter of bs_search."
+      },
+      {
+        "name": "bs_product",
+        "title": "Product details",
+        "summary": "Get one product: price in Toman, discount, stock, options (colors, sizes), attributes, rating and its shop."
+      },
+      {
+        "name": "bs_vendor",
+        "title": "Shop info",
+        "summary": "Get a Basalam shop's profile: city, product count, shipping methods, activity and notice."
+      },
+      {
+        "name": "bs_vendor_products",
+        "title": "Shop products",
+        "summary": "List one shop's products with prices in Toman, searchable and sortable."
+      },
+      {
+        "name": "bs_reviews",
+        "title": "Product reviews",
+        "summary": "Read customer reviews of a product with the star histogram, newest first."
       }
     ]
   },
@@ -2158,6 +2296,271 @@
         "name": "sb_collections",
         "title": "Genres, nations, awards and tags",
         "summary": "Home-page genres, nations, award lists and tags; ids go to sb_browse(kind=...)."
+      }
+    ]
+  },
+  {
+    "name": "tgju-mcp",
+    "title": "TGJU Prices",
+    "category": "prices",
+    "site": "https://www.tgju.org",
+    "description": "Unofficial read-only TGJU: live Iranian gold, coin, currency and crypto prices with daily history.",
+    "version": "0.1.0",
+    "pypi": "tgju-mcp",
+    "repository": "https://github.com/sepehr071/tgju-mcp",
+    "registry_name": "io.github.sepehr071/tgju-mcp",
+    "run": "uvx tgju-mcp",
+    "read_only": true,
+    "env": [
+      {
+        "name": "TGJU_MCP_PROXY",
+        "isRequired": false,
+        "isSecret": false,
+        "description": "Optional HTTP proxy URL for tgju.org requests; system proxy settings are ignored. Also accepts a comma-separated list: one is used until it gets blocked or fails to connect, then the next."
+      }
+    ],
+    "tool_count": 6,
+    "tools": [
+      {
+        "name": "tj_search_symbols",
+        "title": "Search symbols",
+        "summary": "Find TGJU symbols by name."
+      },
+      {
+        "name": "tj_list_categories",
+        "title": "Browse categories",
+        "summary": "Browse TGJU's market tree: folders (with ids) and symbols."
+      },
+      {
+        "name": "tj_category_table",
+        "title": "Category price table",
+        "summary": "Live price table of one TGJU group: price, change, day high/low/open per symbol."
+      },
+      {
+        "name": "tj_get_prices",
+        "title": "Live prices",
+        "summary": "Live price, day change, high and low for one or more TGJU symbols."
+      },
+      {
+        "name": "tj_market_summary",
+        "title": "Key rates summary",
+        "summary": "Key Iranian market rates in one call: dollar, euro, dirham, pound, lira, gold gram and ounce, coins, silver, Brent, Bitcoin, Ethereum, Tether."
+      },
+      {
+        "name": "tj_price_history",
+        "title": "Price history",
+        "summary": "Daily history (open, low, high, close, change) of a TGJU symbol, for charts and trend questions."
+      }
+    ]
+  },
+  {
+    "name": "iran-news-mcp",
+    "title": "Iran News RSS",
+    "category": "news",
+    "site": "https://www.mehrnews.com",
+    "description": "Unofficial read-only Iranian news: Mehr, Khabaronline, Hamshahri, Tabnak, Zoomit, Digiato RSS.",
+    "version": "0.1.0",
+    "pypi": "iran-news-mcp",
+    "repository": "https://github.com/sepehr071/iran-news-mcp",
+    "registry_name": "io.github.sepehr071/iran-news-mcp",
+    "run": "uvx iran-news-mcp",
+    "read_only": true,
+    "env": [
+      {
+        "name": "IRAN_NEWS_MCP_PROXY",
+        "isRequired": false,
+        "isSecret": false,
+        "description": "Optional HTTP proxy URL. System proxy settings are ignored. Also accepts a comma-separated list: one is used until it gets blocked or fails to connect, then the next."
+      }
+    ],
+    "tool_count": 5,
+    "tools": [
+      {
+        "name": "nw_article",
+        "title": "Read a news article",
+        "summary": "Fetch one article page and return its full body text, split into parts for long stories."
+      },
+      {
+        "name": "nw_list_sources",
+        "title": "List news sources",
+        "summary": "List the six news sources and their category slugs; call this first to know valid `source` and `category` values."
+      },
+      {
+        "name": "nw_latest",
+        "title": "Latest news from a source",
+        "summary": "Return the newest headlines of one news source, optionally of one category."
+      },
+      {
+        "name": "nw_search",
+        "title": "Search news across sources",
+        "summary": "Search recent headlines of several sources for a keyword (client-side over their current feeds, newest first)."
+      },
+      {
+        "name": "nw_latest_all",
+        "title": "Latest news across sources",
+        "summary": "Return the newest headlines from every source (or the chosen ones), merged and sorted by time."
+      }
+    ]
+  },
+  {
+    "name": "iran-quake-mcp",
+    "title": "Iran Earthquakes",
+    "category": "quakes",
+    "site": "https://irsc.ut.ac.ir",
+    "description": "Unofficial read-only Iran earthquakes: latest, search, strongest, detail, stats (USGS, EMSC, IRSC).",
+    "version": "0.1.0",
+    "pypi": "iran-quake-mcp",
+    "repository": "https://github.com/sepehr071/iran-quake-mcp",
+    "registry_name": "io.github.sepehr071/iran-quake-mcp",
+    "run": "uvx iran-quake-mcp",
+    "read_only": true,
+    "env": [
+      {
+        "name": "IRAN_QUAKE_MCP_PROXY",
+        "isRequired": false,
+        "isSecret": false,
+        "description": "Optional HTTP proxy URL for reaching USGS/EMSC; system proxy settings are ignored. Also accepts a comma-separated list: one is used until it gets blocked or fails to connect, then the next."
+      }
+    ],
+    "tool_count": 5,
+    "tools": [
+      {
+        "name": "eq_latest",
+        "title": "Latest earthquakes",
+        "summary": "List the most recent earthquakes in Iran, newest first."
+      },
+      {
+        "name": "eq_search",
+        "title": "Search earthquakes",
+        "summary": "Search earthquakes in Iran by date range, magnitude, bounding box and place text."
+      },
+      {
+        "name": "eq_significant",
+        "title": "Significant earthquakes",
+        "summary": "List the strongest recent earthquakes in Iran, largest magnitude first."
+      },
+      {
+        "name": "eq_detail",
+        "title": "Earthquake detail",
+        "summary": "Get one earthquake in full: location, depth_km, magnitude type and source quality fields."
+      },
+      {
+        "name": "eq_stats",
+        "title": "Earthquake statistics",
+        "summary": "Count earthquakes in Iran over a window: by magnitude band, by place, plus the strongest event."
+      }
+    ]
+  },
+  {
+    "name": "qavanin-mcp",
+    "title": "Qavanin",
+    "category": "law",
+    "site": "https://qavanin.ir",
+    "description": "Unofficial read-only qavanin.ir: search Iranian laws and regulations, read full text and status.",
+    "version": "0.1.0",
+    "pypi": "qavanin-mcp",
+    "repository": "https://github.com/sepehr071/qavanin-mcp",
+    "registry_name": "io.github.sepehr071/qavanin-mcp",
+    "run": "uvx qavanin-mcp",
+    "read_only": true,
+    "env": [
+      {
+        "name": "QAVANIN_MCP_PROXY",
+        "isRequired": false,
+        "isSecret": false,
+        "description": "Optional HTTP proxy URL, or a comma-separated list tried in turn, for qavanin.ir; system proxies are ignored."
+      }
+    ],
+    "tool_count": 7,
+    "tools": [
+      {
+        "name": "qv_law",
+        "title": "Read a law's text",
+        "summary": "Read the full text of a law, regulation, court vote or opinion as sections (articles, notes, headings)."
+      },
+      {
+        "name": "qv_law_info",
+        "title": "Law metadata",
+        "summary": "Metadata of a law: type, approving body, approval, notification and gazette dates and numbers, last status,"
+      },
+      {
+        "name": "qv_amendments",
+        "title": "Amendments of a law",
+        "summary": "Which laws amended this one, which this one amends, and which of its articles were amended."
+      },
+      {
+        "name": "qv_article_history",
+        "title": "History of one article",
+        "summary": "Every amendment of one article: type (اصلاحی...), date, the amending law and the replacing text."
+      },
+      {
+        "name": "qv_related",
+        "title": "Related regulations, votes and opinions",
+        "summary": "Documents related to a law: other laws, and regulations, court votes and legal opinions that cite or"
+      },
+      {
+        "name": "qv_search",
+        "title": "Search laws and regulations",
+        "summary": "Search the Iranian law and regulation database (qavanin.ir, 168,000 documents) and list matching titles."
+      },
+      {
+        "name": "qv_lookup",
+        "title": "Look up filter ids",
+        "summary": "Find the ids that qv_search filters take: approving bodies, executing bodies, subjects, types, statuses, lists."
+      }
+    ]
+  },
+  {
+    "name": "iran-tax-mcp",
+    "title": "Iran Tax",
+    "category": "tax",
+    "site": "https://tax.gov.ir",
+    "description": "Unofficial read-only Iranian tax: goods IDs and VAT, activity codes, property values, tax laws.",
+    "version": "0.1.0",
+    "pypi": "iran-tax-mcp",
+    "repository": "https://github.com/sepehr071/iran-tax-mcp",
+    "registry_name": "io.github.sepehr071/iran-tax-mcp",
+    "run": "uvx iran-tax-mcp",
+    "read_only": true,
+    "env": [
+      {
+        "name": "IRAN_TAX_MCP_PROXY",
+        "isRequired": false,
+        "isSecret": false,
+        "description": "Optional HTTP proxy URL. System proxy settings are ignored. Also accepts a comma-separated list: one is used until it gets blocked or fails to connect, then the next."
+      }
+    ],
+    "tool_count": 6,
+    "tools": [
+      {
+        "name": "tx_goods_search",
+        "title": "Search goods and service IDs",
+        "summary": "Find e-invoice goods/service IDs (شناسه کالا و خدمات) and their VAT rate by description or ID."
+      },
+      {
+        "name": "tx_regulations_search",
+        "title": "Search tax regulations",
+        "summary": "Search the official tax regulation database (laws, circulars, rulings, opinions), newest first."
+      },
+      {
+        "name": "tx_regulation_text",
+        "title": "Read a tax regulation",
+        "summary": "Return the full text of one tax law, circular, ruling or opinion, or just one article of it."
+      },
+      {
+        "name": "tx_activity_codes",
+        "title": "Search tax activity codes",
+        "summary": "Find tax activity codes (کد فعالیت / اینتاکد) with their VAT status and official profit ratios."
+      },
+      {
+        "name": "tx_property_value",
+        "title": "Property transaction value",
+        "summary": "Return the official property transaction value (ارزش معاملاتی املاک) per square metre at a map point."
+      },
+      {
+        "name": "tx_faq_search",
+        "title": "Search the tax FAQ",
+        "summary": "Search the tax administration's official FAQ (پرسش های متداول) and return matching questions with links."
       }
     ]
   },

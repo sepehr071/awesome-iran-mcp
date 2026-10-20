@@ -30,6 +30,11 @@ USE = {
     "travel": "flights, trains, buses, hotels, villas or tours",
     "health": "doctors, clinics, labs or appointments",
     "books": "ebooks, audiobooks or printed books",
+    "prices": "live gold, coin, currency or crypto prices",
+    "news": "news headlines or full news articles",
+    "quakes": "recent or past earthquake data",
+    "law": "laws, regulations, court votes or legal opinions",
+    "tax": "e-invoice goods IDs, VAT rates, activity codes, property values or tax laws and circulars",
     "business": "to manage their own PayPing merchant account",
     "messaging": "to run their own Bale messenger bot",
     "crypto": "to check or use their own SwapWallet crypto wallet",
@@ -43,16 +48,21 @@ NOTES = {
     "30book-mcp": "Lists are slow (2 to 5 s each). Prefer one good query over many.",
     "torob-mcp": "Torob blocks bursts of calls from one IP (HTTP 490), so calls are spaced 2 s apart. Ask for a few "
     "products at a time and do not repeat a search the user did not ask for.",
+    "qavanin-mcp": "qavanin.ir is slow (1 to 15 s per call; a whole law can take 15 s). Prefer one good query over many.",
+    "iran-tax-mcp": "The first goods-ID search for a phrase takes 15 to 30 s; repeats are cached. The tax sites often "
+    "refuse foreign connections; outside Iran the user needs IRAN_TAX_MCP_PROXY.",
 }
 
 # name -> (category, site url); order here is the order everywhere else
 SERVERS = {
     "snapp-mcp": ("food", "https://snappfood.ir"),
     "okala-mcp": ("food", "https://okala.com"),
+    "tapsifood-mcp": ("food", "https://tapsi.food"),
     "digikala-mcp": ("shopping", "https://www.digikala.com"),
     "technolife-mcp": ("shopping", "https://www.technolife.com"),
     "masterkala-mcp": ("shopping", "https://masterkala.com"),
     "torob-mcp": ("shopping", "https://torob.com"),
+    "basalam-mcp": ("shopping", "https://basalam.com"),
     "khanoumi-mcp": ("beauty", "https://www.khanoumi.com"),
     "asalbanoo-mcp": ("beauty", "https://asalbanooshop.com"),
     "shopino-mcp": ("fashion", "https://shopino.app"),
@@ -67,6 +77,11 @@ SERVERS = {
     "taaghche-mcp": ("books", "https://taaghche.com"),
     "fidibo-mcp": ("books", "https://fidibo.com"),
     "30book-mcp": ("books", "https://www.30book.com"),
+    "tgju-mcp": ("prices", "https://www.tgju.org"),
+    "iran-news-mcp": ("news", "https://www.mehrnews.com"),
+    "iran-quake-mcp": ("quakes", "https://irsc.ut.ac.ir"),
+    "qavanin-mcp": ("law", "https://qavanin.ir"),
+    "iran-tax-mcp": ("tax", "https://tax.gov.ir"),
     "payping-mcp": ("business", "https://www.payping.ir"),
     "bale-mcp": ("messaging", "https://bale.ai"),
 }

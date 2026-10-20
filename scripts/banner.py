@@ -29,7 +29,8 @@ GROUPS = [
     ("Food &amp; groceries", "غذا و سوپرمارکت", {"food"}, "#ff5c8f"),
     ("Travel &amp; stays", "سفر و اقامت", {"travel"}, "#6aa0ff"),
     ("Doctors &amp; clinics", "پزشک و درمان", {"health"}, "#7ee08a"),
-    ("Books", "کتاب", {"books"}, "#ffc23d"),
+    # the banner fits 3 rows of 2 tiles, so public-data categories share the books tile
+    ("Books, news &amp; data", "کتاب، خبر و داده", {"books", "prices", "news", "quakes", "law", "tax"}, "#ffc23d"),
     ("Your own accounts", f"حساب{ZWNJ}های شخصی", {"business", "messaging", "crypto"}, "#b88cff"),
 ]
 

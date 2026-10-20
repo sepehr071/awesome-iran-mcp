@@ -1,0 +1,27 @@
+{
+  "name": "iran-tax",
+  "displayName": "Iran Tax",
+  "version": "0.1.0",
+  "description": "Unofficial read-only Iranian tax: goods IDs and VAT, activity codes, property values, tax laws.",
+  "author": {
+    "name": "Sepehr Radmard",
+    "email": "sepehrr80@gmail.com",
+    "url": "https://github.com/sepehr071"
+  },
+  "homepage": "https://github.com/sepehr071/awesome-iran-mcp",
+  "repository": "https://github.com/sepehr071/iran-tax-mcp",
+  "license": "MIT",
+  "keywords": [
+    "iran",
+    "tax",
+    "tax.gov.ir"
+  ],
+  "mcpServers": {
+    "iran-tax": {
+      "command": "uvx",
+      "args": [
+        "iran-tax-mcp@0.1.0"
+      ]
+    }
+  }
+}

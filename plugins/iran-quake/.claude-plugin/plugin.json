@@ -1,0 +1,27 @@
+{
+  "name": "iran-quake",
+  "displayName": "Iran Earthquakes",
+  "version": "0.1.0",
+  "description": "Unofficial read-only Iran earthquakes: latest, search, strongest, detail, stats (USGS, EMSC, IRSC).",
+  "author": {
+    "name": "Sepehr Radmard",
+    "email": "sepehrr80@gmail.com",
+    "url": "https://github.com/sepehr071"
+  },
+  "homepage": "https://github.com/sepehr071/awesome-iran-mcp",
+  "repository": "https://github.com/sepehr071/iran-quake-mcp",
+  "license": "MIT",
+  "keywords": [
+    "iran",
+    "quakes",
+    "irsc.ut.ac.ir"
+  ],
+  "mcpServers": {
+    "iran-quake": {
+      "command": "uvx",
+      "args": [
+        "iran-quake-mcp@0.1.0"
+      ]
+    }
+  }
+}

@@ -1,5 +1,26 @@
 # Changelog
 
+## Unreleased (v2.0)
+
+### Added
+
+- **[basalam-mcp](https://github.com/sepehr071/basalam-mcp)**, 7 tools: products from Basalam's small shops with price,
+  shipping and discount filters, the cheapest offers, shops and reviews.
+- **[tapsifood-mcp](https://github.com/sepehr071/tapsifood-mcp)**, 11 tools: Tapsi Food dishes and restaurants near an
+  address, menus, flash deals and reviews.
+- **[tgju-mcp](https://github.com/sepehr071/tgju-mcp)**, 6 tools: live gold, coin, currency and crypto prices from TGJU,
+  market tables and daily history.
+- **[iran-news-mcp](https://github.com/sepehr071/iran-news-mcp)**, 5 tools: headlines from Mehr, Khabaronline,
+  Hamshahri, Tabnak, Zoomit and Digiato, keyword search and full article text.
+- **[iran-quake-mcp](https://github.com/sepehr071/iran-quake-mcp)**, 5 tools: earthquakes in Iran from USGS, EMSC and
+  IRSC: latest, strongest, history, event detail and statistics.
+- **[qavanin-mcp](https://github.com/sepehr071/qavanin-mcp)**, 7 tools: the qavanin.ir national laws database (about
+  168,000 documents): search, full text, single articles, amendments and related documents.
+- **[iran-tax-mcp](https://github.com/sepehr071/iran-tax-mcp)**, 6 tools: the tax administration's public services:
+  e-invoice goods/service IDs with VAT rates, activity codes, property transaction values, tax laws, circulars and
+  rulings, and the official FAQ.
+- New skill categories `prices`, `news`, `quakes`, `law` and `tax`; the banner's books tile now also counts them.
+
 ## v1.7
 
 ### Added

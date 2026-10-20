@@ -1,0 +1,27 @@
+{
+  "name": "tgju",
+  "displayName": "TGJU Prices",
+  "version": "0.1.0",
+  "description": "Unofficial read-only TGJU: live Iranian gold, coin, currency and crypto prices with daily history.",
+  "author": {
+    "name": "Sepehr Radmard",
+    "email": "sepehrr80@gmail.com",
+    "url": "https://github.com/sepehr071"
+  },
+  "homepage": "https://github.com/sepehr071/awesome-iran-mcp",
+  "repository": "https://github.com/sepehr071/tgju-mcp",
+  "license": "MIT",
+  "keywords": [
+    "iran",
+    "prices",
+    "tgju.org"
+  ],
+  "mcpServers": {
+    "tgju": {
+      "command": "uvx",
+      "args": [
+        "tgju-mcp@0.1.0"
+      ]
+    }
+  }
+}

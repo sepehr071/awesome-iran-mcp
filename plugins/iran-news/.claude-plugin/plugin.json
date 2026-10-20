@@ -1,0 +1,27 @@
+{
+  "name": "iran-news",
+  "displayName": "Iran News RSS",
+  "version": "0.1.0",
+  "description": "Unofficial read-only Iranian news: Mehr, Khabaronline, Hamshahri, Tabnak, Zoomit, Digiato RSS.",
+  "author": {
+    "name": "Sepehr Radmard",
+    "email": "sepehrr80@gmail.com",
+    "url": "https://github.com/sepehr071"
+  },
+  "homepage": "https://github.com/sepehr071/awesome-iran-mcp",
+  "repository": "https://github.com/sepehr071/iran-news-mcp",
+  "license": "MIT",
+  "keywords": [
+    "iran",
+    "news",
+    "mehrnews.com"
+  ],
+  "mcpServers": {
+    "iran-news": {
+      "command": "uvx",
+      "args": [
+        "iran-news-mcp@0.1.0"
+      ]
+    }
+  }
+}

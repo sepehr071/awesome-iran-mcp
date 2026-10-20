@@ -1,7 +1,7 @@
 # AGENTS.md
 
-Guide for AI agents using or working on **awesome-iran-mcp**: 24 MCP servers for Iranian websites, 385 tools in
-total. 22 are Python packages on PyPI, run as stdio servers with `uvx <package>`; all of them are unofficial except
+Guide for AI agents using or working on **awesome-iran-mcp**: 31 MCP servers for Iranian websites, 432 tools in
+total. 29 are Python packages on PyPI, run as stdio servers with `uvx <package>`; all of them are unofficial except
 `exiryab-mcp`, ExirYab's own server on its public API. Two are hosted by their sites:
 `pasavard-mcp` (`https://pasavard.ir/api/mcp`, no sign-in) and `swapwallet-mcp` (`https://swapwallet.app/mcp`, OAuth
 sign-in).
@@ -30,6 +30,13 @@ sign-in).
 | Clinics, labs, medical offers | `doctoreto-mcp` | `dt_search_centers`, `dt_search_offers` |
 | Ebooks and audiobooks | `taaghche-mcp`, `fidibo-mcp` | `tg_search`, `tg_free_books`; `fd_search`, `fd_free` |
 | Printed books | `30book-mcp` | `sb_search`, `sb_book`, `sb_deals` |
+| Goods from thousands of small Iranian shops (handmade, local products) | `basalam-mcp` | `bs_find_cheapest`, `bs_search`, then `bs_product` |
+| Food near an address on Tapsi Food, flash deals | `tapsifood-mcp` | `tf_find_location`, then `tf_search_dishes`, `tf_deals` |
+| Live gold, coin, dollar or crypto prices, price history | `tgju-mcp` | `tj_get_prices`, `tj_market_summary`, `tj_price_history` |
+| Latest Iranian news, a topic in the news, a full article | `iran-news-mcp` | `nw_latest_all`, `nw_search`, then `nw_article` |
+| Recent or strong earthquakes in Iran | `iran-quake-mcp` | `eq_latest`, `eq_significant`, `eq_detail` |
+| An Iranian law, regulation or court vote, one article, its amendments | `qavanin-mcp` | `qv_search`, then `qv_law`, `qv_amendments` |
+| E-invoice goods ID and VAT rate, activity code, property value, a tax law or circular | `iran-tax-mcp` | `tx_goods_search`, `tx_activity_codes`, `tx_regulations_search` |
 | Merchant payments (user's own PayPing account) | `payping-mcp` | `payping_get_balance`, `payping_get_sales_summary` |
 | User's own Bale bot | `bale-mcp` | `bot_get_new_messages`, `bot_send_message` |
 | User's own crypto wallet: balances, history, swaps, withdrawals | `swapwallet-mcp` | `get_total_balance`, `get_transactions`; `request_swap`, then `get_action_request` |
@@ -64,7 +71,7 @@ claude plugin install iran-all --marketplace sepehr071/awesome-iran-mcp     # al
 Bundles: `iran-all`, `iran-food`, `iran-shopping`, `iran-beauty`, `iran-travel`, `iran-health`, `iran-books`.
 Skills only, for any agent: `npx skills add sepehr071/awesome-iran-mcp`.
 
-The server key in config is the package name without `-mcp`. [`.mcp.json`](.mcp.json) holds all 23.
+The server key in config is the package name without `-mcp`. [`.mcp.json`](.mcp.json) holds all 31.
 Requires [uv](https://docs.astral.sh/uv/) (`pasavard-mcp` and `swapwallet-mcp` don't). Add only the servers the task needs: each one adds 3 to 31 tools.
 
 ## Rules every server follows
@@ -96,7 +103,7 @@ scripts/catalog.py    rebuilds servers.json, TOOLS.md, .mcp.json, plugins/ and .
 plugins/              one Claude Code plugin per server (MCP server + skill) and bundle plugins (generated)
 .claude-plugin/       marketplace.json for the `iran-mcp` plugin marketplace (generated)
 PLUGINS.md            plugin layout, agent compatibility, and how a server release reaches users
-scripts/banner.py     redraws assets/banner.svg and assets/banner.fa.svg from servers.json
+scripts/banner.py     redraws the banners, social.svg and the release-<version> banners from servers.json
 assets/               banners (generated)
 README.md / README.fa.md   English (default) and Persian docs; keep both in sync
 ```
@@ -108,7 +115,7 @@ README.md / README.fa.md   English (default) and Persian docs; keep both in sync
   ships its own `skills/<key>/SKILL.md`, which come from that file. Check with `claude plugin validate .`.
 - Add a server: `git submodule add https://github.com/sepehr071/<name>-mcp servers/<name>-mcp`, add it to
   `SERVERS` in `scripts/catalog.py` (and to `GROUPS` in `scripts/banner.py` if its category is new), run both scripts, add a row to both
-  READMEs and the table above. Update the 24 / 385 counts written in both READMEs.
+  READMEs and the table above. Update the 31 / 432 counts written in both READMEs.
 - Add a hosted server: `git submodule add <its repo> servers/<name>-mcp` and an entry in `REMOTE` in
   `scripts/catalog.py`, then the same `GROUPS`, README, table and count steps. Its repo needs an MCP Registry
   `server.json` with `remotes` (name, version, description, repository), and the server must publish a server card
