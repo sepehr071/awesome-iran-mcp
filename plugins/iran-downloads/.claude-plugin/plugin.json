@@ -1,0 +1,27 @@
+{
+  "name": "iran-downloads",
+  "displayName": "Iran Software Downloads",
+  "version": "0.1.0",
+  "description": "Unofficial read-only metadata search of Soft98, P30Download, Downloadly and VGDL. Links only.",
+  "author": {
+    "name": "Sepehr Radmard",
+    "email": "sepehrr80@gmail.com",
+    "url": "https://github.com/sepehr071"
+  },
+  "homepage": "https://github.com/sepehr071/awesome-iran-mcp",
+  "repository": "https://github.com/sepehr071/iran-downloads-mcp",
+  "license": "MIT",
+  "keywords": [
+    "iran",
+    "software",
+    "soft98.ir"
+  ],
+  "mcpServers": {
+    "iran-downloads": {
+      "command": "uvx",
+      "args": [
+        "iran-downloads-mcp@0.1.0"
+      ]
+    }
+  }
+}

@@ -91,3 +91,18 @@
 [submodule "servers/iran-tax-mcp"]
 	path = servers/iran-tax-mcp
 	url = https://github.com/sepehr071/iran-tax-mcp
+[submodule "servers/maktabkhooneh-mcp"]
+	path = servers/maktabkhooneh-mcp
+	url = https://github.com/sepehr071/maktabkhooneh-mcp
+[submodule "servers/banimode-mcp"]
+	path = servers/banimode-mcp
+	url = https://github.com/sepehr071/banimode-mcp
+[submodule "servers/baneh-mcp"]
+	path = servers/baneh-mcp
+	url = https://github.com/sepehr071/baneh-mcp
+[submodule "servers/iran-apps-mcp"]
+	path = servers/iran-apps-mcp
+	url = https://github.com/sepehr071/iran-apps-mcp
+[submodule "servers/iran-downloads-mcp"]
+	path = servers/iran-downloads-mcp
+	url = https://github.com/sepehr071/iran-downloads-mcp

@@ -136,6 +136,18 @@ Unofficial read-only MasterKala: search gadgets, compare prices and specs, stock
 - `mk_shipping`: Get the nearest delivery slot and shipping fee for one product: Tehran courier and post to other cities.
 - `mk_branches`: List MasterKala's physical shops in Tehran with address, phone and map location.
 
+## Baneh (`baneh-mcp`, 7 tools)
+
+Unofficial read-only Baneh: search appliances, TVs, electronics, find the cheapest in-stock price.
+
+- `bn_search`: Search Baneh products by name in Persian or English, with price (Toman), stock and rating.
+- `bn_find_cheapest`: Find the cheapest products whose title contains every word of the query, one list sorted by price (Toman).
+- `bn_browse`: List products of a category and/or brand, optionally in a price range, sorted by price or rating.
+- `bn_categories`: List shop categories with slug and product count, biggest first.
+- `bn_brands`: List brands (about 150, e.g. LG, Samsung, Bosch, Xiaomi) with slug and product count, biggest first.
+- `bn_product`: Get one product: price (Toman), stock, rating, brand, categories, spec attributes, highlights, description, images.
+- `bn_reviews`: Get buyer reviews of one product, newest first: rating 1-5, author, date, text.
+
 ## Torob (`torob-mcp`, 26 tools)
 
 Unofficial read-only Torob: compare Iranian shop prices, price history, deal checks and baskets.
@@ -231,6 +243,18 @@ Unofficial read-only Shopino: search fashion across Iranian shops, compare price
 - `sh_similar`: Find products like this one at other shops (itself left out).
 - `sh_shops`: Find shops by name, category group, gender or courier city, with rating, surveys, followers and product count.
 - `sh_shop`: Get a shop's profile: ratings, buyer survey %, followers, product count, main categories, courier city,
+
+## Banimode (`banimode-mcp`, 7 tools)
+
+Unofficial read-only Banimode: search fashion, compare prices, sizes, stock and flash deals.
+
+- `bm_search`: Search Banimode fashion products by keyword and return priced cards with discount, color and sizes in stock.
+- `bm_browse`: List the products of a category and/or brand, with the same filters and cards as bm_search.
+- `bm_categories`: Find category ids by name, or walk the tree: no arguments lists the top sections, parent_id lists children.
+- `bm_brands`: Find brand ids by name (Persian or Latin), or list the first brands when no name is given.
+- `bm_deals`: List today's flash-sale products (deep time-limited discounts) with the time left.
+- `bm_product`: Get one product: every color with its price, discount, stock per size, features and short description.
+- `bm_reviews`: Read customer reviews of a product: stars (1-5, null if only text), text, date and the shop's answer.
 
 ## Divar (`divar-mcp`, 31 tools)
 
@@ -463,6 +487,43 @@ Unofficial read-only 30book: search Iranian printed books, compare editions and 
 - `sb_reviews`: Reader comments (author, date, stars, text cut to 400 chars unless full_text, likes) and the rating summary;
 - `sb_categories`: Category sections (کتاب عمومی, ...) or, for one section, its subjects (تاریخ, ...). Codes go to
 - `sb_collections`: Home-page genres, nations, award lists and tags; ids go to sb_browse(kind=...).
+
+## Maktabkhooneh (`maktabkhooneh-mcp`, 12 tools)
+
+Unofficial read-only Maktabkhooneh: search Persian online courses, compare prices, find free ones.
+
+- `mk_search`: Full-text search of courses by title/topic: price, discount, hours, rating, students, teachers.
+- `mk_browse`: List courses of a category (or all about 5700) with the site's own filters: type, level, hours, rating, publisher, feature.
+- `mk_free_courses`: List the free courses (final_price 0, about 740 of them), optionally in one category: hours, rating, students.
+- `mk_cheapest`: Cheapest paid courses for a topic or category, ascending by final_price (what the customer pays).
+- `mk_deals`: Currently discounted courses, biggest discount first (discount_pct, price before and final_price after).
+- `mk_course`: One course: prices (full vs content-only), discount end, level, hours, teachers, publisher, prerequisites, FAQ.
+- `mk_curriculum`: The chapters and lessons of a course with type (lecture, quiz, project...) and duration (mm:ss).
+- `mk_reviews`: Learner reviews of a course (stars 1-5, text, date, instructor reply) plus the star histogram.
+- `mk_categories`: Category tree (about 680 nodes in 11 top-level groups): slugs for mk_browse, mk_free_courses, mk_cheapest, mk_deals.
+- `mk_teacher`: A teacher's profile (bio, students, rating, teaching hours, links) and their courses with prices.
+- `mk_organizations`: Course publishers (universities, companies, Maktabkhooneh itself, about 180) with the id used as a filter.
+- `mk_organization`: A publisher's totals (courses, students, rating) and its most popular courses.
+
+## Iran Apps (`iran-apps-mcp`, 6 tools)
+
+Unofficial read-only Cafe Bazaar and Myket: search apps, compare versions and ratings, top lists.
+
+- `ap_search`: Search Cafe Bazaar and/or Myket for apps and games by name; returns package names, ratings and store URLs.
+- `ap_app`: Get one app's metadata from one store: version, rating and rating count, installs, size, update date, developer, price, description.
+- `ap_compare`: Compare one package across Cafe Bazaar and Myket: version, rating, rating count, installs, size, update date, price.
+- `ap_top`: List the top ('best') or newest ('new') apps or games of a store, per category or store-wide.
+- `ap_categories`: List the category slugs of a store for apps and games, to pass as ap_top category.
+- `ap_similar`: List apps the store shows as related to one app: Bazaar gives three groups (related, others also installed, similar), Myket one.
+
+## Iran Software Downloads (`iran-downloads-mcp`, 4 tools)
+
+Unofficial read-only metadata search of Soft98, P30Download, Downloadly and VGDL. Links only.
+
+- `dl_list_sources`: List the four download-site sources and their latest-listing categories; call this first for valid ids.
+- `dl_search`: Search the download sites by name and return metadata (title, item page url, category, date, short summary).
+- `dl_latest`: Return the newest uploads of the download sites (soft98 has no latest listing), merged and sorted by date.
+- `dl_item`: Return the details of one download item: name, version, size, category, date, description and system requirements.
 
 ## TGJU Prices (`tgju-mcp`, 6 tools)
 

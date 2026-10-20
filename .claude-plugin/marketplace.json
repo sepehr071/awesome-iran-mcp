@@ -44,6 +44,12 @@
       "category": "shopping"
     },
     {
+      "name": "baneh",
+      "source": "./plugins/baneh",
+      "description": "Unofficial read-only Baneh: search appliances, TVs, electronics, find the cheapest in-stock price.",
+      "category": "shopping"
+    },
+    {
       "name": "torob",
       "source": "./plugins/torob",
       "description": "Unofficial read-only Torob: compare Iranian shop prices, price history, deal checks and baskets.",
@@ -71,6 +77,12 @@
       "name": "shopino",
       "source": "./plugins/shopino",
       "description": "Unofficial read-only Shopino: search fashion across Iranian shops, compare prices, sizes, stock.",
+      "category": "fashion"
+    },
+    {
+      "name": "banimode",
+      "source": "./plugins/banimode",
+      "description": "Unofficial read-only Banimode: search fashion, compare prices, sizes, stock and flash deals.",
       "category": "fashion"
     },
     {
@@ -140,6 +152,24 @@
       "category": "books"
     },
     {
+      "name": "maktabkhooneh",
+      "source": "./plugins/maktabkhooneh",
+      "description": "Unofficial read-only Maktabkhooneh: search Persian online courses, compare prices, find free ones.",
+      "category": "learning"
+    },
+    {
+      "name": "iran-apps",
+      "source": "./plugins/iran-apps",
+      "description": "Unofficial read-only Cafe Bazaar and Myket: search apps, compare versions and ratings, top lists.",
+      "category": "software"
+    },
+    {
+      "name": "iran-downloads",
+      "source": "./plugins/iran-downloads",
+      "description": "Unofficial read-only metadata search of Soft98, P30Download, Downloadly and VGDL. Links only.",
+      "category": "software"
+    },
+    {
       "name": "tgju",
       "source": "./plugins/tgju",
       "description": "Unofficial read-only TGJU: live Iranian gold, coin, currency and crypto prices with daily history.",
@@ -196,7 +226,7 @@
     {
       "name": "iran-all",
       "source": "./plugins/iran-all",
-      "description": "All 28 read-only Iranian site servers in one install.",
+      "description": "All 33 read-only Iranian site servers in one install.",
       "category": "bundle"
     },
     {
@@ -208,13 +238,19 @@
     {
       "name": "iran-shopping",
       "source": "./plugins/iran-shopping",
-      "description": "Everything for electronics, appliances or other goods in Iran: Digikala, Technolife, MasterKala, Torob, Basalam, Pasavard.",
+      "description": "Everything for electronics, appliances or other goods in Iran: Digikala, Technolife, MasterKala, Baneh, Torob, Basalam, Pasavard.",
       "category": "bundle"
     },
     {
       "name": "iran-beauty",
       "source": "./plugins/iran-beauty",
       "description": "Everything for cosmetics, skin and hair care or perfume in Iran: Khanoumi, Asal Banoo.",
+      "category": "bundle"
+    },
+    {
+      "name": "iran-fashion",
+      "source": "./plugins/iran-fashion",
+      "description": "Everything for clothes, shoes or bags in Iran: Shopino, Banimode.",
       "category": "bundle"
     },
     {
@@ -233,6 +269,12 @@
       "name": "iran-books",
       "source": "./plugins/iran-books",
       "description": "Everything for ebooks, audiobooks or printed books in Iran: Taaghche, Fidibo, 30book.",
+      "category": "bundle"
+    },
+    {
+      "name": "iran-software",
+      "source": "./plugins/iran-software",
+      "description": "Everything for Android apps or software and game download listings in Iran: Iran Apps, Iran Software Downloads.",
       "category": "bundle"
     }
   ]

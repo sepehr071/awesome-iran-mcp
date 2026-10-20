@@ -36,6 +36,12 @@
         "masterkala-mcp@0.4.0"
       ]
     },
+    "baneh": {
+      "command": "uvx",
+      "args": [
+        "baneh-mcp@0.1.0"
+      ]
+    },
     "torob": {
       "command": "uvx",
       "args": [
@@ -64,6 +70,12 @@
       "command": "uvx",
       "args": [
         "shopino-mcp@0.4.0"
+      ]
+    },
+    "banimode": {
+      "command": "uvx",
+      "args": [
+        "banimode-mcp@0.1.0"
       ]
     },
     "divar": {
@@ -130,6 +142,24 @@
       "command": "uvx",
       "args": [
         "30book-mcp@0.3.0"
+      ]
+    },
+    "maktabkhooneh": {
+      "command": "uvx",
+      "args": [
+        "maktabkhooneh-mcp@0.1.0"
+      ]
+    },
+    "iran-apps": {
+      "command": "uvx",
+      "args": [
+        "iran-apps-mcp@0.1.0"
+      ]
+    },
+    "iran-downloads": {
+      "command": "uvx",
+      "args": [
+        "iran-downloads-mcp@0.1.0"
       ]
     },
     "tgju": {
