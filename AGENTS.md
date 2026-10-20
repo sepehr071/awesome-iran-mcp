@@ -1,6 +1,6 @@
 # AGENTS.md
 
-Guide for AI agents using or working on **awesome-iran-mcp**: 36 MCP servers for Iranian websites, 468 tools in
+Guide for AI agents using or working on **awesome-iran-mcp**: 36 MCP servers for Iranian websites, 469 tools in
 total. 34 are Python packages on PyPI, run as stdio servers with `uvx <package>`; all of them are unofficial except
 `exiryab-mcp`, ExirYab's own server on its public API. Two are hosted by their sites:
 `pasavard-mcp` (`https://pasavard.ir/api/mcp`, no sign-in) and `swapwallet-mcp` (`https://swapwallet.app/mcp`, OAuth
@@ -31,7 +31,7 @@ sign-in).
 | Clinics, labs, medical offers | `doctoreto-mcp` | `dt_search_centers`, `dt_search_offers` |
 | Ebooks and audiobooks | `taaghche-mcp`, `fidibo-mcp` | `tg_search`, `tg_free_books`; `fd_search`, `fd_free` |
 | Printed books | `30book-mcp` | `sb_search`, `sb_book`, `sb_deals` |
-| Persian online courses, free courses | `maktabkhooneh-mcp` | `mk_search`, `mk_free_courses`, `mk_cheapest`, `mk_course` |
+| Persian online courses, free courses | `maktabkhooneh-mcp` | `mkh_search`, `mkh_free_courses`, `mkh_cheapest`, `mkh_course` |
 | Android apps on Cafe Bazaar and Myket | `iran-apps-mcp` | `ap_search`, `ap_compare`, `ap_top` |
 | Find software or a game on Iranian download sites (metadata and item page only, no download links) | `iran-downloads-mcp` | `dl_search`, `dl_latest`, `dl_item` |
 | Goods from thousands of small Iranian shops (handmade, local products) | `basalam-mcp` | `bs_find_cheapest`, `bs_search`, then `bs_product` |
@@ -119,7 +119,7 @@ README.md / README.fa.md   English (default) and Persian docs; keep both in sync
   ships its own `skills/<key>/SKILL.md`, which come from that file. Check with `claude plugin validate .`.
 - Add a server: `git submodule add https://github.com/sepehr071/<name>-mcp servers/<name>-mcp`, add it to
   `SERVERS` in `scripts/catalog.py` (and to `GROUPS` in `scripts/banner.py` if its category is new), run both scripts, add a row to both
-  READMEs and the table above. Update the 36 / 468 counts written in both READMEs.
+  READMEs and the table above. Update the 36 / 469 counts written in both READMEs.
 - Add a hosted server: `git submodule add <its repo> servers/<name>-mcp` and an entry in `REMOTE` in
   `scripts/catalog.py`, then the same `GROUPS`, README, table and count steps. Its repo needs an MCP Registry
   `server.json` with `remotes` (name, version, description, repository), and the server must publish a server card

@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="assets/banner.svg" alt="awesome-iran-mcp: 36 MCP servers and 468 tools for Iranian shopping, classifieds, food, travel, health, book, course, app, price, news, law, tax and crypto sites, for Claude, Cursor and Copilot" width="100%">
+<img src="assets/banner.svg" alt="awesome-iran-mcp: 36 MCP servers and 469 tools for Iranian shopping, classifieds, food, travel, health, book, course, app, price, news, law, tax and crypto sites, for Claude, Cursor and Copilot" width="100%">
 
 **English** · [فارسی](README.fa.md)
 
@@ -12,19 +12,43 @@ Search, compare prices in Toman, find free slots and today's deals from Claude, 
 Install them as Claude Code plugins with skills, or as Agent Skills for Codex, Cursor, Antigravity and Grok Build.
 
 [![Servers](https://img.shields.io/badge/servers-36-3fd6c9)](#the-servers)
-[![Tools](https://img.shields.io/badge/tools-468-f4b54a)](TOOLS.md)
+[![Tools](https://img.shields.io/badge/tools-469-f4b54a)](TOOLS.md)
 [![Claude Code plugins](https://img.shields.io/badge/Claude_Code-plugin_marketplace-d97757)](#quick-start)
 [![MCP Registry](https://img.shields.io/badge/MCP_Registry-io.github.sepehr071-7c3aed)](https://registry.modelcontextprotocol.io/?q=sepehr071)
 [![License: MIT](https://img.shields.io/badge/license-MIT-16a34a)](LICENSE)
 [![Stars](https://img.shields.io/github/stars/sepehr071/awesome-iran-mcp?style=social)](https://github.com/sepehr071/awesome-iran-mcp)
 
-[What's new](#whats-new-in-v17) · [Quick start](#quick-start) · [The servers](#the-servers) · [For AI agents](#for-ai-agents) · [All tools](TOOLS.md) · [FAQ](#faq)
+[What's new](#whats-new-in-v20) · [Quick start](#quick-start) · [The servers](#the-servers) · [For AI agents](#for-ai-agents) · [All tools](TOOLS.md) · [FAQ](#faq)
 
 </div>
 
 ---
 
-## What's new in v1.7
+## What's new in v2.0
+
+<img src="assets/release-v2.0.svg" alt="awesome-iran-mcp v2.0: 12 new servers, 7 new categories, 10 news sources, same tools and parameters" width="100%">
+
+- **12 new servers**, all read-only and without sign-in: 36 servers and 469 tools in total.
+- **Shops and food:** [basalam-mcp](https://github.com/sepehr071/basalam-mcp) (thousands of small shops),
+  [banimode-mcp](https://github.com/sepehr071/banimode-mcp) (fashion),
+  [baneh-mcp](https://github.com/sepehr071/baneh-mcp) (appliances, TVs, tools) and
+  [tapsifood-mcp](https://github.com/sepehr071/tapsifood-mcp) (dishes and deals near an address).
+- **Prices, news and public records:** [tgju-mcp](https://github.com/sepehr071/tgju-mcp) (gold, coin, currency and
+  crypto), [iran-news-mcp](https://github.com/sepehr071/iran-news-mcp) (10 news sources, plus a tech-news tool),
+  [iran-quake-mcp](https://github.com/sepehr071/iran-quake-mcp) (earthquakes),
+  [qavanin-mcp](https://github.com/sepehr071/qavanin-mcp) (national laws) and
+  [iran-tax-mcp](https://github.com/sepehr071/iran-tax-mcp) (e-invoice IDs, VAT rates, tax rulings).
+- **Courses, apps and software:** [maktabkhooneh-mcp](https://github.com/sepehr071/maktabkhooneh-mcp) (its tools start
+  with `mkh_`), [iran-apps-mcp](https://github.com/sepehr071/iran-apps-mcp) (Cafe Bazaar and Myket) and
+  [iran-downloads-mcp](https://github.com/sepehr071/iran-downloads-mcp) (download-site search, item page only, never a
+  download link).
+- **New bundles** `iran-fashion` and `iran-software`.
+- Tool names and parameters of the existing servers are unchanged.
+
+Full list: [CHANGELOG.md](CHANGELOG.md).
+
+<details>
+<summary><b>What's new in v1.7</b></summary>
 
 <img src="assets/release-v1.7.svg" alt="awesome-iran-mcp v1.7: fewer blocks, 100 Torob calls without a block, 18 steadier shop servers, 3 new servers, same tools and parameters" width="100%">
 
@@ -40,6 +64,7 @@ Install them as Claude Code plugins with skills, or as Agent Skills for Codex, C
 - Tool names and parameters are unchanged.
 
 Full list: [CHANGELOG.md](CHANGELOG.md).
+</details>
 
 <details>
 <summary><b>What's new in v1.5</b></summary>
@@ -142,7 +167,7 @@ cd awesome-iran-mcp && claude
 ```
 
 > [!TIP]
-> 468 tools is a lot of context. Enable the servers for the task at hand rather than all of them.
+> 469 tools is a lot of context. Enable the servers for the task at hand rather than all of them.
 
 ## The servers
 
@@ -219,7 +244,7 @@ cd awesome-iran-mcp && claude
 | Server | Site | Tools | Version | Updated | What your agent can do |
 |---|---|---:|:---:|:---:|---|
 | [tgju-mcp](https://github.com/sepehr071/tgju-mcp) | [TGJU](https://www.tgju.org) | 6 | [![PyPI](https://img.shields.io/pypi/v/tgju-mcp?label=&color=2fe0cf)](https://pypi.org/project/tgju-mcp/) | [![Last commit](https://img.shields.io/github/last-commit/sepehr071/tgju-mcp?label=&color=ffc23d)](https://github.com/sepehr071/tgju-mcp/commits/main) | Live gold, coin, dollar, euro and crypto prices, market tables, daily history |
-| [iran-news-mcp](https://github.com/sepehr071/iran-news-mcp) | [Mehr](https://www.mehrnews.com) and 5 more news sites | 5 | [![PyPI](https://img.shields.io/pypi/v/iran-news-mcp?label=&color=2fe0cf)](https://pypi.org/project/iran-news-mcp/) | [![Last commit](https://img.shields.io/github/last-commit/sepehr071/iran-news-mcp?label=&color=ffc23d)](https://github.com/sepehr071/iran-news-mcp/commits/main) | Latest headlines by source and category, keyword search, full article text |
+| [iran-news-mcp](https://github.com/sepehr071/iran-news-mcp) | [Mehr](https://www.mehrnews.com) and 9 more news sites | 6 | [![PyPI](https://img.shields.io/pypi/v/iran-news-mcp?label=&color=2fe0cf)](https://pypi.org/project/iran-news-mcp/) | [![Last commit](https://img.shields.io/github/last-commit/sepehr071/iran-news-mcp?label=&color=ffc23d)](https://github.com/sepehr071/iran-news-mcp/commits/main) | Latest headlines by source and category, keyword search, full article text |
 | [iran-quake-mcp](https://github.com/sepehr071/iran-quake-mcp) | [IRSC](https://irsc.ut.ac.ir), USGS, EMSC | 5 | [![PyPI](https://img.shields.io/pypi/v/iran-quake-mcp?label=&color=2fe0cf)](https://pypi.org/project/iran-quake-mcp/) | [![Last commit](https://img.shields.io/github/last-commit/sepehr071/iran-quake-mcp?label=&color=ffc23d)](https://github.com/sepehr071/iran-quake-mcp/commits/main) | Latest and strongest earthquakes in Iran, history search, event detail, activity stats |
 | [qavanin-mcp](https://github.com/sepehr071/qavanin-mcp) | [qavanin.ir](https://qavanin.ir) | 7 | [![PyPI](https://img.shields.io/pypi/v/qavanin-mcp?label=&color=2fe0cf)](https://pypi.org/project/qavanin-mcp/) | [![Last commit](https://img.shields.io/github/last-commit/sepehr071/qavanin-mcp?label=&color=ffc23d)](https://github.com/sepehr071/qavanin-mcp/commits/main) | 168,000 laws, regulations and court votes: search, full text, one article, amendments, related documents |
 | [iran-tax-mcp](https://github.com/sepehr071/iran-tax-mcp) | [tax.gov.ir](https://tax.gov.ir) | 6 | [![PyPI](https://img.shields.io/pypi/v/iran-tax-mcp?label=&color=2fe0cf)](https://pypi.org/project/iran-tax-mcp/) | [![Last commit](https://img.shields.io/github/last-commit/sepehr071/iran-tax-mcp?label=&color=ffc23d)](https://github.com/sepehr071/iran-tax-mcp/commits/main) | E-invoice goods/service IDs with VAT rate, activity codes, property transaction values, tax laws and circulars, official FAQ |
@@ -242,7 +267,7 @@ This repo is built to be read by agents as much as by people:
 |---|---|
 | [`AGENTS.md`](AGENTS.md) | Which server to pick for which task, conventions, safety rules, how to work in this repo |
 | [`servers.json`](servers.json) | Machine-readable catalog: package or URL, version, category, env vars and every tool of each server |
-| [`TOOLS.md`](TOOLS.md) | All 468 tools grouped by server, one line each |
+| [`TOOLS.md`](TOOLS.md) | All 469 tools grouped by server, one line each |
 | [`llms.txt`](llms.txt) | Short index for LLMs ([llmstxt.org](https://llmstxt.org)) |
 | [`.mcp.json`](.mcp.json) | Ready-to-use config for every server |
 | [`.claude-plugin/marketplace.json`](.claude-plugin/marketplace.json) | The `iran-mcp` plugin marketplace: one plugin per server plus bundles |

@@ -1,6 +1,9 @@
 # Changelog
 
-## Unreleased (v2.0)
+## v2.0 (2026-10-20)
+
+12 new servers: shops, food, prices, news, earthquakes, laws, tax, courses, apps and software downloads. Every
+existing server keeps its tool names and parameters.
 
 ### Added
 
@@ -10,8 +13,9 @@
   address, menus, flash deals and reviews.
 - **[tgju-mcp](https://github.com/sepehr071/tgju-mcp)**, 6 tools: live gold, coin, currency and crypto prices from TGJU,
   market tables and daily history.
-- **[iran-news-mcp](https://github.com/sepehr071/iran-news-mcp)**, 5 tools: headlines from Mehr, Khabaronline,
-  Hamshahri, Tabnak, Zoomit and Digiato, keyword search and full article text.
+- **[iran-news-mcp](https://github.com/sepehr071/iran-news-mcp)**, 6 tools, 10 sources: headlines from Mehr,
+  Khabaronline, Hamshahri, Tabnak, Entekhab, Asriran, Zoomit, Digiato, Varzesh3 and Khabarvarzeshi, keyword search,
+  full article text and `nw_tech_news`, the newest technology news read several Digiato pages deep.
 - **[iran-quake-mcp](https://github.com/sepehr071/iran-quake-mcp)**, 5 tools: earthquakes in Iran from USGS, EMSC and
   IRSC: latest, strongest, history, event detail and statistics.
 - **[qavanin-mcp](https://github.com/sepehr071/qavanin-mcp)**, 7 tools: the qavanin.ir national laws database (about
@@ -19,7 +23,21 @@
 - **[iran-tax-mcp](https://github.com/sepehr071/iran-tax-mcp)**, 6 tools: the tax administration's public services:
   e-invoice goods/service IDs with VAT rates, activity codes, property transaction values, tax laws, circulars and
   rulings, and the official FAQ.
-- New skill categories `prices`, `news`, `quakes`, `law` and `tax`; the banner's books tile now also counts them.
+- **[maktabkhooneh-mcp](https://github.com/sepehr071/maktabkhooneh-mcp)**, 12 tools: Maktabkhooneh's Persian online
+  courses, free courses, the cheapest courses for a topic, discounts, curricula, teachers and reviews. Its tools use the `mkh_`
+  prefix because `mk_` belongs to `masterkala-mcp`.
+- **[banimode-mcp](https://github.com/sepehr071/banimode-mcp)**, 7 tools: Banimode fashion: clothes, shoes and bags,
+  categories and brands, flash deals, and sizes in stock.
+- **[baneh-mcp](https://github.com/sepehr071/baneh-mcp)**, 7 tools: Baneh home appliances, TVs and tools: search,
+  the cheapest in-stock offers, categories, brands and product details.
+- **[iran-apps-mcp](https://github.com/sepehr071/iran-apps-mcp)**, 6 tools: Android apps on Cafe Bazaar and Myket:
+  search, compare version and rating across the
+  two stores, top and new charts, and similar apps.
+- **[iran-downloads-mcp](https://github.com/sepehr071/iran-downloads-mcp)**, 4 tools: metadata-only search of Soft98,
+  P30Download, Downloadly and VGDL. It returns the item page, never a download link.
+- New skill categories `prices`, `news`, `quakes`, `law`, `tax`, `learning` and `software`; the banner's books tile
+  now also counts them.
+- New bundles `iran-fashion` (Shopino, Banimode) and `iran-software` (Iran Apps, Iran Downloads).
 
 ## v1.7
 

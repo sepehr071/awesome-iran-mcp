@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="assets/banner.fa.svg" alt="awesome-iran-mcp: ۳۶ سرور MCP و ۴۶۸ ابزار برای فروشگاه‌ها، غذا، سفر، سلامت، کتاب، قیمت، خبر، قانون، مالیات و صرافی رمزارز ایرانی، برای Claude، Cursor و Copilot" width="100%">
+<img src="assets/banner.fa.svg" alt="awesome-iran-mcp: ۳۶ سرور MCP و ۴۶۹ ابزار برای فروشگاه‌ها، غذا، سفر، سلامت، کتاب، قیمت، خبر، قانون، مالیات و صرافی رمزارز ایرانی، برای Claude، Cursor و Copilot" width="100%">
 
 [English](README.md) · **فارسی**
 
@@ -18,12 +18,26 @@
 </p>
 
 <p align="center">
-<a href="#تازه‌های-نسخهٔ-۱۷">تازه‌ها</a> · <a href="#سرورها">سرورها</a> · <a href="#شروع-سریع">شروع سریع</a> · <a href="#برای-ایجنت‌ها">برای ایجنت‌ها</a> · <a href="TOOLS.md">همهٔ ابزارها</a> · <a href="#پرسش‌های-رایج">پرسش‌های رایج</a>
+<a href="#تازه‌های-نسخهٔ-۲۰">تازه‌ها</a> · <a href="#سرورها">سرورها</a> · <a href="#شروع-سریع">شروع سریع</a> · <a href="#برای-ایجنت‌ها">برای ایجنت‌ها</a> · <a href="TOOLS.md">همهٔ ابزارها</a> · <a href="#پرسش‌های-رایج">پرسش‌های رایج</a>
 </p>
 
 ---
 
-## تازه‌های نسخهٔ ۱٫۷
+## تازه‌های نسخهٔ ۲٫۰
+
+<img src="assets/release-v2.0.fa.svg" alt="awesome-iran-mcp نسخهٔ ۲٫۰: ۱۲ سرور تازه، ۷ دستهٔ تازه، ۱۰ منبع خبری، همان ابزارها و پارامترها" width="100%">
+
+- **۱۲ سرور تازه**، همه فقط‌خواندنی و بی‌نیاز از ورود به حساب: در مجموع ۳۶ سرور و ۴۶۹ ابزار.
+- **فروشگاه و غذا:** [basalam-mcp](https://github.com/sepehr071/basalam-mcp) (هزاران غرفه‌دار کوچک)، [banimode-mcp](https://github.com/sepehr071/banimode-mcp) (مد و پوشاک)، [baneh-mcp](https://github.com/sepehr071/baneh-mcp) (لوازم خانگی، تلویزیون و ابزار) و [tapsifood-mcp](https://github.com/sepehr071/tapsifood-mcp) (غذا و تخفیف‌های نزدیک یک آدرس).
+- **قیمت، خبر و اسناد عمومی:** [tgju-mcp](https://github.com/sepehr071/tgju-mcp) (طلا، سکه، ارز و رمزارز)، [iran-news-mcp](https://github.com/sepehr071/iran-news-mcp) (۱۰ منبع خبری و ابزار اخبار فناوری)، [iran-quake-mcp](https://github.com/sepehr071/iran-quake-mcp) (زمین‌لرزه)، [qavanin-mcp](https://github.com/sepehr071/qavanin-mcp) (قوانین کشور) و [iran-tax-mcp](https://github.com/sepehr071/iran-tax-mcp) (شناسهٔ کالا در صورتحساب الکترونیکی، نرخ مالیات بر ارزش افزوده، آرای مالیاتی).
+- **دوره، اپ و نرم‌افزار:** [maktabkhooneh-mcp](https://github.com/sepehr071/maktabkhooneh-mcp) (نام ابزارهایش با `mkh_` شروع می‌شود)، [iran-apps-mcp](https://github.com/sepehr071/iran-apps-mcp) (کافه‌بازار و مایکت) و [iran-downloads-mcp](https://github.com/sepehr071/iran-downloads-mcp) (جست‌وجو در سایت‌های دانلود، فقط نشانی صفحهٔ آیتم و هرگز لینک دانلود).
+- **بستهٔ تازه:** `iran-fashion` و `iran-software`.
+- نام ابزارها و پارامترهای سرورهای قبلی تغییری نکرده است.
+
+فهرست کامل: [CHANGELOG.md](CHANGELOG.md) (انگلیسی).
+
+<details>
+<summary><b>تازه‌های نسخهٔ ۱٫۷</b></summary>
 
 <img src="assets/release-v1.7.fa.svg" alt="awesome-iran-mcp نسخهٔ ۱٫۷: مسدودی کمتر، ۱۰۰ درخواست به ترب بی مسدودی، ۱۸ سرور فروشگاهی پایدارتر، ۳ سرور تازه، همان ابزارها و پارامترها" width="100%">
 
@@ -34,6 +48,7 @@
 - نام ابزارها و پارامترها تغییری نکرده است.
 
 فهرست کامل: [CHANGELOG.md](CHANGELOG.md) (انگلیسی).
+</details>
 
 <details>
 <summary><b>تازه‌های نسخهٔ ۱٫۵</b></summary>
@@ -136,7 +151,7 @@ cd awesome-iran-mcp && claude
 <div dir="rtl">
 
 > [!TIP]
-> ۴۶۸ ابزار کانتکست زیادی می‌گیرد. به‌جای همه، فقط سرورهای لازم برای همان کار را فعال کنید.
+> ۴۶۹ ابزار کانتکست زیادی می‌گیرد. به‌جای همه، فقط سرورهای لازم برای همان کار را فعال کنید.
 
 ## سرورها
 
@@ -213,7 +228,7 @@ cd awesome-iran-mcp && claude
 | سرور | سایت | ابزار | نسخه | آخرین تغییر | ایجنت چه می‌تواند بکند |
 |---|---|---:|:---:|:---:|---|
 | [tgju-mcp](https://github.com/sepehr071/tgju-mcp) | [تی‌جی‌یو](https://www.tgju.org) | ۶ | [![PyPI](https://img.shields.io/pypi/v/tgju-mcp?label=&color=2fe0cf)](https://pypi.org/project/tgju-mcp/) | [![Last commit](https://img.shields.io/github/last-commit/sepehr071/tgju-mcp?label=&color=ffc23d)](https://github.com/sepehr071/tgju-mcp/commits/main) | قیمت لحظه‌ای طلا، سکه، دلار، یورو و رمزارز، جدول بازارها، تاریخچهٔ روزانه |
-| [iran-news-mcp](https://github.com/sepehr071/iran-news-mcp) | [مهر](https://www.mehrnews.com) و ۵ سایت خبری دیگر | ۵ | [![PyPI](https://img.shields.io/pypi/v/iran-news-mcp?label=&color=2fe0cf)](https://pypi.org/project/iran-news-mcp/) | [![Last commit](https://img.shields.io/github/last-commit/sepehr071/iran-news-mcp?label=&color=ffc23d)](https://github.com/sepehr071/iran-news-mcp/commits/main) | تازه‌ترین خبرها بر اساس منبع و دسته، جست‌وجوی کلیدواژه، متن کامل خبر |
+| [iran-news-mcp](https://github.com/sepehr071/iran-news-mcp) | [مهر](https://www.mehrnews.com) و ۹ سایت خبری دیگر | ۶ | [![PyPI](https://img.shields.io/pypi/v/iran-news-mcp?label=&color=2fe0cf)](https://pypi.org/project/iran-news-mcp/) | [![Last commit](https://img.shields.io/github/last-commit/sepehr071/iran-news-mcp?label=&color=ffc23d)](https://github.com/sepehr071/iran-news-mcp/commits/main) | تازه‌ترین خبرها بر اساس منبع و دسته، جست‌وجوی کلیدواژه، متن کامل خبر |
 | [iran-quake-mcp](https://github.com/sepehr071/iran-quake-mcp) | [مرکز لرزه‌نگاری](https://irsc.ut.ac.ir)، USGS و EMSC | ۵ | [![PyPI](https://img.shields.io/pypi/v/iran-quake-mcp?label=&color=2fe0cf)](https://pypi.org/project/iran-quake-mcp/) | [![Last commit](https://img.shields.io/github/last-commit/sepehr071/iran-quake-mcp?label=&color=ffc23d)](https://github.com/sepehr071/iran-quake-mcp/commits/main) | تازه‌ترین و قوی‌ترین زلزله‌های ایران، جست‌وجوی سوابق، جزئیات رویداد، آمار لرزه‌خیزی |
 | [qavanin-mcp](https://github.com/sepehr071/qavanin-mcp) | [سامانهٔ قوانین](https://qavanin.ir) | ۷ | [![PyPI](https://img.shields.io/pypi/v/qavanin-mcp?label=&color=2fe0cf)](https://pypi.org/project/qavanin-mcp/) | [![Last commit](https://img.shields.io/github/last-commit/sepehr071/qavanin-mcp?label=&color=ffc23d)](https://github.com/sepehr071/qavanin-mcp/commits/main) | ۱۶۸ هزار قانون، مقرره و رأی: جست‌وجو، متن کامل، یک ماده، اصلاحات، اسناد مرتبط |
 | [iran-tax-mcp](https://github.com/sepehr071/iran-tax-mcp) | [سازمان امور مالیاتی](https://tax.gov.ir) | ۶ | [![PyPI](https://img.shields.io/pypi/v/iran-tax-mcp?label=&color=2fe0cf)](https://pypi.org/project/iran-tax-mcp/) | [![Last commit](https://img.shields.io/github/last-commit/sepehr071/iran-tax-mcp?label=&color=ffc23d)](https://github.com/sepehr071/iran-tax-mcp/commits/main) | شناسهٔ کالا و خدمت با نرخ ارزش افزوده، کد فعالیت، ارزش معاملاتی املاک، قوانین و بخشنامه‌های مالیاتی، پرسش‌های متداول |
@@ -236,7 +251,7 @@ cd awesome-iran-mcp && claude
 |---|---|
 | [`AGENTS.md`](AGENTS.md) | کدام سرور برای کدام کار، قراردادها، قوانین ایمنی، نحوهٔ کار در این مخزن |
 | [`servers.json`](servers.json) | کاتالوگ ماشین‌خوان: پکیج یا آدرس، نسخه، دسته، متغیرهای محیطی و همهٔ ابزارهای هر سرور |
-| [`TOOLS.md`](TOOLS.md) | هر ۴۶۸ ابزار به تفکیک سرور |
+| [`TOOLS.md`](TOOLS.md) | هر ۴۶۹ ابزار به تفکیک سرور |
 | [`llms.txt`](llms.txt) | فهرست کوتاه برای LLMها |
 | [`.mcp.json`](.mcp.json) | تنظیمات آماده برای همهٔ سرورها |
 | [`.claude-plugin/marketplace.json`](.claude-plugin/marketplace.json) | مارکت‌پلیس پلاگین `iran-mcp`: یک پلاگین برای هر سرور به‌اضافهٔ بسته‌ها |

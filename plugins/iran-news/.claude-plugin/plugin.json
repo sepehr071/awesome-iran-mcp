@@ -1,8 +1,8 @@
 {
   "name": "iran-news",
   "displayName": "Iran News RSS",
-  "version": "0.1.0",
-  "description": "Unofficial read-only Iranian news: Mehr, Khabaronline, Hamshahri, Tabnak, Zoomit, Digiato RSS.",
+  "version": "0.2.0",
+  "description": "Unofficial read-only Persian news RSS: Mehr, Tabnak, Entekhab, Zoomit, Varzesh3, more.",
   "author": {
     "name": "Sepehr Radmard",
     "email": "sepehrr80@gmail.com",
@@ -20,7 +20,7 @@
     "iran-news": {
       "command": "uvx",
       "args": [
-        "iran-news-mcp@0.1.0"
+        "iran-news-mcp@0.2.0"
       ]
     }
   }

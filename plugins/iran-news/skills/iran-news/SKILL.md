@@ -1,21 +1,22 @@
 ---
 name: iran-news
-description: "Unofficial read-only Iranian news: Mehr, Khabaronline, Hamshahri, Tabnak, Zoomit, Digiato RSS. Use when the user asks about Iran News RSS (mehrnews.com) or wants news headlines or full news articles in Iran."
+description: "Unofficial read-only Persian news RSS: Mehr, Tabnak, Entekhab, Zoomit, Varzesh3, more. Use when the user asks about Iran News RSS (mehrnews.com) or wants news headlines or full news articles in Iran."
 ---
 
 # Iran News RSS
 
-Unofficial read-only Iranian news: Mehr, Khabaronline, Hamshahri, Tabnak, Zoomit, Digiato RSS.
+Unofficial read-only Persian news RSS: Mehr, Tabnak, Entekhab, Zoomit, Varzesh3, more.
 
 The tools below come from the `iran-news-mcp` MCP server. If they are not available, install it with `claude mcp add iran-news -- uvx iran-news-mcp`, or add `"iran-news": {"command": "uvx", "args": ["iran-news-mcp"]}` to the client's MCP servers config. It needs [uv](https://docs.astral.sh/uv/). Restart the session after installing.
 
 ## Tools
 
 - `nw_article`: Fetch one article page and return its full body text, split into parts for long stories.
-- `nw_list_sources`: List the six news sources and their category slugs; call this first to know valid `source` and `category` values.
+- `nw_list_sources`: List the news sources with their group and category slugs; call this first to know valid `source` and `category` values.
 - `nw_latest`: Return the newest headlines of one news source, optionally of one category.
 - `nw_search`: Search recent headlines of several sources for a keyword (client-side over their current feeds, newest first).
 - `nw_latest_all`: Return the newest headlines from every source (or the chosen ones), merged and sorted by time.
+- `nw_tech_news`: Return the newest technology news (phones, laptops, AI, gadgets, apps, crypto, cars, security, games) with long summaries.
 
 ## Rules
 

@@ -536,15 +536,16 @@ Unofficial read-only TGJU: live Iranian gold, coin, currency and crypto prices w
 - `tj_market_summary`: Key Iranian market rates in one call: dollar, euro, dirham, pound, lira, gold gram and ounce, coins, silver, Brent, Bitcoin, Ethereum, Tether.
 - `tj_price_history`: Daily history (open, low, high, close, change) of a TGJU symbol, for charts and trend questions.
 
-## Iran News RSS (`iran-news-mcp`, 5 tools)
+## Iran News RSS (`iran-news-mcp`, 6 tools)
 
-Unofficial read-only Iranian news: Mehr, Khabaronline, Hamshahri, Tabnak, Zoomit, Digiato RSS.
+Unofficial read-only Persian news RSS: Mehr, Tabnak, Entekhab, Zoomit, Varzesh3, more.
 
 - `nw_article`: Fetch one article page and return its full body text, split into parts for long stories.
-- `nw_list_sources`: List the six news sources and their category slugs; call this first to know valid `source` and `category` values.
+- `nw_list_sources`: List the news sources with their group and category slugs; call this first to know valid `source` and `category` values.
 - `nw_latest`: Return the newest headlines of one news source, optionally of one category.
 - `nw_search`: Search recent headlines of several sources for a keyword (client-side over their current feeds, newest first).
 - `nw_latest_all`: Return the newest headlines from every source (or the chosen ones), merged and sorted by time.
+- `nw_tech_news`: Return the newest technology news (phones, laptops, AI, gadgets, apps, crypto, cars, security, games) with long summaries.
 
 ## Iran Earthquakes (`iran-quake-mcp`, 5 tools)
 
