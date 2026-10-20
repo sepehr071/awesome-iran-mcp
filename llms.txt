@@ -21,6 +21,8 @@
 - [technolife-mcp](https://github.com/sepehr071/technolife-mcp): Technolife electronics, cash and installment prices
 - [masterkala-mcp](https://github.com/sepehr071/masterkala-mcp): MasterKala gadgets and accessories
 - [shopino-mcp](https://github.com/sepehr071/shopino-mcp): Shopino fashion marketplace
+- [banimode-mcp](https://github.com/sepehr071/banimode-mcp): Banimode fashion: prices, sizes in stock, reviews, flash sales
+- [baneh-mcp](https://github.com/sepehr071/baneh-mcp): Baneh (baaneeh.com) in-stock home appliances, TVs and tools: cheapest price, brands, reviews
 - [divar-mcp](https://github.com/sepehr071/divar-mcp): Divar classified ads: homes, cars, phones, fair-price checks
 - [khanoumi-mcp](https://github.com/sepehr071/khanoumi-mcp): Khanoumi cosmetics and perfume
 - [asalbanoo-mcp](https://github.com/sepehr071/asalbanoo-mcp): Asal Banoo cosmetics and hair care
@@ -37,6 +39,7 @@
 - [taaghche-mcp](https://github.com/sepehr071/taaghche-mcp): Taaghche ebooks and audiobooks
 - [fidibo-mcp](https://github.com/sepehr071/fidibo-mcp): Fidibo ebooks and audiobooks
 - [30book-mcp](https://github.com/sepehr071/30book-mcp): 30book printed books
+- [maktabkhooneh-mcp](https://github.com/sepehr071/maktabkhooneh-mcp): Maktabkhooneh Persian online courses: search, free and cheapest courses, deals, curricula, reviews (tools `mkh_*`)
 - [iran-apps-mcp](https://github.com/sepehr071/iran-apps-mcp): Android apps on Cafe Bazaar and Myket: search, compare across both stores, top lists
 - [iran-downloads-mcp](https://github.com/sepehr071/iran-downloads-mcp): metadata-only search of Soft98, P30Download, Downloadly and VGDL (item page links, never download links)
 - [tgju-mcp](https://github.com/sepehr071/tgju-mcp): TGJU live gold, coin, currency and crypto prices with daily history
