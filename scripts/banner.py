@@ -152,11 +152,11 @@ def banner(fa: bool, catalog: list, h: int = H) -> str:
 
 # Release banner: version and the changelog's headline numbers, updated by hand each release.
 # (figure, Persian figure, English line, Persian line, colour)
-RELEASE = "v1.7"
+RELEASE = "v2.0"
 HIGHLIGHTS = [
-    ("100", "۱۰۰", "Torob calls, no block", "درخواست به ترب، بی مسدودی", "#2fe0cf"),
-    ("18", "۱۸", "shop servers steadier", "سرور فروشگاهی پایدارتر", "#ffc23d"),
-    ("+3", "+۳", "new servers", "سرور تازه", "#ff5c8f"),
+    ("+12", "+۱۲", "new servers", "سرور تازه", "#2fe0cf"),
+    ("7", "۷", "new categories", "دستهٔ تازه", "#ffc23d"),
+    ("10", "۱۰", "news sources", "منبع خبری", "#ff5c8f"),
     ("Same", "همان", "tools and parameters", "ابزارها و پارامترها", "#7c3aed"),
 ]
 
@@ -166,16 +166,16 @@ def release(fa: bool, catalog: list, h: int = H) -> str:
     card_x, panel_x = (650, 40) if fa else (40, 670)
     if fa:
         anchor, tx, font = "end", card_x + 590 - 44, PERSIAN
-        title, subtitle, changes = "پایدارتر از همیشه", "و حالا با ترب", "همهٔ تغییرها: CHANGELOG.md"
+        title, subtitle, changes = "۱۲ سرور تازه", "قیمت، خبر، قانون و اپ", "همهٔ تغییرها: CHANGELOG.md"
         stats = [(f"{servers} سرور".translate(FA_DIGITS), "#2fe0cf", 140),
                  (f"{tools} ابزار".translate(FA_DIGITS), "#ffc23d", 140),
-                 (f"درخواست{ZWNJ}های آرام", "#ff5c8f", 190)]
+                 ("فقط خواندنی", "#ff5c8f", 170)]
         desc = f"awesome-iran-mcp {RELEASE}: " + "، ".join(f"{n} {fa_line}" for _, n, _, fa_line, _ in HIGHLIGHTS)
     else:
         anchor, tx, font = "start", card_x + 44, LATIN
-        title, subtitle, changes = "Fewer blocks.", "And now on Torob.", "Full changelog: CHANGELOG.md"
+        title, subtitle, changes = "12 new servers.", "Prices, news, law, apps.", "Full changelog: CHANGELOG.md"
         stats = [(f"{servers} servers", "#2fe0cf", 150), (f"{tools} tools", "#ffc23d", 140),
-                 ("Paced calls", "#ff5c8f", 150)]
+                 ("Read-only", "#ff5c8f", 150)]
         desc = f"awesome-iran-mcp {RELEASE}: " + ", ".join(f"{n} {en_line}" for n, _, en_line, _, _ in HIGHLIGHTS)
 
     out = []

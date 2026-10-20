@@ -2658,8 +2658,8 @@
     "title": "Iran News RSS",
     "category": "news",
     "site": "https://www.mehrnews.com",
-    "description": "Unofficial read-only Iranian news: Mehr, Khabaronline, Hamshahri, Tabnak, Zoomit, Digiato RSS.",
-    "version": "0.1.0",
+    "description": "Unofficial read-only Persian news RSS: Mehr, Tabnak, Entekhab, Zoomit, Varzesh3, more.",
+    "version": "0.2.0",
     "pypi": "iran-news-mcp",
     "repository": "https://github.com/sepehr071/iran-news-mcp",
     "registry_name": "io.github.sepehr071/iran-news-mcp",
@@ -2673,7 +2673,7 @@
         "description": "Optional HTTP proxy URL. System proxy settings are ignored. Also accepts a comma-separated list: one is used until it gets blocked or fails to connect, then the next."
       }
     ],
-    "tool_count": 5,
+    "tool_count": 6,
     "tools": [
       {
         "name": "nw_article",
@@ -2683,7 +2683,7 @@
       {
         "name": "nw_list_sources",
         "title": "List news sources",
-        "summary": "List the six news sources and their category slugs; call this first to know valid `source` and `category` values."
+        "summary": "List the news sources with their group and category slugs; call this first to know valid `source` and `category` values."
       },
       {
         "name": "nw_latest",
@@ -2699,6 +2699,11 @@
         "name": "nw_latest_all",
         "title": "Latest news across sources",
         "summary": "Return the newest headlines from every source (or the chosen ones), merged and sorted by time."
+      },
+      {
+        "name": "nw_tech_news",
+        "title": "Tech news (Digiato, Zoomit)",
+        "summary": "Return the newest technology news (phones, laptops, AI, gadgets, apps, crypto, cars, security, games) with long summaries."
       }
     ]
   },
