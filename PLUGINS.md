@@ -20,7 +20,7 @@ plugins/iran-<bundle>/                 bundles (9): a manifest with `dependencie
   A hosted server's plugin (`swapwallet`) points its MCP server at the URL and takes `version` from the
   `server.json` in its repo.
 - Bundles are `iran-all` (every read-only site server) plus one per category with two or more servers:
-  `iran-food`, `iran-shopping`, `iran-beauty`, `iran-travel`, `iran-health`, `iran-books`, `iran-fashion`, `iran-software`. `payping`, `bale` and
+  `iran-food`, `iran-shopping`, `iran-beauty`, `iran-travel`, `iran-health`, `iran-books`, `iran-fashion`, `iran-software`, `iran-prices`. `payping`, `bale` and
   `swapwallet` act on the user's own account, so no bundle includes them.
 - Bundles have no `version`. Claude Code then versions them by git commit, so a changed member list reaches users.
 - Skill text comes from `skill()`, `USE` and `NOTES` in `scripts/catalog.py`. Tool lists come from the server code,

@@ -1,0 +1,27 @@
+{
+  "name": "iran-crypto",
+  "displayName": "Iran Crypto Exchanges",
+  "version": "0.1.0",
+  "description": "Unofficial read-only Iranian crypto exchanges: prices in Toman, order books, trades, candles.",
+  "author": {
+    "name": "Sepehr Radmard",
+    "email": "sepehrr80@gmail.com",
+    "url": "https://github.com/sepehr071"
+  },
+  "homepage": "https://github.com/sepehr071/awesome-iran-mcp",
+  "repository": "https://github.com/sepehr071/iran-crypto-mcp",
+  "license": "MIT",
+  "keywords": [
+    "iran",
+    "prices",
+    "nobitex.ir"
+  ],
+  "mcpServers": {
+    "iran-crypto": {
+      "command": "uvx",
+      "args": [
+        "iran-crypto-mcp@0.1.0"
+      ]
+    }
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "name": "iran-prices",
+  "description": "Everything for live gold, coin, currency or crypto prices in Iran: TGJU Prices, Iran Crypto Exchanges, Milli.gold Prices.",
+  "author": {
+    "name": "Sepehr Radmard",
+    "email": "sepehrr80@gmail.com",
+    "url": "https://github.com/sepehr071"
+  },
+  "homepage": "https://github.com/sepehr071/awesome-iran-mcp",
+  "dependencies": [
+    "tgju",
+    "iran-crypto",
+    "milligold"
+  ]
+}

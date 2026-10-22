@@ -176,6 +176,24 @@
       "category": "prices"
     },
     {
+      "name": "iran-crypto",
+      "source": "./plugins/iran-crypto",
+      "description": "Unofficial read-only Iranian crypto exchanges: prices in Toman, order books, trades, candles.",
+      "category": "prices"
+    },
+    {
+      "name": "milligold",
+      "source": "./plugins/milligold",
+      "description": "Unofficial read-only Milli.gold: live 18k gold price per milligram, history and platform stats.",
+      "category": "prices"
+    },
+    {
+      "name": "tsetmc",
+      "source": "./plugins/tsetmc",
+      "description": "Unofficial read-only Tehran Stock Exchange (TSETMC): quotes, movers, order book, history, indices.",
+      "category": "stocks"
+    },
+    {
       "name": "iran-news",
       "source": "./plugins/iran-news",
       "description": "Unofficial read-only Persian news RSS: Mehr, Tabnak, Entekhab, Zoomit, Varzesh3, more.",
@@ -226,7 +244,7 @@
     {
       "name": "iran-all",
       "source": "./plugins/iran-all",
-      "description": "All 33 read-only Iranian site servers in one install.",
+      "description": "All 36 read-only Iranian site servers in one install.",
       "category": "bundle"
     },
     {
@@ -275,6 +293,12 @@
       "name": "iran-software",
       "source": "./plugins/iran-software",
       "description": "Everything for Android apps or software and game download listings in Iran: Iran Apps, Iran Software Downloads.",
+      "category": "bundle"
+    },
+    {
+      "name": "iran-prices",
+      "source": "./plugins/iran-prices",
+      "description": "Everything for live gold, coin, currency or crypto prices in Iran: TGJU Prices, Iran Crypto Exchanges, Milli.gold Prices.",
       "category": "bundle"
     }
   ]

@@ -33,6 +33,7 @@ USE = {
     "learning": "online courses, lessons or certificates",
     "software": "Android apps or software and game download listings",
     "prices": "live gold, coin, currency or crypto prices",
+    "stocks": "Tehran stock exchange quotes, indices, order books or real versus legal trading",
     "news": "news headlines or full news articles",
     "quakes": "recent or past earthquake data",
     "law": "laws, regulations, court votes or legal opinions",
@@ -61,6 +62,14 @@ NOTES = {
     "snapp-mcp": "Sites: Snappfood (food delivery), SnappMarket (groceries).",
     "jabama-mcp": "Sites: jabama.com (stays), jabama.tours (group tours), jabama.events (events and theater).",
     "iran-apps-mcp": "Sites: Cafe Bazaar, Myket.",
+    "tsetmc-mcp": "Prices here are Rial (divide by 10 for Toman), not Toman. tsetmc.com serves mostly Iranian lines: "
+    "outside Iran the user needs TSETMC_MCP_PROXY. The market trades Saturday to Wednesday mornings; after the close "
+    "the order book is empty. Sites: tsetmc.com (Tehran Stock Exchange and Iran Fara Bourse).",
+    "iran-crypto-mcp": "Public market data only: no keys, no trading. Every IRT price is already Toman and USDT markets "
+    "are USDT. Check the order book before treating a spread between exchanges as an opportunity. Sites: Nobitex, "
+    "Wallex, Bitpin, Ramzinex, Tabdeal, OMPFinex, Exir.",
+    "milligold-mcp": "Prices come as Rial per milligram, Rial per gram and Toman per gram: say which unit you quote. "
+    "This is Milli.gold's own price, not a market-wide gold quote.",
     "iran-tax-mcp": "The first goods-ID search for a phrase takes 15 to 30 s; repeats are cached. The tax sites often "
     "refuse foreign connections; outside Iran the user needs IRAN_TAX_MCP_PROXY. Sites: tax.gov.ir, "
     "stuffid.tax.gov.ir (goods IDs), regulation.tax.gov.ir (laws and circulars).",
@@ -96,6 +105,9 @@ SERVERS = {
     "iran-apps-mcp": ("software", "https://cafebazaar.ir"),
     "iran-downloads-mcp": ("software", "https://soft98.ir"),
     "tgju-mcp": ("prices", "https://www.tgju.org"),
+    "iran-crypto-mcp": ("prices", "https://nobitex.ir"),
+    "milligold-mcp": ("prices", "https://milli.gold"),
+    "tsetmc-mcp": ("stocks", "https://tsetmc.com"),
     "iran-news-mcp": ("news", "https://www.mehrnews.com"),
     "iran-quake-mcp": ("quakes", "https://irsc.ut.ac.ir"),
     "qavanin-mcp": ("law", "https://qavanin.ir"),

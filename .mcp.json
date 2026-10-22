@@ -168,6 +168,24 @@
         "tgju-mcp@0.1.0"
       ]
     },
+    "iran-crypto": {
+      "command": "uvx",
+      "args": [
+        "iran-crypto-mcp@0.1.0"
+      ]
+    },
+    "milligold": {
+      "command": "uvx",
+      "args": [
+        "milligold-mcp@0.1.0"
+      ]
+    },
+    "tsetmc": {
+      "command": "uvx",
+      "args": [
+        "tsetmc-mcp@0.1.0"
+      ]
+    },
     "iran-news": {
       "command": "uvx",
       "args": [
