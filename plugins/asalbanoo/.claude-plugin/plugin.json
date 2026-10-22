@@ -1,7 +1,7 @@
 {
   "name": "asalbanoo",
   "displayName": "Asal Banoo",
-  "version": "0.4.0",
+  "version": "0.4.1",
   "description": "Unofficial read-only Asal Banoo: search cosmetics and skin care, compare prices, sizes, deals.",
   "author": {
     "name": "Sepehr Radmard",
@@ -20,7 +20,7 @@
     "asalbanoo": {
       "command": "uvx",
       "args": [
-        "asalbanoo-mcp@0.4.0"
+        "asalbanoo-mcp@0.4.1"
       ]
     }
   }

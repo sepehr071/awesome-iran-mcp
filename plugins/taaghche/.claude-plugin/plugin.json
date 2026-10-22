@@ -1,7 +1,7 @@
 {
   "name": "taaghche",
   "displayName": "Taaghche",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "description": "Unofficial read-only Taaghche: search Persian ebooks and audiobooks, compare prices, read reviews.",
   "author": {
     "name": "Sepehr Radmard",
@@ -20,7 +20,7 @@
     "taaghche": {
       "command": "uvx",
       "args": [
-        "taaghche-mcp@0.3.0"
+        "taaghche-mcp@0.3.1"
       ]
     }
   }

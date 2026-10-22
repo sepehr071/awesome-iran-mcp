@@ -1,7 +1,7 @@
 {
   "name": "iran-news",
   "displayName": "Iran News RSS",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Unofficial read-only Persian news RSS: Mehr, Tabnak, Entekhab, Zoomit, Varzesh3, more.",
   "author": {
     "name": "Sepehr Radmard",
@@ -20,7 +20,7 @@
     "iran-news": {
       "command": "uvx",
       "args": [
-        "iran-news-mcp@0.2.0"
+        "iran-news-mcp@0.2.1"
       ]
     }
   }

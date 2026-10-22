@@ -1,7 +1,7 @@
 {
   "name": "bale",
   "displayName": "Bale Bot",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Private, local Bale bot for agents: read, search and answer messages, ask and wait, files.",
   "author": {
     "name": "Sepehr Radmard",
@@ -20,7 +20,7 @@
     "bale": {
       "command": "uvx",
       "args": [
-        "bale-mcp@0.2.0"
+        "bale-mcp@0.2.1"
       ],
       "env": {
         "BALE_BOT_TOKEN": "${BALE_BOT_TOKEN:-}"

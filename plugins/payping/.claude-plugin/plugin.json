@@ -1,7 +1,7 @@
 {
   "name": "payping",
   "displayName": "PayPing",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "PayPing merchant account for agents: balance, sales, invoices; create invoices and payment links.",
   "author": {
     "name": "Sepehr Radmard",
@@ -20,7 +20,7 @@
     "payping": {
       "command": "uvx",
       "args": [
-        "payping-mcp@0.2.0"
+        "payping-mcp@0.2.1"
       ],
       "env": {
         "PAYPING_TOKEN": "${PAYPING_TOKEN:-}"

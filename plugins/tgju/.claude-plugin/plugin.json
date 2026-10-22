@@ -1,7 +1,7 @@
 {
   "name": "tgju",
   "displayName": "TGJU Prices",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Unofficial read-only TGJU: live Iranian gold, coin, currency and crypto prices with daily history.",
   "author": {
     "name": "Sepehr Radmard",
@@ -20,7 +20,7 @@
     "tgju": {
       "command": "uvx",
       "args": [
-        "tgju-mcp@0.1.0"
+        "tgju-mcp@0.1.1"
       ]
     }
   }

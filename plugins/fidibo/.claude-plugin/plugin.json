@@ -1,7 +1,7 @@
 {
   "name": "fidibo",
   "displayName": "Fidibo",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "description": "Unofficial read-only Fidibo: search Persian ebooks and audiobooks, compare prices, free books.",
   "author": {
     "name": "Sepehr Radmard",
@@ -20,7 +20,7 @@
     "fidibo": {
       "command": "uvx",
       "args": [
-        "fidibo-mcp@0.3.0"
+        "fidibo-mcp@0.3.1"
       ]
     }
   }

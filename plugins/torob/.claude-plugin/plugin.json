@@ -1,7 +1,7 @@
 {
   "name": "torob",
   "displayName": "Torob",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Unofficial read-only Torob: compare Iranian shop prices, price history, deal checks and baskets.",
   "author": {
     "name": "Sepehr Radmard",
@@ -20,7 +20,7 @@
     "torob": {
       "command": "uvx",
       "args": [
-        "torob-mcp@0.1.1"
+        "torob-mcp@0.1.2"
       ]
     }
   }
