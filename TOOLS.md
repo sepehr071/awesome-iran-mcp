@@ -536,6 +536,40 @@ Unofficial read-only TGJU: live Iranian gold, coin, currency and crypto prices w
 - `tj_market_summary`: Key Iranian market rates in one call: dollar, euro, dirham, pound, lira, gold gram and ounce, coins, silver, Brent, Bitcoin, Ethereum, Tether.
 - `tj_price_history`: Daily history (open, low, high, close, change) of a TGJU symbol, for charts and trend questions.
 
+## Iran Crypto Exchanges (`iran-crypto-mcp`, 8 tools)
+
+Unofficial read-only Iranian crypto exchanges: prices in Toman, order books, trades, candles.
+
+- `ic_list_exchanges`: List the supported Iranian crypto exchanges, their native price unit and what each can answer.
+- `ic_list_markets`: List the coins an exchange trades against Toman (IRT) or USDT.
+- `ic_compare_price`: Compare one coin's price on every supported exchange in one call, cheapest first, with the spread.
+- `ic_get_ticker`: Get the live price, best bid and ask, 24h range, change and volume of one coin on one exchange.
+- `ic_get_orderbook`: Get the top bids and asks of one coin's order book on one exchange, with the spread.
+- `ic_recent_trades`: Get the most recent public trades of one coin on one exchange, newest first.
+- `ic_candles`: Get recent OHLC candles of one coin from Nobitex or Wallex, oldest first.
+- `ic_top_movers`: List the biggest 24h gainers or losers on one exchange, with illiquid coins filtered out.
+
+## Milli.gold Prices (`milligold-mcp`, 3 tools)
+
+Unofficial read-only Milli.gold: live 18k gold price per milligram, history and platform stats.
+
+- `mg_get_price`: Get the current Milli.gold price of 18k melted gold, in Rial per milligram and per gram.
+- `mg_price_history`: Get the Milli.gold 18k gold price series for a day, week or month, with high, low and change.
+- `mg_platform_stats`: Get Milli.gold's headline numbers: users, trades, gold traded, gold held and branches.
+
+## TSETMC Tehran Stock Exchange (`tsetmc-mcp`, 8 tools)
+
+Unofficial read-only Tehran Stock Exchange (TSETMC): quotes, movers, order book, history, indices.
+
+- `ts_search_symbols`: Find Tehran Stock Exchange instruments (shares, funds, rights, bonds) by ticker or name.
+- `ts_get_quote`: Latest price, daily range, volume and key facts of one instrument on the Tehran Stock Exchange.
+- `ts_market_movers`: Top traded instruments of a market today, ranked by gain, loss, volume, value or trade count.
+- `ts_order_book`: Best five bid and ask levels (price, volume, order count) of one instrument.
+- `ts_price_history`: Daily open, high, low, close, volume, trades and value of one instrument for its latest trading days, newest first.
+- `ts_real_legal`: Buy and sell volume, value and buyer/seller counts split by real (individual) and legal (institutional) traders per day.
+- `ts_indices`: TSE total index, market state and trading totals, plus every sector and market index with its change.
+- `ts_index_history`: Daily close, high, low and percent change of a TSE index (total, equal-weight, sector...), newest first.
+
 ## Iran News RSS (`iran-news-mcp`, 6 tools)
 
 Unofficial read-only Persian news RSS: Mehr, Tabnak, Entekhab, Zoomit, Varzesh3, more.

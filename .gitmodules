@@ -106,3 +106,12 @@
 [submodule "servers/iran-downloads-mcp"]
 	path = servers/iran-downloads-mcp
 	url = https://github.com/sepehr071/iran-downloads-mcp
+[submodule "servers/tsetmc-mcp"]
+	path = servers/tsetmc-mcp
+	url = https://github.com/sepehr071/tsetmc-mcp.git
+[submodule "servers/iran-crypto-mcp"]
+	path = servers/iran-crypto-mcp
+	url = https://github.com/sepehr071/iran-crypto-mcp.git
+[submodule "servers/milligold-mcp"]
+	path = servers/milligold-mcp
+	url = https://github.com/sepehr071/milligold-mcp.git

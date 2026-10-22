@@ -1,6 +1,6 @@
 {
   "name": "iran-all",
-  "description": "All 33 read-only Iranian site servers in one install.",
+  "description": "All 36 read-only Iranian site servers in one install.",
   "author": {
     "name": "Sepehr Radmard",
     "email": "sepehrr80@gmail.com",
@@ -36,6 +36,9 @@
     "iran-apps",
     "iran-downloads",
     "tgju",
+    "iran-crypto",
+    "milligold",
+    "tsetmc",
     "iran-news",
     "iran-quake",
     "qavanin",

@@ -2654,6 +2654,173 @@
     ]
   },
   {
+    "name": "iran-crypto-mcp",
+    "title": "Iran Crypto Exchanges",
+    "category": "prices",
+    "site": "https://nobitex.ir",
+    "description": "Unofficial read-only Iranian crypto exchanges: prices in Toman, order books, trades, candles.",
+    "version": "0.1.0",
+    "pypi": "iran-crypto-mcp",
+    "repository": "https://github.com/sepehr071/iran-crypto-mcp",
+    "registry_name": "io.github.sepehr071/iran-crypto-mcp",
+    "run": "uvx iran-crypto-mcp",
+    "read_only": true,
+    "env": [
+      {
+        "name": "IRAN_CRYPTO_MCP_PROXY",
+        "isRequired": false,
+        "isSecret": false,
+        "description": "Optional HTTP proxy URL for exchange requests; system proxy settings are ignored. Also accepts a comma-separated list: one is used until it gets blocked or fails to connect, then the next."
+      }
+    ],
+    "tool_count": 8,
+    "tools": [
+      {
+        "name": "ic_list_exchanges",
+        "title": "List Exchanges",
+        "summary": "List the supported Iranian crypto exchanges, their native price unit and what each can answer."
+      },
+      {
+        "name": "ic_list_markets",
+        "title": "List Markets",
+        "summary": "List the coins an exchange trades against Toman (IRT) or USDT."
+      },
+      {
+        "name": "ic_compare_price",
+        "title": "Compare Coin Price",
+        "summary": "Compare one coin's price on every supported exchange in one call, cheapest first, with the spread."
+      },
+      {
+        "name": "ic_get_ticker",
+        "title": "Get Ticker",
+        "summary": "Get the live price, best bid and ask, 24h range, change and volume of one coin on one exchange."
+      },
+      {
+        "name": "ic_get_orderbook",
+        "title": "Get Order Book",
+        "summary": "Get the top bids and asks of one coin's order book on one exchange, with the spread."
+      },
+      {
+        "name": "ic_recent_trades",
+        "title": "Recent Trades",
+        "summary": "Get the most recent public trades of one coin on one exchange, newest first."
+      },
+      {
+        "name": "ic_candles",
+        "title": "Price Candles",
+        "summary": "Get recent OHLC candles of one coin from Nobitex or Wallex, oldest first."
+      },
+      {
+        "name": "ic_top_movers",
+        "title": "Top Movers",
+        "summary": "List the biggest 24h gainers or losers on one exchange, with illiquid coins filtered out."
+      }
+    ]
+  },
+  {
+    "name": "milligold-mcp",
+    "title": "Milli.gold Prices",
+    "category": "prices",
+    "site": "https://milli.gold",
+    "description": "Unofficial read-only Milli.gold: live 18k gold price per milligram, history and platform stats.",
+    "version": "0.1.0",
+    "pypi": "milligold-mcp",
+    "repository": "https://github.com/sepehr071/milligold-mcp",
+    "registry_name": "io.github.sepehr071/milligold-mcp",
+    "run": "uvx milligold-mcp",
+    "read_only": true,
+    "env": [
+      {
+        "name": "MILLIGOLD_MCP_PROXY",
+        "isRequired": false,
+        "isSecret": false,
+        "description": "Optional HTTP proxy URL for milli.gold requests; system proxy settings are ignored. Also accepts a comma-separated list: one is used until it gets blocked or fails to connect, then the next."
+      }
+    ],
+    "tool_count": 3,
+    "tools": [
+      {
+        "name": "mg_get_price",
+        "title": "Milli.gold live gold price",
+        "summary": "Get the current Milli.gold price of 18k melted gold, in Rial per milligram and per gram."
+      },
+      {
+        "name": "mg_price_history",
+        "title": "Milli.gold price history",
+        "summary": "Get the Milli.gold 18k gold price series for a day, week or month, with high, low and change."
+      },
+      {
+        "name": "mg_platform_stats",
+        "title": "Milli.gold platform statistics",
+        "summary": "Get Milli.gold's headline numbers: users, trades, gold traded, gold held and branches."
+      }
+    ]
+  },
+  {
+    "name": "tsetmc-mcp",
+    "title": "TSETMC Tehran Stock Exchange",
+    "category": "stocks",
+    "site": "https://tsetmc.com",
+    "description": "Unofficial read-only Tehran Stock Exchange (TSETMC): quotes, movers, order book, history, indices.",
+    "version": "0.1.0",
+    "pypi": "tsetmc-mcp",
+    "repository": "https://github.com/sepehr071/tsetmc-mcp",
+    "registry_name": "io.github.sepehr071/tsetmc-mcp",
+    "run": "uvx tsetmc-mcp",
+    "read_only": true,
+    "env": [
+      {
+        "name": "TSETMC_MCP_PROXY",
+        "isRequired": false,
+        "isSecret": false,
+        "description": "Optional HTTP proxy URL for tsetmc.com requests; system proxy settings are ignored. Also accepts a comma-separated list: one is used until it gets blocked or fails to connect, then the next."
+      }
+    ],
+    "tool_count": 8,
+    "tools": [
+      {
+        "name": "ts_search_symbols",
+        "title": "Search symbols",
+        "summary": "Find Tehran Stock Exchange instruments (shares, funds, rights, bonds) by ticker or name."
+      },
+      {
+        "name": "ts_get_quote",
+        "title": "Stock quote",
+        "summary": "Latest price, daily range, volume and key facts of one instrument on the Tehran Stock Exchange."
+      },
+      {
+        "name": "ts_market_movers",
+        "title": "Market movers",
+        "summary": "Top traded instruments of a market today, ranked by gain, loss, volume, value or trade count."
+      },
+      {
+        "name": "ts_order_book",
+        "title": "Order book",
+        "summary": "Best five bid and ask levels (price, volume, order count) of one instrument."
+      },
+      {
+        "name": "ts_price_history",
+        "title": "Daily price history",
+        "summary": "Daily open, high, low, close, volume, trades and value of one instrument for its latest trading days, newest first."
+      },
+      {
+        "name": "ts_real_legal",
+        "title": "Real vs legal trading",
+        "summary": "Buy and sell volume, value and buyer/seller counts split by real (individual) and legal (institutional) traders per day."
+      },
+      {
+        "name": "ts_indices",
+        "title": "Market indices",
+        "summary": "TSE total index, market state and trading totals, plus every sector and market index with its change."
+      },
+      {
+        "name": "ts_index_history",
+        "title": "Index history",
+        "summary": "Daily close, high, low and percent change of a TSE index (total, equal-weight, sector...), newest first."
+      }
+    ]
+  },
+  {
     "name": "iran-news-mcp",
     "title": "Iran News RSS",
     "category": "news",

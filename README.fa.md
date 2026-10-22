@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="assets/banner.fa.svg" alt="awesome-iran-mcp: ۳۶ سرور MCP و ۴۶۹ ابزار برای فروشگاه‌ها، غذا، سفر، سلامت، کتاب، قیمت، خبر، قانون، مالیات و صرافی رمزارز ایرانی، برای Claude، Cursor و Copilot" width="100%">
+<img src="assets/banner.fa.svg" alt="awesome-iran-mcp: ۳۹ سرور MCP و ۴۸۸ ابزار برای فروشگاه‌ها، غذا، سفر، سلامت، کتاب، قیمت، بورس، خبر، قانون، مالیات و صرافی رمزارز ایرانی، برای Claude، Cursor و Copilot" width="100%">
 
 [English](README.md) · **فارسی**
 
@@ -12,7 +12,7 @@
 
 <p align="center">
 <b>وب ایران را به ایجنت هوش مصنوعی‌تان بدهید.</b><br>
-۳۳ سرور MCP متن‌باز و غیررسمی برای ایران و سایت‌های فارسی: دیجی‌کالا، ترب، دیوار، اسنپ‌فود، جاباما، مستربلیط، پذیرش۲۴، طاقچه، سازمان امور مالیاتی، سامانهٔ قوانین و بقیه، به‌اضافهٔ سرورهای رسمی اکسیریاب، پس‌آورد و سواپ‌ولت.<br>
+۳۶ سرور MCP متن‌باز و غیررسمی برای ایران و سایت‌های فارسی: دیجی‌کالا، ترب، دیوار، اسنپ‌فود، جاباما، مستربلیط، پذیرش۲۴، طاقچه، بورس تهران، صرافی رمزارز ایرانی، سازمان امور مالیاتی، سامانهٔ قوانین و بقیه، به‌اضافهٔ سرورهای رسمی اکسیریاب، پس‌آورد و سواپ‌ولت.<br>
 جست‌وجو، مقایسهٔ قیمت به تومان، پیدا کردن نوبت خالی و تخفیف‌های امروز، از داخل Claude، Cursor، GitHub Copilot در VS Code یا هر کلاینت MCP.<br>
 به‌صورت پلاگین Claude Code همراه با اسکیل نصب کنید، یا به‌صورت Agent Skills برای Codex، Cursor، Antigravity و Grok Build.
 </p>
@@ -139,7 +139,7 @@ claude mcp add --transport http pasavard https://pasavard.ir/api/mcp      # host
 
 `swapwallet-mcp` با آدرسش اضافه می‌شود و هر کلاینت آدرس را به شکل خودش می‌گیرد (Windsurf با `serverUrl`، و Claude Desktop از Settings ← Connectors): [راه‌اندازی آن در هر کلاینت](https://github.com/SwapWallet/swapwallet-mcp#connect).
 
-**هر ۳۶ سرور با هم:** این مخزن را کلون کنید و در Claude Code باز کنید. فایل [`.mcp.json`](.mcp.json) همهٔ سرورها را ثبت می‌کند؛ هر کدام را که لازم دارید تأیید کنید.
+**هر ۳۹ سرور با هم:** این مخزن را کلون کنید و در Claude Code باز کنید. فایل [`.mcp.json`](.mcp.json) همهٔ سرورها را ثبت می‌کند؛ هر کدام را که لازم دارید تأیید کنید.
 
 </div>
 
@@ -151,7 +151,7 @@ cd awesome-iran-mcp && claude
 <div dir="rtl">
 
 > [!TIP]
-> ۴۶۹ ابزار کانتکست زیادی می‌گیرد. به‌جای همه، فقط سرورهای لازم برای همان کار را فعال کنید.
+> ۴۸۸ ابزار کانتکست زیادی می‌گیرد. به‌جای همه، فقط سرورهای لازم برای همان کار را فعال کنید.
 
 ## سرورها
 
@@ -228,6 +228,9 @@ cd awesome-iran-mcp && claude
 | سرور | سایت | ابزار | نسخه | آخرین تغییر | ایجنت چه می‌تواند بکند |
 |---|---|---:|:---:|:---:|---|
 | [tgju-mcp](https://github.com/sepehr071/tgju-mcp) | [تی‌جی‌یو](https://www.tgju.org) | ۶ | [![PyPI](https://img.shields.io/pypi/v/tgju-mcp?label=&color=2fe0cf)](https://pypi.org/project/tgju-mcp/) | [![Last commit](https://img.shields.io/github/last-commit/sepehr071/tgju-mcp?label=&color=ffc23d)](https://github.com/sepehr071/tgju-mcp/commits/main) | قیمت لحظه‌ای طلا، سکه، دلار، یورو و رمزارز، جدول بازارها، تاریخچهٔ روزانه |
+| [iran-crypto-mcp](https://github.com/sepehr071/iran-crypto-mcp) | [نوبیتکس](https://nobitex.ir)، [والکس](https://wallex.ir)، [بیت‌پین](https://bitpin.ir)، [رمزینکس](https://ramzinex.com)، [تبدیل](https://tabdeal.org)، [او‌ام‌پی‌فینکس](https://ompfinex.com)، [اکسیر](https://exir.io) | ۸ | [![PyPI](https://img.shields.io/pypi/v/iran-crypto-mcp?label=&color=2fe0cf)](https://pypi.org/project/iran-crypto-mcp/) | [![Last commit](https://img.shields.io/github/last-commit/sepehr071/iran-crypto-mcp?label=&color=ffc23d)](https://github.com/sepehr071/iran-crypto-mcp/commits/main) | مقایسهٔ قیمت یک ارز در ۷ صرافی به تومان، دفتر سفارش، معاملات، کندل و بیشترین تغییر |
+| [milligold-mcp](https://github.com/sepehr071/milligold-mcp) | [میلی](https://milli.gold) | ۳ | [![PyPI](https://img.shields.io/pypi/v/milligold-mcp?label=&color=2fe0cf)](https://pypi.org/project/milligold-mcp/) | [![Last commit](https://img.shields.io/github/last-commit/sepehr071/milligold-mcp?label=&color=ffc23d)](https://github.com/sepehr071/milligold-mcp/commits/main) | قیمت لحظه‌ای طلای ۱۸ عیار به گرم، تاریخچهٔ روزانه، هفتگی و ماهانه، آمار پلتفرم |
+| [tsetmc-mcp](https://github.com/sepehr071/tsetmc-mcp) | [TSETMC](https://tsetmc.com) | ۸ | [![PyPI](https://img.shields.io/pypi/v/tsetmc-mcp?label=&color=2fe0cf)](https://pypi.org/project/tsetmc-mcp/) | [![Last commit](https://img.shields.io/github/last-commit/sepehr071/tsetmc-mcp?label=&color=ffc23d)](https://github.com/sepehr071/tsetmc-mcp/commits/main) | قیمت و معاملات بورس تهران: نماد، بیشترین رشد و افت، دفتر سفارش، تاریخچه، شاخص، حقیقی و حقوقی (ریال) |
 | [iran-news-mcp](https://github.com/sepehr071/iran-news-mcp) | [مهر](https://www.mehrnews.com)، [خبرآنلاین](https://www.khabaronline.ir)، [همشهری](https://www.hamshahrionline.ir)، [تابناک](https://www.tabnak.ir)، [انتخاب](https://www.entekhab.ir)، [عصر ایران](https://www.asriran.com)، [زومیت](https://www.zoomit.ir)، [دیجیاتو](https://digiato.com)، [ورزش۳](https://www.varzesh3.com)، [خبرورزشی](https://www.khabarvarzeshi.com) | ۶ | [![PyPI](https://img.shields.io/pypi/v/iran-news-mcp?label=&color=2fe0cf)](https://pypi.org/project/iran-news-mcp/) | [![Last commit](https://img.shields.io/github/last-commit/sepehr071/iran-news-mcp?label=&color=ffc23d)](https://github.com/sepehr071/iran-news-mcp/commits/main) | تازه‌ترین خبرها بر اساس منبع و دسته، جست‌وجوی کلیدواژه، متن کامل خبر |
 | [iran-quake-mcp](https://github.com/sepehr071/iran-quake-mcp) | [مرکز لرزه‌نگاری](https://irsc.ut.ac.ir)، [USGS](https://earthquake.usgs.gov) و [EMSC](https://www.emsc-csem.org) | ۵ | [![PyPI](https://img.shields.io/pypi/v/iran-quake-mcp?label=&color=2fe0cf)](https://pypi.org/project/iran-quake-mcp/) | [![Last commit](https://img.shields.io/github/last-commit/sepehr071/iran-quake-mcp?label=&color=ffc23d)](https://github.com/sepehr071/iran-quake-mcp/commits/main) | تازه‌ترین و قوی‌ترین زلزله‌های ایران، جست‌وجوی سوابق، جزئیات رویداد، آمار لرزه‌خیزی |
 | [qavanin-mcp](https://github.com/sepehr071/qavanin-mcp) | [سامانهٔ قوانین](https://qavanin.ir) | ۷ | [![PyPI](https://img.shields.io/pypi/v/qavanin-mcp?label=&color=2fe0cf)](https://pypi.org/project/qavanin-mcp/) | [![Last commit](https://img.shields.io/github/last-commit/sepehr071/qavanin-mcp?label=&color=ffc23d)](https://github.com/sepehr071/qavanin-mcp/commits/main) | ۱۶۸ هزار قانون، مقرره و رأی: جست‌وجو، متن کامل، یک ماده، اصلاحات، اسناد مرتبط |
@@ -251,7 +254,7 @@ cd awesome-iran-mcp && claude
 |---|---|
 | [`AGENTS.md`](AGENTS.md) | کدام سرور برای کدام کار، قراردادها، قوانین ایمنی، نحوهٔ کار در این مخزن |
 | [`servers.json`](servers.json) | کاتالوگ ماشین‌خوان: پکیج یا آدرس، نسخه، دسته، متغیرهای محیطی و همهٔ ابزارهای هر سرور |
-| [`TOOLS.md`](TOOLS.md) | هر ۴۶۹ ابزار به تفکیک سرور |
+| [`TOOLS.md`](TOOLS.md) | هر ۴۸۸ ابزار به تفکیک سرور |
 | [`llms.txt`](llms.txt) | فهرست کوتاه برای LLMها |
 | [`.mcp.json`](.mcp.json) | تنظیمات آماده برای همهٔ سرورها |
 | [`.claude-plugin/marketplace.json`](.claude-plugin/marketplace.json) | مارکت‌پلیس پلاگین `iran-mcp`: یک پلاگین برای هر سرور به‌اضافهٔ بسته‌ها |

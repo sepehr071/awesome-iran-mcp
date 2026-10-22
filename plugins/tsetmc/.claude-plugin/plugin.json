@@ -1,0 +1,27 @@
+{
+  "name": "tsetmc",
+  "displayName": "TSETMC Tehran Stock Exchange",
+  "version": "0.1.0",
+  "description": "Unofficial read-only Tehran Stock Exchange (TSETMC): quotes, movers, order book, history, indices.",
+  "author": {
+    "name": "Sepehr Radmard",
+    "email": "sepehrr80@gmail.com",
+    "url": "https://github.com/sepehr071"
+  },
+  "homepage": "https://github.com/sepehr071/awesome-iran-mcp",
+  "repository": "https://github.com/sepehr071/tsetmc-mcp",
+  "license": "MIT",
+  "keywords": [
+    "iran",
+    "stocks",
+    "tsetmc.com"
+  ],
+  "mcpServers": {
+    "tsetmc": {
+      "command": "uvx",
+      "args": [
+        "tsetmc-mcp@0.1.0"
+      ]
+    }
+  }
+}

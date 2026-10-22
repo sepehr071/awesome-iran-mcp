@@ -1,7 +1,7 @@
 # AGENTS.md
 
-Guide for AI agents using or working on **awesome-iran-mcp**: 36 MCP servers for Iranian websites, 469 tools in
-total. 34 are Python packages on PyPI, run as stdio servers with `uvx <package>`; all of them are unofficial except
+Guide for AI agents using or working on **awesome-iran-mcp**: 39 MCP servers for Iranian websites, 488 tools in
+total. 37 are Python packages on PyPI, run as stdio servers with `uvx <package>`; all of them are unofficial except
 `exiryab-mcp`, ExirYab's own server on its public API. Two are hosted by their sites:
 `pasavard-mcp` (`https://pasavard.ir/api/mcp`, no sign-in) and `swapwallet-mcp` (`https://swapwallet.app/mcp`, OAuth
 sign-in).
@@ -37,6 +37,9 @@ sign-in).
 | Goods from thousands of small Iranian shops (handmade, local products) | `basalam-mcp` | `bs_find_cheapest`, `bs_search`, then `bs_product` |
 | Food near an address on Tapsi Food, flash deals | `tapsifood-mcp` | `tf_find_location`, then `tf_search_dishes`, `tf_deals` |
 | Live gold, coin, dollar or crypto prices, price history | `tgju-mcp` | `tj_get_prices`, `tj_market_summary`, `tj_price_history` |
+| A coin's price on every Iranian crypto exchange (Nobitex, Wallex, Bitpin, Ramzinex, Tabdeal, OMPFinex, Exir), order books, candles | `iran-crypto-mcp` | `ic_compare_price`, then `ic_get_orderbook`, `ic_candles` |
+| The live Milli.gold 18k gold price and its history | `milligold-mcp` | `mg_get_price`, `mg_price_history` |
+| Tehran Stock Exchange and Fara Bourse quotes, top movers, order book, indices, real versus legal trading | `tsetmc-mcp` | `ts_search_symbols`, then `ts_get_quote`, `ts_market_movers`, `ts_indices` |
 | Latest Iranian news (Mehr, Khabaronline, Hamshahri, Tabnak, Entekhab, Asriran, Zoomit, Digiato, Varzesh3, Khabarvarzeshi), a topic in the news, a full article | `iran-news-mcp` | `nw_latest_all`, `nw_search`, then `nw_article` |
 | Recent or strong earthquakes in Iran (IRSC, USGS, EMSC) | `iran-quake-mcp` | `eq_latest`, `eq_significant`, `eq_detail` |
 | An Iranian law, regulation or court vote, one article, its amendments | `qavanin-mcp` | `qv_search`, then `qv_law`, `qv_amendments` |
@@ -72,15 +75,16 @@ claude plugin install digikala --marketplace sepehr071/awesome-iran-mcp     # on
 claude plugin install iran-all --marketplace sepehr071/awesome-iran-mcp     # all read-only site servers
 ```
 
-Bundles: `iran-all`, `iran-food`, `iran-shopping`, `iran-beauty`, `iran-travel`, `iran-health`, `iran-books`, `iran-fashion`, `iran-software`.
+Bundles: `iran-all`, `iran-food`, `iran-shopping`, `iran-beauty`, `iran-travel`, `iran-health`, `iran-books`, `iran-fashion`, `iran-software`, `iran-prices`.
 Skills only, for any agent: `npx skills add sepehr071/awesome-iran-mcp`.
 
-The server key in config is the package name without `-mcp`. [`.mcp.json`](.mcp.json) holds all 36.
+The server key in config is the package name without `-mcp`. [`.mcp.json`](.mcp.json) holds all 39.
 Requires [uv](https://docs.astral.sh/uv/) (`pasavard-mcp` and `swapwallet-mcp` don't). Add only the servers the task needs: each one adds 3 to 31 tools.
 
 ## Rules every server follows
 
-- Prices are **Toman**. Convert before comparing with any Rial figure from elsewhere.
+- Prices are **Toman**. Convert before comparing with any Rial figure from elsewhere. Exceptions: `tsetmc-mcp`
+  quotes share prices in **Rial**, and `milligold-mcp` gives Rial per milligram, Rial per gram and Toman per gram.
 - Site servers are **read-only**: no login, basket, booking, order or payment. Hand the user the link to buy.
 - `okala-mcp` has an optional OTP login (`ok_login`), read-only, only for text search. Ask the user first.
 - `pasavard-mcp` store links are affiliate links: say so when you share one. `cashback_url` returns part of the
@@ -119,7 +123,7 @@ README.md / README.fa.md   English (default) and Persian docs; keep both in sync
   ships its own `skills/<key>/SKILL.md`, which come from that file. Check with `claude plugin validate .`.
 - Add a server: `git submodule add https://github.com/sepehr071/<name>-mcp servers/<name>-mcp`, add it to
   `SERVERS` in `scripts/catalog.py` (and to `GROUPS` in `scripts/banner.py` if its category is new), run both scripts, add a row to both
-  READMEs and the table above. Update the 36 / 469 counts written in both READMEs.
+  READMEs and the table above. Update the 39 / 488 counts written in both READMEs.
 - Add a hosted server: `git submodule add <its repo> servers/<name>-mcp` and an entry in `REMOTE` in
   `scripts/catalog.py`, then the same `GROUPS`, README, table and count steps. Its repo needs an MCP Registry
   `server.json` with `remotes` (name, version, description, repository), and the server must publish a server card
