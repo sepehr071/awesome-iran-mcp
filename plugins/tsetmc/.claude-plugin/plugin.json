@@ -1,7 +1,7 @@
 {
   "name": "tsetmc",
   "displayName": "TSETMC Tehran Stock Exchange",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Unofficial read-only Tehran Stock Exchange (TSETMC): quotes, movers, order book, history, indices.",
   "author": {
     "name": "Sepehr Radmard",
@@ -20,7 +20,7 @@
     "tsetmc": {
       "command": "uvx",
       "args": [
-        "tsetmc-mcp@0.1.0"
+        "tsetmc-mcp@0.1.1"
       ]
     }
   }

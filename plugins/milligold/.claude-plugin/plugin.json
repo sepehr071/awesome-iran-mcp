@@ -1,7 +1,7 @@
 {
   "name": "milligold",
   "displayName": "Milli.gold Prices",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Unofficial read-only Milli.gold: live 18k gold price per milligram, history and platform stats.",
   "author": {
     "name": "Sepehr Radmard",
@@ -20,7 +20,7 @@
     "milligold": {
       "command": "uvx",
       "args": [
-        "milligold-mcp@0.1.0"
+        "milligold-mcp@0.1.1"
       ]
     }
   }

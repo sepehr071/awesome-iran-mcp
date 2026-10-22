@@ -171,19 +171,19 @@
     "iran-crypto": {
       "command": "uvx",
       "args": [
-        "iran-crypto-mcp@0.1.1"
+        "iran-crypto-mcp@0.1.2"
       ]
     },
     "milligold": {
       "command": "uvx",
       "args": [
-        "milligold-mcp@0.1.0"
+        "milligold-mcp@0.1.1"
       ]
     },
     "tsetmc": {
       "command": "uvx",
       "args": [
-        "tsetmc-mcp@0.1.0"
+        "tsetmc-mcp@0.1.1"
       ]
     },
     "iran-news": {
