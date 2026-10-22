@@ -337,6 +337,12 @@ claude plugin validate .
 
 اگر این مجموعه چند بار گشتن بین تب‌ها را برایتان کم کرد، ستاره‌دار کردن مخزن به پیدا شدن آن توسط دیگران کمک می‌کند.
 
+## نویسنده
+
+<a href="https://www.linkedin.com/in/sepehr-radmard"><img src="assets/author-banner.png" alt="Sepehr Radmard: open-source MCP servers for the Iranian web. LinkedIn: linkedin.com/in/sepehr-radmard" width="100%"></a>
+
+ساخته و نگهداری‌شده توسط **سپهر رادمرد** (Sepehr Radmard). برای ارتباط، [لینکدین](https://www.linkedin.com/in/sepehr-radmard) را ببینید یا [@sepehr071 در گیت‌هاب](https://github.com/sepehr071) را دنبال کنید تا سرورهای MCP بیشتری برای سایت‌های ایرانی ببینید. اگر این مخزن به کارتان آمد، یک ستاره کمک می‌کند دیگران هم آن را پیدا کنند.
+
 ## مجوز
 
 [MIT](LICENSE). هر سرور پایتونی در مخزن خودش با مجوز MIT منتشر شده است. نام‌ها، لوگوها و نشان‌های تجاری سایت‌ها متعلق به صاحبانشان است و فقط برای معرفی هر سایت آمده‌اند.

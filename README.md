@@ -368,6 +368,12 @@ your client to upgrade it.
 
 If this saves you some tab-hopping, a star on the repo helps other people find it.
 
+## Author
+
+<a href="https://www.linkedin.com/in/sepehr-radmard"><img src="assets/author-banner.png" alt="Sepehr Radmard: open-source MCP servers for the Iranian web. LinkedIn: linkedin.com/in/sepehr-radmard" width="100%"></a>
+
+Built and maintained by **Sepehr Radmard** (سپهر رادمرد). Connect on [LinkedIn](https://www.linkedin.com/in/sepehr-radmard) or follow [@sepehr071 on GitHub](https://github.com/sepehr071) for more MCP servers for Iranian websites. If this repo saves you some tab-hopping, a star helps other people find it.
+
 ## License
 
 [MIT](LICENSE). Each package server is MIT licensed in its own repo. Site names, logos and trademarks belong to their owners and are shown only to identify each site.
