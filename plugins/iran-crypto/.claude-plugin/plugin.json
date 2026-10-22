@@ -1,7 +1,7 @@
 {
   "name": "iran-crypto",
   "displayName": "Iran Crypto Exchanges",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Unofficial read-only Iranian crypto exchanges: prices in Toman, order books, trades, candles.",
   "author": {
     "name": "Sepehr Radmard",
@@ -20,7 +20,7 @@
     "iran-crypto": {
       "command": "uvx",
       "args": [
-        "iran-crypto-mcp@0.1.0"
+        "iran-crypto-mcp@0.1.1"
       ]
     }
   }

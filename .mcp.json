@@ -171,7 +171,7 @@
     "iran-crypto": {
       "command": "uvx",
       "args": [
-        "iran-crypto-mcp@0.1.0"
+        "iran-crypto-mcp@0.1.1"
       ]
     },
     "milligold": {

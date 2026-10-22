@@ -2659,7 +2659,7 @@
     "category": "prices",
     "site": "https://nobitex.ir",
     "description": "Unofficial read-only Iranian crypto exchanges: prices in Toman, order books, trades, candles.",
-    "version": "0.1.0",
+    "version": "0.1.1",
     "pypi": "iran-crypto-mcp",
     "repository": "https://github.com/sepehr071/iran-crypto-mcp",
     "registry_name": "io.github.sepehr071/iran-crypto-mcp",
