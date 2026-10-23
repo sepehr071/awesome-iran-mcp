@@ -1,6 +1,6 @@
 # Contributing
 
-How pull requests to awesome-iran-mcp work: what goes where, the rules every PR follows, and the flow for adding
+How pull requests to iran-mcp work: what goes where, the rules every PR follows, and the flow for adding
 or updating a server. Commands and repo layout are in [AGENTS.md](AGENTS.md); how plugins are built and released is
 in [PLUGINS.md](PLUGINS.md).
 

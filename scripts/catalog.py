@@ -17,7 +17,7 @@ from urllib.parse import urlparse
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 MARKETPLACE = "iran-mcp"
 OWNER = {"name": "Sepehr Radmard", "email": "sepehrr80@gmail.com", "url": "https://github.com/sepehr071"}
-HOME = "https://github.com/sepehr071/awesome-iran-mcp"
+HOME = "https://github.com/sepehr071/iran-mcp"
 
 # category -> what a user wants when they need it; used in skill and bundle descriptions, so for read-only
 # categories write a noun phrase that reads after both "wants ..." and "Everything for ..."

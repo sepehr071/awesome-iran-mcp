@@ -141,8 +141,8 @@ def banner(fa: bool, catalog: list, h: int = H) -> str:
         font, desc = LATIN, f"{servers} MCP servers and {tools} tools that give AI agents the Iranian web"
 
     return frame(fa, h, desc, f"""<rect x="{tx - (490 if fa else 0)}" y="70" width="490" height="38" rx="19" fill="#000" fill-opacity="0.28" stroke="#fff" stroke-opacity="0.25"/>
-  <text x="{tx + (-245 if fa else 245)}" y="95" text-anchor="middle" font-family="{MONO}" font-size="15" fill="#d9fff9">/plugin marketplace add sepehr071/awesome-iran-mcp</text>
-  <text x="{tx}" y="196" text-anchor="{anchor}" font-family="{LATIN}" font-size="58" font-weight="800" fill="url(#ink)" letter-spacing="-1.5">awesome-iran-mcp</text>
+  <text x="{tx + (-245 if fa else 245)}" y="95" text-anchor="middle" font-family="{MONO}" font-size="15" fill="#d9fff9">/plugin marketplace add sepehr071/iran-mcp</text>
+  <text x="{tx}" y="196" text-anchor="{anchor}" font-family="{LATIN}" font-size="58" font-weight="800" fill="url(#ink)" letter-spacing="-1.5">iran-mcp</text>
   <text x="{tx}" y="250" text-anchor="{anchor}" font-family="{font}" font-size="25" fill="#fff" fill-opacity="0.92">{subtitle}</text>
   {pills(tx, stats, font, fa)}
   <text x="{tx}" y="396" text-anchor="{anchor}" font-family="{LATIN}" font-size="15" fill="#fff" fill-opacity="0.7">Claude Code plugins · Agent Skills · any MCP client</text>
@@ -170,13 +170,13 @@ def release(fa: bool, catalog: list, h: int = H) -> str:
         stats = [(f"{servers} سرور".translate(FA_DIGITS), "#2fe0cf", 140),
                  (f"{tools} ابزار".translate(FA_DIGITS), "#ffc23d", 140),
                  ("فقط خواندنی", "#ff5c8f", 170)]
-        desc = f"awesome-iran-mcp {RELEASE}: " + "، ".join(f"{n} {fa_line}" for _, n, _, fa_line, _ in HIGHLIGHTS)
+        desc = f"iran-mcp {RELEASE}: " + "، ".join(f"{n} {fa_line}" for _, n, _, fa_line, _ in HIGHLIGHTS)
     else:
         anchor, tx, font = "start", card_x + 44, LATIN
         title, subtitle, changes = "12 new servers.", "Prices, news, law, apps.", "Full changelog: CHANGELOG.md"
         stats = [(f"{servers} servers", "#2fe0cf", 150), (f"{tools} tools", "#ffc23d", 140),
                  ("Read-only", "#ff5c8f", 150)]
-        desc = f"awesome-iran-mcp {RELEASE}: " + ", ".join(f"{n} {en_line}" for n, _, en_line, _, _ in HIGHLIGHTS)
+        desc = f"iran-mcp {RELEASE}: " + ", ".join(f"{n} {en_line}" for n, _, en_line, _, _ in HIGHLIGHTS)
 
     out = []
     w, th, gap = 240, 164, 18
@@ -192,7 +192,7 @@ def release(fa: bool, catalog: list, h: int = H) -> str:
   <text x="{nx}" y="{y + 130}" text-anchor="start" direction="{"rtl" if fa else "ltr"}" font-family="{font}" font-size="18" font-weight="600" fill="#fff" fill-opacity="0.85">{line}</text>""")
 
     return frame(fa, h, desc, f"""<rect x="{tx - (220 if fa else 0)}" y="70" width="220" height="38" rx="19" fill="#000" fill-opacity="0.28" stroke="#fff" stroke-opacity="0.25"/>
-  <text x="{tx + (-110 if fa else 110)}" y="95" text-anchor="middle" font-family="{MONO}" font-size="15" fill="#d9fff9">awesome-iran-mcp {RELEASE}</text>
+  <text x="{tx + (-110 if fa else 110)}" y="95" text-anchor="middle" font-family="{MONO}" font-size="15" fill="#d9fff9">iran-mcp {RELEASE}</text>
   <text x="{tx}" y="186" text-anchor="{anchor}" font-family="{font}" font-size="58" font-weight="800" fill="url(#ink)" letter-spacing="{0 if fa else -1.5}">{title}</text>
   <text x="{tx}" y="240" text-anchor="{anchor}" font-family="{font}" font-size="30" font-weight="600" fill="#fff" fill-opacity="0.92">{subtitle}</text>
   {pills(tx, stats, font, fa)}
@@ -217,7 +217,7 @@ def frame(fa: bool, h: int, desc: str, body: str) -> str:
     oy, rx = (h - H) // 2, 28 if h == H else 0
     card_x, panel_x = (650, 40) if fa else (40, 670)
     return f"""<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="{W}" height="{h}" viewBox="0 0 {W} {h}" role="img" aria-labelledby="t d">
-  <title id="t">awesome-iran-mcp</title>
+  <title id="t">iran-mcp</title>
   <desc id="d">{desc}</desc>
   {DEFS}
 

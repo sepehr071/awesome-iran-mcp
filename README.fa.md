@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="assets/banner.fa.svg" alt="awesome-iran-mcp: ۳۹ سرور MCP و ۴۸۸ ابزار برای فروشگاه‌ها، غذا، سفر، سلامت، کتاب، قیمت، بورس، خبر، قانون، مالیات و صرافی رمزارز ایرانی، برای Claude، Cursor و Copilot" width="100%">
+<img src="assets/banner.fa.svg" alt="iran-mcp: ۳۹ سرور MCP و ۴۸۸ ابزار برای فروشگاه‌ها، غذا، سفر، سلامت، کتاب، قیمت، بورس، خبر، قانون، مالیات و صرافی رمزارز ایرانی، برای Claude، Cursor و Copilot" width="100%">
 
 [English](README.md) · **فارسی**
 
@@ -8,7 +8,7 @@
 
 <div dir="rtl">
 
-# سرور MCP برای سایت‌های ایرانی: awesome-iran-mcp
+# سرور MCP برای سایت‌های ایرانی: iran-mcp
 
 <p align="center">
 <b>وب ایران را به ایجنت هوش مصنوعی‌تان بدهید.</b><br>
@@ -25,7 +25,7 @@
 
 ## تازه‌های نسخهٔ ۲٫۰
 
-<img src="assets/release-v2.0.fa.svg" alt="awesome-iran-mcp نسخهٔ ۲٫۰: ۱۲ سرور تازه، ۷ دستهٔ تازه، ۱۰ منبع خبری، همان ابزارها و پارامترها" width="100%">
+<img src="assets/release-v2.0.fa.svg" alt="iran-mcp نسخهٔ ۲٫۰: ۱۲ سرور تازه، ۷ دستهٔ تازه، ۱۰ منبع خبری، همان ابزارها و پارامترها" width="100%">
 
 - **۱۲ سرور تازه**، همه فقط‌خواندنی و بی‌نیاز از ورود به حساب: در مجموع ۳۶ سرور و ۴۶۹ ابزار.
 - **فروشگاه و غذا:** [basalam-mcp](https://github.com/sepehr071/basalam-mcp) (هزاران غرفه‌دار کوچک)، [banimode-mcp](https://github.com/sepehr071/banimode-mcp) (مد و پوشاک)، [baneh-mcp](https://github.com/sepehr071/baneh-mcp) (لوازم خانگی، تلویزیون و ابزار) و [tapsifood-mcp](https://github.com/sepehr071/tapsifood-mcp) (غذا و تخفیف‌های نزدیک یک آدرس).
@@ -39,7 +39,7 @@
 <details>
 <summary><b>تازه‌های نسخهٔ ۱٫۷</b></summary>
 
-<img src="assets/release-v1.7.fa.svg" alt="awesome-iran-mcp نسخهٔ ۱٫۷: مسدودی کمتر، ۱۰۰ درخواست به ترب بی مسدودی، ۱۸ سرور فروشگاهی پایدارتر، ۳ سرور تازه، همان ابزارها و پارامترها" width="100%">
+<img src="assets/release-v1.7.fa.svg" alt="iran-mcp نسخهٔ ۱٫۷: مسدودی کمتر، ۱۰۰ درخواست به ترب بی مسدودی، ۱۸ سرور فروشگاهی پایدارتر، ۳ سرور تازه، همان ابزارها و پارامترها" width="100%">
 
 - **مسدودی و خطای کمتر.** ۱۸ سرور غیررسمی فروشگاهی حالا مثل یک مرورگر معمولی با سایت حرف می‌زنند، درخواست‌ها را آرام‌تر می‌فرستند و هر وقت سایت بخواهد صبر می‌کنند. کلاینت قبلی بعد از ۴ تا ۶ درخواست از ترب مسدود می‌شد؛ کلاینت تازه ۱۰۰ درخواست فرستاد و مسدود نشد.
 - **فهرست پراکسی.** متغیر `<NAME>_MCP_PROXY` چند پراکسی جداشده با کاما می‌گیرد. اگر یکی مسدود شود، بعدی جایش را می‌گیرد.
@@ -53,7 +53,7 @@
 <details>
 <summary><b>تازه‌های نسخهٔ ۱٫۵</b></summary>
 
-<img src="assets/release-v1.5.fa.svg" alt="awesome-iran-mcp نسخهٔ ۱٫۵: حدود ۶۲٪ توکن کمتر در هر فراخوانی ابزار، فهرست ابزار ۱۹٪ کوچک‌تر، امنیت بیشتر و سرور تازهٔ دیوار" width="100%">
+<img src="assets/release-v1.5.fa.svg" alt="iran-mcp نسخهٔ ۱٫۵: حدود ۶۲٪ توکن کمتر در هر فراخوانی ابزار، فهرست ابزار ۱۹٪ کوچک‌تر، امنیت بیشتر و سرور تازهٔ دیوار" width="100%">
 
 - **حدود ۶۲٪ توکن کمتر در هر فراخوانی ابزار** و فهرست ابزار ۱۹٪ کوچک‌تر در ۱۹ سرور پایتونی، با همان رتبه‌بندی و ارزان‌ترین قیمت‌های قبل.
 - **امنیت بیشتر** در سی‌بوک، بله و اکالا، و در همهٔ سرورها متن سایت داده‌ای نامطمئن حساب می‌شود.
@@ -88,7 +88,7 @@
 </div>
 
 ```bash
-claude plugin marketplace add sepehr071/awesome-iran-mcp
+claude plugin marketplace add sepehr071/iran-mcp
 claude plugin install digikala@iran-mcp            # one server
 claude plugin install iran-travel@iran-mcp         # a bundle: food, shopping, beauty, travel, health, books
 claude plugin install iran-all@iran-mcp            # every read-only site server
@@ -96,19 +96,19 @@ claude plugin install iran-all@iran-mcp            # every read-only site server
 
 <div dir="rtl">
 
-دستور `claude plugin install <name> --marketplace sepehr071/awesome-iran-mcp` هر دو مرحله را با یک دستور انجام می‌دهد. `payping`، `bale` و `swapwallet` روی حساب خودتان کار می‌کنند، برای همین در هیچ بسته‌ای نیستند؛ آن‌ها را با نام نصب کنید. سواپ‌ولت همین سرور را با همین قوانین به‌صورت پلاگین خودش هم منتشر کرده است (`swapwallet@swapwallet` از [SwapWallet/swapwallet-mcp](https://github.com/SwapWallet/swapwallet-mcp)). فقط یکی از این دو را نصب کنید، وگرنه سرور دو بار اضافه می‌شود.
+دستور `claude plugin install <name> --marketplace sepehr071/iran-mcp` هر دو مرحله را با یک دستور انجام می‌دهد. `payping`، `bale` و `swapwallet` روی حساب خودتان کار می‌کنند، برای همین در هیچ بسته‌ای نیستند؛ آن‌ها را با نام نصب کنید. سواپ‌ولت همین سرور را با همین قوانین به‌صورت پلاگین خودش هم منتشر کرده است (`swapwallet@swapwallet` از [SwapWallet/swapwallet-mcp](https://github.com/SwapWallet/swapwallet-mcp)). فقط یکی از این دو را نصب کنید، وگرنه سرور دو بار اضافه می‌شود.
 
 **اسکیل برای ایجنت‌های دیگر** (Codex، Cursor، Gemini CLI و ...): اسکیل‌های لازم را انتخاب کنید و بعد هر سرور را با کانفیگ پایین اضافه کنید.
 
 </div>
 
 ```bash
-npx skills add sepehr071/awesome-iran-mcp
+npx skills add sepehr071/iran-mcp
 ```
 
 <div dir="rtl">
 
-**Grok Build** همین مارکت‌پلیس را می‌خواند: `grok plugin marketplace add sepehr071/awesome-iran-mcp`، بعد سرورها را یکی‌یکی نصب کنید (Grok اعضای بسته‌ها را نصب نمی‌کند). اینکه هر ایجنت چه چیزی را پشتیبانی می‌کند: [PLUGINS.md](PLUGINS.md#compatibility).
+**Grok Build** همین مارکت‌پلیس را می‌خواند: `grok plugin marketplace add sepehr071/iran-mcp`، بعد سرورها را یکی‌یکی نصب کنید (Grok اعضای بسته‌ها را نصب نمی‌کند). اینکه هر ایجنت چه چیزی را پشتیبانی می‌کند: [PLUGINS.md](PLUGINS.md#compatibility).
 
 **یک سرور** (Claude Code، بدون پلاگین):
 
@@ -144,8 +144,8 @@ claude mcp add --transport http pasavard https://pasavard.ir/api/mcp      # host
 </div>
 
 ```bash
-git clone https://github.com/sepehr071/awesome-iran-mcp
-cd awesome-iran-mcp && claude
+git clone https://github.com/sepehr071/iran-mcp
+cd iran-mcp && claude
 ```
 
 <div dir="rtl">
@@ -266,7 +266,7 @@ cd awesome-iran-mcp && claude
 </div>
 
 ```text
-Read https://raw.githubusercontent.com/sepehr071/awesome-iran-mcp/main/AGENTS.md, then add the MCP servers I need for <task> to my MCP config.
+Read https://raw.githubusercontent.com/sepehr071/iran-mcp/main/AGENTS.md, then add the MCP servers I need for <task> to my MCP config.
 ```
 
 <div dir="rtl">
@@ -285,8 +285,8 @@ Read https://raw.githubusercontent.com/sepehr071/awesome-iran-mcp/main/AGENTS.md
 </div>
 
 ```bash
-git clone --recurse-submodules https://github.com/sepehr071/awesome-iran-mcp
-cd awesome-iran-mcp/servers/digikala-mcp
+git clone --recurse-submodules https://github.com/sepehr071/iran-mcp
+cd iran-mcp/servers/digikala-mcp
 uv sync && uv run pytest -q          # offline tests
 uv run pytest -m live -q             # against the real site
 
