@@ -1,7 +1,7 @@
 {
   "name": "maktabkhooneh",
   "displayName": "Maktabkhooneh",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Unofficial read-only Maktabkhooneh: search Persian online courses, compare prices, find free ones.",
   "author": {
     "name": "Sepehr Radmard",
@@ -20,7 +20,7 @@
     "maktabkhooneh": {
       "command": "uvx",
       "args": [
-        "maktabkhooneh-mcp@0.1.1"
+        "maktabkhooneh-mcp@0.1.2"
       ]
     }
   }

@@ -1,7 +1,7 @@
 {
   "name": "banimode",
   "displayName": "Banimode",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Unofficial read-only Banimode: search fashion, compare prices, sizes, stock and flash deals.",
   "author": {
     "name": "Sepehr Radmard",
@@ -20,7 +20,7 @@
     "banimode": {
       "command": "uvx",
       "args": [
-        "banimode-mcp@0.1.1"
+        "banimode-mcp@0.1.2"
       ]
     }
   }

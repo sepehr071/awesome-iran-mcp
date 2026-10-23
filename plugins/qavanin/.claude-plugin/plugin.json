@@ -1,7 +1,7 @@
 {
   "name": "qavanin",
   "displayName": "Qavanin",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Unofficial read-only qavanin.ir: search Iranian laws and regulations, read full text and status.",
   "author": {
     "name": "Sepehr Radmard",
@@ -20,7 +20,7 @@
     "qavanin": {
       "command": "uvx",
       "args": [
-        "qavanin-mcp@0.1.1"
+        "qavanin-mcp@0.1.2"
       ]
     }
   }

@@ -1,7 +1,7 @@
 {
   "name": "basalam",
   "displayName": "Basalam",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Unofficial read-only Basalam marketplace: search products, cheapest offers, shops, reviews.",
   "author": {
     "name": "Sepehr Radmard",
@@ -20,7 +20,7 @@
     "basalam": {
       "command": "uvx",
       "args": [
-        "basalam-mcp@0.1.1"
+        "basalam-mcp@0.1.2"
       ]
     }
   }

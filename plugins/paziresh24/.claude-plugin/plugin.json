@@ -1,7 +1,7 @@
 {
   "name": "paziresh24",
   "displayName": "Paziresh24",
-  "version": "0.4.1",
+  "version": "0.4.2",
   "description": "Unofficial read-only Paziresh24: find Iranian doctors, profiles, prices, reviews and free slots.",
   "author": {
     "name": "Sepehr Radmard",
@@ -20,7 +20,7 @@
     "paziresh24": {
       "command": "uvx",
       "args": [
-        "paziresh24-mcp@0.4.1"
+        "paziresh24-mcp@0.4.2"
       ]
     }
   }
