@@ -1,7 +1,7 @@
 {
   "name": "khanoumi",
   "displayName": "Khanoumi",
-  "version": "0.3.1",
+  "version": "0.3.2",
   "description": "Unofficial read-only Khanoumi: search cosmetics and skin care, compare prices, shades, reviews.",
   "author": {
     "name": "Sepehr Radmard",
@@ -20,7 +20,7 @@
     "khanoumi": {
       "command": "uvx",
       "args": [
-        "khanoumi-mcp@0.3.1"
+        "khanoumi-mcp@0.3.2"
       ]
     }
   }

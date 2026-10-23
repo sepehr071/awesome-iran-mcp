@@ -1,7 +1,7 @@
 {
   "name": "iran-downloads",
   "displayName": "Iran Software Downloads",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Unofficial read-only metadata search of Soft98, P30Download, Downloadly and VGDL. Links only.",
   "author": {
     "name": "Sepehr Radmard",
@@ -20,7 +20,7 @@
     "iran-downloads": {
       "command": "uvx",
       "args": [
-        "iran-downloads-mcp@0.1.1"
+        "iran-downloads-mcp@0.1.2"
       ]
     }
   }

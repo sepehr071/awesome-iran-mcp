@@ -1,7 +1,7 @@
 {
   "name": "iran-tax",
   "displayName": "Iran Tax",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Unofficial read-only Iranian tax: goods IDs and VAT, activity codes, property values, tax laws.",
   "author": {
     "name": "Sepehr Radmard",
@@ -20,7 +20,7 @@
     "iran-tax": {
       "command": "uvx",
       "args": [
-        "iran-tax-mcp@0.1.1"
+        "iran-tax-mcp@0.1.2"
       ]
     }
   }
