@@ -42,18 +42,18 @@ agent's plugin system.
 
 | Agent | Install | Skill | MCP server | Bundles | Status |
 |---|---|---|---|---|---|
-| Claude Code (CLI, desktop, VS Code) | `claude plugin install <name> --marketplace sepehr071/awesome-iran-mcp` | yes | yes | yes | Tested |
-| Grok Build | `grok plugin marketplace add sepehr071/awesome-iran-mcp`, then `grok plugin install <name>@<marketplace> --trust` | yes | detected | no | Tested (grok 1.0.45) |
-| GitHub Copilot CLI | `copilot plugin marketplace add sepehr071/awesome-iran-mcp`, then `copilot plugin install <name>@iran-mcp` | likely | likely | unknown | Docs only |
-| Codex CLI | `npx skills add sepehr071/awesome-iran-mcp -a codex` + MCP config | yes | manual | no | Docs only |
+| Claude Code (CLI, desktop, VS Code) | `claude plugin install <name> --marketplace sepehr071/iran-mcp` | yes | yes | yes | Tested |
+| Grok Build | `grok plugin marketplace add sepehr071/iran-mcp`, then `grok plugin install <name>@<marketplace> --trust` | yes | detected | no | Tested (grok 1.0.45) |
+| GitHub Copilot CLI | `copilot plugin marketplace add sepehr071/iran-mcp`, then `copilot plugin install <name>@iran-mcp` | likely | likely | unknown | Docs only |
+| Codex CLI | `npx skills add sepehr071/iran-mcp -a codex` + MCP config | yes | manual | no | Docs only |
 | Cursor | `npx skills add ... -a cursor` + MCP config | yes | manual | no | Docs only |
 | Antigravity (IDE and CLI) | `npx skills add ... -a antigravity` (or `-a antigravity-cli`) + `mcp_config.json` | yes | manual | no | Docs only |
-| Gemini CLI, OpenCode, Windsurf, Cline, ~60 more | `npx skills add sepehr071/awesome-iran-mcp` (pick skills and agents) | yes | manual | no | Tested (skill discovery only) |
+| Gemini CLI, OpenCode, Windsurf, Cline, ~60 more | `npx skills add sepehr071/iran-mcp` (pick skills and agents) | yes | manual | no | Tested (skill discovery only) |
 
 Notes:
 
 - **Grok Build** reads `.claude-plugin/marketplace.json` as is. A marketplace added from a local path registers
-  under the folder name (`awesome-iran-mcp`), not `iran-mcp`. Run `grok plugin marketplace list` to see the name.
+  under its folder name, which can differ from `iran-mcp`. Run `grok plugin marketplace list` to see the name.
   It installs a single plugin with its skill and MCP server. It ignores `dependencies`, so a bundle installs alone,
   without its members.
 - **Copilot CLI** reads `.claude-plugin/marketplace.json` according to GitHub's docs. It supports relative-path

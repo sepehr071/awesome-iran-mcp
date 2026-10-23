@@ -1,10 +1,10 @@
 <div align="center">
 
-<img src="assets/banner.svg" alt="awesome-iran-mcp: 39 MCP servers and 488 tools for Iranian shopping, classifieds, food, travel, health, book, course, app, price, stock, news, law, tax and crypto sites, for Claude, Cursor and Copilot" width="100%">
+<img src="assets/banner.svg" alt="iran-mcp: 39 MCP servers and 488 tools for Iranian shopping, classifieds, food, travel, health, book, course, app, price, stock, news, law, tax and crypto sites, for Claude, Cursor and Copilot" width="100%">
 
 **English** · [فارسی](README.fa.md)
 
-# Iran MCP servers: awesome-iran-mcp
+# Iran MCP servers: iran-mcp
 
 **Give your AI agent the Iranian web.**<br>
 36 unofficial, open-source Persian-web MCP servers for Digikala, Torob, Divar, Snappfood, Jabama, MrBilit, Paziresh24, Taaghche, the Tehran stock exchange, Iranian crypto exchanges, the tax administration, qavanin.ir laws and more, plus official ones from ExirYab, Pasavard and SwapWallet.<br>
@@ -16,7 +16,7 @@ Install them as Claude Code plugins with skills, or as Agent Skills for Codex, C
 [![Claude Code plugins](https://img.shields.io/badge/Claude_Code-plugin_marketplace-d97757)](#quick-start)
 [![MCP Registry](https://img.shields.io/badge/MCP_Registry-io.github.sepehr071-7c3aed)](https://registry.modelcontextprotocol.io/?q=sepehr071)
 [![License: MIT](https://img.shields.io/badge/license-MIT-16a34a)](LICENSE)
-[![Stars](https://img.shields.io/github/stars/sepehr071/awesome-iran-mcp?style=social)](https://github.com/sepehr071/awesome-iran-mcp)
+[![Stars](https://img.shields.io/github/stars/sepehr071/iran-mcp?style=social)](https://github.com/sepehr071/iran-mcp)
 
 [What's new](#whats-new-in-v20) · [Quick start](#quick-start) · [The servers](#the-servers) · [For AI agents](#for-ai-agents) · [All tools](TOOLS.md) · [FAQ](#faq)
 
@@ -26,7 +26,7 @@ Install them as Claude Code plugins with skills, or as Agent Skills for Codex, C
 
 ## What's new in v2.0
 
-<img src="assets/release-v2.0.svg" alt="awesome-iran-mcp v2.0: 12 new servers, 7 new categories, 10 news sources, same tools and parameters" width="100%">
+<img src="assets/release-v2.0.svg" alt="iran-mcp v2.0: 12 new servers, 7 new categories, 10 news sources, same tools and parameters" width="100%">
 
 - **12 new servers**, all read-only and without sign-in: 36 servers and 469 tools in total.
 - **Shops and food:** [basalam-mcp](https://github.com/sepehr071/basalam-mcp) (thousands of small shops),
@@ -50,7 +50,7 @@ Full list: [CHANGELOG.md](CHANGELOG.md).
 <details>
 <summary><b>What's new in v1.7</b></summary>
 
-<img src="assets/release-v1.7.svg" alt="awesome-iran-mcp v1.7: fewer blocks, 100 Torob calls without a block, 18 steadier shop servers, 3 new servers, same tools and parameters" width="100%">
+<img src="assets/release-v1.7.svg" alt="iran-mcp v1.7: fewer blocks, 100 Torob calls without a block, 18 steadier shop servers, 3 new servers, same tools and parameters" width="100%">
 
 - **Fewer blocks and failed calls.** The 18 unofficial shop servers now talk to each site like a normal browser,
   pace their requests and wait when a site asks them to slow down. On Torob the old client was blocked after 4-6
@@ -69,7 +69,7 @@ Full list: [CHANGELOG.md](CHANGELOG.md).
 <details>
 <summary><b>What's new in v1.5</b></summary>
 
-<img src="assets/release-v1.5.svg" alt="awesome-iran-mcp v1.5: about 62% fewer tokens per tool call, a 19% smaller tool list, security hardening, and the new Divar server" width="100%">
+<img src="assets/release-v1.5.svg" alt="iran-mcp v1.5: about 62% fewer tokens per tool call, a 19% smaller tool list, security hardening, and the new Divar server" width="100%">
 
 - **About 62% fewer tokens per tool call** and a 19% smaller tool list across the 19 package servers, with the same
   rankings and cheapest prices as before.
@@ -113,13 +113,13 @@ with your SwapWallet sign-in.
 servers in the `/plugin` Discover tab, or install by name.
 
 ```bash
-claude plugin marketplace add sepehr071/awesome-iran-mcp
+claude plugin marketplace add sepehr071/iran-mcp
 claude plugin install digikala@iran-mcp            # one server
 claude plugin install iran-travel@iran-mcp         # a bundle: food, shopping, beauty, travel, health, books
 claude plugin install iran-all@iran-mcp            # every read-only site server
 ```
 
-`claude plugin install <name> --marketplace sepehr071/awesome-iran-mcp` does both steps in one command.
+`claude plugin install <name> --marketplace sepehr071/iran-mcp` does both steps in one command.
 `payping`, `bale` and `swapwallet` act on your own account, so no bundle includes them; install them by name.
 SwapWallet also publishes this server as its own plugin (`swapwallet@swapwallet`, from
 [SwapWallet/swapwallet-mcp](https://github.com/SwapWallet/swapwallet-mcp)), with the same rules. Install one of the
@@ -129,10 +129,10 @@ two: with both you get the server twice.
 with the config below.
 
 ```bash
-npx skills add sepehr071/awesome-iran-mcp
+npx skills add sepehr071/iran-mcp
 ```
 
-**Grok Build** reads the same marketplace: `grok plugin marketplace add sepehr071/awesome-iran-mcp`, then install
+**Grok Build** reads the same marketplace: `grok plugin marketplace add sepehr071/iran-mcp`, then install
 servers one by one (Grok doesn't install a bundle's members). Which agent supports what:
 [PLUGINS.md](PLUGINS.md#compatibility).
 
@@ -162,8 +162,8 @@ Desktop takes it under Settings → Connectors): see [its setup for each client]
 registers every server; approve the ones you want.
 
 ```bash
-git clone https://github.com/sepehr071/awesome-iran-mcp
-cd awesome-iran-mcp && claude
+git clone https://github.com/sepehr071/iran-mcp
+cd iran-mcp && claude
 ```
 
 > [!TIP]
@@ -280,7 +280,7 @@ This repo is built to be read by agents as much as by people:
 Paste this into your agent to set it up:
 
 ```text
-Read https://raw.githubusercontent.com/sepehr071/awesome-iran-mcp/main/AGENTS.md, then add the MCP servers I need for <task> to my MCP config.
+Read https://raw.githubusercontent.com/sepehr071/iran-mcp/main/AGENTS.md, then add the MCP servers I need for <task> to my MCP config.
 ```
 
 ## Shared conventions
@@ -303,8 +303,8 @@ holds its `server.json` and client configs, not its code; `catalog.py` reads its
 publishes.
 
 ```bash
-git clone --recurse-submodules https://github.com/sepehr071/awesome-iran-mcp
-cd awesome-iran-mcp/servers/digikala-mcp
+git clone --recurse-submodules https://github.com/sepehr071/iran-mcp
+cd iran-mcp/servers/digikala-mcp
 uv sync && uv run pytest -q          # offline tests
 uv run pytest -m live -q             # against the real site
 ```

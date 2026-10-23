@@ -1,6 +1,6 @@
 # AGENTS.md
 
-Guide for AI agents using or working on **awesome-iran-mcp**: 39 MCP servers for Iranian websites, 488 tools in
+Guide for AI agents using or working on **iran-mcp**: 39 MCP servers for Iranian websites, 488 tools in
 total. 37 are Python packages on PyPI, run as stdio servers with `uvx <package>`; all of them are unofficial except
 `exiryab-mcp`, ExirYab's own server on its public API. Two are hosted by their sites:
 `pasavard-mcp` (`https://pasavard.ir/api/mcp`, no sign-in) and `swapwallet-mcp` (`https://swapwallet.app/mcp`, OAuth
@@ -71,12 +71,12 @@ and choose Authenticate. Pasavard is hosted too, with no sign-in:
 As Claude Code plugins (MCP server plus a skill with usage rules), from the `iran-mcp` marketplace:
 
 ```bash
-claude plugin install digikala --marketplace sepehr071/awesome-iran-mcp     # one server
-claude plugin install iran-all --marketplace sepehr071/awesome-iran-mcp     # all read-only site servers
+claude plugin install digikala --marketplace sepehr071/iran-mcp     # one server
+claude plugin install iran-all --marketplace sepehr071/iran-mcp     # all read-only site servers
 ```
 
 Bundles: `iran-all`, `iran-food`, `iran-shopping`, `iran-beauty`, `iran-travel`, `iran-health`, `iran-books`, `iran-fashion`, `iran-software`, `iran-prices`.
-Skills only, for any agent: `npx skills add sepehr071/awesome-iran-mcp`.
+Skills only, for any agent: `npx skills add sepehr071/iran-mcp`.
 
 The server key in config is the package name without `-mcp`. [`.mcp.json`](.mcp.json) holds all 39.
 Requires [uv](https://docs.astral.sh/uv/) (`pasavard-mcp` and `swapwallet-mcp` don't). Add only the servers the task needs: each one adds 3 to 31 tools.
